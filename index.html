@@ -23,11 +23,11 @@ canvas{display:block}
 #bubble .tr{font-size:18px;opacity:.65;font-weight:600}
 #bar{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
   padding:12px 16px calc(14px + env(safe-area-inset-bottom,0px))}
-#bar button{font:800 20px var(--display);color:#fff;border:0;border-radius:24px;padding:8px 12px 6px;min-width:84px;
+#bar button{font:800 17px var(--display);color:#fff;border:0;border-radius:24px;padding:8px 10px 6px;min-width:0;
   display:flex;flex-direction:column;align-items:center;gap:0;cursor:pointer;box-shadow:0 6px 0 #0003;transition:transform .1s}
 #bar button:active{transform:translateY(4px);box-shadow:0 2px 0 #0003}
 #bar button:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
-#bar .ic{font-size:30px;line-height:1.1}
+#bar .ic{font-size:26px;line-height:1.1}
 #bar .fa{font-family:var(--fa);font-size:15px;opacity:.9}
 #bTalk.on{animation:pulse 1s ease-in-out infinite}
 @keyframes pulse{0%,100%{box-shadow:0 6px 0 #0003,0 0 0 0 #ff4f6d88}50%{box-shadow:0 6px 0 #0003,0 0 0 12px #ff4f6d00}}
@@ -48,9 +48,11 @@ canvas{display:block}
 
 <div id="stage"></div>
 <div id="bubble"><div class="fa" id="bfa"></div><div class="tr" id="btr"></div></div>
-<div id="hint">Just talk to Pash: when he's standing still he listens and repeats it in a funny voice. The Talk button turns his ears on and off. Poke his head, tummy (try 3 times fast!), ears, feet, antenna or face. Drag to spin him. Tap the empty floor to call him home. Grown-ups: Farsi lines show here and will play your recorded voice later.</div>
+<div id="hint">Find, Feed and Say it are Farsi games. Just talk to Pash: when he's standing still he listens and repeats it in a funny voice. The Talk button turns his ears on and off. Poke his head, tummy (try 3 times fast!), ears, feet, antenna or face. Drag to spin him. Tap the empty floor to call him home. Grown-ups: Farsi lines show here and will play your recorded voice later.</div>
 <div id="bar">
   <button id="bTalk" style="background:#ff4f6d"><span class="ic">🎤</span>Talk<span class="fa">حرف بزن</span></button>
+  <button id="bFind" style="background:#2bb673"><span class="ic">🔍</span>Find<span class="fa">پیدا کن</span></button>
+  <button id="bSay" style="background:#f15bb5"><span class="ic">🗣️</span>Say it<span class="fa">بگو</span></button>
   <button id="bDance" style="background:#a66cff"><span class="ic">💃</span>Dance<span class="fa">برقص</span></button>
   <button id="bJump" style="background:#ff9f1c"><span class="ic">🦘</span>Jump<span class="fa">بپر</span></button>
   <button id="bPeek" style="background:#e05aa0"><span class="ic">🙈</span>Peekaboo<span class="fa">دالی</span></button>
@@ -259,6 +261,7 @@ function goHome(){
   const tau=Math.PI*2;robot.rotation.y=((robot.rotation.y%tau)+tau+Math.PI)%tau-Math.PI;st.spin=0;st.spinVel=0;
 }
 function poke(part,point){
+  if(game.awaiting&&game.awaiting.kind==='body'&&BODY_OF_PART[part]){answer('body',BODY_OF_PART[part]);return}
   if(st.mode==='sleep'){wake();return}
   goHome();st.lastPoke=performance.now();st.idleAct=null;
   if(part==='head'){SFX.dizzy();say('head');setFace('dizzy',2200);kick('head',9);kick('squash',-4);
@@ -318,6 +321,176 @@ function popBubble(b){bubbleGroup.remove(b);tone(900,1600,.08,'square',.12);
   popped++;setFace('laugh',700);kick('squash',3);arms.forEach(a=>a.vel+=a.s*6);
   if(bubbleGroup.children.length===0){say('yay');SFX.giggle();jump(6,popped>=6)}}
 
+// ---------- Learning games: Find it, Feed choice, Say it ----------
+// Each word has short voice lines. Missing clips just show the Farsi bubble.
+const WORDS={
+  ball:  {fa:'توپ',  tr:'toop',   en:'ball',   where:'توپ کجاست؟',   whereT:'toop kojâst?',   this:'این توپه!',   thisT:'in toope!',   say:'بگو توپ!',   sayT:'begu toop!'},
+  apple: {fa:'سیب',  tr:'sib',    en:'apple',  where:'سیب کجاست؟',   whereT:'sib kojâst?',    this:'این سیبه!',   thisT:'in sibe!',    say:'بگو سیب!',   sayT:'begu sib!',  want:'سیب می‌خوام!', wantT:'sib mikhâm!'},
+  banana:{fa:'موز',  tr:'moz',    en:'banana', where:'موز کجاست؟',   whereT:'moz kojâst?',    this:'این موزه!',   thisT:'in moze!',    say:'بگو موز!',   sayT:'begu moz!',  want:'موز می‌خوام!', wantT:'moz mikhâm!'},
+  teddy: {fa:'خرس',  tr:'khers',  en:'teddy bear', where:'خرسه کجاست؟', whereT:'kherse kojâst?', this:'این خرسه!', thisT:'in kherse!', say:'بگو خرس!', sayT:'begu khers!'},
+  car:   {fa:'ماشین',tr:'mâshin', en:'car',    where:'ماشین کجاست؟', whereT:'mâshin kojâst?', this:'این ماشینه!', thisT:'in mâshine!', say:'بگو ماشین!', sayT:'begu mâshin!'},
+  bread: {fa:'نون',  tr:'nun',    en:'bread',  this:'این نونه!', thisT:'in nune!', want:'نون می‌خوام!', wantT:'nun mikhâm!'},
+  milk:  {fa:'شیر',  tr:'shir',   en:'milk',   this:'این شیره!', thisT:'in shire!', want:'شیر می‌خوام!', wantT:'shir mikhâm!'},
+};
+const BODY={
+  head: {fa:'سر', tr:'sar',  en:'head',  where:'سرم کجاست؟',  whereT:'saram kojâst?',  this:'این سرمه!',  thisT:'in sarame!'},
+  hand: {fa:'دست',tr:'dast', en:'hand',  where:'دستم کجاست؟', whereT:'dastam kojâst?', this:'این دستمه!', thisT:'in dastame!'},
+  belly:{fa:'شکم',tr:'shekam',en:'tummy',where:'شکمم کجاست؟', whereT:'shekamam kojâst?',this:'این شکممه!',thisT:'in shekamame!'},
+  feet: {fa:'پا', tr:'pâ',   en:'foot',  where:'پام کجاست؟',  whereT:'pâm kojâst?',    this:'این پامه!',  thisT:'in pâme!'},
+};
+// Register every game line as a speakable key (w_, where_, this_, say_, want_)
+for(const [id,w] of Object.entries(WORDS)){
+  LINES['w_'+id]=[w.fa+'!',w.tr+'! ('+w.en+'!)'];
+  if(w.where)LINES['where_'+id]=[w.where,w.whereT+' (where is the '+w.en+'?)'];
+  LINES['this_'+id]=[w.this,w.thisT+" (that's the "+w.en+'!)'];
+  if(w.say)LINES['say_'+id]=[w.say,w.sayT+' (say '+w.en+'!)'];
+  if(w.want)LINES['want_'+id]=[w.want,w.wantT+' (I want '+w.en+'!)'];
+}
+for(const [id,b] of Object.entries(BODY)){
+  LINES['w_'+id]=[b.fa+'!',b.tr+'! ('+b.en+'!)'];
+  LINES['where_'+id]=[b.where,b.whereT+' (where is my '+b.en+'?)'];
+  LINES['this_'+id]=[b.this,b.thisT+" (that's my "+b.en+'!)'];
+}
+LINES.play=['بیا بازی کنیم!','biâ bâzi konim! (let\'s play!)'];
+const FIND_POOL=['ball','apple','banana','teddy','car'],FOOD_POOL=['apple','banana','bread','milk'],SAY_POOL=['ball','apple','banana','teddy','car'];
+const BODY_OF_PART={head:'head',face:'head',antenna:'head',ear:'head',arm:'hand',belly:'belly',feet:'feet'};
+
+const wait=ms=>new Promise(r=>setTimeout(r,ms));
+function sayAsync(k){say(k);const d=VOICE[k]?VOICE[k].duration:1.3;return wait(d*1000+250)}
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+
+// ----- 3D toys and food -----
+const itemsGroup=new THREE.Group();scene.add(itemsGroup);
+function part(geo,mat,x=0,y=0,z=0){const m=new THREE.Mesh(geo,mat);m.position.set(x,y,z);m.castShadow=true;return m}
+const MAKE={
+  ball(){const g=new THREE.Group();g.add(part(new THREE.SphereGeometry(.32,28,20),ball.material,0,.32,0));return g},
+  apple(){const g=new THREE.Group(),b=part(new THREE.SphereGeometry(.32,28,20),M(0xe63946,.35,.05),0,.32,0);b.scale.y=.9;g.add(b);
+    g.add(part(new THREE.CylinderGeometry(.025,.03,.18,8),M(0x6b4423,.8),0,.66,0));
+    const l=part(new THREE.SphereGeometry(.09,12,8),M(0x4caf50,.6),.09,.68,0);l.scale.set(1.4,.4,.8);g.add(l);return g},
+  banana(){const g=new THREE.Group(),b=part(new THREE.TorusGeometry(.38,.1,12,24,Math.PI*.75),M(0xffd93d,.45),0,.12,0);
+    b.rotation.set(Math.PI/2,0,Math.PI*.12);b.scale.z=1.4;g.add(b);
+    g.add(part(new THREE.SphereGeometry(.05,8,6),M(0x5b4636,.8),.36,.12,.12));return g},
+  teddy(){const g=new THREE.Group(),fur=M(0xb07a4a,.9),pale=M(0xe8c9a0,.9),dark=M(0x2a2a2a,.4);
+    g.add(part(new THREE.SphereGeometry(.26,20,16),fur,0,.26,0));g.add(part(new THREE.SphereGeometry(.2,20,16),fur,0,.62,0));
+    g.add(part(new THREE.SphereGeometry(.08,12,8),fur,-.15,.78,0));g.add(part(new THREE.SphereGeometry(.08,12,8),fur,.15,.78,0));
+    g.add(part(new THREE.SphereGeometry(.08,12,8),pale,0,.58,.17));g.add(part(new THREE.SphereGeometry(.03,8,6),dark,0,.6,.24));
+    g.add(part(new THREE.SphereGeometry(.03,8,6),dark,-.07,.68,.17));g.add(part(new THREE.SphereGeometry(.03,8,6),dark,.07,.68,.17));
+    g.add(part(new THREE.SphereGeometry(.13,12,10),pale,0,.26,.16));return g},
+  car(){const g=new THREE.Group(),body=rbox(.8,.26,.44,.08,M(0x3a86ff,.35,.2));body.position.y=.25;g.add(body);
+    const cab=rbox(.44,.22,.38,.07,M(0xcfe8ff,.2,.1));cab.position.set(-.05,.45,0);g.add(cab);
+    for(const x of[-.26,.26])for(const z of[-.22,.22]){const w=part(new THREE.CylinderGeometry(.1,.1,.08,16),M(0x222831,.7),x,.11,z);w.rotation.x=Math.PI/2;g.add(w)}
+    return g},
+  bread(){const g=new THREE.Group(),b=rbox(.6,.3,.36,.12,M(0xd9a05b,.8));b.position.y=.17;g.add(b);
+    const top=part(new THREE.SphereGeometry(.3,20,12,0,Math.PI*2,0,Math.PI/2),M(0xc68642,.8),0,.3,0);top.scale.set(1,.45,.6);g.add(top);return g},
+  milk(){const g=new THREE.Group();g.add(part(new THREE.BoxGeometry(.3,.5,.3),M(0xffffff,.5),0,.25,0));
+    const roof=part(new THREE.ConeGeometry(.22,.18,4),M(0xffffff,.5),0,.59,0);roof.rotation.y=Math.PI/4;g.add(roof);
+    g.add(part(new THREE.BoxGeometry(.305,.14,.305),M(0x4d96ff,.5),0,.24,0));return g},
+};
+function spawnItems(ids,xs){
+  clearItems();
+  ids.forEach((id,i)=>{const g=MAKE[id]();g.traverse(o=>o.userData.item=id);
+    g.position.set(xs?xs[i]:(i-(ids.length-1)/2)*(innerWidth<innerHeight?1.75:2.5),0,ids.length>1&&!xs&&i===1?1.0:(innerWidth<innerHeight?1.9:1.5));g.scale.setScalar(.01);
+    g.userData={item:id,born:performance.now()+i*120,wig:0,baseX:g.position.x};itemsGroup.add(g)});
+}
+function clearItems(){while(itemsGroup.children.length)itemsGroup.remove(itemsGroup.children[0])}
+function itemById(id){return itemsGroup.children.find(g=>g.userData.item===id)}
+function animateItems(t,dt){
+  const now=performance.now();
+  for(const g of [...itemsGroup.children]){const u=g.userData;
+    if(u.fly){u.fly.k=Math.min(1,u.fly.k+dt*1.8);const k=u.fly.k;
+      g.position.lerpVectors(u.fly.from,u.fly.to,k);g.position.y+=Math.sin(k*Math.PI)*1.2;g.scale.setScalar(1-k*.6);g.rotation.y+=dt*8;
+      if(k>=1){itemsGroup.remove(g);u.fly.done&&u.fly.done()}continue}
+    const age=Math.max(0,(now-u.born)/1000),pop=Math.min(1,age*3);
+    g.scale.setScalar(Math.max(.01,pop<1?pop*1.15:1+(u.glow?Math.sin(t*8)*.08:0)));
+    g.position.y=Math.abs(Math.sin(t*2+u.baseX))*.06+(u.glow?Math.abs(Math.sin(t*6))*.25:0);
+    if(u.wig>0){u.wig-=dt;g.rotation.z=Math.sin(u.wig*30)*.35*u.wig}else g.rotation.z=0;
+    g.rotation.y=Math.sin(t*.8+u.baseX)*.4;
+  }
+}
+
+// ----- game state -----
+const game={type:null,token:0,awaiting:null,busy:false,listening:false,onHeard:null,score:0};
+function endGame(){game.token++;game.type=null;game.awaiting=null;game.busy=false;game.listening=false;game.onHeard=null;clearItems();
+  if(st.mode==='game')setMode('idle')}
+function startGame(type){endGame();game.type=type;game.score=0;setMode('game');return game.token}
+const alive=tok=>tok===game.token;
+function cheer(big){SFX.giggle();setFace('laugh',1400);kick('squash',7);arms.forEach(a=>a.vel+=a.s*10);jump(big?9:6,big);
+  emit('star',new THREE.Vector3(0,3,.6),10,{size:.28,life:1.2,g:-4,vel:()=>new THREE.Vector3((Math.random()-.5)*5,3+Math.random()*3,(Math.random()-.5)*2)})}
+// Wait for the right answer; re-ask with a hint if nothing happens for a while
+function ask(tok,kind,target,whereKey){
+  return new Promise(res=>{
+    game.awaiting={kind,target,res};
+    let tries=0;const nudge=async()=>{await wait(9000);if(!alive(tok)||!game.awaiting||game.awaiting.target!==target)return;
+      if(kind==='item'){const it=itemById(target);if(it)it.userData.glow=true}
+      if(!game.busy){game.busy=true;await sayAsync(whereKey);game.busy=false}if(++tries<3)nudge()};
+    nudge();
+  })
+}
+async function answer(kind,id,point){ // a tap during a game
+  const a=game.awaiting;if(!a||a.kind!==kind||game.busy)return false;
+  const tok=game.token;game.busy=true;
+  if(id===a.target){game.awaiting=null;game.score++;
+    if(game.type==='feed'){await eatItem(id);await sayAsync('feed');emit('heart',new THREE.Vector3(0,3.3,.5),6,{size:.3,life:1.3,g:.6})}
+    else{cheer(false);await sayAsync('w_'+id);if(alive(tok))await sayAsync('yay')}
+    game.busy=false;if(alive(tok))a.res();return true}
+  // wrong one: name what was tapped, then ask again (never "no")
+  if(kind==='item'){const it=itemById(id);if(it)it.userData.wig=.6}
+  else{kick('lean',3)}
+  setFace('shock',600);await sayAsync('this_'+id);
+  if(alive(tok)&&game.awaiting)await sayAsync(game.type==='feed'?'want_'+a.target:'where_'+a.target);
+  game.busy=false;return true;
+}
+function eatItem(id){return new Promise(res=>{const g=itemById(id);if(!g){res();return}
+  g.userData.fly={from:g.position.clone(),to:new THREE.Vector3(0,2.5,.7),k:0,done:()=>{SFX.munch();setFace('laugh',1500);kick('squash',6);speak();res()}}})}
+
+// 1) Find it: 4 rounds, alternating toys and Pash's body parts
+async function playFind(){
+  const tok=startGame('find');
+  await sayAsync('play');
+  const toys=shuffle(FIND_POOL),body=shuffle(Object.keys(BODY));
+  for(let r=0;r<4&&alive(tok);r++){
+    if(r%2===0){const target=toys[r/2],others=shuffle(FIND_POOL.filter(x=>x!==target)).slice(0,2);
+      spawnItems(shuffle([target,...others]));await wait(500);if(!alive(tok))return;
+      game.busy=true;await sayAsync('where_'+target);game.busy=false;if(!alive(tok))return;
+      await ask(tok,'item',target,'where_'+target);clearItems();
+    }else{const target=body[(r-1)/2];
+      game.busy=true;await sayAsync('where_'+target);game.busy=false;if(!alive(tok))return;
+      await ask(tok,'body',target,'where_'+target);
+    }
+    await wait(400);
+  }
+  if(alive(tok)){cheer(true);await sayAsync('yay');if(alive(tok))endGame()}
+}
+// 2) Feed: Pash asks for one food out of three
+async function playFeed(){
+  const tok=startGame('feed');
+  const foods=shuffle(FOOD_POOL).slice(0,3),target=foods[Math.floor(Math.random()*3)];
+  spawnItems(foods);await wait(450);if(!alive(tok))return;
+  game.busy=true;await sayAsync('want_'+target);game.busy=false;if(!alive(tok))return;
+  await ask(tok,'item',target,'want_'+target);
+  await wait(300);if(alive(tok))endGame();
+}
+// 3) Say it: Pash shows a thing and asks your son to say it; any try counts
+async function playSay(){
+  const tok=startGame('say');
+  for(const id of shuffle(SAY_POOL).slice(0,3)){
+    if(!alive(tok))return;
+    spawnItems([id],[1.7]);await wait(450);
+    let heard=false;
+    for(let attempt=0;attempt<2&&!heard&&alive(tok);attempt++){
+      game.busy=true;await sayAsync('say_'+id);game.busy=false;if(!alive(tok))return;
+      if(talk.on){heard=await new Promise(res=>{game.listening=true;game.onHeard=()=>res(true);setTimeout(()=>res(false),7000)});
+        game.listening=false;game.onHeard=null}
+      else{await wait(3200);heard=true} // no mic here: give him time to say it out loud
+    }
+    if(!alive(tok))return;
+    if(heard){cheer(false);await sayAsync('yay')}
+    await sayAsync('w_'+id); // Pash models the word again
+    clearItems();await wait(300);
+  }
+  if(alive(tok)){cheer(true);endGame()}
+}
+
 // ---------- Talk-back: Pash repeats what you say in a funny voice ----------
 const talk={stream:null,src:null,proc:null,sink:null,on:false,rec:false,chunks:[],pre:[],quiet:0,noise:.008,idle:0,
   playing:false,level:0,an:null,resumeAt:0,clips:0,pitch:1.65};
@@ -351,7 +524,8 @@ function releaseMic(){
 function onMic(e){
   if(!talk.on)return;
   const d=e.inputBuffer.getChannelData(0),sr=e.inputBuffer.sampleRate,secs=d.length/sr,now=performance.now();
-  const canHear=(st.mode==='idle'&&!food&&!flipping&&jumpY<.05)||st.mode==='listen'||st.mode==='sleep';
+  const gameEar=st.mode==='game'&&game.listening;
+  const canHear=(st.mode==='idle'&&!food&&!flipping&&jumpY<.05)||st.mode==='listen'||st.mode==='sleep'||gameEar;
   if(!canHear||talk.playing||now<talk.resumeAt||now<talkMuteUntil){
     if(talk.rec&&st.mode==='listen'&&!talk.playing)setMode('idle');
     talk.rec=false;talk.chunks=[];talk.pre=[];return}
@@ -363,7 +537,7 @@ function onMic(e){
   if(!talk.rec){
     talk.pre.push(copy);if(talk.pre.length>6)talk.pre.shift();
     if(rms>loud){talk.rec=true;talk.chunks=talk.pre.slice();talk.pre=[];talk.quiet=0;st.lastPoke=now;st.idleAct=null;
-      if(st.mode!=='listen'){goHome();setMode('listen')}}
+      if(!gameEar&&st.mode!=='listen'){goHome();setMode('listen')}}
     else talk.noise=talk.noise*.97+rms*.03;
   }else{
     talk.chunks.push(copy);
@@ -383,44 +557,47 @@ function finishClip(sr,secs){
   setTimeout(()=>playBack(buf),0);
 }
 function playBack(buf){
-  if(!talk.on||st.mode!=='listen')return;
+  if(!talk.on||!(st.mode==='listen'||(st.mode==='game'&&game.listening)))return;
   const a=ac(),src=a.createBufferSource(),an=a.createAnalyser(),gain=a.createGain();
   src.buffer=buf;src.playbackRate.value=talk.pitch;an.fftSize=512;gain.gain.value=1.3;
   src.connect(an);an.connect(gain);gain.connect(a.destination);
   talk.an=an;talk.playing=true;talk.clips++;setFace('laugh',buf.duration/talk.pitch*1000+300);kick('squash',5);
-  src.onended=()=>{talk.playing=false;talk.an=null;talk.level=0;talk.resumeAt=performance.now()+400;if(st.mode==='listen')setMode('idle')};
+  src.onended=()=>{talk.playing=false;talk.an=null;talk.level=0;talk.resumeAt=performance.now()+400;if(st.mode==='listen')setMode('idle');if(game.onHeard){const f=game.onHeard;game.onHeard=null;f()}};
   src.start();
 }
 
 // ---------- Input ----------
 const ray=new THREE.Raycaster(),ptr=new THREE.Vector2();let down=null;
 function hit(e){const r=renderer.domElement.getBoundingClientRect();ptr.set(((e.clientX-r.left)/r.width)*2-1,-((e.clientY-r.top)/r.height)*2+1);
-  ray.setFromCamera(ptr,camera);const h=ray.intersectObjects([bubbleGroup,robot,ball],true);return h[0]}
+  ray.setFromCamera(ptr,camera);const h=ray.intersectObjects([itemsGroup,bubbleGroup,robot,ball],true);return h[0]}
 renderer.domElement.addEventListener('pointerdown',e=>{down={x:e.clientX,y:e.clientY,moved:false,h:hit(e)}});
 renderer.domElement.addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-down.x;
   if(Math.abs(dx)>12){down.moved=true;st.spinVel+=(e.movementX||0)*.02;}});
 addEventListener('pointerup',e=>{if(!down)return;
   if(!down.moved){const h=down.h;
-    if(h&&h.object===ball){bv.set((Math.random()-.5)*3,5,(Math.random()-.5)*2);SFX.kick()}
+    if(h&&h.object.userData.item){answer('item',h.object.userData.item)}
+    else if(h&&h.object===ball){bv.set((Math.random()-.5)*3,5,(Math.random()-.5)*2);SFX.kick()}
     else if(h&&h.object.userData.bubble)popBubble(h.object);
     else if(h)poke(h.object.userData.part||'belly',h.point);
     else if(st.mode!=='sleep'){goHome();if(st.mode==='chase'||st.mode==='idle')setFace('shock',400)}}
   else if(Math.abs(st.spinVel)>3){setTimeout(()=>{if(st.mode!=='sleep'){setFace('dizzy',1500);SFX.dizzy()}},400)}
   down=null});
-function onBtn(id,fn,home=true){document.getElementById(id).onclick=()=>{if(st.mode==='sleep'&&id!=='bSleep')wake();if(home)goHome();st.lastPoke=performance.now();st.idleAct=null;fn()}}
+function onBtn(id,fn,home=true){document.getElementById(id).onclick=()=>{endGame();if(st.mode==='sleep'&&id!=='bSleep')wake();if(home)goHome();st.lastPoke=performance.now();st.idleAct=null;fn()}}
 onBtn('bTalk',startTalk);
 onBtn('bDance',()=>{danceStyle=(danceStyle+1)%4;setMode('dance');music(true);say('dance');speak()});
 onBtn('bJump',()=>{say('jump');speak();const big=Math.random()<.5;jump(big?10:7,big);setFace('laugh',1200)});
 onBtn('bPeek',()=>{setMode('peek');setFace('hidden',1300)});
 onBtn('bBubbles',blowBubbles);
 onBtn('bBall',throwBall,false);
-onBtn('bFeed',feed);
+onBtn('bFeed',playFeed);
+onBtn('bFind',playFind);
+onBtn('bSay',playSay);
 onBtn('bSleep',()=>{setMode('sleep');say('sleep');setFace('sleep',1e9);music(false)});
-document.getElementById('go').onclick=async()=>{await ac().resume();micOn(false);await new Promise(r=>{loadVoices();setTimeout(r,250)});document.getElementById('start').hidden=true;say(VOICE.name?'name':'hi');SFX.beep();kick('squash',8);speak()};
+document.getElementById('go').onclick=async()=>{await ac().resume();micOn(false);await new Promise(r=>{loadVoices();setTimeout(r,250)});document.getElementById('start').hidden=true;document.getElementById('hint').hidden=true;say(VOICE.name?'name':'hi');SFX.beep();kick('squash',8);speak()};
 
 // ---------- Layout ----------
 function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;
-  const far=w<h?11.5:8.5;camera.position.set(0,3.2,far);camera.lookAt(0,1.6,0);camera.updateProjectionMatrix()}
+  const far=w<h?12:9;camera.position.set(0,3.4,far);camera.lookAt(0,1.2,0);camera.updateProjectionMatrix()}
 addEventListener('resize',resize);resize();
 
 // ---------- Loop ----------
@@ -456,6 +633,7 @@ function loop(){
     else{if(face==='hidden'){say('peek');SFX.giggle();setFace('shock',350);setTimeout(()=>setFace('laugh',1000),350);kick('squash',8);speak()}
       armWave=[2.8,2.8]}
     if(st.modeT>2.8)setMode('idle')}
+  else if(st.mode==='game'){headYaw=Math.sin(t*.8)*.12;if(talk.playing){bob=Math.abs(Math.sin(t*12))*.05+talk.level*.4;armWave=[1+talk.level*8,1+talk.level*8]}}
   else if(st.mode==='listen'){
     if(talk.playing){const lv=talk.level;bob=Math.abs(Math.sin(t*12))*.05+lv*.4;headYaw=Math.sin(t*9)*.25;armWave=[1+lv*8,1+lv*8]}
     else{headYaw=-.25;st.head=-.6;armWave=[.25,2.35];if(now>faceUntil)face='listen';
@@ -493,6 +671,7 @@ function loop(){
     ball.position.x=THREE.MathUtils.clamp(ball.position.x,-4.5,4.5);ball.position.z=THREE.MathUtils.clamp(ball.position.z,-3,3);
     if(Math.abs(ball.position.x)>=4.5)bv.x*=-.8;if(Math.abs(ball.position.z)>=3)bv.z*=-.8;
     ball.rotation.x+=bv.z*dt*3;ball.rotation.z-=bv.x*dt*3}
+  animateItems(t,dt);
   for(const b of [...bubbleGroup.children]){const u=b.userData;b.position.y+=u.sp*dt;b.position.x+=Math.sin(t*1.5+u.ph)*dt*.3;
     b.scale.setScalar(1+Math.sin(t*4+u.ph)*.04);if(b.position.y>6)bubbleGroup.remove(b)}
   for(let i=parts.length-1;i>=0;i--){const p=parts[i];p.life+=dt;
