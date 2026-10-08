@@ -23,6 +23,7 @@ canvas{display:block}
 #bubble .tr{font-size:18px;opacity:.65;font-weight:600}
 .col{position:fixed;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:var(--g);z-index:3}
 #colL{left:calc(env(safe-area-inset-left,0px) + 12px)}#colR{right:calc(env(safe-area-inset-right,0px) + 12px)}
+@media (orientation:portrait){.col{top:70%}} /* upright: buttons sit on the empty floor, not over the furniture */
 #nav{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 10px);transform:translateX(-50%);display:flex;gap:var(--g);z-index:3}
 .rb{width:var(--b);height:var(--b);border-radius:50%;border:0;padding:0;font-size:calc(var(--b)*.5);line-height:1;display:grid;place-items:center;
   cursor:pointer;box-shadow:0 5px 0 #0003;transition:transform .1s,box-shadow .1s;touch-action:manipulation}
@@ -128,9 +129,15 @@ function noise(dur,vol=.3,freq=300,delay=0){hush((delay+dur)*1000+250);
   const s=a.createBufferSource(),f=a.createBiquadFilter(),g=a.createGain();s.buffer=b;f.type='lowpass';f.frequency.value=freq;g.gain.value=vol;
   s.connect(f).connect(g).connect(a.destination);s.start(t);
 }
+// fart: buzzy low sawtooth with a random flutter in pitch and volume, through a lowpass
+function fart(dur=.7,delay=0){hush((delay+dur)*1000+250);
+  const a=ac(),t=a.currentTime+delay,o=a.createOscillator(),f=a.createBiquadFilter(),g=a.createGain();
+  o.type='sawtooth';f.type='lowpass';f.frequency.value=520;f.Q.value=6;
+  for(let x=0;x<dur;x+=.03){o.frequency.setValueAtTime((95-x*40)*(.8+Math.random()*.45),t+x);g.gain.setValueAtTime(.45*(.55+Math.random()*.45)*Math.min(1,(dur-x)*4),t+x)}
+  g.gain.setValueAtTime(.001,t+dur);o.connect(f).connect(g).connect(a.destination);o.start(t);o.stop(t+dur+.02);noise(dur,.25,180,delay)}
 const SFX={
   boing:()=>{tone(180,700,.35,'triangle',.3)},
-  toot:()=>{noise(.5,.5,260);tone(120,70,.45,'sawtooth',.12);tone(900,1400,.15,'square',.08,.45)},
+  toot:()=>fart(.4+Math.random()*.4),
   dizzy:()=>{for(let i=0;i<6;i++)tone(500+i*120,300+i*60,.12,'triangle',.15,i*.09)},
   giggle:()=>{for(let i=0;i<5;i++)tone(700+(i%2)*200,900,.08,'sine',.2,i*.1)},
   zap:()=>{tone(1800,200,.25,'square',.1);noise(.15,.2,4000)},
@@ -442,10 +449,10 @@ function poke(part,point){
   else if(part==='belly'){
     const now=performance.now();tummyHits=tummyHits.filter(t=>now-t<2500);tummyHits.push(now);
     const p=new THREE.Vector3();pipe.getWorldPosition(p);
-    if(tummyHits.length>=3){tummyHits=[];say('rocket');SFX.toot();setTimeout(SFX.toot,180);setFace('shock',2000);jump(12,true);setTimeout(()=>{if(HAS.has('x_oftadam')&&st.mode!=='sleep')say('x_oftadam')},1700);
+    if(tummyHits.length>=3){tummyHits=[];fart(1.1);setTimeout(()=>say('rocket'),900);setFace('shock',2000);jump(12,true);setTimeout(()=>{if(HAS.has('x_oftadam')&&st.mode!=='sleep')say('x_oftadam')},3000);
       emit('puff',p,22,{size:.8,life:1.6,grow:1.5,g:.2,vel:()=>new THREE.Vector3((Math.random()-.5)*2,-1-Math.random(),(Math.random()-.5)*2)});
       setTimeout(()=>setFace('laugh',1400),1500)}
-    else{SFX.toot();say('belly');setFace('shock',1200);kick('squash',7);kick('lean',3);
+    else{SFX.toot();setTimeout(()=>say('belly'),850);setFace('shock',1200);kick('squash',7);kick('lean',3);
       emit('puff',p,10,{size:.6,life:1.4,grow:1.5,g:.4,vel:()=>new THREE.Vector3((Math.random()-.5)*.8,.4+Math.random()*.4,-1-Math.random())});
       setTimeout(()=>setFace('laugh',1200),900)}}
   else if(part==='face'){SFX.giggle();say('face');setFace('laugh',1600);kick('lean',-4);kick('squash',3);
@@ -694,7 +701,7 @@ let lightsOn=true;
 function makeFurniture(){
   const wood=M(0xc98b52,.7),dark=M(0x8a5a33,.7);
   const add=(id,g,x,z,ry=0,rm='home')=>{g.position.set(x,0,z);g.rotation.y=ry;g.traverse(o=>{o.userData.furn=id;if(o.isMesh){o.castShadow=true;o.receiveShadow=true}});
-    g.userData={furn:id,wig:0,room:rm};furnGroup.add(g);
+    g.userData={furn:id,wig:0,room:rm,x0:x};furnGroup.add(g);
     // invisible tap area covering the whole piece, so taps between legs still count
     const bb=new THREE.Box3().setFromObject(g),sz=new THREE.Vector3(),c=new THREE.Vector3();bb.getSize(sz);bb.getCenter(c);g.worldToLocal(c);
     const hb=new THREE.Mesh(new THREE.BoxGeometry(sz.x+.2,sz.y+.2,sz.z+.2),new THREE.MeshBasicMaterial({visible:false}));hb.position.copy(c);hb.rotation.y=-ry;hb.userData.furn=id;g.add(hb);
@@ -971,6 +978,7 @@ document.querySelectorAll('#nav .rb').forEach(b=>b.onclick=()=>{st.lastPoke=perf
 // ---------- Layout ----------
 function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;
   const far=w<h?12:9;camera.position.set(0,3.4,far);camera.lookAt(0,1.2,0);
+  const sq=Math.min(1,.35+w/h*.75);furnGroup.children.forEach(g=>g.position.x=g.userData.x0*sq); // portrait: pull furniture toward the middle so it stays on screen
   if(scr==='say')camera.setViewOffset(w,h,w<h?0:-w*.2,w<h?-h*.2:0,w,h);else camera.clearViewOffset(); // Say it: robot moves aside for the card
   camera.updateProjectionMatrix()}
 addEventListener('resize',resize);showScreen('home');
