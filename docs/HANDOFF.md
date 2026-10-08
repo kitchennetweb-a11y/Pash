@@ -42,7 +42,7 @@ Done and live: everything listed in decisions.md under Product, apart from the i
 - v2 phrases wired as `VARIANTS` and `ROOM_HI` (room greetings).
 
 ### Next
-1. After the ElevenLabs top-up: run `python tools/gen_voices.py 8Ebkg5uUcbSbeqGucAoR eleven_v4`, then `python tools/process_robo_clips.py` and `python tools/build.py`. Say it only uses words with a clip, so new words appear automatically.
+1. (done: all 200 words generated)
 2. Phone portrait: bed and toy shelf are mostly off-screen; iPad portrait bedroom: mic button overlaps the bed.
 3. Find with the new words (emoji cards), optional. Unused phrases: food (p_nam_nam..., p_ah_ino...), say-it prompts (p_hala_to_begu, p_chi_gofti_nashenidam), goodbye, countdown.
 
