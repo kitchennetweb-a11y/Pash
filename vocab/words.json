@@ -1,0 +1,1802 @@
+[
+{
+"id": "cat",
+"fa": "گربه",
+"tr": "gorbe",
+"en": "cat",
+"pic": "🐱",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "dog",
+"fa": "سگ",
+"tr": "sag",
+"en": "dog",
+"pic": "🐶",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "horse",
+"fa": "اسب",
+"tr": "asb",
+"en": "horse",
+"pic": "🐴",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "cow",
+"fa": "گاو",
+"tr": "gâv",
+"en": "cow",
+"pic": "🐮",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "sheep",
+"fa": "گوسفند",
+"tr": "gusfand",
+"en": "sheep",
+"pic": "🐑",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "goat",
+"fa": "بز",
+"tr": "boz",
+"en": "goat",
+"pic": "🐐",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "hen",
+"fa": "مرغ",
+"tr": "morgh",
+"en": "chicken",
+"pic": "🐔",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "chick",
+"fa": "جوجه",
+"tr": "juje",
+"en": "chick",
+"pic": "🐥",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "duck",
+"fa": "اردک",
+"tr": "ordak",
+"en": "duck",
+"pic": "🦆",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "rabbit",
+"fa": "خرگوش",
+"tr": "khargush",
+"en": "rabbit",
+"pic": "🐰",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "mouse",
+"fa": "موش",
+"tr": "mush",
+"en": "mouse",
+"pic": "🐭",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "fish",
+"fa": "ماهی",
+"tr": "mâhi",
+"en": "fish",
+"pic": "🐟",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "bird",
+"fa": "پرنده",
+"tr": "parande",
+"en": "bird",
+"pic": "🐦",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "tiger",
+"fa": "ببر",
+"tr": "babr",
+"en": "tiger",
+"pic": "🐯",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "elephant",
+"fa": "فیل",
+"tr": "fil",
+"en": "elephant",
+"pic": "🐘",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "monkey",
+"fa": "میمون",
+"tr": "meymun",
+"en": "monkey",
+"pic": "🐒",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "giraffe",
+"fa": "زرافه",
+"tr": "zarâfe",
+"en": "giraffe",
+"pic": "🦒",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "zebra",
+"fa": "گورخر",
+"tr": "gurkhar",
+"en": "zebra",
+"pic": "🦓",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "penguin",
+"fa": "پنگوئن",
+"tr": "penguan",
+"en": "penguin",
+"pic": "🐧",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "turtle",
+"fa": "لاک‌پشت",
+"tr": "lâkposht",
+"en": "turtle",
+"pic": "🐢",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "frog",
+"fa": "قورباغه",
+"tr": "qurbâghe",
+"en": "frog",
+"pic": "🐸",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "snake",
+"fa": "مار",
+"tr": "mâr",
+"en": "snake",
+"pic": "🐍",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "butterfly",
+"fa": "پروانه",
+"tr": "parvâne",
+"en": "butterfly",
+"pic": "🦋",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "bee",
+"fa": "زنبور",
+"tr": "zanbur",
+"en": "bee",
+"pic": "🐝",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "ant",
+"fa": "مورچه",
+"tr": "murche",
+"en": "ant",
+"pic": "🐜",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "ladybug",
+"fa": "کفشدوزک",
+"tr": "kafshduzak",
+"en": "ladybug",
+"pic": "🐞",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "octopus",
+"fa": "هشت‌پا",
+"tr": "hashtpâ",
+"en": "octopus",
+"pic": "🐙",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "whale",
+"fa": "نهنگ",
+"tr": "nahang",
+"en": "whale",
+"pic": "🐋",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "dolphin",
+"fa": "دلفین",
+"tr": "dolfin",
+"en": "dolphin",
+"pic": "🐬",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "camel",
+"fa": "شتر",
+"tr": "shotor",
+"en": "camel",
+"pic": "🐫",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "owl",
+"fa": "جغد",
+"tr": "joghd",
+"en": "owl",
+"pic": "🦉",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "squirrel",
+"fa": "سنجاب",
+"tr": "sanjâb",
+"en": "squirrel",
+"pic": "🐿️",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "dino",
+"fa": "دایناسور",
+"tr": "dâynâsor",
+"en": "dinosaur",
+"pic": "🦖",
+"cat": "animals",
+"kind": "n"
+},
+{
+"id": "orange",
+"fa": "پرتقال",
+"tr": "porteghâl",
+"en": "orange",
+"pic": "🍊",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "grapes",
+"fa": "انگور",
+"tr": "angur",
+"en": "grapes",
+"pic": "🍇",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "watermelon",
+"fa": "هندونه",
+"tr": "hendune",
+"en": "watermelon",
+"pic": "🍉",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "strawberry",
+"fa": "توت‌فرنگی",
+"tr": "tutfarangi",
+"en": "strawberry",
+"pic": "🍓",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "cherry",
+"fa": "گیلاس",
+"tr": "gilâs",
+"en": "cherries",
+"pic": "🍒",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "peach",
+"fa": "هلو",
+"tr": "holu",
+"en": "peach",
+"pic": "🍑",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "pear",
+"fa": "گلابی",
+"tr": "golâbi",
+"en": "pear",
+"pic": "🍐",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "pineapple",
+"fa": "آناناس",
+"tr": "ânânâs",
+"en": "pineapple",
+"pic": "🍍",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "lemon",
+"fa": "لیمو",
+"tr": "limu",
+"en": "lemon",
+"pic": "🍋",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "carrot",
+"fa": "هویج",
+"tr": "havij",
+"en": "carrot",
+"pic": "🥕",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "tomato",
+"fa": "گوجه",
+"tr": "goje",
+"en": "tomato",
+"pic": "🍅",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "cucumber",
+"fa": "خیار",
+"tr": "khiâr",
+"en": "cucumber",
+"pic": "🥒",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "potato",
+"fa": "سیب‌زمینی",
+"tr": "sibzamini",
+"en": "potato",
+"pic": "🥔",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "corn",
+"fa": "ذرت",
+"tr": "zorrat",
+"en": "corn",
+"pic": "🌽",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "egg",
+"fa": "تخم‌مرغ",
+"tr": "tokhm-morgh",
+"en": "egg",
+"pic": "🥚",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "cheese",
+"fa": "پنیر",
+"tr": "panir",
+"en": "cheese",
+"pic": "🧀",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "rice",
+"fa": "برنج",
+"tr": "berenj",
+"en": "rice",
+"pic": "🍚",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "pasta",
+"fa": "ماکارونی",
+"tr": "mâkâruni",
+"en": "pasta",
+"pic": "🍝",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "pizza",
+"fa": "پیتزا",
+"tr": "pitzâ",
+"en": "pizza",
+"pic": "🍕",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "cake",
+"fa": "کیک",
+"tr": "keyk",
+"en": "cake",
+"pic": "🍰",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "icecream",
+"fa": "بستنی",
+"tr": "bastani",
+"en": "ice cream",
+"pic": "🍦",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "chocolate",
+"fa": "شکلات",
+"tr": "shokolât",
+"en": "chocolate",
+"pic": "🍫",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "candy",
+"fa": "آبنبات",
+"tr": "âbnabât",
+"en": "candy",
+"pic": "🍬",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "cookie",
+"fa": "کلوچه",
+"tr": "koluche",
+"en": "cookie",
+"pic": "🍪",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "honey",
+"fa": "عسل",
+"tr": "asal",
+"en": "honey",
+"pic": "🍯",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "juice",
+"fa": "آبمیوه",
+"tr": "âbmive",
+"en": "juice",
+"pic": "🧃",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "tea",
+"fa": "چای",
+"tr": "châi",
+"en": "tea",
+"pic": "🍵",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "soup",
+"fa": "سوپ",
+"tr": "sup",
+"en": "soup",
+"pic": "🍲",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "sandwich",
+"fa": "ساندویچ",
+"tr": "sândevich",
+"en": "sandwich",
+"pic": "🥪",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "mushroom",
+"fa": "قارچ",
+"tr": "qârch",
+"en": "mushroom",
+"pic": "🍄",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "pepper",
+"fa": "فلفل",
+"tr": "felfel",
+"en": "pepper",
+"pic": "🫑",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "kiwi",
+"fa": "کیوی",
+"tr": "kivi",
+"en": "kiwi",
+"pic": "🥝",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "popcorn",
+"fa": "پاپ‌کورن",
+"tr": "pâpkorn",
+"en": "popcorn",
+"pic": "🍿",
+"cat": "food",
+"kind": "n"
+},
+{
+"id": "teeth",
+"fa": "دندون",
+"tr": "dandun",
+"en": "teeth",
+"pic": "🦷",
+"cat": "body",
+"kind": "n"
+},
+{
+"id": "tongue",
+"fa": "زبون",
+"tr": "zabun",
+"en": "tongue",
+"pic": "👅",
+"cat": "body",
+"kind": "n"
+},
+{
+"id": "hair",
+"fa": "مو",
+"tr": "mu",
+"en": "hair",
+"pic": "💇",
+"cat": "body",
+"kind": "n"
+},
+{
+"id": "finger",
+"fa": "انگشت",
+"tr": "angosht",
+"en": "finger",
+"pic": "☝️",
+"cat": "body",
+"kind": "n"
+},
+{
+"id": "lips",
+"fa": "لب",
+"tr": "lab",
+"en": "lips",
+"pic": "👄",
+"cat": "body",
+"kind": "n"
+},
+{
+"id": "face",
+"fa": "صورت",
+"tr": "surat",
+"en": "face",
+"pic": "🙂",
+"cat": "body",
+"kind": "n"
+},
+{
+"id": "nose",
+"fa": "دماغ",
+"tr": "damâgh",
+"en": "nose",
+"pic": "👃",
+"cat": "body",
+"kind": "n"
+},
+{
+"id": "arm",
+"fa": "بازو",
+"tr": "bâzu",
+"en": "arm",
+"pic": "💪",
+"cat": "body",
+"kind": "n"
+},
+{
+"id": "heart",
+"fa": "قلب",
+"tr": "ghalb",
+"en": "heart",
+"pic": "❤️",
+"cat": "body",
+"kind": "n"
+},
+{
+"id": "shoes",
+"fa": "کفش",
+"tr": "kafsh",
+"en": "shoes",
+"pic": "👟",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "socks",
+"fa": "جوراب",
+"tr": "jurâb",
+"en": "socks",
+"pic": "🧦",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "hat",
+"fa": "کلاه",
+"tr": "kolâh",
+"en": "hat",
+"pic": "🧢",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "pants",
+"fa": "شلوار",
+"tr": "shalvâr",
+"en": "pants",
+"pic": "👖",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "shirt",
+"fa": "پیرهن",
+"tr": "pirhan",
+"en": "shirt",
+"pic": "👕",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "dress",
+"fa": "لباس",
+"tr": "lebâs",
+"en": "dress",
+"pic": "👗",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "jacket",
+"fa": "کاپشن",
+"tr": "kâpshen",
+"en": "jacket",
+"pic": "🧥",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "glasses",
+"fa": "عینک",
+"tr": "eynak",
+"en": "glasses",
+"pic": "👓",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "gloves",
+"fa": "دستکش",
+"tr": "dastkesh",
+"en": "gloves",
+"pic": "🧤",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "scarf",
+"fa": "شال‌گردن",
+"tr": "shâlgardan",
+"en": "scarf",
+"pic": "🧣",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "backpack",
+"fa": "کیف",
+"tr": "kif",
+"en": "bag",
+"pic": "🎒",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "umbrella",
+"fa": "چتر",
+"tr": "chatr",
+"en": "umbrella",
+"pic": "☂️",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "slippers",
+"fa": "دمپایی",
+"tr": "dampâyi",
+"en": "slippers",
+"pic": "🩴",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "watch",
+"fa": "ساعت",
+"tr": "sâat",
+"en": "watch",
+"pic": "⌚",
+"cat": "clothes",
+"kind": "n"
+},
+{
+"id": "door",
+"fa": "در",
+"tr": "dar",
+"en": "door",
+"pic": "🚪",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "window",
+"fa": "پنجره",
+"tr": "panjere",
+"en": "window",
+"pic": "🪟",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "tv",
+"fa": "تلویزیون",
+"tr": "televizyon",
+"en": "TV",
+"pic": "📺",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "phone",
+"fa": "تلفن",
+"tr": "telefon",
+"en": "phone",
+"pic": "📱",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "key",
+"fa": "کلید",
+"tr": "kelid",
+"en": "key",
+"pic": "🔑",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "bath",
+"fa": "حموم",
+"tr": "hamum",
+"en": "bath",
+"pic": "🛁",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "soap",
+"fa": "صابون",
+"tr": "sâbun",
+"en": "soap",
+"pic": "🧼",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "toothbrush",
+"fa": "مسواک",
+"tr": "mesvâk",
+"en": "toothbrush",
+"pic": "🪥",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "comb",
+"fa": "شونه",
+"tr": "shune",
+"en": "comb",
+"pic": "🪮",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "spoon",
+"fa": "قاشق",
+"tr": "qâshogh",
+"en": "spoon",
+"pic": "🥄",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "fork",
+"fa": "چنگال",
+"tr": "changâl",
+"en": "fork",
+"pic": "🍴",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "plate",
+"fa": "بشقاب",
+"tr": "boshghâb",
+"en": "plate",
+"pic": "🍽️",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "cup",
+"fa": "لیوان",
+"tr": "livân",
+"en": "cup",
+"pic": "🥤",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "broom",
+"fa": "جارو",
+"tr": "jâru",
+"en": "broom",
+"pic": "🧹",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "candle",
+"fa": "شمع",
+"tr": "sham",
+"en": "candle",
+"pic": "🕯️",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "gift",
+"fa": "کادو",
+"tr": "kâdo",
+"en": "present",
+"pic": "🎁",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "balloon",
+"fa": "بادکنک",
+"tr": "bâdkonak",
+"en": "balloon",
+"pic": "🎈",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "doll",
+"fa": "عروسک",
+"tr": "arusak",
+"en": "doll",
+"pic": "🪆",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "scissors",
+"fa": "قیچی",
+"tr": "qeychi",
+"en": "scissors",
+"pic": "✂️",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "pencil",
+"fa": "مداد",
+"tr": "medâd",
+"en": "pencil",
+"pic": "✏️",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "paint",
+"fa": "رنگ",
+"tr": "rang",
+"en": "paint",
+"pic": "🎨",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "puzzle",
+"fa": "پازل",
+"tr": "pâzel",
+"en": "puzzle",
+"pic": "🧩",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "drum",
+"fa": "طبل",
+"tr": "tabl",
+"en": "drum",
+"pic": "🥁",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "guitar",
+"fa": "گیتار",
+"tr": "gitâr",
+"en": "guitar",
+"pic": "🎸",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "piano",
+"fa": "پیانو",
+"tr": "piyâno",
+"en": "piano",
+"pic": "🎹",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "blocks",
+"fa": "لگو",
+"tr": "lego",
+"en": "blocks",
+"pic": "🧱",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "kite",
+"fa": "بادبادک",
+"tr": "bâdbâdak",
+"en": "kite",
+"pic": "🪁",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "robot",
+"fa": "ربات",
+"tr": "robât",
+"en": "robot",
+"pic": "🤖",
+"cat": "home",
+"kind": "n"
+},
+{
+"id": "bus",
+"fa": "اتوبوس",
+"tr": "otobus",
+"en": "bus",
+"pic": "🚌",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "train",
+"fa": "قطار",
+"tr": "qatâr",
+"en": "train",
+"pic": "🚂",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "plane",
+"fa": "هواپیما",
+"tr": "havâpeymâ",
+"en": "airplane",
+"pic": "✈️",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "ship",
+"fa": "کشتی",
+"tr": "keshti",
+"en": "ship",
+"pic": "🚢",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "boat",
+"fa": "قایق",
+"tr": "qâyegh",
+"en": "boat",
+"pic": "⛵",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "bike",
+"fa": "دوچرخه",
+"tr": "docharkhe",
+"en": "bike",
+"pic": "🚲",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "motorbike",
+"fa": "موتور",
+"tr": "motor",
+"en": "motorbike",
+"pic": "🏍️",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "truck",
+"fa": "کامیون",
+"tr": "kâmyon",
+"en": "truck",
+"pic": "🚚",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "tractor",
+"fa": "تراکتور",
+"tr": "terâktor",
+"en": "tractor",
+"pic": "🚜",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "ambulance",
+"fa": "آمبولانس",
+"tr": "âmbulâns",
+"en": "ambulance",
+"pic": "🚑",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "firetruck",
+"fa": "ماشین آتش‌نشانی",
+"tr": "mâshin-e âtash-neshâni",
+"en": "fire truck",
+"pic": "🚒",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "policecar",
+"fa": "ماشین پلیس",
+"tr": "mâshin-e polis",
+"en": "police car",
+"pic": "🚓",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "helicopter",
+"fa": "هلیکوپتر",
+"tr": "helikopter",
+"en": "helicopter",
+"pic": "🚁",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "rocket",
+"fa": "موشک",
+"tr": "mushak",
+"en": "rocket",
+"pic": "🚀",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "taxi",
+"fa": "تاکسی",
+"tr": "tâksi",
+"en": "taxi",
+"pic": "🚕",
+"cat": "vehicles",
+"kind": "n"
+},
+{
+"id": "sun",
+"fa": "خورشید",
+"tr": "khorshid",
+"en": "sun",
+"pic": "☀️",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "moon",
+"fa": "ماه",
+"tr": "mâh",
+"en": "moon",
+"pic": "🌙",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "star",
+"fa": "ستاره",
+"tr": "setâre",
+"en": "star",
+"pic": "⭐",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "cloud",
+"fa": "ابر",
+"tr": "abr",
+"en": "cloud",
+"pic": "☁️",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "rain",
+"fa": "بارون",
+"tr": "bârun",
+"en": "rain",
+"pic": "🌧️",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "snow",
+"fa": "برف",
+"tr": "barf",
+"en": "snow",
+"pic": "❄️",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "rainbow",
+"fa": "رنگین‌کمون",
+"tr": "ranginkamun",
+"en": "rainbow",
+"pic": "🌈",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "tree",
+"fa": "درخت",
+"tr": "derakht",
+"en": "tree",
+"pic": "🌳",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "flower",
+"fa": "گل",
+"tr": "gol",
+"en": "flower",
+"pic": "🌸",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "leaf",
+"fa": "برگ",
+"tr": "barg",
+"en": "leaf",
+"pic": "🍃",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "fire",
+"fa": "آتیش",
+"tr": "âtish",
+"en": "fire",
+"pic": "🔥",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "sea",
+"fa": "دریا",
+"tr": "daryâ",
+"en": "sea",
+"pic": "🌊",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "mountain",
+"fa": "کوه",
+"tr": "kuh",
+"en": "mountain",
+"pic": "⛰️",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "stone",
+"fa": "سنگ",
+"tr": "sang",
+"en": "rock",
+"pic": "🪨",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "shell",
+"fa": "صدف",
+"tr": "sadaf",
+"en": "shell",
+"pic": "🐚",
+"cat": "nature",
+"kind": "n"
+},
+{
+"id": "red",
+"fa": "قرمز",
+"tr": "ghermez",
+"en": "red",
+"pic": "🔴",
+"cat": "colours",
+"kind": "n"
+},
+{
+"id": "blue",
+"fa": "آبی",
+"tr": "âbi",
+"en": "blue",
+"pic": "🔵",
+"cat": "colours",
+"kind": "n"
+},
+{
+"id": "green",
+"fa": "سبز",
+"tr": "sabz",
+"en": "green",
+"pic": "🟢",
+"cat": "colours",
+"kind": "n"
+},
+{
+"id": "yellow",
+"fa": "زرد",
+"tr": "zard",
+"en": "yellow",
+"pic": "🟡",
+"cat": "colours",
+"kind": "n"
+},
+{
+"id": "orangec",
+"fa": "نارنجی",
+"tr": "nârenji",
+"en": "orange (colour)",
+"pic": "🟠",
+"cat": "colours",
+"kind": "n"
+},
+{
+"id": "purple",
+"fa": "بنفش",
+"tr": "banafsh",
+"en": "purple",
+"pic": "🟣",
+"cat": "colours",
+"kind": "n"
+},
+{
+"id": "black",
+"fa": "سیاه",
+"tr": "siyâh",
+"en": "black",
+"pic": "⚫",
+"cat": "colours",
+"kind": "n"
+},
+{
+"id": "white",
+"fa": "سفید",
+"tr": "sefid",
+"en": "white",
+"pic": "⚪",
+"cat": "colours",
+"kind": "n"
+},
+{
+"id": "pink",
+"fa": "صورتی",
+"tr": "surati",
+"en": "pink",
+"pic": "🩷",
+"cat": "colours",
+"kind": "n"
+},
+{
+"id": "brown",
+"fa": "قهوه‌ای",
+"tr": "ghahveyi",
+"en": "brown",
+"pic": "🟤",
+"cat": "colours",
+"kind": "n"
+},
+{
+"id": "one",
+"fa": "یک",
+"tr": "yek",
+"en": "one",
+"pic": "1️⃣",
+"cat": "numbers",
+"kind": "n"
+},
+{
+"id": "two",
+"fa": "دو",
+"tr": "do",
+"en": "two",
+"pic": "2️⃣",
+"cat": "numbers",
+"kind": "n"
+},
+{
+"id": "three",
+"fa": "سه",
+"tr": "se",
+"en": "three",
+"pic": "3️⃣",
+"cat": "numbers",
+"kind": "n"
+},
+{
+"id": "four",
+"fa": "چهار",
+"tr": "chahâr",
+"en": "four",
+"pic": "4️⃣",
+"cat": "numbers",
+"kind": "n"
+},
+{
+"id": "five",
+"fa": "پنج",
+"tr": "panj",
+"en": "five",
+"pic": "5️⃣",
+"cat": "numbers",
+"kind": "n"
+},
+{
+"id": "six",
+"fa": "شیش",
+"tr": "shish",
+"en": "six",
+"pic": "6️⃣",
+"cat": "numbers",
+"kind": "n"
+},
+{
+"id": "seven",
+"fa": "هفت",
+"tr": "haft",
+"en": "seven",
+"pic": "7️⃣",
+"cat": "numbers",
+"kind": "n"
+},
+{
+"id": "eight",
+"fa": "هشت",
+"tr": "hasht",
+"en": "eight",
+"pic": "8️⃣",
+"cat": "numbers",
+"kind": "n"
+},
+{
+"id": "nine",
+"fa": "نه",
+"tr": "noh",
+"en": "nine",
+"pic": "9️⃣",
+"cat": "numbers",
+"kind": "n"
+},
+{
+"id": "ten",
+"fa": "ده",
+"tr": "dah",
+"en": "ten",
+"pic": "🔟",
+"cat": "numbers",
+"kind": "n"
+},
+{
+"id": "circle",
+"fa": "دایره",
+"tr": "dâyere",
+"en": "circle",
+"pic": "⭕",
+"cat": "shapes",
+"kind": "n"
+},
+{
+"id": "square",
+"fa": "مربع",
+"tr": "morabba",
+"en": "square",
+"pic": "🟥",
+"cat": "shapes",
+"kind": "n"
+},
+{
+"id": "triangle",
+"fa": "مثلث",
+"tr": "mosallas",
+"en": "triangle",
+"pic": "🔺",
+"cat": "shapes",
+"kind": "n"
+},
+{
+"id": "mommy",
+"fa": "مامان",
+"tr": "mâmân",
+"en": "mommy",
+"pic": "👩",
+"cat": "people",
+"kind": "n"
+},
+{
+"id": "daddy",
+"fa": "بابا",
+"tr": "bâbâ",
+"en": "daddy",
+"pic": "👨",
+"cat": "people",
+"kind": "n"
+},
+{
+"id": "grandma",
+"fa": "مامان‌بزرگ",
+"tr": "mâmân-bozorg",
+"en": "grandma",
+"pic": "👵",
+"cat": "people",
+"kind": "n"
+},
+{
+"id": "grandpa",
+"fa": "بابابزرگ",
+"tr": "bâbâ-bozorg",
+"en": "grandpa",
+"pic": "👴",
+"cat": "people",
+"kind": "n"
+},
+{
+"id": "brother",
+"fa": "داداش",
+"tr": "dâdâsh",
+"en": "brother",
+"pic": "👦",
+"cat": "people",
+"kind": "n"
+},
+{
+"id": "sister",
+"fa": "آبجی",
+"tr": "âbji",
+"en": "sister",
+"pic": "👧",
+"cat": "people",
+"kind": "n"
+},
+{
+"id": "baby",
+"fa": "نی‌نی",
+"tr": "ni-ni",
+"en": "baby",
+"pic": "👶",
+"cat": "people",
+"kind": "n"
+},
+{
+"id": "doctor",
+"fa": "دکتر",
+"tr": "doktor",
+"en": "doctor",
+"pic": "🧑‍⚕️",
+"cat": "people",
+"kind": "n"
+},
+{
+"id": "police",
+"fa": "پلیس",
+"tr": "polis",
+"en": "police officer",
+"pic": "👮",
+"cat": "people",
+"kind": "n"
+},
+{
+"id": "friend",
+"fa": "دوست",
+"tr": "dust",
+"en": "friend",
+"pic": "🧒",
+"cat": "people",
+"kind": "n"
+},
+{
+"id": "happy",
+"fa": "خوشحال",
+"tr": "khoshhâl",
+"en": "happy",
+"pic": "😀",
+"cat": "feelings",
+"kind": "a"
+},
+{
+"id": "sad",
+"fa": "ناراحت",
+"tr": "nârâhat",
+"en": "sad",
+"pic": "😢",
+"cat": "feelings",
+"kind": "a"
+},
+{
+"id": "angry",
+"fa": "عصبانی",
+"tr": "asabâni",
+"en": "angry",
+"pic": "😠",
+"cat": "feelings",
+"kind": "a"
+},
+{
+"id": "scared",
+"fa": "ترسیده",
+"tr": "tarside",
+"en": "scared",
+"pic": "😨",
+"cat": "feelings",
+"kind": "a"
+},
+{
+"id": "sleepy",
+"fa": "خوابالو",
+"tr": "khâbâlu",
+"en": "sleepy",
+"pic": "😴",
+"cat": "feelings",
+"kind": "a"
+},
+{
+"id": "tired",
+"fa": "خسته",
+"tr": "khaste",
+"en": "tired",
+"pic": "😩",
+"cat": "feelings",
+"kind": "a"
+},
+{
+"id": "surprised",
+"fa": "تعجب",
+"tr": "taajjob",
+"en": "surprised",
+"pic": "😮",
+"cat": "feelings",
+"kind": "a"
+},
+{
+"id": "hot",
+"fa": "گرم",
+"tr": "garm",
+"en": "hot",
+"pic": "🥵",
+"cat": "feelings",
+"kind": "a"
+},
+{
+"id": "cold",
+"fa": "سرد",
+"tr": "sard",
+"en": "cold",
+"pic": "🥶",
+"cat": "feelings",
+"kind": "a"
+},
+{
+"id": "run",
+"fa": "بدو",
+"tr": "bedo",
+"en": "run",
+"pic": "🏃",
+"cat": "actions",
+"kind": "a"
+},
+{
+"id": "swim",
+"fa": "شنا",
+"tr": "shenâ",
+"en": "swim",
+"pic": "🏊",
+"cat": "actions",
+"kind": "a"
+},
+{
+"id": "sing",
+"fa": "بخون",
+"tr": "bekhun",
+"en": "sing",
+"pic": "🎤",
+"cat": "actions",
+"kind": "a"
+},
+{
+"id": "hug",
+"fa": "بغل",
+"tr": "baghal",
+"en": "hug",
+"pic": "🤗",
+"cat": "actions",
+"kind": "a"
+},
+{
+"id": "kiss",
+"fa": "بوس",
+"tr": "bus",
+"en": "kiss",
+"pic": "😘",
+"cat": "actions",
+"kind": "a"
+},
+{
+"id": "wave",
+"fa": "بای بای",
+"tr": "bâybây",
+"en": "bye-bye",
+"pic": "👋",
+"cat": "actions",
+"kind": "a"
+},
+{
+"id": "laugh",
+"fa": "بخند",
+"tr": "bekhand",
+"en": "laugh",
+"pic": "😂",
+"cat": "actions",
+"kind": "a"
+},
+{
+"id": "cry",
+"fa": "گریه",
+"tr": "gerye",
+"en": "cry",
+"pic": "😭",
+"cat": "actions",
+"kind": "a"
+},
+{
+"id": "wash",
+"fa": "بشور",
+"tr": "beshur",
+"en": "wash",
+"pic": "🧽",
+"cat": "actions",
+"kind": "a"
+},
+{
+"id": "fast",
+"fa": "تند",
+"tr": "tond",
+"en": "fast",
+"pic": "🐆",
+"cat": "actions",
+"kind": "a"
+},
+{
+"id": "slow",
+"fa": "آروم",
+"tr": "ârum",
+"en": "slow",
+"pic": "🐌",
+"cat": "actions",
+"kind": "a"
+}
+]

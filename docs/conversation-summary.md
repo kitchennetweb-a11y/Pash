@@ -1,0 +1,13 @@
+# Pash: summary of the discussion so far (Oct 6–8, 2026)
+
+1. **Starting point.** A handoff described a 3D Persian-cat Farsi pet ("Pash"), built with ChatGPT art → Meshy/Tripo → Blender → Claude Code → SwiftUI/RealityKit. The advice was to validate cheaply first, with a web prototype.
+2. **Character.** We looked at Fab assets (a free Robotz pack and a cartoon mouse) and chose an original robot built in code, because my son loves robots and there are no license questions.
+3. **v1 web prototype.** A 3D robot with pokes (dizzy, toot, giggle, zap, boing), dance, ball, feed, sleep, and Farsi speech bubbles. After fixing a few bugs it worked. Then came more moves (jump/flip, peekaboo, bubbles, 4 dance styles, ear-propeller flight, rocket toot, idle routines) and a "come home" reset.
+4. **Voice.** I made the first ElevenLabs clips by hand (21 lines, robot-effect voice). They were embedded and lip-synced to the screen mouth.
+5. **Hosting.** The Claude link is private by default and blocks the mic. The page moved to GitHub Pages (`kitchennetweb-a11y/Pash`).
+6. **My son loved it** and wanted to talk to Pash, so we added Talking-Tom talk-back, which became hands-free voice detection.
+7. **Learning games:** Find (toys and body parts), Feed (choose a food), Say it (any attempt is praised), Moves (copy the commands), plus tap-to-name furniture and a parent corner.
+8. **Robo audio set.** 107 clips generated elsewhere with a different, higher-pitched voice and no effect. We tried adding a robot effect, then a light one, and finally removed it ("better without"). Loudness was matched. Endings were cut off; that's now fixed by keeping natural endings plus tail padding, but 11 source clips are truncated.
+9. **Realism.** The room was upgraded: walls, window, curtains, oak floor, woven rug, sunlight, reflections, lamp-lit night.
+10. **Big picture.** Claude can build gameplay, responsiveness and environments well. Character art and animation charm are the gap; AI 3D tools or bought assets help. A separate prompt was written for brainstorming the commercial App Store / Google Play product (market, monetisation, Kids-category compliance, tech path, roadmap). The recommended next steps: test with 5–10 other Farsi families, upgrade the character, then package.
+11. **Latest requests (Oct 8):** an icon-only round button UI on the screen edges, mobile friendly; three rooms (home, play, bed) with bottom navigation; a dedicated Say it screen; 200 new words; and re-recording all clips clean with one voice via the ElevenLabs API. The API is blocked from the cloud workspace, so generation moves to Claude Code on the PC, and so does this whole project.

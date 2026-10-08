@@ -1,0 +1,893 @@
+﻿file_name,farsi_text,english,group
+hi.mp3,سلام!,hi!,existing
+head.mp3,سرم گیج رفت!,I'm dizzy!,existing
+belly.mp3,ببخشید!,excuse me!,existing
+face.mp3,قلقلکم نده!,no tickling!,existing
+antenna.mp3,جیز!,zap!,existing
+dance.mp3,بیا برقصیم!,let's dance!,existing
+ball.mp3,توپ!,ball!,existing
+feed.mp3,به به! خوشمزه!,yum!,existing
+sleep.mp3,شب بخیر,good night,existing
+wake.mp3,بیدار شدم!,I'm awake!,existing
+arm.mp3,دست!,hand!,existing
+listen.mp3,بگو!,say something!,existing
+rocket.mp3,وای! موشک!,whoa! rocket!,existing
+fly.mp3,پرواز!,fly!,existing
+feet.mp3,پام قلقلکی شد!,my feet tickle!,existing
+jump.mp3,بپر!,jump!,existing
+peek.mp3,دالی!,peekaboo!,existing
+bubbles.mp3,حباب!,bubbles!,existing
+yay.mp3,آفرین!,well done!,existing
+bored.mp3,حوصلم سر رفت,I'm bored,existing
+x_akh_saram.mp3,آخ سرم!,"ow, my head!",existing
+x_oops.mp3,اوپس!,oops!,existing
+x_in_chi_bood.mp3,این چی بود؟,what was that?,existing
+x_ghelghelakam_miad.mp3,قلقلکم میاد!,that tickles!,existing
+x_hahaha.mp3,هاهاها!,hâhâhâ!,existing
+x_dooset_daram.mp3,دوستت دارم!,I love you!,existing
+x_pam_ro_zadi.mp3,پامو زدی!,you got my foot!,existing
+x_vay.mp3,وای!,whoa!,existing
+x_hapche.mp3,هاپچه!,achoo!,existing
+x_sobh_bekheir.mp3,صبح بخیر!,good morning!,existing
+x_salam_doostam.mp3,سلام دوستم!,"hi, my friend!",existing
+x_afarin_kheili_khoob.mp3,آفرین! خیلی خوب!,well done! very good!,existing
+x_bache_khoob.mp3,بچه خوب!,good kid!,existing
+x_gorosnam.mp3,گرسنمه!,I'm hungry!,existing
+x_ser_shodam.mp3,سیر شدم!,I'm full!,existing
+x_khabam_miad.mp3,خوابم میاد...,I'm sleepy...,existing
+x_oftadam.mp3,افتادم!,I fell!,existing
+x_dobare.mp3,دوباره!,again!,existing
+x_sib_khoshmaze.mp3,سیب خوشمزه‌ست!,apples are yummy!,existing
+x_moz_dooset_daram.mp3,موز دوست دارم!,I love bananas!,existing
+x_shir_khordam.mp3,شیر خوردم!,I drank milk!,existing
+x_sar_gij.mp3,سرم گیج رفت!,I'm dizzy!,existing
+x_akh.mp3,آخ!,ow!,existing
+x_oh.mp3,اوه!,oh!,existing
+x_boo_mide.mp3,بو میده!,it smells!,existing
+x_ghelghelaki.mp3,قلقلکی!,ticklish!,existing
+x_bidar_shodam.mp3,بیدار شدم!,I'm awake!,existing
+x_pashodam.mp3,پا شدم!,I got up!,existing
+x_salam.mp3,سلام!,hi!,existing
+x_mamnoon.mp3,ممنون!,thank you!,existing
+x_shab_bekheir.mp3,شب بخیر!,good night!,existing
+x_begir.mp3,بگیر!,catch!,existing
+x_biya_beraghsim.mp3,بیا برقصیم!,let's dance!,existing
+x_beraghs.mp3,برقص!,dance!,existing
+x_dobare_dobare.mp3,دوباره! دوباره!,again! again!,existing
+x_ab_khonak.mp3,آب خنک!,cool water!,existing
+x_cheragh_roshan.mp3,چراغ روشن!,light on!,existing
+x_cheragh_khamoosh.mp3,چراغ خاموش!,light off!,existing
+x_in_takhte_mane.mp3,این تخت منه!,this is my bed!,existing
+x_bekhab.mp3,بخواب!,sleep!,existing
+x_bepar.mp3,بپر!,jump!,existing
+x_bepar_bala.mp3,بپر بالا!,jump up high!,existing
+x_becharkh.mp3,بچرخ!,spin!,existing
+x_dast_bezan.mp3,دست بزن!,clap!,existing
+x_beshin.mp3,بشین!,sit down!,existing
+x_bala.mp3,بالا!,up!,existing
+x_paein.mp3,پایین!,down!,existing
+x_miram_bala.mp3,میرم بالا!,going up!,existing
+x_miam_paein.mp3,میام پایین!,coming down!,existing
+x_yavash.mp3,یواش!,gently!,existing
+x_yavash_tar.mp3,یواش‌تر!,more gently!,existing
+x_bozorg.mp3,بزرگ!,big!,existing
+x_koochak.mp3,کوچیک!,small!,existing
+x_man_bozorgam.mp3,من بزرگم!,I'm big!,existing
+w_lamp.mp3,چراغ!,lamp!,existing
+w_book.mp3,کتاب!,book!,existing
+w_bed.mp3,تخت!,bed!,existing
+w_table.mp3,میز!,table!,existing
+w_chair.mp3,صندلی!,chair!,existing
+w_ball.mp3,توپ!,ball!,existing
+where_ball.mp3,توپ کجاست؟,where is the ball?,existing
+this_ball.mp3,این توپه!,that's the ball!,existing
+say_ball.mp3,بگو توپ!,say ball!,existing
+w_apple.mp3,سیب!,apple!,existing
+where_apple.mp3,سیب کجاست؟,where is the apple?,existing
+this_apple.mp3,این سیبه!,that's the apple!,existing
+say_apple.mp3,بگو سیب!,say apple!,existing
+want_apple.mp3,سیب می‌خوام!,I want apple!,existing
+w_banana.mp3,موز!,banana!,existing
+where_banana.mp3,موز کجاست؟,where is the banana?,existing
+this_banana.mp3,این موزه!,that's the banana!,existing
+say_banana.mp3,بگو موز!,say banana!,existing
+want_banana.mp3,موز می‌خوام!,I want banana!,existing
+w_teddy.mp3,خرس!,teddy bear!,existing
+where_teddy.mp3,خرسه کجاست؟,where is the teddy bear?,existing
+this_teddy.mp3,این خرسه!,that's the teddy bear!,existing
+say_teddy.mp3,بگو خرس!,say teddy bear!,existing
+w_car.mp3,ماشین!,car!,existing
+where_car.mp3,ماشین کجاست؟,where is the car?,existing
+this_car.mp3,این ماشینه!,that's the car!,existing
+say_car.mp3,بگو ماشین!,say car!,existing
+w_bread.mp3,نون!,bread!,existing
+this_bread.mp3,این نونه!,that's the bread!,existing
+want_bread.mp3,نون می‌خوام!,I want bread!,existing
+w_milk.mp3,شیر!,milk!,existing
+this_milk.mp3,این شیره!,that's the milk!,existing
+want_milk.mp3,شیر می‌خوام!,I want milk!,existing
+w_water.mp3,آب!,water!,existing
+this_water.mp3,این آبه!,that's the water!,existing
+want_water.mp3,آب می‌خوام!,I want water!,existing
+w_head.mp3,سر!,head!,existing
+where_head.mp3,سرم کجاست؟,where is my head?,existing
+this_head.mp3,این سرمه!,that's my head!,existing
+w_hand.mp3,دست!,hand!,existing
+where_hand.mp3,دستم کجاست؟,where is my hand?,existing
+this_hand.mp3,این دستمه!,that's my hand!,existing
+w_belly.mp3,شکم!,tummy!,existing
+where_belly.mp3,شکمم کجاست؟,where is my tummy?,existing
+this_belly.mp3,این شکممه!,that's my tummy!,existing
+w_feet.mp3,پا!,foot!,existing
+where_feet.mp3,پام کجاست؟,where is my foot?,existing
+this_feet.mp3,این پامه!,that's my foot!,existing
+w_eye.mp3,چشم!,eyes!,existing
+where_eye.mp3,چشمم کجاست؟,where is my eyes?,existing
+this_eye.mp3,این چشممه!,that's my eyes!,existing
+w_ear.mp3,گوش!,ear!,existing
+where_ear.mp3,گوشم کجاست؟,where is my ear?,existing
+this_ear.mp3,این گوشمه!,that's my ear!,existing
+w_mouth.mp3,دهن!,mouth!,existing
+where_mouth.mp3,دهنم کجاست؟,where is my mouth?,existing
+this_mouth.mp3,این دهنمه!,that's my mouth!,existing
+play.mp3,بیا بازی کنیم!,let's play!,existing
+w_cat.mp3,گربه!,cat,animals
+say_cat.mp3,بگو گربه!,say cat,animals
+where_cat.mp3,گربه کجاست؟,where is the cat?,animals
+this_cat.mp3,این گربه‌ست!,that's the cat!,animals
+w_dog.mp3,سگ!,dog,animals
+say_dog.mp3,بگو سگ!,say dog,animals
+where_dog.mp3,سگ کجاست؟,where is the dog?,animals
+this_dog.mp3,این سگه!,that's the dog!,animals
+w_horse.mp3,اسب!,horse,animals
+say_horse.mp3,بگو اسب!,say horse,animals
+where_horse.mp3,اسب کجاست؟,where is the horse?,animals
+this_horse.mp3,این اسبه!,that's the horse!,animals
+w_cow.mp3,گاو!,cow,animals
+say_cow.mp3,بگو گاو!,say cow,animals
+where_cow.mp3,گاو کجاست؟,where is the cow?,animals
+this_cow.mp3,این گاوست!,that's the cow!,animals
+w_sheep.mp3,گوسفند!,sheep,animals
+say_sheep.mp3,بگو گوسفند!,say sheep,animals
+where_sheep.mp3,گوسفند کجاست؟,where is the sheep?,animals
+this_sheep.mp3,این گوسفنده!,that's the sheep!,animals
+w_goat.mp3,بز!,goat,animals
+say_goat.mp3,بگو بز!,say goat,animals
+where_goat.mp3,بز کجاست؟,where is the goat?,animals
+this_goat.mp3,این بزه!,that's the goat!,animals
+w_hen.mp3,مرغ!,chicken,animals
+say_hen.mp3,بگو مرغ!,say chicken,animals
+where_hen.mp3,مرغ کجاست؟,where is the chicken?,animals
+this_hen.mp3,این مرغه!,that's the chicken!,animals
+w_chick.mp3,جوجه!,chick,animals
+say_chick.mp3,بگو جوجه!,say chick,animals
+where_chick.mp3,جوجه کجاست؟,where is the chick?,animals
+this_chick.mp3,این جوجه‌ست!,that's the chick!,animals
+w_duck.mp3,اردک!,duck,animals
+say_duck.mp3,بگو اردک!,say duck,animals
+where_duck.mp3,اردک کجاست؟,where is the duck?,animals
+this_duck.mp3,این اردکه!,that's the duck!,animals
+w_rabbit.mp3,خرگوش!,rabbit,animals
+say_rabbit.mp3,بگو خرگوش!,say rabbit,animals
+where_rabbit.mp3,خرگوش کجاست؟,where is the rabbit?,animals
+this_rabbit.mp3,این خرگوشه!,that's the rabbit!,animals
+w_mouse.mp3,موش!,mouse,animals
+say_mouse.mp3,بگو موش!,say mouse,animals
+where_mouse.mp3,موش کجاست؟,where is the mouse?,animals
+this_mouse.mp3,این موشه!,that's the mouse!,animals
+w_fish.mp3,ماهی!,fish,animals
+say_fish.mp3,بگو ماهی!,say fish,animals
+where_fish.mp3,ماهی کجاست؟,where is the fish?,animals
+this_fish.mp3,این ماهیه!,that's the fish!,animals
+w_bird.mp3,پرنده!,bird,animals
+say_bird.mp3,بگو پرنده!,say bird,animals
+where_bird.mp3,پرنده کجاست؟,where is the bird?,animals
+this_bird.mp3,این پرنده‌ست!,that's the bird!,animals
+w_tiger.mp3,ببر!,tiger,animals
+say_tiger.mp3,بگو ببر!,say tiger,animals
+where_tiger.mp3,ببر کجاست؟,where is the tiger?,animals
+this_tiger.mp3,این ببره!,that's the tiger!,animals
+w_elephant.mp3,فیل!,elephant,animals
+say_elephant.mp3,بگو فیل!,say elephant,animals
+where_elephant.mp3,فیل کجاست؟,where is the elephant?,animals
+this_elephant.mp3,این فیله!,that's the elephant!,animals
+w_monkey.mp3,میمون!,monkey,animals
+say_monkey.mp3,بگو میمون!,say monkey,animals
+where_monkey.mp3,میمون کجاست؟,where is the monkey?,animals
+this_monkey.mp3,این میمونه!,that's the monkey!,animals
+w_giraffe.mp3,زرافه!,giraffe,animals
+say_giraffe.mp3,بگو زرافه!,say giraffe,animals
+where_giraffe.mp3,زرافه کجاست؟,where is the giraffe?,animals
+this_giraffe.mp3,این زرافه‌ست!,that's the giraffe!,animals
+w_zebra.mp3,گورخر!,zebra,animals
+say_zebra.mp3,بگو گورخر!,say zebra,animals
+where_zebra.mp3,گورخر کجاست؟,where is the zebra?,animals
+this_zebra.mp3,این گورخره!,that's the zebra!,animals
+w_penguin.mp3,پنگوئن!,penguin,animals
+say_penguin.mp3,بگو پنگوئن!,say penguin,animals
+where_penguin.mp3,پنگوئن کجاست؟,where is the penguin?,animals
+this_penguin.mp3,این پنگوئنه!,that's the penguin!,animals
+w_turtle.mp3,لاک‌پشت!,turtle,animals
+say_turtle.mp3,بگو لاک‌پشت!,say turtle,animals
+where_turtle.mp3,لاک‌پشت کجاست؟,where is the turtle?,animals
+this_turtle.mp3,این لاک‌پشته!,that's the turtle!,animals
+w_frog.mp3,قورباغه!,frog,animals
+say_frog.mp3,بگو قورباغه!,say frog,animals
+where_frog.mp3,قورباغه کجاست؟,where is the frog?,animals
+this_frog.mp3,این قورباغه‌ست!,that's the frog!,animals
+w_snake.mp3,مار!,snake,animals
+say_snake.mp3,بگو مار!,say snake,animals
+where_snake.mp3,مار کجاست؟,where is the snake?,animals
+this_snake.mp3,این ماره!,that's the snake!,animals
+w_butterfly.mp3,پروانه!,butterfly,animals
+say_butterfly.mp3,بگو پروانه!,say butterfly,animals
+where_butterfly.mp3,پروانه کجاست؟,where is the butterfly?,animals
+this_butterfly.mp3,این پروانه‌ست!,that's the butterfly!,animals
+w_bee.mp3,زنبور!,bee,animals
+say_bee.mp3,بگو زنبور!,say bee,animals
+where_bee.mp3,زنبور کجاست؟,where is the bee?,animals
+this_bee.mp3,این زنبوره!,that's the bee!,animals
+w_ant.mp3,مورچه!,ant,animals
+say_ant.mp3,بگو مورچه!,say ant,animals
+where_ant.mp3,مورچه کجاست؟,where is the ant?,animals
+this_ant.mp3,این مورچه‌ست!,that's the ant!,animals
+w_ladybug.mp3,کفشدوزک!,ladybug,animals
+say_ladybug.mp3,بگو کفشدوزک!,say ladybug,animals
+where_ladybug.mp3,کفشدوزک کجاست؟,where is the ladybug?,animals
+this_ladybug.mp3,این کفشدوزکه!,that's the ladybug!,animals
+w_octopus.mp3,هشت‌پا!,octopus,animals
+say_octopus.mp3,بگو هشت‌پا!,say octopus,animals
+where_octopus.mp3,هشت‌پا کجاست؟,where is the octopus?,animals
+this_octopus.mp3,این هشت‌پاست!,that's the octopus!,animals
+w_whale.mp3,نهنگ!,whale,animals
+say_whale.mp3,بگو نهنگ!,say whale,animals
+where_whale.mp3,نهنگ کجاست؟,where is the whale?,animals
+this_whale.mp3,این نهنگه!,that's the whale!,animals
+w_dolphin.mp3,دلفین!,dolphin,animals
+say_dolphin.mp3,بگو دلفین!,say dolphin,animals
+where_dolphin.mp3,دلفین کجاست؟,where is the dolphin?,animals
+this_dolphin.mp3,این دلفینه!,that's the dolphin!,animals
+w_camel.mp3,شتر!,camel,animals
+say_camel.mp3,بگو شتر!,say camel,animals
+where_camel.mp3,شتر کجاست؟,where is the camel?,animals
+this_camel.mp3,این شتره!,that's the camel!,animals
+w_owl.mp3,جغد!,owl,animals
+say_owl.mp3,بگو جغد!,say owl,animals
+where_owl.mp3,جغد کجاست؟,where is the owl?,animals
+this_owl.mp3,این جغده!,that's the owl!,animals
+w_squirrel.mp3,سنجاب!,squirrel,animals
+say_squirrel.mp3,بگو سنجاب!,say squirrel,animals
+where_squirrel.mp3,سنجاب کجاست؟,where is the squirrel?,animals
+this_squirrel.mp3,این سنجابه!,that's the squirrel!,animals
+w_dino.mp3,دایناسور!,dinosaur,animals
+say_dino.mp3,بگو دایناسور!,say dinosaur,animals
+where_dino.mp3,دایناسور کجاست؟,where is the dinosaur?,animals
+this_dino.mp3,این دایناسوره!,that's the dinosaur!,animals
+w_orange.mp3,پرتقال!,orange,food
+say_orange.mp3,بگو پرتقال!,say orange,food
+where_orange.mp3,پرتقال کجاست؟,where is the orange?,food
+this_orange.mp3,این پرتقاله!,that's the orange!,food
+w_grapes.mp3,انگور!,grapes,food
+say_grapes.mp3,بگو انگور!,say grapes,food
+where_grapes.mp3,انگور کجاست؟,where is the grapes?,food
+this_grapes.mp3,این انگوره!,that's the grapes!,food
+w_watermelon.mp3,هندونه!,watermelon,food
+say_watermelon.mp3,بگو هندونه!,say watermelon,food
+where_watermelon.mp3,هندونه کجاست؟,where is the watermelon?,food
+this_watermelon.mp3,این هندونه‌ست!,that's the watermelon!,food
+w_strawberry.mp3,توت‌فرنگی!,strawberry,food
+say_strawberry.mp3,بگو توت‌فرنگی!,say strawberry,food
+where_strawberry.mp3,توت‌فرنگی کجاست؟,where is the strawberry?,food
+this_strawberry.mp3,این توت‌فرنگیه!,that's the strawberry!,food
+w_cherry.mp3,گیلاس!,cherries,food
+say_cherry.mp3,بگو گیلاس!,say cherries,food
+where_cherry.mp3,گیلاس کجاست؟,where is the cherries?,food
+this_cherry.mp3,این گیلاسه!,that's the cherries!,food
+w_peach.mp3,هلو!,peach,food
+say_peach.mp3,بگو هلو!,say peach,food
+where_peach.mp3,هلو کجاست؟,where is the peach?,food
+this_peach.mp3,این هلوست!,that's the peach!,food
+w_pear.mp3,گلابی!,pear,food
+say_pear.mp3,بگو گلابی!,say pear,food
+where_pear.mp3,گلابی کجاست؟,where is the pear?,food
+this_pear.mp3,این گلابیه!,that's the pear!,food
+w_pineapple.mp3,آناناس!,pineapple,food
+say_pineapple.mp3,بگو آناناس!,say pineapple,food
+where_pineapple.mp3,آناناس کجاست؟,where is the pineapple?,food
+this_pineapple.mp3,این آناناسه!,that's the pineapple!,food
+w_lemon.mp3,لیمو!,lemon,food
+say_lemon.mp3,بگو لیمو!,say lemon,food
+where_lemon.mp3,لیمو کجاست؟,where is the lemon?,food
+this_lemon.mp3,این لیموست!,that's the lemon!,food
+w_carrot.mp3,هویج!,carrot,food
+say_carrot.mp3,بگو هویج!,say carrot,food
+where_carrot.mp3,هویج کجاست؟,where is the carrot?,food
+this_carrot.mp3,این هویجه!,that's the carrot!,food
+w_tomato.mp3,گوجه!,tomato,food
+say_tomato.mp3,بگو گوجه!,say tomato,food
+where_tomato.mp3,گوجه کجاست؟,where is the tomato?,food
+this_tomato.mp3,این گوجه‌ست!,that's the tomato!,food
+w_cucumber.mp3,خیار!,cucumber,food
+say_cucumber.mp3,بگو خیار!,say cucumber,food
+where_cucumber.mp3,خیار کجاست؟,where is the cucumber?,food
+this_cucumber.mp3,این خیاره!,that's the cucumber!,food
+w_potato.mp3,سیب‌زمینی!,potato,food
+say_potato.mp3,بگو سیب‌زمینی!,say potato,food
+where_potato.mp3,سیب‌زمینی کجاست؟,where is the potato?,food
+this_potato.mp3,این سیب‌زمینیه!,that's the potato!,food
+w_corn.mp3,ذرت!,corn,food
+say_corn.mp3,بگو ذرت!,say corn,food
+where_corn.mp3,ذرت کجاست؟,where is the corn?,food
+this_corn.mp3,این ذرته!,that's the corn!,food
+w_egg.mp3,تخم‌مرغ!,egg,food
+say_egg.mp3,بگو تخم‌مرغ!,say egg,food
+where_egg.mp3,تخم‌مرغ کجاست؟,where is the egg?,food
+this_egg.mp3,این تخم‌مرغه!,that's the egg!,food
+w_cheese.mp3,پنیر!,cheese,food
+say_cheese.mp3,بگو پنیر!,say cheese,food
+where_cheese.mp3,پنیر کجاست؟,where is the cheese?,food
+this_cheese.mp3,این پنیره!,that's the cheese!,food
+w_rice.mp3,برنج!,rice,food
+say_rice.mp3,بگو برنج!,say rice,food
+where_rice.mp3,برنج کجاست؟,where is the rice?,food
+this_rice.mp3,این برنجه!,that's the rice!,food
+w_pasta.mp3,ماکارونی!,pasta,food
+say_pasta.mp3,بگو ماکارونی!,say pasta,food
+where_pasta.mp3,ماکارونی کجاست؟,where is the pasta?,food
+this_pasta.mp3,این ماکارونیه!,that's the pasta!,food
+w_pizza.mp3,پیتزا!,pizza,food
+say_pizza.mp3,بگو پیتزا!,say pizza,food
+where_pizza.mp3,پیتزا کجاست؟,where is the pizza?,food
+this_pizza.mp3,این پیتزاست!,that's the pizza!,food
+w_cake.mp3,کیک!,cake,food
+say_cake.mp3,بگو کیک!,say cake,food
+where_cake.mp3,کیک کجاست؟,where is the cake?,food
+this_cake.mp3,این کیکه!,that's the cake!,food
+w_icecream.mp3,بستنی!,ice cream,food
+say_icecream.mp3,بگو بستنی!,say ice cream,food
+where_icecream.mp3,بستنی کجاست؟,where is the ice cream?,food
+this_icecream.mp3,این بستنیه!,that's the ice cream!,food
+w_chocolate.mp3,شکلات!,chocolate,food
+say_chocolate.mp3,بگو شکلات!,say chocolate,food
+where_chocolate.mp3,شکلات کجاست؟,where is the chocolate?,food
+this_chocolate.mp3,این شکلاته!,that's the chocolate!,food
+w_candy.mp3,آبنبات!,candy,food
+say_candy.mp3,بگو آبنبات!,say candy,food
+where_candy.mp3,آبنبات کجاست؟,where is the candy?,food
+this_candy.mp3,این آبنباته!,that's the candy!,food
+w_cookie.mp3,کلوچه!,cookie,food
+say_cookie.mp3,بگو کلوچه!,say cookie,food
+where_cookie.mp3,کلوچه کجاست؟,where is the cookie?,food
+this_cookie.mp3,این کلوچه‌ست!,that's the cookie!,food
+w_honey.mp3,عسل!,honey,food
+say_honey.mp3,بگو عسل!,say honey,food
+where_honey.mp3,عسل کجاست؟,where is the honey?,food
+this_honey.mp3,این عسله!,that's the honey!,food
+w_juice.mp3,آبمیوه!,juice,food
+say_juice.mp3,بگو آبمیوه!,say juice,food
+where_juice.mp3,آبمیوه کجاست؟,where is the juice?,food
+this_juice.mp3,این آبمیوه‌ست!,that's the juice!,food
+w_tea.mp3,چای!,tea,food
+say_tea.mp3,بگو چای!,say tea,food
+where_tea.mp3,چای کجاست؟,where is the tea?,food
+this_tea.mp3,این چایه!,that's the tea!,food
+w_soup.mp3,سوپ!,soup,food
+say_soup.mp3,بگو سوپ!,say soup,food
+where_soup.mp3,سوپ کجاست؟,where is the soup?,food
+this_soup.mp3,این سوپه!,that's the soup!,food
+w_sandwich.mp3,ساندویچ!,sandwich,food
+say_sandwich.mp3,بگو ساندویچ!,say sandwich,food
+where_sandwich.mp3,ساندویچ کجاست؟,where is the sandwich?,food
+this_sandwich.mp3,این ساندویچه!,that's the sandwich!,food
+w_mushroom.mp3,قارچ!,mushroom,food
+say_mushroom.mp3,بگو قارچ!,say mushroom,food
+where_mushroom.mp3,قارچ کجاست؟,where is the mushroom?,food
+this_mushroom.mp3,این قارچه!,that's the mushroom!,food
+w_pepper.mp3,فلفل!,pepper,food
+say_pepper.mp3,بگو فلفل!,say pepper,food
+where_pepper.mp3,فلفل کجاست؟,where is the pepper?,food
+this_pepper.mp3,این فلفله!,that's the pepper!,food
+w_kiwi.mp3,کیوی!,kiwi,food
+say_kiwi.mp3,بگو کیوی!,say kiwi,food
+where_kiwi.mp3,کیوی کجاست؟,where is the kiwi?,food
+this_kiwi.mp3,این کیویه!,that's the kiwi!,food
+w_popcorn.mp3,پاپ‌کورن!,popcorn,food
+say_popcorn.mp3,بگو پاپ‌کورن!,say popcorn,food
+where_popcorn.mp3,پاپ‌کورن کجاست؟,where is the popcorn?,food
+this_popcorn.mp3,این پاپ‌کورنه!,that's the popcorn!,food
+w_teeth.mp3,دندون!,teeth,body
+say_teeth.mp3,بگو دندون!,say teeth,body
+where_teeth.mp3,دندون کجاست؟,where is the teeth?,body
+this_teeth.mp3,این دندونه!,that's the teeth!,body
+w_tongue.mp3,زبون!,tongue,body
+say_tongue.mp3,بگو زبون!,say tongue,body
+where_tongue.mp3,زبون کجاست؟,where is the tongue?,body
+this_tongue.mp3,این زبونه!,that's the tongue!,body
+w_hair.mp3,مو!,hair,body
+say_hair.mp3,بگو مو!,say hair,body
+where_hair.mp3,مو کجاست؟,where is the hair?,body
+this_hair.mp3,این موست!,that's the hair!,body
+w_finger.mp3,انگشت!,finger,body
+say_finger.mp3,بگو انگشت!,say finger,body
+where_finger.mp3,انگشت کجاست؟,where is the finger?,body
+this_finger.mp3,این انگشته!,that's the finger!,body
+w_lips.mp3,لب!,lips,body
+say_lips.mp3,بگو لب!,say lips,body
+where_lips.mp3,لب کجاست؟,where is the lips?,body
+this_lips.mp3,این لبه!,that's the lips!,body
+w_face.mp3,صورت!,face,body
+say_face.mp3,بگو صورت!,say face,body
+where_face.mp3,صورت کجاست؟,where is the face?,body
+this_face.mp3,این صورته!,that's the face!,body
+w_nose.mp3,دماغ!,nose,body
+say_nose.mp3,بگو دماغ!,say nose,body
+where_nose.mp3,دماغ کجاست؟,where is the nose?,body
+this_nose.mp3,این دماغه!,that's the nose!,body
+w_arm.mp3,بازو!,arm,body
+say_arm.mp3,بگو بازو!,say arm,body
+where_arm.mp3,بازو کجاست؟,where is the arm?,body
+this_arm.mp3,این بازوست!,that's the arm!,body
+w_heart.mp3,قلب!,heart,body
+say_heart.mp3,بگو قلب!,say heart,body
+where_heart.mp3,قلب کجاست؟,where is the heart?,body
+this_heart.mp3,این قلبه!,that's the heart!,body
+w_shoes.mp3,کفش!,shoes,clothes
+say_shoes.mp3,بگو کفش!,say shoes,clothes
+where_shoes.mp3,کفش کجاست؟,where is the shoes?,clothes
+this_shoes.mp3,این کفشه!,that's the shoes!,clothes
+w_socks.mp3,جوراب!,socks,clothes
+say_socks.mp3,بگو جوراب!,say socks,clothes
+where_socks.mp3,جوراب کجاست؟,where is the socks?,clothes
+this_socks.mp3,این جورابه!,that's the socks!,clothes
+w_hat.mp3,کلاه!,hat,clothes
+say_hat.mp3,بگو کلاه!,say hat,clothes
+where_hat.mp3,کلاه کجاست؟,where is the hat?,clothes
+this_hat.mp3,این کلاه‌ست!,that's the hat!,clothes
+w_pants.mp3,شلوار!,pants,clothes
+say_pants.mp3,بگو شلوار!,say pants,clothes
+where_pants.mp3,شلوار کجاست؟,where is the pants?,clothes
+this_pants.mp3,این شلواره!,that's the pants!,clothes
+w_shirt.mp3,پیرهن!,shirt,clothes
+say_shirt.mp3,بگو پیرهن!,say shirt,clothes
+where_shirt.mp3,پیرهن کجاست؟,where is the shirt?,clothes
+this_shirt.mp3,این پیرهنه!,that's the shirt!,clothes
+w_dress.mp3,لباس!,dress,clothes
+say_dress.mp3,بگو لباس!,say dress,clothes
+where_dress.mp3,لباس کجاست؟,where is the dress?,clothes
+this_dress.mp3,این لباسه!,that's the dress!,clothes
+w_jacket.mp3,کاپشن!,jacket,clothes
+say_jacket.mp3,بگو کاپشن!,say jacket,clothes
+where_jacket.mp3,کاپشن کجاست؟,where is the jacket?,clothes
+this_jacket.mp3,این کاپشنه!,that's the jacket!,clothes
+w_glasses.mp3,عینک!,glasses,clothes
+say_glasses.mp3,بگو عینک!,say glasses,clothes
+where_glasses.mp3,عینک کجاست؟,where is the glasses?,clothes
+this_glasses.mp3,این عینکه!,that's the glasses!,clothes
+w_gloves.mp3,دستکش!,gloves,clothes
+say_gloves.mp3,بگو دستکش!,say gloves,clothes
+where_gloves.mp3,دستکش کجاست؟,where is the gloves?,clothes
+this_gloves.mp3,این دستکشه!,that's the gloves!,clothes
+w_scarf.mp3,شال‌گردن!,scarf,clothes
+say_scarf.mp3,بگو شال‌گردن!,say scarf,clothes
+where_scarf.mp3,شال‌گردن کجاست؟,where is the scarf?,clothes
+this_scarf.mp3,این شال‌گردنه!,that's the scarf!,clothes
+w_backpack.mp3,کیف!,bag,clothes
+say_backpack.mp3,بگو کیف!,say bag,clothes
+where_backpack.mp3,کیف کجاست؟,where is the bag?,clothes
+this_backpack.mp3,این کیفه!,that's the bag!,clothes
+w_umbrella.mp3,چتر!,umbrella,clothes
+say_umbrella.mp3,بگو چتر!,say umbrella,clothes
+where_umbrella.mp3,چتر کجاست؟,where is the umbrella?,clothes
+this_umbrella.mp3,این چتره!,that's the umbrella!,clothes
+w_slippers.mp3,دمپایی!,slippers,clothes
+say_slippers.mp3,بگو دمپایی!,say slippers,clothes
+where_slippers.mp3,دمپایی کجاست؟,where is the slippers?,clothes
+this_slippers.mp3,این دمپاییه!,that's the slippers!,clothes
+w_watch.mp3,ساعت!,watch,clothes
+say_watch.mp3,بگو ساعت!,say watch,clothes
+where_watch.mp3,ساعت کجاست؟,where is the watch?,clothes
+this_watch.mp3,این ساعته!,that's the watch!,clothes
+w_door.mp3,در!,door,home
+say_door.mp3,بگو در!,say door,home
+where_door.mp3,در کجاست؟,where is the door?,home
+this_door.mp3,این دره!,that's the door!,home
+w_window.mp3,پنجره!,window,home
+say_window.mp3,بگو پنجره!,say window,home
+where_window.mp3,پنجره کجاست؟,where is the window?,home
+this_window.mp3,این پنجره‌ست!,that's the window!,home
+w_tv.mp3,تلویزیون!,TV,home
+say_tv.mp3,بگو تلویزیون!,say TV,home
+where_tv.mp3,تلویزیون کجاست؟,where is the TV?,home
+this_tv.mp3,این تلویزیونه!,that's the TV!,home
+w_phone.mp3,تلفن!,phone,home
+say_phone.mp3,بگو تلفن!,say phone,home
+where_phone.mp3,تلفن کجاست؟,where is the phone?,home
+this_phone.mp3,این تلفنه!,that's the phone!,home
+w_key.mp3,کلید!,key,home
+say_key.mp3,بگو کلید!,say key,home
+where_key.mp3,کلید کجاست؟,where is the key?,home
+this_key.mp3,این کلیده!,that's the key!,home
+w_bath.mp3,حموم!,bath,home
+say_bath.mp3,بگو حموم!,say bath,home
+where_bath.mp3,حموم کجاست؟,where is the bath?,home
+this_bath.mp3,این حمومه!,that's the bath!,home
+w_soap.mp3,صابون!,soap,home
+say_soap.mp3,بگو صابون!,say soap,home
+where_soap.mp3,صابون کجاست؟,where is the soap?,home
+this_soap.mp3,این صابونه!,that's the soap!,home
+w_toothbrush.mp3,مسواک!,toothbrush,home
+say_toothbrush.mp3,بگو مسواک!,say toothbrush,home
+where_toothbrush.mp3,مسواک کجاست؟,where is the toothbrush?,home
+this_toothbrush.mp3,این مسواکه!,that's the toothbrush!,home
+w_comb.mp3,شونه!,comb,home
+say_comb.mp3,بگو شونه!,say comb,home
+where_comb.mp3,شونه کجاست؟,where is the comb?,home
+this_comb.mp3,این شونه‌ست!,that's the comb!,home
+w_spoon.mp3,قاشق!,spoon,home
+say_spoon.mp3,بگو قاشق!,say spoon,home
+where_spoon.mp3,قاشق کجاست؟,where is the spoon?,home
+this_spoon.mp3,این قاشقه!,that's the spoon!,home
+w_fork.mp3,چنگال!,fork,home
+say_fork.mp3,بگو چنگال!,say fork,home
+where_fork.mp3,چنگال کجاست؟,where is the fork?,home
+this_fork.mp3,این چنگاله!,that's the fork!,home
+w_plate.mp3,بشقاب!,plate,home
+say_plate.mp3,بگو بشقاب!,say plate,home
+where_plate.mp3,بشقاب کجاست؟,where is the plate?,home
+this_plate.mp3,این بشقابه!,that's the plate!,home
+w_cup.mp3,لیوان!,cup,home
+say_cup.mp3,بگو لیوان!,say cup,home
+where_cup.mp3,لیوان کجاست؟,where is the cup?,home
+this_cup.mp3,این لیوانه!,that's the cup!,home
+w_broom.mp3,جارو!,broom,home
+say_broom.mp3,بگو جارو!,say broom,home
+where_broom.mp3,جارو کجاست؟,where is the broom?,home
+this_broom.mp3,این جاروست!,that's the broom!,home
+w_candle.mp3,شمع!,candle,home
+say_candle.mp3,بگو شمع!,say candle,home
+where_candle.mp3,شمع کجاست؟,where is the candle?,home
+this_candle.mp3,این شمعه!,that's the candle!,home
+w_gift.mp3,کادو!,present,home
+say_gift.mp3,بگو کادو!,say present,home
+where_gift.mp3,کادو کجاست؟,where is the present?,home
+this_gift.mp3,این کادوست!,that's the present!,home
+w_balloon.mp3,بادکنک!,balloon,home
+say_balloon.mp3,بگو بادکنک!,say balloon,home
+where_balloon.mp3,بادکنک کجاست؟,where is the balloon?,home
+this_balloon.mp3,این بادکنکه!,that's the balloon!,home
+w_doll.mp3,عروسک!,doll,home
+say_doll.mp3,بگو عروسک!,say doll,home
+where_doll.mp3,عروسک کجاست؟,where is the doll?,home
+this_doll.mp3,این عروسکه!,that's the doll!,home
+w_scissors.mp3,قیچی!,scissors,home
+say_scissors.mp3,بگو قیچی!,say scissors,home
+where_scissors.mp3,قیچی کجاست؟,where is the scissors?,home
+this_scissors.mp3,این قیچیه!,that's the scissors!,home
+w_pencil.mp3,مداد!,pencil,home
+say_pencil.mp3,بگو مداد!,say pencil,home
+where_pencil.mp3,مداد کجاست؟,where is the pencil?,home
+this_pencil.mp3,این مداده!,that's the pencil!,home
+w_paint.mp3,رنگ!,paint,home
+say_paint.mp3,بگو رنگ!,say paint,home
+where_paint.mp3,رنگ کجاست؟,where is the paint?,home
+this_paint.mp3,این رنگه!,that's the paint!,home
+w_puzzle.mp3,پازل!,puzzle,home
+say_puzzle.mp3,بگو پازل!,say puzzle,home
+where_puzzle.mp3,پازل کجاست؟,where is the puzzle?,home
+this_puzzle.mp3,این پازله!,that's the puzzle!,home
+w_drum.mp3,طبل!,drum,home
+say_drum.mp3,بگو طبل!,say drum,home
+where_drum.mp3,طبل کجاست؟,where is the drum?,home
+this_drum.mp3,این طبله!,that's the drum!,home
+w_guitar.mp3,گیتار!,guitar,home
+say_guitar.mp3,بگو گیتار!,say guitar,home
+where_guitar.mp3,گیتار کجاست؟,where is the guitar?,home
+this_guitar.mp3,این گیتاره!,that's the guitar!,home
+w_piano.mp3,پیانو!,piano,home
+say_piano.mp3,بگو پیانو!,say piano,home
+where_piano.mp3,پیانو کجاست؟,where is the piano?,home
+this_piano.mp3,این پیانوست!,that's the piano!,home
+w_blocks.mp3,لگو!,blocks,home
+say_blocks.mp3,بگو لگو!,say blocks,home
+where_blocks.mp3,لگو کجاست؟,where is the blocks?,home
+this_blocks.mp3,این لگوست!,that's the blocks!,home
+w_kite.mp3,بادبادک!,kite,home
+say_kite.mp3,بگو بادبادک!,say kite,home
+where_kite.mp3,بادبادک کجاست؟,where is the kite?,home
+this_kite.mp3,این بادبادکه!,that's the kite!,home
+w_robot.mp3,ربات!,robot,home
+say_robot.mp3,بگو ربات!,say robot,home
+where_robot.mp3,ربات کجاست؟,where is the robot?,home
+this_robot.mp3,این رباته!,that's the robot!,home
+w_bus.mp3,اتوبوس!,bus,vehicles
+say_bus.mp3,بگو اتوبوس!,say bus,vehicles
+where_bus.mp3,اتوبوس کجاست؟,where is the bus?,vehicles
+this_bus.mp3,این اتوبوسه!,that's the bus!,vehicles
+w_train.mp3,قطار!,train,vehicles
+say_train.mp3,بگو قطار!,say train,vehicles
+where_train.mp3,قطار کجاست؟,where is the train?,vehicles
+this_train.mp3,این قطاره!,that's the train!,vehicles
+w_plane.mp3,هواپیما!,airplane,vehicles
+say_plane.mp3,بگو هواپیما!,say airplane,vehicles
+where_plane.mp3,هواپیما کجاست؟,where is the airplane?,vehicles
+this_plane.mp3,این هواپیماست!,that's the airplane!,vehicles
+w_ship.mp3,کشتی!,ship,vehicles
+say_ship.mp3,بگو کشتی!,say ship,vehicles
+where_ship.mp3,کشتی کجاست؟,where is the ship?,vehicles
+this_ship.mp3,این کشتیه!,that's the ship!,vehicles
+w_boat.mp3,قایق!,boat,vehicles
+say_boat.mp3,بگو قایق!,say boat,vehicles
+where_boat.mp3,قایق کجاست؟,where is the boat?,vehicles
+this_boat.mp3,این قایقه!,that's the boat!,vehicles
+w_bike.mp3,دوچرخه!,bike,vehicles
+say_bike.mp3,بگو دوچرخه!,say bike,vehicles
+where_bike.mp3,دوچرخه کجاست؟,where is the bike?,vehicles
+this_bike.mp3,این دوچرخه‌ست!,that's the bike!,vehicles
+w_motorbike.mp3,موتور!,motorbike,vehicles
+say_motorbike.mp3,بگو موتور!,say motorbike,vehicles
+where_motorbike.mp3,موتور کجاست؟,where is the motorbike?,vehicles
+this_motorbike.mp3,این موتوره!,that's the motorbike!,vehicles
+w_truck.mp3,کامیون!,truck,vehicles
+say_truck.mp3,بگو کامیون!,say truck,vehicles
+where_truck.mp3,کامیون کجاست؟,where is the truck?,vehicles
+this_truck.mp3,این کامیونه!,that's the truck!,vehicles
+w_tractor.mp3,تراکتور!,tractor,vehicles
+say_tractor.mp3,بگو تراکتور!,say tractor,vehicles
+where_tractor.mp3,تراکتور کجاست؟,where is the tractor?,vehicles
+this_tractor.mp3,این تراکتوره!,that's the tractor!,vehicles
+w_ambulance.mp3,آمبولانس!,ambulance,vehicles
+say_ambulance.mp3,بگو آمبولانس!,say ambulance,vehicles
+where_ambulance.mp3,آمبولانس کجاست؟,where is the ambulance?,vehicles
+this_ambulance.mp3,این آمبولانسه!,that's the ambulance!,vehicles
+w_firetruck.mp3,ماشین آتش‌نشانی!,fire truck,vehicles
+say_firetruck.mp3,بگو ماشین آتش‌نشانی!,say fire truck,vehicles
+where_firetruck.mp3,ماشین آتش‌نشانی کجاست؟,where is the fire truck?,vehicles
+this_firetruck.mp3,این ماشین آتش‌نشانیه!,that's the fire truck!,vehicles
+w_policecar.mp3,ماشین پلیس!,police car,vehicles
+say_policecar.mp3,بگو ماشین پلیس!,say police car,vehicles
+where_policecar.mp3,ماشین پلیس کجاست؟,where is the police car?,vehicles
+this_policecar.mp3,این ماشین پلیسه!,that's the police car!,vehicles
+w_helicopter.mp3,هلیکوپتر!,helicopter,vehicles
+say_helicopter.mp3,بگو هلیکوپتر!,say helicopter,vehicles
+where_helicopter.mp3,هلیکوپتر کجاست؟,where is the helicopter?,vehicles
+this_helicopter.mp3,این هلیکوپتره!,that's the helicopter!,vehicles
+w_rocket.mp3,موشک!,rocket,vehicles
+say_rocket.mp3,بگو موشک!,say rocket,vehicles
+where_rocket.mp3,موشک کجاست؟,where is the rocket?,vehicles
+this_rocket.mp3,این موشکه!,that's the rocket!,vehicles
+w_taxi.mp3,تاکسی!,taxi,vehicles
+say_taxi.mp3,بگو تاکسی!,say taxi,vehicles
+where_taxi.mp3,تاکسی کجاست؟,where is the taxi?,vehicles
+this_taxi.mp3,این تاکسیه!,that's the taxi!,vehicles
+w_sun.mp3,خورشید!,sun,nature
+say_sun.mp3,بگو خورشید!,say sun,nature
+where_sun.mp3,خورشید کجاست؟,where is the sun?,nature
+this_sun.mp3,این خورشیده!,that's the sun!,nature
+w_moon.mp3,ماه!,moon,nature
+say_moon.mp3,بگو ماه!,say moon,nature
+where_moon.mp3,ماه کجاست؟,where is the moon?,nature
+this_moon.mp3,این ماه‌ست!,that's the moon!,nature
+w_star.mp3,ستاره!,star,nature
+say_star.mp3,بگو ستاره!,say star,nature
+where_star.mp3,ستاره کجاست؟,where is the star?,nature
+this_star.mp3,این ستاره‌ست!,that's the star!,nature
+w_cloud.mp3,ابر!,cloud,nature
+say_cloud.mp3,بگو ابر!,say cloud,nature
+where_cloud.mp3,ابر کجاست؟,where is the cloud?,nature
+this_cloud.mp3,این ابره!,that's the cloud!,nature
+w_rain.mp3,بارون!,rain,nature
+say_rain.mp3,بگو بارون!,say rain,nature
+where_rain.mp3,بارون کجاست؟,where is the rain?,nature
+this_rain.mp3,این بارونه!,that's the rain!,nature
+w_snow.mp3,برف!,snow,nature
+say_snow.mp3,بگو برف!,say snow,nature
+where_snow.mp3,برف کجاست؟,where is the snow?,nature
+this_snow.mp3,این برفه!,that's the snow!,nature
+w_rainbow.mp3,رنگین‌کمون!,rainbow,nature
+say_rainbow.mp3,بگو رنگین‌کمون!,say rainbow,nature
+where_rainbow.mp3,رنگین‌کمون کجاست؟,where is the rainbow?,nature
+this_rainbow.mp3,این رنگین‌کمونه!,that's the rainbow!,nature
+w_tree.mp3,درخت!,tree,nature
+say_tree.mp3,بگو درخت!,say tree,nature
+where_tree.mp3,درخت کجاست؟,where is the tree?,nature
+this_tree.mp3,این درخته!,that's the tree!,nature
+w_flower.mp3,گل!,flower,nature
+say_flower.mp3,بگو گل!,say flower,nature
+where_flower.mp3,گل کجاست؟,where is the flower?,nature
+this_flower.mp3,این گله!,that's the flower!,nature
+w_leaf.mp3,برگ!,leaf,nature
+say_leaf.mp3,بگو برگ!,say leaf,nature
+where_leaf.mp3,برگ کجاست؟,where is the leaf?,nature
+this_leaf.mp3,این برگه!,that's the leaf!,nature
+w_fire.mp3,آتیش!,fire,nature
+say_fire.mp3,بگو آتیش!,say fire,nature
+where_fire.mp3,آتیش کجاست؟,where is the fire?,nature
+this_fire.mp3,این آتیشه!,that's the fire!,nature
+w_sea.mp3,دریا!,sea,nature
+say_sea.mp3,بگو دریا!,say sea,nature
+where_sea.mp3,دریا کجاست؟,where is the sea?,nature
+this_sea.mp3,این دریاست!,that's the sea!,nature
+w_mountain.mp3,کوه!,mountain,nature
+say_mountain.mp3,بگو کوه!,say mountain,nature
+where_mountain.mp3,کوه کجاست؟,where is the mountain?,nature
+this_mountain.mp3,این کوه‌ست!,that's the mountain!,nature
+w_stone.mp3,سنگ!,rock,nature
+say_stone.mp3,بگو سنگ!,say rock,nature
+where_stone.mp3,سنگ کجاست؟,where is the rock?,nature
+this_stone.mp3,این سنگه!,that's the rock!,nature
+w_shell.mp3,صدف!,shell,nature
+say_shell.mp3,بگو صدف!,say shell,nature
+where_shell.mp3,صدف کجاست؟,where is the shell?,nature
+this_shell.mp3,این صدفه!,that's the shell!,nature
+w_red.mp3,قرمز!,red,colours
+say_red.mp3,بگو قرمز!,say red,colours
+where_red.mp3,قرمز کجاست؟,where is the red?,colours
+this_red.mp3,این قرمزه!,that's the red!,colours
+w_blue.mp3,آبی!,blue,colours
+say_blue.mp3,بگو آبی!,say blue,colours
+where_blue.mp3,آبی کجاست؟,where is the blue?,colours
+this_blue.mp3,این آبیه!,that's the blue!,colours
+w_green.mp3,سبز!,green,colours
+say_green.mp3,بگو سبز!,say green,colours
+where_green.mp3,سبز کجاست؟,where is the green?,colours
+this_green.mp3,این سبزه!,that's the green!,colours
+w_yellow.mp3,زرد!,yellow,colours
+say_yellow.mp3,بگو زرد!,say yellow,colours
+where_yellow.mp3,زرد کجاست؟,where is the yellow?,colours
+this_yellow.mp3,این زرده!,that's the yellow!,colours
+w_orangec.mp3,نارنجی!,orange (colour),colours
+say_orangec.mp3,بگو نارنجی!,say orange (colour),colours
+where_orangec.mp3,نارنجی کجاست؟,where is the orange (colour)?,colours
+this_orangec.mp3,این نارنجیه!,that's the orange (colour)!,colours
+w_purple.mp3,بنفش!,purple,colours
+say_purple.mp3,بگو بنفش!,say purple,colours
+where_purple.mp3,بنفش کجاست؟,where is the purple?,colours
+this_purple.mp3,این بنفشه!,that's the purple!,colours
+w_black.mp3,سیاه!,black,colours
+say_black.mp3,بگو سیاه!,say black,colours
+where_black.mp3,سیاه کجاست؟,where is the black?,colours
+this_black.mp3,این سیاه‌ست!,that's the black!,colours
+w_white.mp3,سفید!,white,colours
+say_white.mp3,بگو سفید!,say white,colours
+where_white.mp3,سفید کجاست؟,where is the white?,colours
+this_white.mp3,این سفیده!,that's the white!,colours
+w_pink.mp3,صورتی!,pink,colours
+say_pink.mp3,بگو صورتی!,say pink,colours
+where_pink.mp3,صورتی کجاست؟,where is the pink?,colours
+this_pink.mp3,این صورتیه!,that's the pink!,colours
+w_brown.mp3,قهوه‌ای!,brown,colours
+say_brown.mp3,بگو قهوه‌ای!,say brown,colours
+where_brown.mp3,قهوه‌ای کجاست؟,where is the brown?,colours
+this_brown.mp3,این قهوه‌ایه!,that's the brown!,colours
+w_one.mp3,یک!,one,numbers
+say_one.mp3,بگو یک!,say one,numbers
+where_one.mp3,یک کجاست؟,where is the one?,numbers
+this_one.mp3,این یکه!,that's the one!,numbers
+w_two.mp3,دو!,two,numbers
+say_two.mp3,بگو دو!,say two,numbers
+where_two.mp3,دو کجاست؟,where is the two?,numbers
+this_two.mp3,این دوست!,that's the two!,numbers
+w_three.mp3,سه!,three,numbers
+say_three.mp3,بگو سه!,say three,numbers
+where_three.mp3,سه کجاست؟,where is the three?,numbers
+this_three.mp3,این سه‌ست!,that's the three!,numbers
+w_four.mp3,چهار!,four,numbers
+say_four.mp3,بگو چهار!,say four,numbers
+where_four.mp3,چهار کجاست؟,where is the four?,numbers
+this_four.mp3,این چهاره!,that's the four!,numbers
+w_five.mp3,پنج!,five,numbers
+say_five.mp3,بگو پنج!,say five,numbers
+where_five.mp3,پنج کجاست؟,where is the five?,numbers
+this_five.mp3,این پنجه!,that's the five!,numbers
+w_six.mp3,شیش!,six,numbers
+say_six.mp3,بگو شیش!,say six,numbers
+where_six.mp3,شیش کجاست؟,where is the six?,numbers
+this_six.mp3,این شیشه!,that's the six!,numbers
+w_seven.mp3,هفت!,seven,numbers
+say_seven.mp3,بگو هفت!,say seven,numbers
+where_seven.mp3,هفت کجاست؟,where is the seven?,numbers
+this_seven.mp3,این هفته!,that's the seven!,numbers
+w_eight.mp3,هشت!,eight,numbers
+say_eight.mp3,بگو هشت!,say eight,numbers
+where_eight.mp3,هشت کجاست؟,where is the eight?,numbers
+this_eight.mp3,این هشته!,that's the eight!,numbers
+w_nine.mp3,نه!,nine,numbers
+say_nine.mp3,بگو نه!,say nine,numbers
+where_nine.mp3,نه کجاست؟,where is the nine?,numbers
+this_nine.mp3,این نه‌ست!,that's the nine!,numbers
+w_ten.mp3,ده!,ten,numbers
+say_ten.mp3,بگو ده!,say ten,numbers
+where_ten.mp3,ده کجاست؟,where is the ten?,numbers
+this_ten.mp3,این ده‌ست!,that's the ten!,numbers
+w_circle.mp3,دایره!,circle,shapes
+say_circle.mp3,بگو دایره!,say circle,shapes
+where_circle.mp3,دایره کجاست؟,where is the circle?,shapes
+this_circle.mp3,این دایره‌ست!,that's the circle!,shapes
+w_square.mp3,مربع!,square,shapes
+say_square.mp3,بگو مربع!,say square,shapes
+where_square.mp3,مربع کجاست؟,where is the square?,shapes
+this_square.mp3,این مربعه!,that's the square!,shapes
+w_triangle.mp3,مثلث!,triangle,shapes
+say_triangle.mp3,بگو مثلث!,say triangle,shapes
+where_triangle.mp3,مثلث کجاست؟,where is the triangle?,shapes
+this_triangle.mp3,این مثلثه!,that's the triangle!,shapes
+w_mommy.mp3,مامان!,mommy,people
+say_mommy.mp3,بگو مامان!,say mommy,people
+where_mommy.mp3,مامان کجاست؟,where is the mommy?,people
+this_mommy.mp3,این مامانه!,that's the mommy!,people
+w_daddy.mp3,بابا!,daddy,people
+say_daddy.mp3,بگو بابا!,say daddy,people
+where_daddy.mp3,بابا کجاست؟,where is the daddy?,people
+this_daddy.mp3,این باباست!,that's the daddy!,people
+w_grandma.mp3,مامان‌بزرگ!,grandma,people
+say_grandma.mp3,بگو مامان‌بزرگ!,say grandma,people
+where_grandma.mp3,مامان‌بزرگ کجاست؟,where is the grandma?,people
+this_grandma.mp3,این مامان‌بزرگه!,that's the grandma!,people
+w_grandpa.mp3,بابابزرگ!,grandpa,people
+say_grandpa.mp3,بگو بابابزرگ!,say grandpa,people
+where_grandpa.mp3,بابابزرگ کجاست؟,where is the grandpa?,people
+this_grandpa.mp3,این بابابزرگه!,that's the grandpa!,people
+w_brother.mp3,داداش!,brother,people
+say_brother.mp3,بگو داداش!,say brother,people
+where_brother.mp3,داداش کجاست؟,where is the brother?,people
+this_brother.mp3,این داداشه!,that's the brother!,people
+w_sister.mp3,آبجی!,sister,people
+say_sister.mp3,بگو آبجی!,say sister,people
+where_sister.mp3,آبجی کجاست؟,where is the sister?,people
+this_sister.mp3,این آبجیه!,that's the sister!,people
+w_baby.mp3,نی‌نی!,baby,people
+say_baby.mp3,بگو نی‌نی!,say baby,people
+where_baby.mp3,نی‌نی کجاست؟,where is the baby?,people
+this_baby.mp3,این نی‌نیه!,that's the baby!,people
+w_doctor.mp3,دکتر!,doctor,people
+say_doctor.mp3,بگو دکتر!,say doctor,people
+where_doctor.mp3,دکتر کجاست؟,where is the doctor?,people
+this_doctor.mp3,این دکتره!,that's the doctor!,people
+w_police.mp3,پلیس!,police officer,people
+say_police.mp3,بگو پلیس!,say police officer,people
+where_police.mp3,پلیس کجاست؟,where is the police officer?,people
+this_police.mp3,این پلیسه!,that's the police officer!,people
+w_friend.mp3,دوست!,friend,people
+say_friend.mp3,بگو دوست!,say friend,people
+where_friend.mp3,دوست کجاست؟,where is the friend?,people
+this_friend.mp3,این دوسته!,that's the friend!,people
+w_happy.mp3,خوشحال!,happy,feelings
+say_happy.mp3,بگو خوشحال!,say happy,feelings
+w_sad.mp3,ناراحت!,sad,feelings
+say_sad.mp3,بگو ناراحت!,say sad,feelings
+w_angry.mp3,عصبانی!,angry,feelings
+say_angry.mp3,بگو عصبانی!,say angry,feelings
+w_scared.mp3,ترسیده!,scared,feelings
+say_scared.mp3,بگو ترسیده!,say scared,feelings
+w_sleepy.mp3,خوابالو!,sleepy,feelings
+say_sleepy.mp3,بگو خوابالو!,say sleepy,feelings
+w_tired.mp3,خسته!,tired,feelings
+say_tired.mp3,بگو خسته!,say tired,feelings
+w_surprised.mp3,تعجب!,surprised,feelings
+say_surprised.mp3,بگو تعجب!,say surprised,feelings
+w_hot.mp3,گرم!,hot,feelings
+say_hot.mp3,بگو گرم!,say hot,feelings
+w_cold.mp3,سرد!,cold,feelings
+say_cold.mp3,بگو سرد!,say cold,feelings
+w_run.mp3,بدو!,run,actions
+say_run.mp3,بگو بدو!,say run,actions
+w_swim.mp3,شنا!,swim,actions
+say_swim.mp3,بگو شنا!,say swim,actions
+w_sing.mp3,بخون!,sing,actions
+say_sing.mp3,بگو بخون!,say sing,actions
+w_hug.mp3,بغل!,hug,actions
+say_hug.mp3,بگو بغل!,say hug,actions
+w_kiss.mp3,بوس!,kiss,actions
+say_kiss.mp3,بگو بوس!,say kiss,actions
+w_wave.mp3,بای بای!,bye-bye,actions
+say_wave.mp3,بگو بای بای!,say bye-bye,actions
+w_laugh.mp3,بخند!,laugh,actions
+say_laugh.mp3,بگو بخند!,say laugh,actions
+w_cry.mp3,گریه!,cry,actions
+say_cry.mp3,بگو گریه!,say cry,actions
+w_wash.mp3,بشور!,wash,actions
+say_wash.mp3,بگو بشور!,say wash,actions
+w_fast.mp3,تند!,fast,actions
+say_fast.mp3,بگو تند!,say fast,actions
+w_slow.mp3,آروم!,slow,actions
+say_slow.mp3,بگو آروم!,say slow,actions
