@@ -1,8 +1,8 @@
 <title>Pash Robot</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Vazirmatn:wght@600;800&display=swap">
 <style>
-/* Layout: full-screen playroom; robot centre stage, big chunky buttons along the bottom for small hands */
-:root{
+/* Layout: full-screen room; robot centre stage, round icon buttons on the left/right edges, rooms along the bottom */
+:root{--b:56px;--g:14px;
   --sky:#bfe3f2; --floor:#f6d58a; --ink:#22314a; --coral:#ff7a59; --mint:#4fd1b0; --card:#ffffffd9;
   --display:"Baloo 2","Vazirmatn",ui-rounded,system-ui,sans-serif;
   --fa:"Vazirmatn","Baloo 2",system-ui,sans-serif;
@@ -14,20 +14,28 @@ body{margin:0;background:var(--sky);color:var(--ink);font-family:var(--display);
   -webkit-user-select:none;user-select:none;touch-action:none;-webkit-tap-highlight-color:transparent}
 #stage{position:fixed;inset:0}
 canvas{display:block}
-#bubble{position:fixed;left:50%;top:calc(env(safe-area-inset-top,0px) + 18px);transform:translateX(-50%) scale(.6);
+#bubble{position:fixed;z-index:3;left:50%;top:calc(env(safe-area-inset-top,0px) + 18px);transform:translateX(-50%) scale(.6);
   background:#fff;border-radius:28px;padding:10px 26px 12px;text-align:center;box-shadow:0 6px 0 #22314a22;
   opacity:0;transition:opacity .2s,transform .25s cubic-bezier(.3,1.6,.5,1);pointer-events:none;max-width:calc(100% - 32px)}
 #bubble.show{opacity:1;transform:translateX(-50%) scale(1)}
 #bubble .fa{font-family:var(--fa);font-size:clamp(34px,7vw,56px);font-weight:800;line-height:1.2;direction:rtl}
 #bubble .tr{font-size:18px;opacity:.65;font-weight:600}
-#bar{position:fixed;left:0;right:0;bottom:0;display:flex;justify-content:center;gap:10px;flex-wrap:wrap;
-  padding:12px 16px calc(14px + env(safe-area-inset-bottom,0px))}
-#bar button{font:800 17px var(--display);color:#fff;border:0;border-radius:24px;padding:8px 10px 6px;min-width:0;
-  display:flex;flex-direction:column;align-items:center;gap:0;cursor:pointer;box-shadow:0 6px 0 #0003;transition:transform .1s}
-#bar button:active{transform:translateY(4px);box-shadow:0 2px 0 #0003}
-#bar button:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
-#bar .ic{font-size:26px;line-height:1.1}
-#bar .fa{font-family:var(--fa);font-size:15px;opacity:.9}
+.col{position:fixed;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:var(--g);z-index:3}
+#colL{left:calc(env(safe-area-inset-left,0px) + 12px)}#colR{right:calc(env(safe-area-inset-right,0px) + 12px)}
+#nav{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 10px);transform:translateX(-50%);display:flex;gap:var(--g);z-index:3}
+.rb{width:var(--b);height:var(--b);border-radius:50%;border:0;padding:0;font-size:calc(var(--b)*.5);line-height:1;display:grid;place-items:center;
+  cursor:pointer;box-shadow:0 5px 0 #0003;transition:transform .1s,box-shadow .1s;touch-action:manipulation}
+.rb:active{transform:translateY(3px) scale(.9);box-shadow:0 2px 0 #0003}
+.rb:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
+#nav .rb{background:#ffffffcc}#nav .rb.cur{background:#ffd34d;box-shadow:0 0 0 4px #fff,0 5px 0 #0003}
+@media (min-width:700px) and (min-height:700px){:root{--b:68px;--g:18px}}
+@media (max-height:440px){:root{--g:8px}}
+#fade{position:fixed;inset:0;background:#fff7ea;opacity:0;pointer-events:none;transition:opacity .3s;z-index:4}#fade.on{opacity:1}
+#card{position:fixed;left:30%;top:50%;transform:translate(-50%,-50%);z-index:2;background:#fffffff0;border-radius:32px;padding:10px 26px 6px;
+  text-align:center;box-shadow:0 8px 0 #22314a22;pointer-events:none}
+#card .em{font-size:min(24vh,22vw);line-height:1.15}#card .fa{font:800 min(9vh,9vw)/1.4 var(--fa);direction:rtl}
+@media (orientation:portrait){#card{left:50%;top:calc(env(safe-area-inset-top,0px) + 18vh);transform:translateX(-50%)}#card .em{font-size:min(14vh,30vw)}}
+@media (max-height:500px){#bubble{top:calc(env(safe-area-inset-top,0px) + 8px);padding:6px 18px 8px}#bubble .fa{font-size:30px}#bubble .tr{font-size:14px}}
 #bTalk.on{animation:pulse 1s ease-in-out infinite}
 @keyframes pulse{0%,100%{box-shadow:0 6px 0 #0003,0 0 0 0 #ff4f6d88}50%{box-shadow:0 6px 0 #0003,0 0 0 12px #ff4f6d00}}
 @media (prefers-reduced-motion:reduce){#bTalk.on{animation:none;outline:4px solid #fff}}
@@ -62,24 +70,30 @@ canvas{display:block}
 #start p{text-align:center;margin:14px 16px 0;font-size:16px;opacity:.7}
 #hint{position:fixed;right:16px;top:calc(env(safe-area-inset-top,0px) + 14px);font-size:13px;background:var(--card);
   border-radius:12px;padding:6px 10px;max-width:220px;line-height:1.35}
-@media (max-width:520px){#bar{gap:6px}#bar button{min-width:0;flex:1 1 22%;font-size:14px;padding:6px 4px 4px;border-radius:18px}#bar .ic{font-size:22px}#bar .fa{font-size:12px}#hint{display:none}}
+@media (max-width:520px){#hint{display:none}.say #bubble .tr{display:none}}
 </style>
 
 <div id="stage"></div>
 <div id="bubble"><div class="fa" id="bfa"></div><div class="tr" id="btr"></div></div>
 <div id="hint">Find, Feed and Say it are Farsi games. Just talk to Pash: when he's standing still he listens and repeats it in a funny voice. The Talk button turns his ears on and off. Poke his head, tummy (try 3 times fast!), ears, feet, antenna or face. Drag to spin him. Tap the empty floor to call him home. Grown-ups: Farsi lines show here and will play your recorded voice later.</div>
-<div id="bar">
-  <button id="bTalk" style="background:#ff4f6d"><span class="ic">🎤</span>Talk<span class="fa">حرف بزن</span></button>
-  <button id="bFind" style="background:#2bb673"><span class="ic">🔍</span>Find<span class="fa">پیدا کن</span></button>
-  <button id="bSay" style="background:#f15bb5"><span class="ic">🗣️</span>Say it<span class="fa">بگو</span></button>
-  <button id="bMoves" style="background:#00a6a6"><span class="ic">🤸</span>Moves<span class="fa">حرکت</span></button>
-  <button id="bDance" style="background:#a66cff"><span class="ic">💃</span>Dance<span class="fa">برقص</span></button>
-  <button id="bJump" style="background:#ff9f1c"><span class="ic">🦘</span>Jump<span class="fa">بپر</span></button>
-  <button id="bPeek" style="background:#e05aa0"><span class="ic">🙈</span>Peekaboo<span class="fa">دالی</span></button>
-  <button id="bBubbles" style="background:#3bb4e5"><span class="ic">🫧</span>Bubbles<span class="fa">حباب</span></button>
-  <button id="bBall" style="background:var(--coral)"><span class="ic">⚽</span>Ball<span class="fa">توپ</span></button>
-  <button id="bFeed" style="background:var(--mint)"><span class="ic">🔋</span>Feed<span class="fa">غذا</span></button>
-  <button id="bSleep" style="background:#5b7bd5"><span class="ic">🌙</span>Sleep<span class="fa">بخواب</span></button>
+<div id="colL" class="col"></div><div id="colR" class="col"></div>
+<div id="nav"><button class="rb" data-r="home" aria-label="Home">🏠</button><button class="rb" data-r="play" aria-label="Play room">🧸</button>
+  <button class="rb" data-r="bed" aria-label="Bedroom">🛏️</button><button class="rb" data-r="say" aria-label="Say it">🗣️</button></div>
+<div id="card" hidden><div class="em" id="cardEm"></div><div class="fa" id="cardFa"></div></div>
+<div id="fade"></div>
+<div id="btns" hidden><!-- side buttons; showScreen() moves the current screen's ones into #colL/#colR -->
+  <button id="bTalk" class="rb" style="background:#ff4f6d" aria-label="Talk (microphone on/off)">🎤</button>
+  <button id="bFind" class="rb" style="background:#2bb673" aria-label="Find">🔍</button>
+  <button id="bMoves" class="rb" style="background:#00a6a6" aria-label="Moves">🤸</button>
+  <button id="bDance" class="rb" style="background:#a66cff" aria-label="Dance">💃</button>
+  <button id="bJump" class="rb" style="background:#ff9f1c" aria-label="Jump">🦘</button>
+  <button id="bPeek" class="rb" style="background:#e05aa0" aria-label="Peekaboo">🙈</button>
+  <button id="bBubbles" class="rb" style="background:#3bb4e5" aria-label="Bubbles">🫧</button>
+  <button id="bBall" class="rb" style="background:var(--coral)" aria-label="Ball">⚽</button>
+  <button id="bFeed" class="rb" style="background:var(--mint)" aria-label="Feed">🍎</button>
+  <button id="bSleep" class="rb" style="background:#5b7bd5" aria-label="Sleep">🌙</button>
+  <button id="bNext" class="rb" style="background:#2bb673" aria-label="Next word">➡️</button>
+  <button id="bRepeat" class="rb" style="background:#f15bb5" aria-label="Say it again">🔁</button>
 </div>
 <button id="parentBtn" aria-label="Parent corner: press and hold">⚙︎</button>
 <div id="parent" hidden><div class="pc-card">
@@ -155,7 +169,7 @@ const loadVoices=keys=>Promise.all(keys.map(loadVoice));
 const loadCore=()=>MANIFEST.then(()=>loadVoices([...HAS].filter(k=>!/^(w|where|this|say|want)_/.test(k))));
 let voiceSrc=null;
 function playVoice(k){const b=VOICE[k];if(!b||!AC)return 0;try{voiceSrc&&voiceSrc.stop()}catch(e){}
-  const s=AC.createBufferSource(),g=AC.createGain();g.gain.value=/^(w_|x_|want_|this_|play)/.test(k)?1.12:1;s.buffer=b;s.connect(g).connect(AC.destination);s.start(AC.currentTime+.05);voiceSrc=s;return b.duration}
+  const s=AC.createBufferSource(),g=AC.createGain();g.gain.value=k==='name'?.9:1;s.buffer=b;s.connect(g).connect(AC.destination);s.start(AC.currentTime+.05);voiceSrc=s;return b.duration}
 const bubble=document.getElementById('bubble');let bubT;
 // Extra lines: variety so Pash doesn't always say the same thing
 Object.assign(LINES,{
@@ -171,8 +185,18 @@ Object.assign(LINES,{
 });
 const VARIANTS={head:['x_akh_saram','x_sar_gij','x_akh'],belly:['x_in_chi_bood','x_oops','x_boo_mide'],face:['x_ghelghelakam_miad','x_hahaha','x_dooset_daram'],
   feet:['x_pam_ro_zadi','x_ghelghelaki'],arm:['x_oh'],antenna:['x_vay','x_hapche'],wake:['x_sobh_bekheir','x_bidar_shodam','x_pashodam'],hi:['x_salam_doostam','x_salam'],
-  yay:['x_afarin_kheili_khoob','x_bache_khoob'],bored:['x_gorosnam'],feed:['x_ser_shodam','x_mamnoon'],sleep:['x_shab_bekheir'],ball:['x_begir'],
+  yay:['x_afarin_kheili_khoob','x_bache_khoob'],bored:['x_gorosnam'],feed:['x_mamnoon','p_aaa_dahanam_baze'],sleep:['x_shab_bekheir'],ball:['x_begir'],
   dance:['x_biya_beraghsim','x_beraghs'],x_dobare:['x_dobare_dobare']};
+// v2 phrases (vocab/lines_existing_v2.csv, group "phrases") as extra variants
+const ROOM_HI={home:'p_inja_khoone_mane',play:'p_inja_otagh_bazie',bed:'p_vaghte_khabe'};
+VARIANTS.p_inja_khoone_mane=['p_bia_bargardim_khoone'];VARIANTS.p_inja_otagh_bazie=['p_bia_ghayem_bashak','p_mano_begir'];VARIANTS.p_vaghte_khabe=['p_lala_gole_lale'];
+VARIANTS.p_vay_goftish=['p_che_ghashang_gofti','p_shenidam_shenidam','yay'];
+for(const[k,v]of Object.entries({hi:['p_salam_chetori','p_akh_joon_oomadi'],yay:['p_che_zerangi','p_to_ghahremani','p_hoora'],
+  bored:['p_hoselam_sar_raft_bia_bazi','p_ye_bazi_konim','p_delam_ghar_o_ghoor','p_man_khoshhalam','p_bip_bop_man_robotam','p_man_gorbeam_na_robotam',
+    'p_alo_moz_zang_mizane','p_esmet_chie','p_chand_salete','p_damaghet_ko','p_bia_baghalam','p_andaze_ye_donya','p_ye_mach_bede'],
+  belly:['p_pif_pif_ki_bood'],sleep:['p_khabaye_khoob_bebini'],wake:['p_akhish_khoob_khabidam'],ball:['p_toopo_bendaz'],
+  x_cheragh_roshan:['p_akh_joon_roshan_shod'],x_cheragh_khamoosh:['p_vay_tarik_shod']}))VARIANTS[k]=[...(VARIANTS[k]||[]),...v];
+
 Object.assign(LINES,{
   x_sar_gij:['سرم گیج رفت!','saram gij raft! (I\'m dizzy!)'],x_akh:['آخ!','âkh! (ow!)'],x_oh:['اوه!','oh!'],x_boo_mide:['بو میده!','bu mide! (it smells!)'],
   x_ghelghelaki:['قلقلکی!','ghelghelaki! (ticklish!)'],x_bidar_shodam:['بیدار شدم!','bidâr shodam! (I\'m awake!)'],x_pashodam:['پا شدم!','pâ shodam! (I got up!)'],
@@ -269,8 +293,8 @@ const picTex=canvasTex(256,320,(x,w,h)=>{x.fillStyle='#fffaf0';x.fillRect(0,0,w,
   x.strokeStyle='#3a86ff';x.strokeRect(80,150,96,90);x.strokeStyle='#ff7a59';x.strokeRect(70,70,116,78);
   x.fillStyle='#2a9d8f';x.beginPath();x.arc(108,108,9,0,7);x.arc(148,108,9,0,7);x.fill();x.strokeStyle='#ffc93c';x.beginPath();x.moveTo(128,70);x.lineTo(128,40);x.stroke();
   x.fillStyle='#ffc93c';x.beginPath();x.arc(128,36,10,0,7);x.fill();x.strokeStyle='#e76f51';x.beginPath();x.moveTo(110,130);x.quadraticCurveTo(128,142,146,130);x.stroke()});
-const pic=new THREE.Mesh(new THREE.PlaneGeometry(1.1,1.4),new THREE.MeshStandardMaterial({map:picTex,roughness:.8}));pic.position.set(3.4,4.1,BACK+.07);room.add(pic);
-const pf=new THREE.Mesh(new THREE.BoxGeometry(1.3,1.6,.06),new THREE.MeshStandardMaterial({color:0x8a5a33,roughness:.5}));pf.position.set(3.4,4.1,BACK+.02);pf.castShadow=true;room.add(pf);
+const pic=new THREE.Mesh(new THREE.PlaneGeometry(1.1,1.4),new THREE.MeshStandardMaterial({map:picTex,roughness:.8}));
+const pf=new THREE.Mesh(new THREE.BoxGeometry(1.3,1.6,.06),new THREE.MeshStandardMaterial({color:0x8a5a33,roughness:.5}));pf.castShadow=true;pic.position.z=.05;
 // daylight: warm sun from the window side, cool sky fill, gentle bounce from the floor
 sun.color.setHex(0xfff1dc);sun.intensity=.95;sun.position.set(-3.5,9,5.5);Object.assign(sun.shadow.camera,{left:-9,right:9,top:9,bottom:-9,far:30});sun.shadow.camera.updateProjectionMatrix();
 const hemiL=scene.children.find(o=>o.isHemisphereLight);if(hemiL){hemiL.color.setHex(0xdfeeff);hemiL.groundColor.setHex(0xb08a5e);hemiL.intensity=.3}
@@ -507,7 +531,11 @@ for(const [id,b] of Object.entries(BODY)){
   LINES['this_'+id]=[b.this,b.thisT+" (that's my "+b.en+'!)'];
 }
 LINES.play=['بیا بازی کنیم!','biâ bâzi konim! (let\'s play!)'];
-const FIND_POOL=['ball','apple','banana','teddy','car'],FOOD_POOL=['apple','banana','bread','milk','water'],SAY_POOL=['ball','apple','banana','teddy','car'];
+const FIND_POOL=['ball','apple','banana','teddy','car'],FOOD_POOL=['apple','banana','bread','milk','water'];
+// ----- Say it words: [id, Farsi, transliteration, English, emoji]. GENERATED: the 20 original words above + vocab/words.json
+// (regenerate this one line from words.json when the list changes; don't hand-edit)
+const SAY_WORDS=[["ball","توپ","toop","ball","⚽"],["apple","سیب","sib","apple","🍎"],["banana","موز","moz","banana","🍌"],["teddy","خرس","khers","teddy bear","🧸"],["car","ماشین","mâshin","car","🚗"],["bread","نون","nun","bread","🍞"],["milk","شیر","shir","milk","🥛"],["water","آب","âb","water","💧"],["head","سر","sar","head","👦"],["hand","دست","dast","hand","✋"],["belly","شکم","shekam","tummy","😋"],["feet","پا","pâ","foot","🦶"],["eye","چشم","cheshm","eyes","👁️"],["ear","گوش","gush","ear","👂"],["mouth","دهن","dahan","mouth","👄"],["lamp","چراغ","cherâgh","lamp","💡"],["book","کتاب","ketâb","book","📖"],["bed","تخت","takht","bed","🛏️"],["table","میز","miz","table","🍽️"],["chair","صندلی","sandali","chair","🪑"],["cat","گربه","gorbe","cat","🐱"],["dog","سگ","sag","dog","🐶"],["horse","اسب","asb","horse","🐴"],["cow","گاو","gâv","cow","🐮"],["sheep","گوسفند","gusfand","sheep","🐑"],["goat","بُز","boz","goat","🐐"],["chicken","مرغ","morgh","chicken","🐔"],["rooster","خروس","khorus","rooster","🐓"],["chick","جوجه","juje","chick","🐥"],["duck","اردک","ordak","duck","🦆"],["rabbit","خرگوش","khargush","rabbit","🐰"],["mouse","موش","mush","mouse","🐭"],["fish","ماهی","mâhi","fish","🐟"],["bird","پرنده","parande","bird","🐦"],["parrot","طوطی","tuti","parrot","🦜"],["tiger","بَبر","babr","tiger","🐯"],["elephant","فیل","fil","elephant","🐘"],["monkey","میمون","meymun","monkey","🐒"],["giraffe","زرافه","zarâfe","giraffe","🦒"],["zebra","گورخر","gurkhar","zebra","🦓"],["penguin","پنگوئن","panguan","penguin","🐧"],["turtle","لاک‌پشت","lâkposht","turtle","🐢"],["frog","قورباغه","ghurbâghe","frog","🐸"],["snake","مار","mâr","snake","🐍"],["butterfly","پروانه","parvâne","butterfly","🦋"],["bee","زنبور","zanbur","bee","🐝"],["ant","مورچه","murche","ant","🐜"],["ladybug","کفشدوزک","kafshduzak","ladybug","🐞"],["octopus","هشت‌پا","hashtpâ","octopus","🐙"],["whale","نهنگ","nahang","whale","🐋"],["dolphin","دلفین","dolfin","dolphin","🐬"],["camel","شُتُر","shotor","camel","🐫"],["owl","جغد","joghd","owl","🦉"],["squirrel","سنجاب","sanjâb","squirrel","🐿️"],["dinosaur","دایناسور","dâynâsor","dinosaur","🦖"],["orange","پرتقال","porteghâl","orange","🍊"],["grapes","انگور","angur","grapes","🍇"],["watermelon","هندونه","hendune","watermelon","🍉"],["melon","طالبی","tâlebi","melon","🍈"],["strawberry","توت‌فرنگی","tutfarangi","strawberry","🍓"],["cherry","گیلاس","gilâs","cherries","🍒"],["peach","هلو","holu","peach","🍑"],["pear","گلابی","golâbi","pear","🍐"],["pineapple","آناناس","ânânâs","pineapple","🍍"],["lemon","لیمو","limu","lemon","🍋"],["carrot","هویج","havij","carrot","🥕"],["tomato","گوجه","goje","tomato","🍅"],["cucumber","خیار","khiyâr","cucumber","🥒"],["potato","سیب‌زمینی","sibzamini","potato","🥔"],["corn","ذرت","zorrat","corn","🌽"],["egg","تخم‌مرغ","tokhmemorgh","egg","🥚"],["cheese","پنیر","panir","cheese","🧀"],["rice","برنج","berenj","rice","🍚"],["pasta","ماکارونی","mâkâruni","pasta","🍝"],["pizza","پیتزا","pitzâ","pizza","🍕"],["cake","کیک","keyk","cake","🍰"],["icecream","بستنی","bastani","ice cream","🍦"],["chocolate","شکلات","shokolât","chocolate","🍫"],["candy","آبنبات","âbnabât","candy","🍬"],["cookie","بیسکویت","biskuit","cookie","🍪"],["honey","عسل","asal","honey","🍯"],["juice","آبمیوه","âbmive","juice","🧃"],["tea","چایی","châyi","tea","🍵"],["soup","سوپ","sup","soup","🍲"],["sandwich","ساندویچ","sândevich","sandwich","🥪"],["mushroom","قارچ","ghârch","mushroom","🍄"],["kiwi","کیوی","kivi","kiwi","🥝"],["popcorn","پفیلا","pofilâ","popcorn","🍿"],["teeth","دندون","dandun","teeth","🦷"],["tongue","زبون","zabun","tongue","👅"],["finger","انگشت","angosht","finger","☝️"],["face","صورت","surat","face","🙂"],["nose","دماغ","damâgh","nose","👃"],["arm","بازو","bâzu","arm","💪"],["shoes","کفش","kafsh","shoes","👟"],["socks","جوراب","jurâb","socks","🧦"],["hat","کلاه","kolâh","hat","🧢"],["pants","شلوار","shalvâr","pants","👖"],["shirt","پیرهن","pirhan","shirt","👕"],["boots","چکمه","chakme","boots","🥾"],["jacket","کاپشن","kâpshen","jacket","🧥"],["glasses","عینک","eynak","glasses","👓"],["gloves","دستکش","dastkesh","gloves","🧤"],["scarf","شال‌گردن","shâlgardan","scarf","🧣"],["bag","کیف","kif","bag","🎒"],["umbrella","چتر","chatr","umbrella","☂️"],["slippers","دمپایی","dampâyi","slippers","🩴"],["watch","ساعت","sâat","watch","⌚"],["door","در","dar","door","🚪"],["window","پنجره","panjere","window","🪟"],["tv","تلویزیون","televizyon","TV","📺"],["phone","گوشی","gushi","phone","📱"],["key","کلید","kelid","key","🔑"],["bath","حموم","hamum","bath","🛁"],["toilet","دستشویی","dastshuyi","potty","🚽"],["soap","صابون","sâbun","soap","🧼"],["toothbrush","مسواک","mesvâk","toothbrush","🪥"],["bucket","سطل","satl","bucket","🪣"],["spoon","قاشق","ghâshogh","spoon","🥄"],["fork","چنگال","changâl","fork","🍴"],["plate","بشقاب","boshghâb","plate","🍽️"],["cup","لیوان","livân","cup","🥤"],["broom","جارو","jâru","broom","🧹"],["candle","شمع","sham","candle","🕯️"],["gift","کادو","kâdo","present","🎁"],["balloon","بادکنک","bâdkonak","balloon","🎈"],["doll","عروسک","arusak","doll","🪆"],["scissors","قیچی","gheychi","scissors","✂️"],["pencil","مداد","medâd","pencil","✏️"],["slide","سرسره","sorsore","slide","🛝"],["puzzle","پازل","pâzel","puzzle","🧩"],["drum","طبل","tabl","drum","🥁"],["guitar","گیتار","gitâr","guitar","🎸"],["piano","پیانو","piyâno","piano","🎹"],["kite","بادبادک","bâdbâdak","kite","🪁"],["robot","ربات","robât","robot","🤖"],["bus","اتوبوس","otobus","bus","🚌"],["train","قطار","ghatâr","train","🚂"],["plane","هواپیما","havâpeymâ","airplane","✈️"],["ship","کشتی","keshti","ship","🚢"],["boat","قایق","ghâyegh","boat","⛵"],["bike","دوچرخه","docharkhe","bike","🚲"],["motorbike","موتور","motor","motorbike","🏍️"],["truck","کامیون","kâmiyon","truck","🚚"],["tractor","تراکتور","terâktor","tractor","🚜"],["ambulance","آمبولانس","âmbulâns","ambulance","🚑"],["fire_truck","ماشین آتش‌نشانی","mâshin âtashneshâni","fire truck","🚒"],["police_car","ماشین پلیس","mâshin polis","police car","🚓"],["helicopter","هلیکوپتر","helikopter","helicopter","🚁"],["rocket","موشک","mushak","rocket","🚀"],["taxi","تاکسی","tâksi","taxi","🚕"],["sun","خورشید","khorshid","sun","☀️"],["moon","ماه","mâh","moon","🌙"],["star","ستاره","setâre","star","⭐"],["cloud","ابر","abr","cloud","☁️"],["rain","بارون","bârun","rain","🌧️"],["snow","برف","barf","snow","❄️"],["rainbow","رنگین‌کمون","ranginkamun","rainbow","🌈"],["tree","درخت","derakht","tree","🌳"],["flower","گُل","gol","flower","🌸"],["leaf","برگ","barg","leaf","🍃"],["fire","آتیش","âtish","fire","🔥"],["sea","دریا","daryâ","sea","🌊"],["mountain","کوه","kuh","mountain","⛰️"],["stone","سنگ","sang","rock","🪨"],["shell","صدف","sadaf","shell","🐚"],["red","قرمز","ghermez","red","🔴"],["blue","آبی","âbi","blue","🔵"],["green","سبز","sabz","green","🟢"],["yellow","زرد","zard","yellow","🟡"],["orange_color","نارنجی","nârenji","orange (colour)","🟠"],["purple","بنفش","banafsh","purple","🟣"],["black","سیاه","siyâh","black","⚫"],["white","سفید","sefid","white","⚪"],["pink","صورتی","surati","pink","🩷"],["brown","قهوه‌ای","ghahveyi","brown","🟤"],["one","یک","yek","one","1️⃣"],["two","دو","do","two","2️⃣"],["three","سه","se","three","3️⃣"],["four","چهار","chahâr","four","4️⃣"],["five","پنج","panj","five","5️⃣"],["six","شیش","shish","six","6️⃣"],["seven","هفت","haft","seven","7️⃣"],["eight","هشت","hasht","eight","8️⃣"],["nine","نُه","noh","nine","9️⃣"],["ten","دَه","dah","ten","🔟"],["circle","دایره","dâyere","circle","⭕"],["square","مربع","morabba","square","🔲"],["triangle","مثلث","mosallas","triangle","🔺"],["heart","قلب","ghalb","heart","❤️"],["mommy","مامان","mâmân","mommy","👩"],["daddy","بابا","bâbâ","daddy","👨"],["grandma","مامان‌بزرگ","mâmânbozorg","grandma","👵"],["grandpa","بابابزرگ","bâbâbozorg","grandpa","👴"],["brother","داداش","dâdâsh","brother","👦"],["sister","آبجی","âbji","sister","👧"],["baby","نی‌نی","nini","baby","👶"],["doctor","دکتر","doktor","doctor","🧑‍⚕️"],["police","پلیس","polis","police officer","👮"],["firefighter","آتش‌نشان","âtashneshân","firefighter","🧑‍🚒"],["happy","خوشحال","khoshhâl","happy","😀"],["sad","ناراحت","nârâhat","sad","😢"],["angry","عصبانی","asabâni","angry","😠"],["scared","ترسیده","tarside","scared","😨"],["sleepy","خوابالو","khâbâlu","sleepy","😴"],["tired","خسته","khaste","tired","😩"],["sick","مریض","mariz","sick","🤒"],["hot","گرم","garm","hot","🥵"],["cold","سرد","sard","cold","🥶"],["run","بدو","bedo","run","🏃"],["swim","شنا","shenâ","swim","🏊"],["sing","بخون","bekhun","sing","🎤"],["hug","بغل","baghal","hug","🤗"],["kiss","بوس","bus","kiss","😘"],["wave","بای بای","bâybây","bye-bye","👋"],["laugh","بخند","bekhand","laugh","😂"],["cry","گریه","gerye","cry","😭"],["clap","دست بزن","dast bezan","clap","👏"],["dance","برقص","beraghs","dance","💃"],["sleep","لالا","lâlâ","night-night","🛌"]];
+const SW={};for(const [id,fa,tr,en,pic] of SAY_WORDS){SW[id]={fa,tr,en,pic};LINES['w_'+id]||=[fa+'!',tr+'! ('+en+'!)'];LINES['say_'+id]||=['بگو '+fa+'!','begu '+tr+'! (say '+en+'!)']}
 const BODY_OF_PART={head:'head',face:'face',antenna:'head',ear:'ear',arm:'hand',belly:'belly',feet:'feet'};
 
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
@@ -640,35 +668,32 @@ async function playFeed(){
   await ask(tok,'item',target,'want_'+target);
   await wait(300);if(alive(tok))endGame();
 }
-// 3) Say it: Pash shows a thing and asks your son to say it; any try counts
-async function playSay(){
-  const tok=startGame('say');
-  for(const id of shuffle(SAY_POOL).slice(0,3)){
-    if(!alive(tok))return;
-    spawnItems([id],[1.7]);await wait(450);
-    let heard=false;
-    for(let attempt=0;attempt<2&&!heard&&alive(tok);attempt++){
-      game.busy=true;await sayAsync('say_'+id);game.busy=false;if(!alive(tok))return;
-      if(talk.on){heard=await new Promise(res=>{game.listening=true;game.onHeard=()=>res(true);setTimeout(()=>res(false),7000)});
-        game.listening=false;game.onHeard=null}
-      else{await wait(3200);heard=true} // no mic here: give him time to say it out loud
-    }
-    if(!alive(tok))return;
-    if(heard){statAdd(id,'said');cheer(false);await sayAsync('yay')}
-    await sayAsync('w_'+id); // Pash models the word again
-    clearItems();await wait(300);
-  }
-  if(alive(tok)){cheer(true);endGame()}
+// 3) Say it screen: one big picture card; Pash says "say X!", listens up to 8 s, praises any try, then models the word
+let sayCur=null,sayNext=null;
+function pickSay(not){const ids=Object.keys(SW),has=ids.filter(id=>HAS.has('w_'+id)),pool=(has.length?has:ids).filter(id=>id!==not);
+  return pool[Math.floor(Math.random()*pool.length)]}
+async function sayRound(id){
+  const tok=startGame('say');sayCur=id;sayNext=pickSay(id);loadVoices(['say_'+sayNext,'w_'+sayNext]);
+  document.getElementById('cardEm').textContent=SW[id].pic;document.getElementById('cardFa').textContent=SW[id].fa;
+  game.busy=true;await sayAsync('say_'+id);game.busy=false;if(!alive(tok))return;
+  let heard=false;
+  if(talk.on){heard=await new Promise(res=>{game.listening=true;game.onHeard=()=>res(true);
+      const to=()=>talk.rec||talk.playing?setTimeout(to,400):res(false);setTimeout(to,8000)}); // don't cut off a try in progress
+    game.listening=false;game.onHeard=null}
+  else await wait(3500); // no mic: give him time to say it out loud
+  if(!alive(tok))return;
+  if(heard){statAdd(id,'said');cheer(false);await sayAsync('p_vay_goftish');if(!alive(tok))return}
+  await sayAsync('w_'+id);await wait(1800);if(alive(tok))sayRound(sayNext); // model the word, then gently move on
 }
 
 // ---------- Room furniture: tap to hear the word ----------
 const furnGroup=new THREE.Group();scene.add(furnGroup);
-const hemiLight=scene.children.find(o=>o.isHemisphereLight);
+const hemiLight=scene.children.find(o=>o.isHemisphereLight);let tvMat;
 let lightsOn=true;
 function makeFurniture(){
   const wood=M(0xc98b52,.7),dark=M(0x8a5a33,.7);
-  const add=(id,g,x,z,ry=0)=>{g.position.set(x,0,z);g.rotation.y=ry;g.traverse(o=>{o.userData.furn=id;if(o.isMesh){o.castShadow=true;o.receiveShadow=true}});
-    g.userData={furn:id,wig:0};furnGroup.add(g);
+  const add=(id,g,x,z,ry=0,rm='home')=>{g.position.set(x,0,z);g.rotation.y=ry;g.traverse(o=>{o.userData.furn=id;if(o.isMesh){o.castShadow=true;o.receiveShadow=true}});
+    g.userData={furn:id,wig:0,room:rm};furnGroup.add(g);
     // invisible tap area covering the whole piece, so taps between legs still count
     const bb=new THREE.Box3().setFromObject(g),sz=new THREE.Vector3(),c=new THREE.Vector3();bb.getSize(sz);bb.getCenter(c);g.worldToLocal(c);
     const hb=new THREE.Mesh(new THREE.BoxGeometry(sz.x+.2,sz.y+.2,sz.z+.2),new THREE.MeshBasicMaterial({visible:false}));hb.position.copy(c);hb.rotation.y=-ry;hb.userData.furn=id;g.add(hb);
@@ -679,13 +704,13 @@ function makeFurniture(){
   const blanket=rbox(1.3,.12,1.24,.08,M(0x5aa9ff,.8));blanket.position.set(.35,.75,0);bed.add(blanket);
   const pillow=rbox(.5,.18,.8,.09,M(0xffffff,.9));pillow.position.set(-.75,.8,0);bed.add(pillow);
   const head=rbox(.14,1.1,1.3,.06,dark);head.position.set(-1.1,.6,0);bed.add(head);
-  add('bed',bed,4.1,-2.6,-.35);
+  add('bed',bed,3.2,-3.3,-.35,'bed');
   // lamp
   const lamp=new THREE.Group();lamp.add(part(new THREE.CylinderGeometry(.3,.36,.08,24),M(0x3d4a63,.5),0,.04,0));
   lamp.add(part(new THREE.CylinderGeometry(.04,.04,1.6,10),M(0x3d4a63,.5),0,.84,0));
   const shadeMat=new THREE.MeshStandardMaterial({color:0xffe08a,emissive:0xffc94d,emissiveIntensity:.6,roughness:.6,side:THREE.DoubleSide});
   lamp.add(part(new THREE.CylinderGeometry(.28,.45,.5,24,1,true),shadeMat,0,1.75,0));lamp.userData.shade=shadeMat;
-  const l=add('lamp',lamp,2.2,-4.4);l.userData.shade=shadeMat;
+  const l=add('lamp',lamp,-3.2,-4.5,0,'bed');l.userData.shade=shadeMat;
   // table + book
   const table=new THREE.Group();const top=rbox(1.4,.1,.9,.04,wood);top.position.y=.95;table.add(top);
   for(const x of[-.6,.6])for(const z of[-.36,.36])table.add(part(new THREE.CylinderGeometry(.05,.05,.92,8),wood,x,.47,z));
@@ -698,6 +723,36 @@ function makeFurniture(){
   for(const x of[-.24,.24])for(const z of[-.24,.24])chair.add(part(new THREE.CylinderGeometry(.035,.035,.55,8),M(0xff9f1c,.6),x,.27,z));
   const back=rbox(.6,.6,.07,.03,M(0xff9f1c,.6));back.position.set(0,.88,-.27);chair.add(back);
   add('chair',chair,-2.2,-2.4,.5);
+  // home: TV on a low cabinet, framed picture
+  const tv=new THREE.Group();const cab=rbox(1.8,.6,.6,.06,wood);cab.position.y=.3;tv.add(cab);tv.add(part(new THREE.BoxGeometry(1.5,.92,.08),DARK,0,1.12,0));
+  tvMat=new THREE.MeshStandardMaterial({color:0x111418,roughness:.25});tv.add(part(new THREE.PlaneGeometry(1.38,.8),tvMat,0,1.12,.045));
+  add('tv',tv,3.3,-4.4);
+  const picG=new THREE.Group();picG.add(pic,pf);add('picture',picG,3.4,BACK).position.y=4.1;
+  // play room: toy shelf, teddy, blocks, drum, kite (brighter walls: WALL in showScreen)
+  const shelf=new THREE.Group(),sw=M(0xffffff,.6),cols=[0xe63946,0x3a86ff,0xffc93c,0x2bb673,0xa66cff,0xff7a59];
+  for(const x of[-1,1])shelf.add(part(new THREE.BoxGeometry(.08,1.9,.5),sw,x,.95,0));
+  for(const y of[.05,.65,1.25,1.86])shelf.add(part(new THREE.BoxGeometry(2.08,.06,.5),sw,0,y,0));
+  for(let i=0;i<9;i++){const sz=rnd(.22,.38);shelf.add(part(new THREE.BoxGeometry(sz,sz,sz),M(cols[i%6],.5),-.7+(i%3)*.7+rnd(-.1,.1),[.08,.68,1.28][i/3|0]+sz/2,0))}
+  add('shelf',shelf,-3.3,-4.85,0,'play');
+  const ted=new THREE.Group(),tb=MAKE.teddy();tb.scale.setScalar(1.9);ted.add(tb);add('teddy',ted,-1.9,-3.7,.3,'play');
+  const blocks=new THREE.Group();[[-.3,0],[.3,0],[0,1],[-.1,2]].forEach(([x,r],i)=>{const b=rbox(.5,.5,.5,.06,M(cols[i],.5));b.position.set(x,.25+r*.5,0);b.rotation.y=rnd(-.3,.3);blocks.add(b)});
+  add('blocks',blocks,2.3,-2.3,0,'play');
+  const drum=new THREE.Group();drum.add(part(new THREE.CylinderGeometry(.5,.5,.55,24),M(0xe63946,.5),0,.3,0));drum.add(part(new THREE.CylinderGeometry(.51,.51,.03,24),M(0xfaf6ef,.7),0,.59,0));
+  for(const s of[-1,1]){const k=part(new THREE.CylinderGeometry(.025,.025,.6,6),wood,s*.18,.68,.1);k.rotation.z=s*1.2;drum.add(k)}
+  add('drum',drum,3.6,-3.2,0,'play');
+  const ks=new THREE.Shape();ks.moveTo(0,.75);ks.lineTo(.5,0);ks.lineTo(0,-.95);ks.lineTo(-.5,0);
+  const kite=new THREE.Group();kite.add(part(new THREE.ShapeGeometry(ks),new THREE.MeshStandardMaterial({color:0xff7a59,roughness:.7,side:THREE.DoubleSide})));
+  for(let i=0;i<4;i++)kite.add(part(new THREE.BoxGeometry(.16,.1,.02),M(cols[i+1],.6),.12*Math.sin(i*1.4),-1.15-i*.32,.01));
+  add('kite',kite,3.3,BACK+.06,0,'play').position.y=4.4;
+  // bedroom: night stand and a slowly turning star mobile (bed + lamp above)
+  const ns=new THREE.Group();ns.add(part(new THREE.BoxGeometry(.7,.62,.55),M(0xf4f7fb,.6),0,.31,0));ns.add(part(new THREE.SphereGeometry(.04,8,6),YEL,0,.4,.29));
+  add('nightstand',ns,1.6,-4.4,-.2,'bed');
+  const ss=new THREE.Shape();for(let i=0;i<10;i++){const r=i%2?.09:.22,a=i*Math.PI/5+Math.PI/2;ss[i?'lineTo':'moveTo'](Math.cos(a)*r,Math.sin(a)*r)}
+  const sg=new THREE.ExtrudeGeometry(ss,{depth:.05,bevelEnabled:false}),mob=new THREE.Group(),hang=M(0xdddddd,.6);
+  mob.add(part(new THREE.CylinderGeometry(.012,.012,2.5,4),hang,0,1.25,0));
+  for(const r of[[0,0,Math.PI/2],[Math.PI/2,0,0]]){const b=part(new THREE.CylinderGeometry(.02,.02,1.4,6),hang);b.rotation.set(...r);mob.add(b)}
+  [[.7,0],[-.7,0],[0,.7],[0,-.7]].forEach(([x,z],i)=>{mob.add(part(new THREE.CylinderGeometry(.008,.008,.5,4),hang,x,-.25,z));mob.add(part(sg,M([0xffd34d,0xffffff,0xffd34d,0x9fd3ff][i],.4),x,-.6,z))});
+  add('star',mob,-1.7,-2.4,0,'bed').position.y=4.3;mob.userData.spin=.5;
 }
 makeFurniture();
 function furnById(id){return furnGroup.children.find(g=>g.userData.furn===id)}
@@ -711,11 +766,15 @@ async function tapFurniture(id){
   if(game.type||st.mode==='sleep'&&id!=='lamp')return;
   const g=furnById(id);if(g)g.userData.wig=.7;st.lastPoke=performance.now();
   if(id==='lamp'){setLights(!lightsOn);SFX.beep();await sayAsync('w_lamp');say(lightsOn?'x_cheragh_roshan':'x_cheragh_khamoosh');return}
-  if(id==='bed'){goHome();await sayAsync('w_bed');await sayAsync('x_in_takhte_mane');if(st.mode!=='game'){setMode('sleep');setFace('sleep',1e9);music(false)}return}
+  if(id==='bed'){goHome();await sayAsync('w_bed');await sayAsync('x_in_takhte_mane');if(st.mode!=='game'&&curRoom==='bed'){setMode('sleep');setFace('sleep',1e9);music(false)}return}
   if(id==='chair'){await sayAsync('w_chair');pose={name:'sit',until:performance.now()+1500};setMode('game');say('x_beshin');await wait(1600);if(st.mode==='game'&&!game.type)setMode('idle');return}
-  setFace('shock',500);await sayAsync('w_'+id);setFace('laugh',800);
+  // new pieces: a little reaction, and Pash names it when there's a clip
+  ({tv:()=>{tvMat.emissive.setHex(tvMat.emissive.getHex()?0:0x3a86ff);SFX.beep()},drum:()=>{tone(140,55,.3,'sine',.6);noise(.1,.3,900);jump(5)},
+    teddy:()=>{SFX.giggle();emit('heart',new THREE.Vector3(-1.9,1.8,-3.4),5,{size:.3,life:1.2,g:.5})},star:()=>{[1047,1319,1568].forEach((f,i)=>tone(f,f,.2,'triangle',.08,i*.15))}}[id]||SFX.boing)();
+  setFace('shock',500);kick('squash',4);if(HAS.has('w_'+id)||FURN[id])await sayAsync('w_'+id);setFace('laugh',800);
 }
 function animateFurniture(t,dt){for(const g of furnGroup.children){const u=g.userData;
+  if(u.spin)g.rotation.y+=u.spin*dt;
   if(u.wig>0){u.wig-=dt;g.scale.set(1+Math.sin(u.wig*25)*.06*u.wig,1-Math.sin(u.wig*25)*.06*u.wig,1+Math.sin(u.wig*25)*.06*u.wig)}else g.scale.set(1,1,1)}}
 
 // ---------- Moves game: Pash calls a move and does it; your son copies ----------
@@ -752,7 +811,7 @@ let stats=(()=>{try{return JSON.parse(localStorage.getItem(STATS_KEY))||null}cat
 let statsDirty=false;
 function saveStats(){if(!statsDirty)return;statsDirty=false;try{localStorage.setItem(STATS_KEY,JSON.stringify(stats))}catch(e){}}
 function wordOf(k){const m=k.match(/^(?:w|where|this|say|want)_(.+)$/);if(!m)return null;const id=m[1];
-  return (WORDS[id]||BODY[id]||FURN[id])?id:null}
+  return (WORDS[id]||BODY[id]||FURN[id]||SW[id])?id:null}
 function statAdd(id,field){if(!id)return;const w=stats.words[id]||(stats.words[id]={heard:0,right:0,miss:0,said:0});w[field]=(w[field]||0)+1;statsDirty=true}
 function statHeard(k){statAdd(wordOf(k),'heard')}
 const today=()=>new Date().toISOString().slice(0,10);
@@ -760,7 +819,7 @@ setInterval(()=>{if(document.getElementById('start').hidden&&document.visibility
 document.getElementById('go').addEventListener('click',()=>{stats.sessions++;statsDirty=true;saveStats()});
 const mins=s=>s<60?'<1':Math.round(s/60);
 function renderParent(){
-  const all={...WORDS,...BODY,...FURN};
+  const all={...SW,...WORDS,...BODY,...FURN};
   document.getElementById('pcSum').innerHTML=
     `<div><b>${mins(stats.days[today()]||0)}</b>minutes today</div><div><b>${mins(stats.secs)}</b>minutes total</div><div><b>${stats.sessions}</b>times opened</div>`+
     `<div><b>${Object.values(stats.words).filter(w=>w.heard>=3).length}/${Object.keys(all).length}</b>words heard 3+ times</div>`;
@@ -861,7 +920,7 @@ function playBack(buf){
 // ---------- Input ----------
 const ray=new THREE.Raycaster(),ptr=new THREE.Vector2();let down=null;
 function hit(e){const r=renderer.domElement.getBoundingClientRect();ptr.set(((e.clientX-r.left)/r.width)*2-1,-((e.clientY-r.top)/r.height)*2+1);
-  ray.setFromCamera(ptr,camera);const h=ray.intersectObjects([itemsGroup,bubbleGroup,robot,ball,furnGroup],true);return h[0]}
+  ray.setFromCamera(ptr,camera);return ray.intersectObjects([itemsGroup,bubbleGroup,robot,ball,furnGroup,sky],true).find(h=>{for(let o=h.object;o;o=o.parent)if(!o.visible)return false;return true})}
 renderer.domElement.addEventListener('pointerdown',e=>{down={x:e.clientX,y:e.clientY,moved:false,h:hit(e)}});
 renderer.domElement.addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-down.x;
   if(Math.abs(dx)>12){down.moved=true;st.spinVel+=(e.movementX||0)*.02;}});
@@ -884,15 +943,36 @@ onBtn('bBubbles',blowBubbles);
 onBtn('bBall',throwBall,false);
 onBtn('bFeed',playFeed);
 onBtn('bFind',playFind);
-onBtn('bSay',playSay);
+onBtn('bNext',()=>sayRound(sayNext||pickSay()));
+onBtn('bRepeat',()=>sayRound(sayCur||pickSay()));
 onBtn('bMoves',playMoves);
 onBtn('bSleep',()=>{setMode('sleep');say(HAS.has('x_khabam_miad')&&Math.random()<.5?'x_khabam_miad':'sleep');setFace('sleep',1e9);music(false)});
 document.getElementById('go').onclick=async()=>{await ac().resume();micOn(false);await Promise.race([MANIFEST.then(()=>loadVoices(['name','hi'])),wait(2500)]);loadCore();document.getElementById('start').hidden=true;document.getElementById('hint').hidden=true;say(HAS.has('name')?'name':'hi');SFX.beep();kick('squash',8);speak()};
 
+// ---------- Rooms (home, play, bed) + the Say it screen, switched from #nav ----------
+let curRoom='home',scr='home';
+const SCREENS={home:[['bTalk','bFeed','bJump'],['bDance','bMoves','bPeek']],play:[['bBall','bFind','bBubbles'],['bDance','bMoves','bTalk']],
+  bed:[['bSleep','bPeek'],['bTalk']],say:[['bTalk','bRepeat'],['bNext']]};
+const WALL={home:0xffffff,play:0xfff27a,bed:0x6f9cff};
+function showScreen(s){scr=s;
+  if(s!=='say'){curRoom=s;furnGroup.children.forEach(g=>g.visible=g.userData.room===s);wallMat.color.setHex(WALL[s]);if(s!=='bed'&&!lightsOn)setLights(true)}
+  document.querySelectorAll('.col .rb').forEach(b=>document.getElementById('btns').appendChild(b));
+  ['colL','colR'].forEach((c,i)=>{c=document.getElementById(c);SCREENS[s][i].forEach(id=>c.appendChild(document.getElementById(id)))});
+  document.querySelectorAll('#nav .rb').forEach(b=>b.classList.toggle('cur',b.dataset.r===s));document.getElementById('card').hidden=s!=='say';document.body.classList.toggle('say',s==='say');resize()}
+async function setRoom(s){if(s===scr&&s!=='say')return;const f=document.getElementById('fade');
+  endGame();try{voiceSrc&&voiceSrc.stop()}catch(e){}if(st.mode!=='idle')setMode('idle');setFace('happy',0);goHome();
+  while(bubbleGroup.children.length)bubbleGroup.remove(bubbleGroup.children[0]);
+  f.classList.add('on');await wait(320);showScreen(s);robot.position.x=robot.position.z=0;f.classList.remove('on');
+  if(s==='say')sayRound(pickSay(sayCur));else say(ROOM_HI[s]);
+}
+document.querySelectorAll('#nav .rb').forEach(b=>b.onclick=()=>{st.lastPoke=performance.now();setRoom(b.dataset.r)});
+
 // ---------- Layout ----------
 function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;
-  const far=w<h?12:9;camera.position.set(0,3.4,far);camera.lookAt(0,1.2,0);camera.updateProjectionMatrix()}
-addEventListener('resize',resize);resize();
+  const far=w<h?12:9;camera.position.set(0,3.4,far);camera.lookAt(0,1.2,0);
+  if(scr==='say')camera.setViewOffset(w,h,w<h?0:-w*.2,w<h?-h*.2:0,w,h);else camera.clearViewOffset(); // Say it: robot moves aside for the card
+  camera.updateProjectionMatrix()}
+addEventListener('resize',resize);showScreen('home');
 
 // ---------- Loop ----------
 const clock=new THREE.Clock();let nextBlink=2;

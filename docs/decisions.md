@@ -20,6 +20,9 @@ Newest decisions are at the bottom of each section.
 - **11 Robo source clips are truncated at the source** and must be regenerated: ab_mikham, nan_mikham, shir_khordam, ser_shodam, gorosnam, ghelghelaki, in_chi_bood, dobare, dahan, akh, boo_mide.
 - **Clips are generated on the user's PC.** This cloud workspace can't reach api.elevenlabs.io (blocked by the network allowlist), so generation runs via Claude Code on the PC using `vocab/PROMPT_for_Claude_Code.md` and `vocab/pash_voice_lines.csv` (892 lines). The API key stays in a local environment variable and is never pasted into chat.
 - **`name.mp3` is the personal greeting with my son's name.** Keep it; don't regenerate it.
+- **v2 voice (2026-10-08): ElevenLabs `eleven_v4`, voice "Setareh" (`8Ebkg5uUcbSbeqGucAoR`), with English emotion tags** in the text ([excited], [whispers], [yawns], ...). Lines are in `vocab/lines_existing_v2.csv` (Pash's lines + 57 longer `p_` phrases) and `vocab/lines_words_v2.csv` (200 reviewed words, `vocab/words_v2.json`). Bubble text comes from the CSV `display_text` via `audio/manifest.json`.
+- **Pitch +2 semitones, formants shifted ("up2 cute")**, applied in `tools/process_robo_clips.py`. This is the one effect the user approved after listening.
+- **Generation is budgeted:** 15,000 characters were used first; remaining words wait for a top-up (see `vocab/voice_status.md`).
 
 ## Tech
 - **Platform: web for now (three.js r128 from cdnjs).** One page; the hosted build is `index.html` on GitHub Pages: https://kitchennetweb-a11y.github.io/Pash/ (capital P). A Claude artifact copy also exists, but the microphone is blocked there, so GitHub Pages is the real version.

@@ -1,0 +1,190 @@
+﻿file_name,farsi_text,display_text,translit,english,group,use
+hi.mp3,[excited] سلام!,سلام!,salâm!,hi!,existing,start / wake from fly
+head.mp3,[dizzy] وای... سرم گیج رفت!,وای... سرم گیج رفت!,vây... saram gij raft!,whoa... I'm dizzy!,existing,tap head
+belly.mp3,[giggles] اِ... ببخشید!,اِ... ببخشید!,e... bebakhshid!,oh... excuse me!,existing,tap belly (toot)
+face.mp3,[giggles] قلقلکم نده!,قلقلکم نده!,ghelghelakam nade!,don't tickle me!,existing,tap face
+antenna.mp3,[surprised] جیززز!,جیززز!,jizzz!,zap!,existing,tap antenna
+dance.mp3,[excited] بیا برقصیم!,بیا برقصیم!,biâ beraghsim!,let's dance!,existing,dance button
+ball.mp3,[excited] آخ جون، توپ!,آخ جون، توپ!,"âkh jun, tup!","yay, a ball!",existing,ball button
+feed.mp3,[happy] به به! چه خوشمزه!,به به! چه خوشمزه!,bah bah! che khoshmaze!,yum! so tasty!,existing,food appears / eats
+sleep.mp3,[whispers] شب بخیر...,شب بخیر...,shab bekheir...,good night...,existing,sleep button
+wake.mp3,[surprised] اِ! بیدار شدم!,اِ! بیدار شدم!,e! bidâr shodam!,oh! I'm awake!,existing,woken up
+arm.mp3,[playful] دستم! بزن قدش!,دستم! بزن قدش!,dastam! bezan ghadesh!,my hand! high five!,existing,tap arm
+listen.mp3,[curious] یه چیزی بگو!,یه چیزی بگو!,ye chizi begu!,say something!,existing,mic on
+rocket.mp3,[laughs] وای! موشک شدم!,وای! موشک شدم!,vây! mushak shodam!,whoa! I'm a rocket!,existing,belly x3 (toot launch)
+fly.mp3,[excited] پرواز! وییی!,پرواز! وییی!,parvâz! viii!,fly! wheee!,existing,tap ear (fly)
+feet.mp3,[giggles] پاهام قلقلکی شد!,پاهام قلقلکی شد!,pâhâm ghelghelaki shod!,my feet tickle!,existing,tap feet
+jump.mp3,[excited] هوپ! بپر!,هوپ! بپر!,hop! bepar!,hop! jump!,existing,jump button
+peek.mp3,[playful] دالی!,دالی!,dâli!,peekaboo!,existing,face hidden then shown
+bubbles.mp3,[excited] حباب! بترکونشون!,حباب! بترکونشون!,habâb! betarkuneshun!,bubbles! pop them!,existing,bubbles start
+yay.mp3,[excited] آفرین!,آفرین!,âfarin!,well done!,existing,praise
+bored.mp3,[yawns] اوووف... حوصله‌م سر رفت!,اوووف... حوصله‌م سر رفت!,uuuf... hoselam sar raft!,ugh... I'm bored!,existing,idle yawn
+x_akh_saram.mp3,[groans] آخ سرم!,آخ سرم!,âkh saram!,"ow, my head!",existing,tap head variant
+x_oops.mp3,[giggles] اوه اوه!,اوه اوه!,oh oh!,uh-oh!,existing,tap belly variant
+x_in_chi_bood.mp3,[giggles] این صدای چی بود؟,این صدای چی بود؟,in sedâ-ye chi bud?,what was that noise?,existing,tap belly variant
+x_ghelghelakam_miad.mp3,[giggles] قلقلکم میاد!,قلقلکم میاد!,ghelghelakam miâd!,that tickles!,existing,tap face variant
+x_hahaha.mp3,[laughs] هاهاها!,هاهاها!,hâhâhâ!,hahaha!,existing,tap face variant
+x_dooset_daram.mp3,[happy] خیلی دوستت دارم!,خیلی دوستت دارم!,kheili dustet dâram!,I love you so much!,existing,tap face variant
+x_pam_ro_zadi.mp3,[playful] اِ! پامو زدی!,اِ! پامو زدی!,e! pâmo zadi!,hey! you got my foot!,existing,tap feet variant
+x_vay.mp3,[surprised] وای!,وای!,vây!,whoa!,existing,tap antenna variant
+x_hapche.mp3,[sniffs] هاپچی!,هاپچی!,hâpchi!,achoo!,existing,tap antenna variant
+x_sobh_bekheir.mp3,[cheerfully] صبح بخیر!,صبح بخیر!,sobh bekheir!,good morning!,existing,woken up variant
+x_salam_doostam.mp3,[cheerfully] سلام دوست من!,سلام دوست من!,salâm dust-e man!,"hi, my friend!",existing,greeting variant
+x_afarin_kheili_khoob.mp3,[proudly] آفرین! خیلی خوب بود!,آفرین! خیلی خوب بود!,âfarin! kheili khub bud!,well done! that was great!,existing,praise variant
+x_bache_khoob.mp3,[happy] آفرین عزیزم!,آفرین عزیزم!,âfarin azizam!,"well done, sweetie!",existing,praise variant
+x_gorosnam.mp3,[sighs] گشنمه!,گشنمه!,gosname!,I'm hungry!,existing,idle yawn variant
+x_ser_shodam.mp3,[happy] آخیش! سیر شدم!,آخیش! سیر شدم!,âkhish! sir shodam!,ahh! I'm full!,existing,food variant
+x_khabam_miad.mp3,[yawns] خوابم میاد...,خوابم میاد...,khâbam miâd...,I'm sleepy...,existing,sleep button variant
+x_oftadam.mp3,[laughs] تالاپ! افتادم!,تالاپ! افتادم!,tâlâp! oftâdam!,thud! I fell!,existing,after rocket landing
+x_dobare.mp3,[excited] دوباره!,دوباره!,dobâre!,again!,existing,end of game
+x_sib_khoshmaze.mp3,[happy] به به! سیب خوشمزه‌ست!,به به! سیب خوشمزه‌ست!,bah bah! sib khoshmaze-st!,yum! apples are tasty!,existing,feed game: apple
+x_moz_dooset_daram.mp3,[happy] آخ جون! موز دوست دارم!,آخ جون! موز دوست دارم!,âkh jun! moz dust dâram!,yay! I love bananas!,existing,feed game: banana
+x_shir_khordam.mp3,[happy] شیرمو خوردم!,شیرمو خوردم!,shiramo khordam!,I drank my milk!,existing,feed game: milk
+x_sar_gij.mp3,[dizzy] سرم گیج رفت!,سرم گیج رفت!,saram gij raft!,I'm dizzy!,existing,tap head variant
+x_akh.mp3,[groans] آخ!,آخ!,âkh!,ow!,existing,tap head variant
+x_oh.mp3,[surprised] اوه!,اوه!,oh!,oh!,existing,tap arm variant
+x_boo_mide.mp3,[giggles] پیف پیف! بو میده!,پیف پیف! بو میده!,pif pif! bu mide!,pee-yew! it smells!,existing,tap belly variant
+x_ghelghelaki.mp3,[giggles] قلقلکیم!,قلقلکیم!,ghelghelakiyam!,I'm ticklish!,existing,tap feet variant
+x_bidar_shodam.mp3,[yawns] بیدار شدم!,بیدار شدم!,bidâr shodam!,I'm awake!,existing,woken up variant
+x_pashodam.mp3,[cheerfully] پا شدم، پا شدم!,پا شدم، پا شدم!,"pâ shodam, pâ shodam!","I'm up, I'm up!",existing,woken up variant
+x_salam.mp3,[happy] سلااام!,سلااام!,salâââm!,hiii!,existing,greeting variant
+x_mamnoon.mp3,[happy] مرسی! دستت درد نکنه!,مرسی! دستت درد نکنه!,mersi! dastet dard nakone!,thanks! you are so kind!,existing,food variant
+x_shab_bekheir.mp3,[sleepy] شب بخیر... بریم لالا.,شب بخیر... بریم لالا.,shab bekheir... berim lâlâ.,good night... let's go night-night.,existing,sleep button variant
+x_begir.mp3,[playful] بگیرش!,بگیرش!,begiresh!,catch it!,existing,ball button variant
+x_biya_beraghsim.mp3,[excited] بیا با هم برقصیم!,بیا با هم برقصیم!,biâ bâ ham beraghsim!,let's dance together!,existing,dance button variant
+x_beraghs.mp3,[excited] برقص!,برقص!,beraghs!,dance!,existing,moves game / dance variant
+x_dobare_dobare.mp3,[excited] دوباره! دوباره!,دوباره! دوباره!,dobâre! dobâre!,again! again!,existing,end of game variant
+x_ab_khonak.mp3,[happy] آخیش! آب خنک!,آخیش! آب خنک!,âkhish! âb-e khonak!,ahh! cool water!,existing,feed game: water
+x_cheragh_roshan.mp3,[cheerfully] چراغ روشن شد!,چراغ روشن شد!,cherâgh roshan shod!,the light is on!,existing,tap lamp (on)
+x_cheragh_khamoosh.mp3,[whispers] چراغ خاموش شد!,چراغ خاموش شد!,cherâgh khâmush shod!,the light is off!,existing,tap lamp (off)
+x_in_takhte_mane.mp3,[sleepy] اینم تخت من!,اینم تخت من!,inam takht-e man!,and here's my bed!,existing,tap bed
+x_bekhab.mp3,[whispers] بخواب، لالا...,بخواب، لالا...,"bekhâb, lâlâ...","sleep, night-night...",existing,unused in code
+x_bepar.mp3,[excited] بپر!,بپر!,bepar!,jump!,existing,moves game
+x_bepar_bala.mp3,[excited] بپر بالا!,بپر بالا!,bepar bâlâ!,jump up high!,existing,moves game
+x_becharkh.mp3,[playful] بچرخ، بچرخ!,بچرخ، بچرخ!,"becharkh, becharkh!","spin, spin!",existing,moves game
+x_dast_bezan.mp3,[cheerfully] دست بزن!,دست بزن!,dast bezan!,clap!,existing,moves game
+x_beshin.mp3,[playful] بشین!,بشین!,beshin!,sit down!,existing,moves game / tap chair
+x_bala.mp3,[excited] بالا!,بالا!,bâlâ!,up!,existing,moves game
+x_paein.mp3,[playful] پایین!,پایین!,pâyin!,down!,existing,moves game
+x_miram_bala.mp3,[excited] میرم بالا!,میرم بالا!,miram bâlâ!,I'm going up!,existing,moves game (after up)
+x_miam_paein.mp3,[playful] میام پایین!,میام پایین!,miâm pâyin!,I'm coming down!,existing,moves game (after down)
+x_yavash.mp3,[softly] یواش، یواش!,یواش، یواش!,"yavâsh, yavâsh!","gently, gently!",existing,too many pokes
+x_yavash_tar.mp3,[softly] یواش‌تر، عزیزم!,یواش‌تر، عزیزم!,"yavâsh-tar, azizam!","more gently, sweetie!",existing,too many pokes
+x_bozorg.mp3,[proudly] بزرگ!,بزرگ!,bozorg!,big!,existing,moves game
+x_koochak.mp3,[whispers] کوچیک!,کوچیک!,kuchik!,small!,existing,moves game
+x_man_bozorgam.mp3,[proudly] من بزرگم! خیلی بزرگ!,من بزرگم! خیلی بزرگ!,man bozorgam! kheili bozorg!,I'm big! so big!,existing,moves game (after big)
+w_lamp.mp3,[cheerfully] چراغ!,چراغ!,cherâgh!,lamp!,existing,tap lamp
+w_book.mp3,[cheerfully] کتاب!,کتاب!,ketâb!,book!,existing,tap furniture
+w_bed.mp3,[cheerfully] تخت!,تخت!,takht!,bed!,existing,tap bed
+w_table.mp3,[cheerfully] میز!,میز!,miz!,table!,existing,tap furniture
+w_chair.mp3,[cheerfully] صندلی!,صندلی!,sandali!,chair!,existing,tap chair
+w_ball.mp3,[cheerfully] توپ!,توپ!,tup!,ball!,existing,tap object (correct) / say-it model
+where_ball.mp3,[curious] توپ کجاست؟,توپ کجاست؟,tup kojâst?,where is the ball?,existing,find game ask
+this_ball.mp3,[cheerfully] این توپه!,این توپه!,in tupe!,that's the ball!,existing,wrong tap: name it
+say_ball.mp3,[playful] بگو... توپ!,بگو... توپ!,begu... tup!,say... ball!,existing,say-it prompt
+w_apple.mp3,[cheerfully] سیب!,سیب!,sib!,apple!,existing,tap object (correct) / say-it model
+where_apple.mp3,[curious] سیب کجاست؟,سیب کجاست؟,sib kojâst?,where is the apple?,existing,find game ask
+this_apple.mp3,[cheerfully] این سیبه!,این سیبه!,in sibe!,that's the apple!,existing,wrong tap: name it
+say_apple.mp3,[playful] بگو... سیب!,بگو... سیب!,begu... sib!,say... apple!,existing,say-it prompt
+want_apple.mp3,[excited] سیب می‌خوام!,سیب می‌خوام!,sib mikhâm!,I want apple!,existing,feed game ask
+w_banana.mp3,[cheerfully] موز!,موز!,moz!,banana!,existing,tap object (correct) / say-it model
+where_banana.mp3,[curious] موز کجاست؟,موز کجاست؟,moz kojâst?,where is the banana?,existing,find game ask
+this_banana.mp3,[cheerfully] این موزه!,این موزه!,in moze!,that's the banana!,existing,wrong tap: name it
+say_banana.mp3,[playful] بگو... موز!,بگو... موز!,begu... moz!,say... banana!,existing,say-it prompt
+want_banana.mp3,[excited] موز می‌خوام!,موز می‌خوام!,moz mikhâm!,I want banana!,existing,feed game ask
+w_teddy.mp3,[cheerfully] خرس!,خرس!,khers!,teddy bear!,existing,tap object (correct) / say-it model
+where_teddy.mp3,[curious] خرسه کجاست؟,خرسه کجاست؟,kherse kojâst?,where is the teddy bear?,existing,find game ask
+this_teddy.mp3,[cheerfully] این خرسه!,این خرسه!,in kherse!,that's the teddy bear!,existing,wrong tap: name it
+say_teddy.mp3,[playful] بگو... خرس!,بگو... خرس!,begu... khers!,say... teddy bear!,existing,say-it prompt
+w_car.mp3,[cheerfully] ماشین!,ماشین!,mâshin!,car!,existing,tap object (correct) / say-it model
+where_car.mp3,[curious] ماشین کجاست؟,ماشین کجاست؟,mâshin kojâst?,where is the car?,existing,find game ask
+this_car.mp3,[cheerfully] این ماشینه!,این ماشینه!,in mâshine!,that's the car!,existing,wrong tap: name it
+say_car.mp3,[playful] بگو... ماشین!,بگو... ماشین!,begu... mâshin!,say... car!,existing,say-it prompt
+w_bread.mp3,[cheerfully] نون!,نون!,nun!,bread!,existing,tap object (correct) / say-it model
+this_bread.mp3,[cheerfully] این نونه!,این نونه!,in nune!,that's the bread!,existing,wrong tap: name it
+want_bread.mp3,[excited] نون می‌خوام!,نون می‌خوام!,nun mikhâm!,I want bread!,existing,feed game ask
+w_milk.mp3,[cheerfully] شیر!,شیر!,shir!,milk!,existing,tap object (correct) / say-it model
+this_milk.mp3,[cheerfully] این شیره!,این شیره!,in shire!,that's the milk!,existing,wrong tap: name it
+want_milk.mp3,[excited] شیر می‌خوام!,شیر می‌خوام!,shir mikhâm!,I want milk!,existing,feed game ask
+w_water.mp3,[cheerfully] آب!,آب!,âb!,water!,existing,tap object (correct) / say-it model
+this_water.mp3,[cheerfully] این آبه!,این آبه!,in âbe!,that's the water!,existing,wrong tap: name it
+want_water.mp3,[panting] آب می‌خوام!,آب می‌خوام!,âb mikhâm!,I want water!,existing,feed game ask
+w_head.mp3,[cheerfully] سر!,سر!,sar!,head!,existing,tap body (correct)
+where_head.mp3,[curious] سرم کجاست؟,سرم کجاست؟,saram kojâst?,where is my head?,existing,body game ask
+this_head.mp3,[cheerfully] این سرمه!,این سرمه!,in sarame!,that's my head!,existing,wrong tap: name it
+w_hand.mp3,[cheerfully] دست!,دست!,dast!,hand!,existing,tap body (correct)
+where_hand.mp3,[curious] دستم کجاست؟,دستم کجاست؟,dastam kojâst?,where is my hand?,existing,body game ask
+this_hand.mp3,[cheerfully] این دستمه!,این دستمه!,in dastame!,that's my hand!,existing,wrong tap: name it
+w_belly.mp3,[cheerfully] شکم!,شکم!,shekam!,tummy!,existing,tap body (correct)
+where_belly.mp3,[curious] شکمم کجاست؟,شکمم کجاست؟,shekamam kojâst?,where is my tummy?,existing,body game ask
+this_belly.mp3,[cheerfully] این شکممه!,این شکممه!,in shekamame!,that's my tummy!,existing,wrong tap: name it
+w_feet.mp3,[cheerfully] پا!,پا!,pâ!,foot!,existing,tap body (correct)
+where_feet.mp3,[curious] پام کجاست؟,پام کجاست؟,pâam kojâst?,where is my foot?,existing,body game ask
+this_feet.mp3,[cheerfully] این پامه!,این پامه!,in pâame!,that's my foot!,existing,wrong tap: name it
+w_eye.mp3,[cheerfully] چشم!,چشم!,cheshm!,eye!,existing,tap body (correct)
+where_eye.mp3,[curious] چشمم کجاست؟,چشمم کجاست؟,cheshmam kojâst?,where is my eye?,existing,body game ask
+this_eye.mp3,[cheerfully] این چشممه!,این چشممه!,in cheshmame!,that's my eye!,existing,wrong tap: name it
+w_ear.mp3,[cheerfully] گوش!,گوش!,gush!,ear!,existing,tap body (correct)
+where_ear.mp3,[curious] گوشم کجاست؟,گوشم کجاست؟,gusham kojâst?,where is my ear?,existing,body game ask
+this_ear.mp3,[cheerfully] این گوشمه!,این گوشمه!,in gushame!,that's my ear!,existing,wrong tap: name it
+w_mouth.mp3,[cheerfully] دهن!,دهن!,dahan!,mouth!,existing,tap body (correct)
+where_mouth.mp3,[curious] دهنم کجاست؟,دهنم کجاست؟,dahanam kojâst?,where is my mouth?,existing,body game ask
+this_mouth.mp3,[cheerfully] این دهنمه!,این دهنمه!,in dahaname!,that's my mouth!,existing,wrong tap: name it
+play.mp3,[excited] بیا بازی کنیم!,بیا بازی کنیم!,biâ bâzi konim!,let's play!,existing,game start
+p_salam_chetori.mp3,[cheerfully] سلام! چطوری؟,سلام! چطوری؟,salâm! chetori?,hi! how are you?,phrases,greeting
+p_koja_boodi.mp3,[happy] کجا بودی؟ دلم برات تنگ شده بود!,کجا بودی؟ دلم برات تنگ شده بود!,kojâ budi? delam barât tang shode bud!,where were you? I missed you!,phrases,greeting (return)
+p_akh_joon_oomadi.mp3,[excited] آخ جون، اومدی!,آخ جون، اومدی!,"âkh jun, umadi!","yay, you came!",phrases,greeting
+p_khodahafez_zood_bia.mp3,[softly] خداحافظ! زود بیا، باشه؟,خداحافظ! زود بیا، باشه؟,"khodâhâfez! zud biâ, bâshe?","bye! come back soon, okay?",phrases,goodbye
+p_hoselam_sar_raft_bia_bazi.mp3,[sighs] حوصله‌م سر رفت... بیا بازی کنیم!,حوصله‌م سر رفت... بیا بازی کنیم!,hoselam sar raft... biâ bâzi konim!,I'm bored... let's play!,phrases,idle
+p_ye_bazi_konim.mp3,[curious] یه بازی کنیم؟,یه بازی کنیم؟,ye bâzi konim?,shall we play a game?,phrases,idle
+p_kojaei_nemibinamet.mp3,[curious] کجایی؟ نمی‌بینمت!,کجایی؟ نمی‌بینمت!,kojâyi? nemibinamet!,where are you? I can't see you!,phrases,idle (no touch)
+p_man_injam.mp3,[playful] من اینجام! اینجا!,من اینجام! اینجا!,man injâm! injâ!,I'm here! over here!,phrases,idle
+p_bip_bop_man_robotam.mp3,[playful] بیپ بوپ! من رباتم!,بیپ بوپ! من رباتم!,bip bop! man robâtam!,beep boop! I'm a robot!,phrases,idle / tap
+p_man_gorbeam_na_robotam.mp3,[mischievously] میو میو! من گربه‌م! نه... رباتم!,میو میو! من گربه‌م! نه... رباتم!,miyu miyu! man gorbe-am! na... robâtam!,meow! I'm a cat! no... I'm a robot!,phrases,silly joke
+p_alo_moz_zang_mizane.mp3,[mischievously] الو؟ الو؟ موزه داره زنگ می‌زنه!,الو؟ الو؟ موزه داره زنگ می‌زنه!,alo? alo? moze dâre zang mizane!,hello? hello? the banana is calling!,phrases,silly joke
+p_pif_pif_ki_bood.mp3,[giggles] پیف پیف! کی بود؟,پیف پیف! کی بود؟,pif pif! ki bud?,pee-yew! who was it?,phrases,silly joke (toot)
+p_delam_ghar_o_ghoor.mp3,[giggles] دلم قار و قور می‌کنه!,دلم قار و قور می‌کنه!,delam ghâr-o ghur mikone!,my tummy is rumbling!,phrases,idle hungry
+p_esmet_chie.mp3,[curious] اسمت چیه؟,اسمت چیه؟,esmet chiye?,what's your name?,phrases,question
+p_chand_salete.mp3,[curious] چند سالته؟,چند سالته؟,chand sâlete?,how old are you?,phrases,question
+p_to_chi_dooset_dare.mp3,[curious] تو چی دوست داری؟,تو چی دوست داری؟,to chi dust dâri?,what do you like?,phrases,question
+p_damaghet_ko.mp3,[playful] دماغت کو؟ دماغت کو؟,دماغت کو؟ دماغت کو؟,damâghet ku? damâghet ku?,where's your nose? where's your nose?,phrases,question / body play
+p_ye_mach_bede.mp3,[softly] یه ماچ بده!,یه ماچ بده!,ye mâch bede!,give me a kiss!,phrases,affection
+p_bia_baghalam.mp3,[happy] بیا بغلم!,بیا بغلم!,biâ baghalam!,come give me a hug!,phrases,affection
+p_andaze_ye_donya.mp3,[happy] اندازه‌ی یه دنیا دوستت دارم!,اندازه‌ی یه دنیا دوستت دارم!,andâze-ye ye donyâ dustet dâram!,I love you as big as the whole world!,phrases,affection
+p_man_khoshhalam.mp3,[happy] من خیلی خوشحالم!,من خیلی خوشحالم!,man kheili khoshhâlam!,I'm so happy!,phrases,idle happy
+p_ashkal_nadare_ye_bar_dige.mp3,[softly] اشکال نداره! یه بار دیگه!,اشکال نداره! یه بار دیگه!,eshkâl nadâre! ye bâr-e dige!,it's okay! one more time!,phrases,wrong answer
+p_to_mitooni.mp3,[cheerfully] تو می‌تونی!,تو می‌تونی!,to mituni!,you can do it!,phrases,encouragement
+p_che_zerangi.mp3,[excited] وای! چه زرنگی!,وای! چه زرنگی!,vây! che zerangi!,wow! how clever you are!,phrases,praise
+p_to_ghahremani.mp3,[proudly] تو یه قهرمانی!,تو یه قهرمانی!,to ye ghahremâni!,you're a champion!,phrases,praise
+p_hoora.mp3,[excited] هورا!,هورا!,hurâ!,hooray!,phrases,praise / game win
+p_vay_goftish.mp3,[excited] وای! گفتیش!,وای! گفتیش!,vây! goftish!,wow! you said it!,phrases,say-it praise
+p_che_ghashang_gofti.mp3,[happy] چه قشنگ گفتی!,چه قشنگ گفتی!,che ghashang gofti!,you said it so nicely!,phrases,say-it praise
+p_shenidam_shenidam.mp3,[excited] شنیدم! شنیدم!,شنیدم! شنیدم!,shenidam! shenidam!,I heard it! I heard it!,phrases,say-it praise
+p_ye_bar_dige_bolandtar.mp3,[playful] یه بار دیگه! بلندتر!,یه بار دیگه! بلندتر!,ye bâr-e dige! bolandtar!,one more time! louder!,phrases,say-it again
+p_hala_to_begu.mp3,[curious] حالا تو بگو!,حالا تو بگو!,hâlâ to begu!,now you say it!,phrases,say-it prompt
+p_man_migam_to_begu.mp3,[cheerfully] من می‌گم، تو بگو!,من می‌گم، تو بگو!,"man migam, to begu!","I say it, you say it!",phrases,say-it intro
+p_chi_gofti_nashenidam.mp3,[curious] چی گفتی؟ نشنیدم!,چی گفتی؟ نشنیدم!,chi gofti? nashenidam!,what did you say? I didn't hear!,phrases,say-it no speech
+p_bia_berim_otagh_bazi.mp3,[excited] بیا بریم اتاق بازی!,بیا بریم اتاق بازی!,biâ berim otâgh-e bâzi!,let's go to the play room!,phrases,go to room:play
+p_bia_berim_otagh_khab.mp3,[softly] بیا بریم اتاق خواب.,بیا بریم اتاق خواب.,biâ berim otâgh-e khâb.,let's go to the bedroom.,phrases,go to room:bed
+p_bia_bargardim_khoone.mp3,[cheerfully] بیا برگردیم خونه!,بیا برگردیم خونه!,biâ bargardim khune!,let's go back home!,phrases,go to room:home
+p_bia_harf_bezanim.mp3,[cheerfully] بیا با هم حرف بزنیم!,بیا با هم حرف بزنیم!,biâ bâ ham harf bezanim!,let's talk together!,phrases,go to say-it screen
+p_inja_otagh_bazie.mp3,[excited] اینجا اتاق بازیه! چقدر اسباب‌بازی!,اینجا اتاق بازیه! چقدر اسباب‌بازی!,injâ otâgh-e bâziye! cheghadr asbâb-bâzi!,this is the play room! so many toys!,phrases,room:play enter
+p_inja_khoone_mane.mp3,[happy] اینجا خونه‌ی منه!,اینجا خونه‌ی منه!,injâ khune-ye mane!,this is my home!,phrases,room:home enter
+p_bia_ghayem_bashak.mp3,[whispers] بیا قایم‌باشک بازی کنیم!,بیا قایم‌باشک بازی کنیم!,biâ ghâyem-bâshak bâzi konim!,let's play hide and seek!,phrases,room:play idle
+p_yek_do_se.mp3,[excited] یک، دو، سه!,یک، دو، سه!,"yek, do, se!","one, two, three!",phrases,game countdown
+p_mano_begir.mp3,[playful] منو بگیر!,منو بگیر!,mano begir!,catch me!,phrases,room:play idle
+p_toopo_bendaz.mp3,[excited] توپو بنداز!,توپو بنداز!,tupo bendâz!,throw the ball!,phrases,ball play
+p_vaghte_khabe.mp3,[softly] وقت خوابه...,وقت خوابه...,vaght-e khâbe...,it's bedtime...,phrases,room:bed enter (night)
+p_lala_gole_lale.mp3,[sings] لالا لالا، گل لاله...,لالا لالا، گل لاله...,"lâlâ lâlâ, gol-e lâle...","lullaby, lullaby, little tulip...",phrases,room:bed lullaby
+p_cheragho_khamoosh_kon.mp3,[whispers] چراغو خاموش کن!,چراغو خاموش کن!,cherâgho khâmush kon!,turn off the light!,phrases,room:bed ask lamp off
+p_cheragho_roshan_kon.mp3,[cheerfully] چراغو روشن کن!,چراغو روشن کن!,cherâgho roshan kon!,turn on the light!,phrases,room:bed ask lamp on
+p_vay_tarik_shod.mp3,[whispers] اوه! تاریک شد!,اوه! تاریک شد!,oh! târik shod!,oh! it got dark!,phrases,lamp off
+p_akh_joon_roshan_shod.mp3,[happy] آخ جون! روشن شد!,آخ جون! روشن شد!,âkh jun! roshan shod!,yay! it got bright!,phrases,lamp on
+p_khabaye_khoob_bebini.mp3,[whispers] خوابای خوب ببینی...,خوابای خوب ببینی...,khâbâ-ye khub bebini...,sweet dreams...,phrases,room:bed sleep
+p_pasho_sobh_shode.mp3,[cheerfully] پاشو، پاشو! صبح شده!,پاشو، پاشو! صبح شده!,"pâsho, pâsho! sobh shode!","wake up, wake up! it's morning!",phrases,room:bed morning
+p_akhish_khoob_khabidam.mp3,[yawns] آخیش! خوب خوابیدم!,آخیش! خوب خوابیدم!,âkhish! khub khâbidam!,ahh! I slept well!,phrases,room:bed wake
+p_nam_nam_khoshmaze.mp3,[happy] نم نم نم! خوشمزه!,نم نم نم! خوشمزه!,nam nam nam! khoshmaze!,nom nom nom! yummy!,phrases,food eat
+p_ye_ghashogh_dige.mp3,[excited] یه قاشق دیگه!,یه قاشق دیگه!,ye ghâshogh-e dige!,one more spoonful!,phrases,food more
+p_aaa_dahanam_baze.mp3,[playful] آآآ! دهنم بازه!,آآآ! دهنم بازه!,âââ! dahanam bâze!,aaah! my mouth is open!,phrases,food waiting
+p_ah_ino_dooset_nadaram.mp3,[sighs] اَه! اینو دوست ندارم!,اَه! اینو دوست ندارم!,ah! ino dust nadâram!,yuck! I don't like this!,phrases,food dislike
+p_inam_baraye_to.mp3,[softly] اینم برای تو!,اینم برای تو!,inam barâye to!,here's one for you!,phrases,food share

@@ -1,0 +1,801 @@
+﻿file_name,farsi_text,display_text,translit,english,group
+w_cat.mp3,[excited] گربه!,گربه!,gorbe!,cat!,animals
+say_cat.mp3,[curious] می‌تونی بگی گربه؟,می‌تونی بگی گربه؟,mituni begi gorbe?,can you say cat?,animals
+where_cat.mp3,[curious] می‌تونی گربه رو پیدا کنی؟,می‌تونی گربه رو پیدا کنی؟,mituni gorbe ro peydâ koni?,can you find the cat?,animals
+this_cat.mp3,[proudly] آره! این گربه‌ست!,آره! این گربه‌ست!,âre! in gorbast!,yes! that's the cat!,animals
+w_dog.mp3,[cheerfully] سگ!,سگ!,sag!,dog!,animals
+say_dog.mp3,[excited] حالا تو بگو: سگ!,حالا تو بگو: سگ!,hâlâ to begu: sag!,now you say: dog!,animals
+where_dog.mp3,[whispers] هیس... سگ کجاست؟,هیس... سگ کجاست؟,hiss... sag kojâst?,shh... where is the dog?,animals
+this_dog.mp3,[cheerfully] ایول! این سگه!,ایول! این سگه!,eyval! in sage!,awesome! that's the dog!,animals
+w_horse.mp3,[surprised] وای! اسب!,وای! اسب!,vây! asb!,wow! horse!,animals
+say_horse.mp3,[mischievously] بگو ببینم... اسب!,بگو ببینم... اسب!,begu bebinam... asb!,"go on, say... horse!",animals
+where_horse.mp3,[curious] اسب کجاست؟,اسب کجاست؟,asb kojâst?,where is the horse?,animals
+this_horse.mp3,[giggles] درسته! این اسبه!,درسته! این اسبه!,doroste! in asbe!,right! that's the horse!,animals
+w_cow.mp3,[playful] گاو!,گاو!,gâv!,cow!,animals
+say_cow.mp3,[playful] با من بگو: گاو!,با من بگو: گاو!,bâ man begu: gâv!,say it with me: cow!,animals
+where_cow.mp3,[whispers] گاو کجا قایم شده؟,گاو کجا قایم شده؟,gâv kojâ ghâyem shode?,where is the cow hiding?,animals
+this_cow.mp3,[excited] هورا! این گاوه!,هورا! این گاوه!,hurâ! in gâve!,hooray! that's the cow!,animals
+w_sheep.mp3,[gasps] اِ، گوسفند!,اِ، گوسفند!,"e, gusfand!","oh, sheep!",animals
+say_sheep.mp3,[playful] بگو گوسفند!,بگو گوسفند!,begu gusfand!,say sheep!,animals
+where_sheep.mp3,[curious] پس گوسفند کو؟,پس گوسفند کو؟,pas gusfand ku?,so where is the sheep?,animals
+this_sheep.mp3,[proudly] باریکلا! گوسفنده!,باریکلا! گوسفنده!,bârikallâ! gusfande!,bravo! it's the sheep!,animals
+w_goat.mp3,[excited] بُز!,بُز!,boz!,goat!,animals
+say_goat.mp3,[cheerfully] تو بگو بُز!,تو بگو بُز!,to begu boz!,you say goat!,animals
+where_goat.mp3,[playful] بُز رو پیدا کن!,بُز رو پیدا کن!,boz ro peydâ kon!,find the goat!,animals
+this_goat.mp3,[excited] آفرین! این بُزه!,آفرین! این بُزه!,âfarin! in boze!,well done! that's the goat!,animals
+w_chicken.mp3,[cheerfully] مرغ!,مرغ!,morgh!,chicken!,animals
+say_chicken.mp3,[curious] می‌تونی بگی مرغ؟,می‌تونی بگی مرغ؟,mituni begi morgh?,can you say chicken?,animals
+where_chicken.mp3,[curious] می‌تونی مرغ رو پیدا کنی؟,می‌تونی مرغ رو پیدا کنی؟,mituni morgh ro peydâ koni?,can you find the chicken?,animals
+this_chicken.mp3,[proudly] آره! این مرغه!,آره! این مرغه!,âre! in morghe!,yes! that's the chicken!,animals
+w_rooster.mp3,[surprised] وای! خروس!,وای! خروس!,vây! khorus!,wow! rooster!,animals
+say_rooster.mp3,[excited] حالا تو بگو: خروس!,حالا تو بگو: خروس!,hâlâ to begu: khorus!,now you say: rooster!,animals
+where_rooster.mp3,[whispers] هیس... خروس کجاست؟,هیس... خروس کجاست؟,hiss... khorus kojâst?,shh... where is the rooster?,animals
+this_rooster.mp3,[cheerfully] ایول! این خروسه!,ایول! این خروسه!,eyval! in khoruse!,awesome! that's the rooster!,animals
+w_chick.mp3,[playful] جوجه!,جوجه!,juje!,chick!,animals
+say_chick.mp3,[mischievously] بگو ببینم... جوجه!,بگو ببینم... جوجه!,begu bebinam... juje!,"go on, say... chick!",animals
+where_chick.mp3,[curious] جوجه کجاست؟,جوجه کجاست؟,juje kojâst?,where is the chick?,animals
+this_chick.mp3,[giggles] درسته! این جوجه‌ست!,درسته! این جوجه‌ست!,doroste! in jujast!,right! that's the chick!,animals
+w_duck.mp3,[gasps] اِ، اردک!,اِ، اردک!,"e, ordak!","oh, duck!",animals
+say_duck.mp3,[playful] با من بگو: اردک!,با من بگو: اردک!,bâ man begu: ordak!,say it with me: duck!,animals
+where_duck.mp3,[whispers] اردک کجا قایم شده؟,اردک کجا قایم شده؟,ordak kojâ ghâyem shode?,where is the duck hiding?,animals
+this_duck.mp3,[excited] هورا! این اردکه!,هورا! این اردکه!,hurâ! in ordake!,hooray! that's the duck!,animals
+w_rabbit.mp3,[excited] خرگوش!,خرگوش!,khargush!,rabbit!,animals
+say_rabbit.mp3,[playful] بگو خرگوش!,بگو خرگوش!,begu khargush!,say rabbit!,animals
+where_rabbit.mp3,[curious] پس خرگوش کو؟,پس خرگوش کو؟,pas khargush ku?,so where is the rabbit?,animals
+this_rabbit.mp3,[proudly] باریکلا! خرگوشه!,باریکلا! خرگوشه!,bârikallâ! khargushe!,bravo! it's the rabbit!,animals
+w_mouse.mp3,[cheerfully] موش!,موش!,mush!,mouse!,animals
+say_mouse.mp3,[cheerfully] تو بگو موش!,تو بگو موش!,to begu mush!,you say mouse!,animals
+where_mouse.mp3,[playful] موش رو پیدا کن!,موش رو پیدا کن!,mush ro peydâ kon!,find the mouse!,animals
+this_mouse.mp3,[excited] آفرین! این موشه!,آفرین! این موشه!,âfarin! in mushe!,well done! that's the mouse!,animals
+w_fish.mp3,[surprised] وای! ماهی!,وای! ماهی!,vây! mâhi!,wow! fish!,animals
+say_fish.mp3,[curious] می‌تونی بگی ماهی؟,می‌تونی بگی ماهی؟,mituni begi mâhi?,can you say fish?,animals
+where_fish.mp3,[curious] می‌تونی ماهی رو پیدا کنی؟,می‌تونی ماهی رو پیدا کنی؟,mituni mâhi ro peydâ koni?,can you find the fish?,animals
+this_fish.mp3,[proudly] آره! این ماهیه!,آره! این ماهیه!,âre! in mâhiye!,yes! that's the fish!,animals
+w_bird.mp3,[playful] پرنده!,پرنده!,parande!,bird!,animals
+say_bird.mp3,[excited] حالا تو بگو: پرنده!,حالا تو بگو: پرنده!,hâlâ to begu: parande!,now you say: bird!,animals
+where_bird.mp3,[whispers] هیس... پرنده کجاست؟,هیس... پرنده کجاست؟,hiss... parande kojâst?,shh... where is the bird?,animals
+this_bird.mp3,[cheerfully] ایول! این پرنده‌ست!,ایول! این پرنده‌ست!,eyval! in parandast!,awesome! that's the bird!,animals
+w_parrot.mp3,[gasps] اِ، طوطی!,اِ، طوطی!,"e, tuti!","oh, parrot!",animals
+say_parrot.mp3,[mischievously] بگو ببینم... طوطی!,بگو ببینم... طوطی!,begu bebinam... tuti!,"go on, say... parrot!",animals
+where_parrot.mp3,[curious] طوطی کجاست؟,طوطی کجاست؟,tuti kojâst?,where is the parrot?,animals
+this_parrot.mp3,[giggles] درسته! این طوطیه!,درسته! این طوطیه!,doroste! in tutiye!,right! that's the parrot!,animals
+w_tiger.mp3,[excited] بَبر!,بَبر!,babr!,tiger!,animals
+say_tiger.mp3,[playful] با من بگو: بَبر!,با من بگو: بَبر!,bâ man begu: babr!,say it with me: tiger!,animals
+where_tiger.mp3,[whispers] بَبر کجا قایم شده؟,بَبر کجا قایم شده؟,babr kojâ ghâyem shode?,where is the tiger hiding?,animals
+this_tiger.mp3,[excited] هورا! این بَبره!,هورا! این بَبره!,hurâ! in babre!,hooray! that's the tiger!,animals
+w_elephant.mp3,[cheerfully] فیل!,فیل!,fil!,elephant!,animals
+say_elephant.mp3,[playful] بگو فیل!,بگو فیل!,begu fil!,say elephant!,animals
+where_elephant.mp3,[curious] پس فیل کو؟,پس فیل کو؟,pas fil ku?,so where is the elephant?,animals
+this_elephant.mp3,[proudly] باریکلا! فیله!,باریکلا! فیله!,bârikallâ! file!,bravo! it's the elephant!,animals
+w_monkey.mp3,[surprised] وای! میمون!,وای! میمون!,vây! meymun!,wow! monkey!,animals
+say_monkey.mp3,[cheerfully] تو بگو میمون!,تو بگو میمون!,to begu meymun!,you say monkey!,animals
+where_monkey.mp3,[playful] میمون رو پیدا کن!,میمون رو پیدا کن!,meymun ro peydâ kon!,find the monkey!,animals
+this_monkey.mp3,[excited] آفرین! این میمونه!,آفرین! این میمونه!,âfarin! in meymune!,well done! that's the monkey!,animals
+w_giraffe.mp3,[playful] زرافه!,زرافه!,zarâfe!,giraffe!,animals
+say_giraffe.mp3,[curious] می‌تونی بگی زرافه؟,می‌تونی بگی زرافه؟,mituni begi zarâfe?,can you say giraffe?,animals
+where_giraffe.mp3,[curious] می‌تونی زرافه رو پیدا کنی؟,می‌تونی زرافه رو پیدا کنی؟,mituni zarâfe ro peydâ koni?,can you find the giraffe?,animals
+this_giraffe.mp3,[proudly] آره! این زرافه‌ست!,آره! این زرافه‌ست!,âre! in zarâfast!,yes! that's the giraffe!,animals
+w_zebra.mp3,[gasps] اِ، گورخر!,اِ، گورخر!,"e, gurkhar!","oh, zebra!",animals
+say_zebra.mp3,[excited] حالا تو بگو: گورخر!,حالا تو بگو: گورخر!,hâlâ to begu: gurkhar!,now you say: zebra!,animals
+where_zebra.mp3,[whispers] هیس... گورخر کجاست؟,هیس... گورخر کجاست؟,hiss... gurkhar kojâst?,shh... where is the zebra?,animals
+this_zebra.mp3,[cheerfully] ایول! این گورخره!,ایول! این گورخره!,eyval! in gurkhare!,awesome! that's the zebra!,animals
+w_penguin.mp3,[excited] پنگوئن!,پنگوئن!,panguan!,penguin!,animals
+say_penguin.mp3,[mischievously] بگو ببینم... پنگوئن!,بگو ببینم... پنگوئن!,begu bebinam... panguan!,"go on, say... penguin!",animals
+where_penguin.mp3,[curious] پنگوئن کجاست؟,پنگوئن کجاست؟,panguan kojâst?,where is the penguin?,animals
+this_penguin.mp3,[giggles] درسته! این پنگوئنه!,درسته! این پنگوئنه!,doroste! in panguane!,right! that's the penguin!,animals
+w_turtle.mp3,[cheerfully] لاک‌پشت!,لاک‌پشت!,lâkposht!,turtle!,animals
+say_turtle.mp3,[playful] با من بگو: لاک‌پشت!,با من بگو: لاک‌پشت!,bâ man begu: lâkposht!,say it with me: turtle!,animals
+where_turtle.mp3,[whispers] لاک‌پشت کجا قایم شده؟,لاک‌پشت کجا قایم شده؟,lâkposht kojâ ghâyem shode?,where is the turtle hiding?,animals
+this_turtle.mp3,[excited] هورا! این لاک‌پشته!,هورا! این لاک‌پشته!,hurâ! in lâkposhte!,hooray! that's the turtle!,animals
+w_frog.mp3,[surprised] وای! قورباغه!,وای! قورباغه!,vây! ghurbâghe!,wow! frog!,animals
+say_frog.mp3,[playful] بگو قورباغه!,بگو قورباغه!,begu ghurbâghe!,say frog!,animals
+where_frog.mp3,[curious] پس قورباغه کو؟,پس قورباغه کو؟,pas ghurbâghe ku?,so where is the frog?,animals
+this_frog.mp3,[proudly] باریکلا! قورباغه‌ست!,باریکلا! قورباغه‌ست!,bârikallâ! ghurbâghast!,bravo! it's the frog!,animals
+w_snake.mp3,[playful] مار!,مار!,mâr!,snake!,animals
+say_snake.mp3,[cheerfully] تو بگو مار!,تو بگو مار!,to begu mâr!,you say snake!,animals
+where_snake.mp3,[playful] مار رو پیدا کن!,مار رو پیدا کن!,mâr ro peydâ kon!,find the snake!,animals
+this_snake.mp3,[excited] آفرین! این ماره!,آفرین! این ماره!,âfarin! in mâre!,well done! that's the snake!,animals
+w_butterfly.mp3,[gasps] اِ، پروانه!,اِ، پروانه!,"e, parvâne!","oh, butterfly!",animals
+say_butterfly.mp3,[curious] می‌تونی بگی پروانه؟,می‌تونی بگی پروانه؟,mituni begi parvâne?,can you say butterfly?,animals
+where_butterfly.mp3,[curious] می‌تونی پروانه رو پیدا کنی؟,می‌تونی پروانه رو پیدا کنی؟,mituni parvâne ro peydâ koni?,can you find the butterfly?,animals
+this_butterfly.mp3,[proudly] آره! این پروانه‌ست!,آره! این پروانه‌ست!,âre! in parvânast!,yes! that's the butterfly!,animals
+w_bee.mp3,[excited] زنبور!,زنبور!,zanbur!,bee!,animals
+say_bee.mp3,[excited] حالا تو بگو: زنبور!,حالا تو بگو: زنبور!,hâlâ to begu: zanbur!,now you say: bee!,animals
+where_bee.mp3,[whispers] هیس... زنبور کجاست؟,هیس... زنبور کجاست؟,hiss... zanbur kojâst?,shh... where is the bee?,animals
+this_bee.mp3,[cheerfully] ایول! این زنبوره!,ایول! این زنبوره!,eyval! in zanbure!,awesome! that's the bee!,animals
+w_ant.mp3,[cheerfully] مورچه!,مورچه!,murche!,ant!,animals
+say_ant.mp3,[mischievously] بگو ببینم... مورچه!,بگو ببینم... مورچه!,begu bebinam... murche!,"go on, say... ant!",animals
+where_ant.mp3,[curious] مورچه کجاست؟,مورچه کجاست؟,murche kojâst?,where is the ant?,animals
+this_ant.mp3,[giggles] درسته! این مورچه‌ست!,درسته! این مورچه‌ست!,doroste! in murchast!,right! that's the ant!,animals
+w_ladybug.mp3,[surprised] وای! کفشدوزک!,وای! کفشدوزک!,vây! kafshduzak!,wow! ladybug!,animals
+say_ladybug.mp3,[playful] با من بگو: کفشدوزک!,با من بگو: کفشدوزک!,bâ man begu: kafshduzak!,say it with me: ladybug!,animals
+where_ladybug.mp3,[whispers] کفشدوزک کجا قایم شده؟,کفشدوزک کجا قایم شده؟,kafshduzak kojâ ghâyem shode?,where is the ladybug hiding?,animals
+this_ladybug.mp3,[excited] هورا! این کفشدوزکه!,هورا! این کفشدوزکه!,hurâ! in kafshduzake!,hooray! that's the ladybug!,animals
+w_octopus.mp3,[playful] هشت‌پا!,هشت‌پا!,hashtpâ!,octopus!,animals
+say_octopus.mp3,[playful] بگو هشت‌پا!,بگو هشت‌پا!,begu hashtpâ!,say octopus!,animals
+where_octopus.mp3,[curious] پس هشت‌پا کو؟,پس هشت‌پا کو؟,pas hashtpâ ku?,so where is the octopus?,animals
+this_octopus.mp3,[proudly] باریکلا! هشت‌پاست!,باریکلا! هشت‌پاست!,bârikallâ! hashtpâst!,bravo! it's the octopus!,animals
+w_whale.mp3,[gasps] اِ، نهنگ!,اِ، نهنگ!,"e, nahang!","oh, whale!",animals
+say_whale.mp3,[cheerfully] تو بگو نهنگ!,تو بگو نهنگ!,to begu nahang!,you say whale!,animals
+where_whale.mp3,[playful] نهنگ رو پیدا کن!,نهنگ رو پیدا کن!,nahang ro peydâ kon!,find the whale!,animals
+this_whale.mp3,[excited] آفرین! این نهنگه!,آفرین! این نهنگه!,âfarin! in nahange!,well done! that's the whale!,animals
+w_dolphin.mp3,[excited] دلفین!,دلفین!,dolfin!,dolphin!,animals
+say_dolphin.mp3,[curious] می‌تونی بگی دلفین؟,می‌تونی بگی دلفین؟,mituni begi dolfin?,can you say dolphin?,animals
+where_dolphin.mp3,[curious] می‌تونی دلفین رو پیدا کنی؟,می‌تونی دلفین رو پیدا کنی؟,mituni dolfin ro peydâ koni?,can you find the dolphin?,animals
+this_dolphin.mp3,[proudly] آره! این دلفینه!,آره! این دلفینه!,âre! in dolfine!,yes! that's the dolphin!,animals
+w_camel.mp3,[cheerfully] شُتُر!,شُتُر!,shotor!,camel!,animals
+say_camel.mp3,[excited] حالا تو بگو: شُتُر!,حالا تو بگو: شُتُر!,hâlâ to begu: shotor!,now you say: camel!,animals
+where_camel.mp3,[whispers] هیس... شُتُر کجاست؟,هیس... شُتُر کجاست؟,hiss... shotor kojâst?,shh... where is the camel?,animals
+this_camel.mp3,[cheerfully] ایول! این شُتُره!,ایول! این شُتُره!,eyval! in shotore!,awesome! that's the camel!,animals
+w_owl.mp3,[surprised] وای! جغد!,وای! جغد!,vây! joghd!,wow! owl!,animals
+say_owl.mp3,[mischievously] بگو ببینم... جغد!,بگو ببینم... جغد!,begu bebinam... joghd!,"go on, say... owl!",animals
+where_owl.mp3,[curious] جغد کجاست؟,جغد کجاست؟,joghd kojâst?,where is the owl?,animals
+this_owl.mp3,[giggles] درسته! این جغده!,درسته! این جغده!,doroste! in joghde!,right! that's the owl!,animals
+w_squirrel.mp3,[playful] سنجاب!,سنجاب!,sanjâb!,squirrel!,animals
+say_squirrel.mp3,[playful] با من بگو: سنجاب!,با من بگو: سنجاب!,bâ man begu: sanjâb!,say it with me: squirrel!,animals
+where_squirrel.mp3,[whispers] سنجاب کجا قایم شده؟,سنجاب کجا قایم شده؟,sanjâb kojâ ghâyem shode?,where is the squirrel hiding?,animals
+this_squirrel.mp3,[excited] هورا! این سنجابه!,هورا! این سنجابه!,hurâ! in sanjâbe!,hooray! that's the squirrel!,animals
+w_dinosaur.mp3,[gasps] اِ، دایناسور!,اِ، دایناسور!,"e, dâynâsor!","oh, dinosaur!",animals
+say_dinosaur.mp3,[playful] بگو دایناسور!,بگو دایناسور!,begu dâynâsor!,say dinosaur!,animals
+where_dinosaur.mp3,[curious] پس دایناسور کو؟,پس دایناسور کو؟,pas dâynâsor ku?,so where is the dinosaur?,animals
+this_dinosaur.mp3,[proudly] باریکلا! دایناسوره!,باریکلا! دایناسوره!,bârikallâ! dâynâsore!,bravo! it's the dinosaur!,animals
+w_orange.mp3,[excited] پرتقال!,پرتقال!,porteghâl!,orange!,food
+say_orange.mp3,[cheerfully] تو بگو پرتقال!,تو بگو پرتقال!,to begu porteghâl!,you say orange!,food
+where_orange.mp3,[playful] پرتقال رو پیدا کن!,پرتقال رو پیدا کن!,porteghâl ro peydâ kon!,find the orange!,food
+this_orange.mp3,[excited] آفرین! این پرتقاله!,آفرین! این پرتقاله!,âfarin! in porteghâle!,well done! that's the orange!,food
+w_grapes.mp3,[cheerfully] انگور!,انگور!,angur!,grapes!,food
+say_grapes.mp3,[curious] می‌تونی بگی انگور؟,می‌تونی بگی انگور؟,mituni begi angur?,can you say grapes?,food
+where_grapes.mp3,[curious] می‌تونی انگور رو پیدا کنی؟,می‌تونی انگور رو پیدا کنی؟,mituni angur ro peydâ koni?,can you find the grapes?,food
+this_grapes.mp3,[proudly] آره! این انگوره!,آره! این انگوره!,âre! in angure!,yes! that's the grapes!,food
+w_watermelon.mp3,[surprised] وای! هندونه!,وای! هندونه!,vây! hendune!,wow! watermelon!,food
+say_watermelon.mp3,[excited] حالا تو بگو: هندونه!,حالا تو بگو: هندونه!,hâlâ to begu: hendune!,now you say: watermelon!,food
+where_watermelon.mp3,[whispers] هیس... هندونه کجاست؟,هیس... هندونه کجاست؟,hiss... hendune kojâst?,shh... where is the watermelon?,food
+this_watermelon.mp3,[cheerfully] ایول! این هندونه‌ست!,ایول! این هندونه‌ست!,eyval! in hendunast!,awesome! that's the watermelon!,food
+w_melon.mp3,[playful] طالبی!,طالبی!,tâlebi!,melon!,food
+say_melon.mp3,[mischievously] بگو ببینم... طالبی!,بگو ببینم... طالبی!,begu bebinam... tâlebi!,"go on, say... melon!",food
+where_melon.mp3,[curious] طالبی کجاست؟,طالبی کجاست؟,tâlebi kojâst?,where is the melon?,food
+this_melon.mp3,[giggles] درسته! این طالبیه!,درسته! این طالبیه!,doroste! in tâlebiye!,right! that's the melon!,food
+w_strawberry.mp3,[gasps] اِ، توت‌فرنگی!,اِ، توت‌فرنگی!,"e, tutfarangi!","oh, strawberry!",food
+say_strawberry.mp3,[playful] با من بگو: توت‌فرنگی!,با من بگو: توت‌فرنگی!,bâ man begu: tutfarangi!,say it with me: strawberry!,food
+where_strawberry.mp3,[whispers] توت‌فرنگی کجا قایم شده؟,توت‌فرنگی کجا قایم شده؟,tutfarangi kojâ ghâyem shode?,where is the strawberry hiding?,food
+this_strawberry.mp3,[excited] هورا! این توت‌فرنگیه!,هورا! این توت‌فرنگیه!,hurâ! in tutfarangiye!,hooray! that's the strawberry!,food
+w_cherry.mp3,[excited] گیلاس!,گیلاس!,gilâs!,cherries!,food
+say_cherry.mp3,[playful] بگو گیلاس!,بگو گیلاس!,begu gilâs!,say cherries!,food
+where_cherry.mp3,[curious] پس گیلاس کو؟,پس گیلاس کو؟,pas gilâs ku?,so where is the cherries?,food
+this_cherry.mp3,[proudly] باریکلا! گیلاسه!,باریکلا! گیلاسه!,bârikallâ! gilâse!,bravo! it's the cherries!,food
+w_peach.mp3,[cheerfully] هلو!,هلو!,holu!,peach!,food
+say_peach.mp3,[cheerfully] تو بگو هلو!,تو بگو هلو!,to begu holu!,you say peach!,food
+where_peach.mp3,[playful] هلو رو پیدا کن!,هلو رو پیدا کن!,holu ro peydâ kon!,find the peach!,food
+this_peach.mp3,[excited] آفرین! این هلوئه!,آفرین! این هلوئه!,âfarin! in holue!,well done! that's the peach!,food
+w_pear.mp3,[surprised] وای! گلابی!,وای! گلابی!,vây! golâbi!,wow! pear!,food
+say_pear.mp3,[curious] می‌تونی بگی گلابی؟,می‌تونی بگی گلابی؟,mituni begi golâbi?,can you say pear?,food
+where_pear.mp3,[curious] می‌تونی گلابی رو پیدا کنی؟,می‌تونی گلابی رو پیدا کنی؟,mituni golâbi ro peydâ koni?,can you find the pear?,food
+this_pear.mp3,[proudly] آره! این گلابیه!,آره! این گلابیه!,âre! in golâbiye!,yes! that's the pear!,food
+w_pineapple.mp3,[playful] آناناس!,آناناس!,ânânâs!,pineapple!,food
+say_pineapple.mp3,[excited] حالا تو بگو: آناناس!,حالا تو بگو: آناناس!,hâlâ to begu: ânânâs!,now you say: pineapple!,food
+where_pineapple.mp3,[whispers] هیس... آناناس کجاست؟,هیس... آناناس کجاست؟,hiss... ânânâs kojâst?,shh... where is the pineapple?,food
+this_pineapple.mp3,[cheerfully] ایول! این آناناسه!,ایول! این آناناسه!,eyval! in ânânâse!,awesome! that's the pineapple!,food
+w_lemon.mp3,[gasps] اِ، لیمو!,اِ، لیمو!,"e, limu!","oh, lemon!",food
+say_lemon.mp3,[mischievously] بگو ببینم... لیمو!,بگو ببینم... لیمو!,begu bebinam... limu!,"go on, say... lemon!",food
+where_lemon.mp3,[curious] لیمو کجاست؟,لیمو کجاست؟,limu kojâst?,where is the lemon?,food
+this_lemon.mp3,[giggles] درسته! این لیموئه!,درسته! این لیموئه!,doroste! in limue!,right! that's the lemon!,food
+w_carrot.mp3,[excited] هویج!,هویج!,havij!,carrot!,food
+say_carrot.mp3,[playful] با من بگو: هویج!,با من بگو: هویج!,bâ man begu: havij!,say it with me: carrot!,food
+where_carrot.mp3,[whispers] هویج کجا قایم شده؟,هویج کجا قایم شده؟,havij kojâ ghâyem shode?,where is the carrot hiding?,food
+this_carrot.mp3,[excited] هورا! این هویجه!,هورا! این هویجه!,hurâ! in havije!,hooray! that's the carrot!,food
+w_tomato.mp3,[cheerfully] گوجه!,گوجه!,goje!,tomato!,food
+say_tomato.mp3,[playful] بگو گوجه!,بگو گوجه!,begu goje!,say tomato!,food
+where_tomato.mp3,[curious] پس گوجه کو؟,پس گوجه کو؟,pas goje ku?,so where is the tomato?,food
+this_tomato.mp3,[proudly] باریکلا! گوجه‌ست!,باریکلا! گوجه‌ست!,bârikallâ! gojast!,bravo! it's the tomato!,food
+w_cucumber.mp3,[surprised] وای! خیار!,وای! خیار!,vây! khiyâr!,wow! cucumber!,food
+say_cucumber.mp3,[cheerfully] تو بگو خیار!,تو بگو خیار!,to begu khiyâr!,you say cucumber!,food
+where_cucumber.mp3,[playful] خیار رو پیدا کن!,خیار رو پیدا کن!,khiyâr ro peydâ kon!,find the cucumber!,food
+this_cucumber.mp3,[excited] آفرین! این خیاره!,آفرین! این خیاره!,âfarin! in khiyâre!,well done! that's the cucumber!,food
+w_potato.mp3,[playful] سیب‌زمینی!,سیب‌زمینی!,sibzamini!,potato!,food
+say_potato.mp3,[curious] می‌تونی بگی سیب‌زمینی؟,می‌تونی بگی سیب‌زمینی؟,mituni begi sibzamini?,can you say potato?,food
+where_potato.mp3,[curious] می‌تونی سیب‌زمینی رو پیدا کنی؟,می‌تونی سیب‌زمینی رو پیدا کنی؟,mituni sibzamini ro peydâ koni?,can you find the potato?,food
+this_potato.mp3,[proudly] آره! این سیب‌زمینیه!,آره! این سیب‌زمینیه!,âre! in sibzaminiye!,yes! that's the potato!,food
+w_corn.mp3,[gasps] اِ، ذرت!,اِ، ذرت!,"e, zorrat!","oh, corn!",food
+say_corn.mp3,[excited] حالا تو بگو: ذرت!,حالا تو بگو: ذرت!,hâlâ to begu: zorrat!,now you say: corn!,food
+where_corn.mp3,[whispers] هیس... ذرت کجاست؟,هیس... ذرت کجاست؟,hiss... zorrat kojâst?,shh... where is the corn?,food
+this_corn.mp3,[cheerfully] ایول! این ذرته!,ایول! این ذرته!,eyval! in zorrate!,awesome! that's the corn!,food
+w_egg.mp3,[excited] تخم‌مرغ!,تخم‌مرغ!,tokhmemorgh!,egg!,food
+say_egg.mp3,[mischievously] بگو ببینم... تخم‌مرغ!,بگو ببینم... تخم‌مرغ!,begu bebinam... tokhmemorgh!,"go on, say... egg!",food
+where_egg.mp3,[curious] تخم‌مرغ کجاست؟,تخم‌مرغ کجاست؟,tokhmemorgh kojâst?,where is the egg?,food
+this_egg.mp3,[giggles] درسته! این تخم‌مرغه!,درسته! این تخم‌مرغه!,doroste! in tokhmemorghe!,right! that's the egg!,food
+w_cheese.mp3,[cheerfully] پنیر!,پنیر!,panir!,cheese!,food
+say_cheese.mp3,[playful] با من بگو: پنیر!,با من بگو: پنیر!,bâ man begu: panir!,say it with me: cheese!,food
+where_cheese.mp3,[whispers] پنیر کجا قایم شده؟,پنیر کجا قایم شده؟,panir kojâ ghâyem shode?,where is the cheese hiding?,food
+this_cheese.mp3,[excited] هورا! این پنیره!,هورا! این پنیره!,hurâ! in panire!,hooray! that's the cheese!,food
+w_rice.mp3,[surprised] وای! برنج!,وای! برنج!,vây! berenj!,wow! rice!,food
+say_rice.mp3,[playful] بگو برنج!,بگو برنج!,begu berenj!,say rice!,food
+where_rice.mp3,[curious] پس برنج کو؟,پس برنج کو؟,pas berenj ku?,so where is the rice?,food
+this_rice.mp3,[proudly] باریکلا! برنجه!,باریکلا! برنجه!,bârikallâ! berenje!,bravo! it's the rice!,food
+w_pasta.mp3,[playful] ماکارونی!,ماکارونی!,mâkâruni!,pasta!,food
+say_pasta.mp3,[cheerfully] تو بگو ماکارونی!,تو بگو ماکارونی!,to begu mâkâruni!,you say pasta!,food
+where_pasta.mp3,[playful] ماکارونی رو پیدا کن!,ماکارونی رو پیدا کن!,mâkâruni ro peydâ kon!,find the pasta!,food
+this_pasta.mp3,[excited] آفرین! این ماکارونیه!,آفرین! این ماکارونیه!,âfarin! in mâkâruniye!,well done! that's the pasta!,food
+w_pizza.mp3,[gasps] اِ، پیتزا!,اِ، پیتزا!,"e, pitzâ!","oh, pizza!",food
+say_pizza.mp3,[curious] می‌تونی بگی پیتزا؟,می‌تونی بگی پیتزا؟,mituni begi pitzâ?,can you say pizza?,food
+where_pizza.mp3,[curious] می‌تونی پیتزا رو پیدا کنی؟,می‌تونی پیتزا رو پیدا کنی؟,mituni pitzâ ro peydâ koni?,can you find the pizza?,food
+this_pizza.mp3,[proudly] آره! این پیتزاست!,آره! این پیتزاست!,âre! in pitzâst!,yes! that's the pizza!,food
+w_cake.mp3,[excited] کیک!,کیک!,keyk!,cake!,food
+say_cake.mp3,[excited] حالا تو بگو: کیک!,حالا تو بگو: کیک!,hâlâ to begu: keyk!,now you say: cake!,food
+where_cake.mp3,[whispers] هیس... کیک کجاست؟,هیس... کیک کجاست؟,hiss... keyk kojâst?,shh... where is the cake?,food
+this_cake.mp3,[cheerfully] ایول! این کیکه!,ایول! این کیکه!,eyval! in keyke!,awesome! that's the cake!,food
+w_icecream.mp3,[cheerfully] بستنی!,بستنی!,bastani!,ice cream!,food
+say_icecream.mp3,[mischievously] بگو ببینم... بستنی!,بگو ببینم... بستنی!,begu bebinam... bastani!,"go on, say... ice cream!",food
+where_icecream.mp3,[curious] بستنی کجاست؟,بستنی کجاست؟,bastani kojâst?,where is the ice cream?,food
+this_icecream.mp3,[giggles] درسته! این بستنیه!,درسته! این بستنیه!,doroste! in bastaniye!,right! that's the ice cream!,food
+w_chocolate.mp3,[surprised] وای! شکلات!,وای! شکلات!,vây! shokolât!,wow! chocolate!,food
+say_chocolate.mp3,[playful] با من بگو: شکلات!,با من بگو: شکلات!,bâ man begu: shokolât!,say it with me: chocolate!,food
+where_chocolate.mp3,[whispers] شکلات کجا قایم شده؟,شکلات کجا قایم شده؟,shokolât kojâ ghâyem shode?,where is the chocolate hiding?,food
+this_chocolate.mp3,[excited] هورا! این شکلاته!,هورا! این شکلاته!,hurâ! in shokolâte!,hooray! that's the chocolate!,food
+w_candy.mp3,[playful] آبنبات!,آبنبات!,âbnabât!,candy!,food
+say_candy.mp3,[playful] بگو آبنبات!,بگو آبنبات!,begu âbnabât!,say candy!,food
+where_candy.mp3,[curious] پس آبنبات کو؟,پس آبنبات کو؟,pas âbnabât ku?,so where is the candy?,food
+this_candy.mp3,[proudly] باریکلا! آبنباته!,باریکلا! آبنباته!,bârikallâ! âbnabâte!,bravo! it's the candy!,food
+w_cookie.mp3,[gasps] اِ، بیسکویت!,اِ، بیسکویت!,"e, biskuit!","oh, cookie!",food
+say_cookie.mp3,[cheerfully] تو بگو بیسکویت!,تو بگو بیسکویت!,to begu biskuit!,you say cookie!,food
+where_cookie.mp3,[playful] بیسکویت رو پیدا کن!,بیسکویت رو پیدا کن!,biskuit ro peydâ kon!,find the cookie!,food
+this_cookie.mp3,[excited] آفرین! این بیسکویته!,آفرین! این بیسکویته!,âfarin! in biskuite!,well done! that's the cookie!,food
+w_honey.mp3,[excited] عسل!,عسل!,asal!,honey!,food
+say_honey.mp3,[curious] می‌تونی بگی عسل؟,می‌تونی بگی عسل؟,mituni begi asal?,can you say honey?,food
+where_honey.mp3,[curious] می‌تونی عسل رو پیدا کنی؟,می‌تونی عسل رو پیدا کنی؟,mituni asal ro peydâ koni?,can you find the honey?,food
+this_honey.mp3,[proudly] آره! این عسله!,آره! این عسله!,âre! in asale!,yes! that's the honey!,food
+w_juice.mp3,[cheerfully] آبمیوه!,آبمیوه!,âbmive!,juice!,food
+say_juice.mp3,[excited] حالا تو بگو: آبمیوه!,حالا تو بگو: آبمیوه!,hâlâ to begu: âbmive!,now you say: juice!,food
+where_juice.mp3,[whispers] هیس... آبمیوه کجاست؟,هیس... آبمیوه کجاست؟,hiss... âbmive kojâst?,shh... where is the juice?,food
+this_juice.mp3,[cheerfully] ایول! این آبمیوه‌ست!,ایول! این آبمیوه‌ست!,eyval! in âbmivast!,awesome! that's the juice!,food
+w_tea.mp3,[surprised] وای! چایی!,وای! چایی!,vây! châyi!,wow! tea!,food
+say_tea.mp3,[mischievously] بگو ببینم... چایی!,بگو ببینم... چایی!,begu bebinam... châyi!,"go on, say... tea!",food
+where_tea.mp3,[curious] چایی کجاست؟,چایی کجاست؟,châyi kojâst?,where is the tea?,food
+this_tea.mp3,[giggles] درسته! این چاییه!,درسته! این چاییه!,doroste! in châyiye!,right! that's the tea!,food
+w_soup.mp3,[playful] سوپ!,سوپ!,sup!,soup!,food
+say_soup.mp3,[playful] با من بگو: سوپ!,با من بگو: سوپ!,bâ man begu: sup!,say it with me: soup!,food
+where_soup.mp3,[whispers] سوپ کجا قایم شده؟,سوپ کجا قایم شده؟,sup kojâ ghâyem shode?,where is the soup hiding?,food
+this_soup.mp3,[excited] هورا! این سوپه!,هورا! این سوپه!,hurâ! in supe!,hooray! that's the soup!,food
+w_sandwich.mp3,[gasps] اِ، ساندویچ!,اِ، ساندویچ!,"e, sândevich!","oh, sandwich!",food
+say_sandwich.mp3,[playful] بگو ساندویچ!,بگو ساندویچ!,begu sândevich!,say sandwich!,food
+where_sandwich.mp3,[curious] پس ساندویچ کو؟,پس ساندویچ کو؟,pas sândevich ku?,so where is the sandwich?,food
+this_sandwich.mp3,[proudly] باریکلا! ساندویچه!,باریکلا! ساندویچه!,bârikallâ! sândeviche!,bravo! it's the sandwich!,food
+w_mushroom.mp3,[excited] قارچ!,قارچ!,ghârch!,mushroom!,food
+say_mushroom.mp3,[cheerfully] تو بگو قارچ!,تو بگو قارچ!,to begu ghârch!,you say mushroom!,food
+where_mushroom.mp3,[playful] قارچ رو پیدا کن!,قارچ رو پیدا کن!,ghârch ro peydâ kon!,find the mushroom!,food
+this_mushroom.mp3,[excited] آفرین! این قارچه!,آفرین! این قارچه!,âfarin! in ghârche!,well done! that's the mushroom!,food
+w_kiwi.mp3,[cheerfully] کیوی!,کیوی!,kivi!,kiwi!,food
+say_kiwi.mp3,[curious] می‌تونی بگی کیوی؟,می‌تونی بگی کیوی؟,mituni begi kivi?,can you say kiwi?,food
+where_kiwi.mp3,[curious] می‌تونی کیوی رو پیدا کنی؟,می‌تونی کیوی رو پیدا کنی؟,mituni kivi ro peydâ koni?,can you find the kiwi?,food
+this_kiwi.mp3,[proudly] آره! این کیویه!,آره! این کیویه!,âre! in kiviye!,yes! that's the kiwi!,food
+w_popcorn.mp3,[surprised] وای! پفیلا!,وای! پفیلا!,vây! pofilâ!,wow! popcorn!,food
+say_popcorn.mp3,[excited] حالا تو بگو: پفیلا!,حالا تو بگو: پفیلا!,hâlâ to begu: pofilâ!,now you say: popcorn!,food
+where_popcorn.mp3,[whispers] هیس... پفیلا کجاست؟,هیس... پفیلا کجاست؟,hiss... pofilâ kojâst?,shh... where is the popcorn?,food
+this_popcorn.mp3,[cheerfully] ایول! این پفیلاست!,ایول! این پفیلاست!,eyval! in pofilâst!,awesome! that's the popcorn!,food
+w_teeth.mp3,[playful] دندون!,دندون!,dandun!,teeth!,body
+say_teeth.mp3,[mischievously] بگو ببینم... دندون!,بگو ببینم... دندون!,begu bebinam... dandun!,"go on, say... teeth!",body
+where_teeth.mp3,[curious] دندون کجاست؟,دندون کجاست؟,dandun kojâst?,where is the teeth?,body
+this_teeth.mp3,[giggles] درسته! این دندونه!,درسته! این دندونه!,doroste! in dandune!,right! that's the teeth!,body
+w_tongue.mp3,[gasps] اِ، زبون!,اِ، زبون!,"e, zabun!","oh, tongue!",body
+say_tongue.mp3,[playful] با من بگو: زبون!,با من بگو: زبون!,bâ man begu: zabun!,say it with me: tongue!,body
+where_tongue.mp3,[whispers] زبون کجا قایم شده؟,زبون کجا قایم شده؟,zabun kojâ ghâyem shode?,where is the tongue hiding?,body
+this_tongue.mp3,[excited] هورا! این زبونه!,هورا! این زبونه!,hurâ! in zabune!,hooray! that's the tongue!,body
+w_finger.mp3,[excited] انگشت!,انگشت!,angosht!,finger!,body
+say_finger.mp3,[playful] بگو انگشت!,بگو انگشت!,begu angosht!,say finger!,body
+where_finger.mp3,[curious] پس انگشت کو؟,پس انگشت کو؟,pas angosht ku?,so where is the finger?,body
+this_finger.mp3,[proudly] باریکلا! انگشته!,باریکلا! انگشته!,bârikallâ! angoshte!,bravo! it's the finger!,body
+w_face.mp3,[cheerfully] صورت!,صورت!,surat!,face!,body
+say_face.mp3,[cheerfully] تو بگو صورت!,تو بگو صورت!,to begu surat!,you say face!,body
+where_face.mp3,[playful] صورت رو پیدا کن!,صورت رو پیدا کن!,surat ro peydâ kon!,find the face!,body
+this_face.mp3,[excited] آفرین! این صورته!,آفرین! این صورته!,âfarin! in surate!,well done! that's the face!,body
+w_nose.mp3,[surprised] وای! دماغ!,وای! دماغ!,vây! damâgh!,wow! nose!,body
+say_nose.mp3,[curious] می‌تونی بگی دماغ؟,می‌تونی بگی دماغ؟,mituni begi damâgh?,can you say nose?,body
+where_nose.mp3,[curious] می‌تونی دماغ رو پیدا کنی؟,می‌تونی دماغ رو پیدا کنی؟,mituni damâgh ro peydâ koni?,can you find the nose?,body
+this_nose.mp3,[proudly] آره! این دماغه!,آره! این دماغه!,âre! in damâghe!,yes! that's the nose!,body
+w_arm.mp3,[playful] بازو!,بازو!,bâzu!,arm!,body
+say_arm.mp3,[excited] حالا تو بگو: بازو!,حالا تو بگو: بازو!,hâlâ to begu: bâzu!,now you say: arm!,body
+where_arm.mp3,[whispers] هیس... بازو کجاست؟,هیس... بازو کجاست؟,hiss... bâzu kojâst?,shh... where is the arm?,body
+this_arm.mp3,[cheerfully] ایول! این بازوئه!,ایول! این بازوئه!,eyval! in bâzue!,awesome! that's the arm!,body
+w_shoes.mp3,[gasps] اِ، کفش!,اِ، کفش!,"e, kafsh!","oh, shoes!",clothes
+say_shoes.mp3,[mischievously] بگو ببینم... کفش!,بگو ببینم... کفش!,begu bebinam... kafsh!,"go on, say... shoes!",clothes
+where_shoes.mp3,[curious] کفش کجاست؟,کفش کجاست؟,kafsh kojâst?,where is the shoes?,clothes
+this_shoes.mp3,[giggles] درسته! این کفشه!,درسته! این کفشه!,doroste! in kafshe!,right! that's the shoes!,clothes
+w_socks.mp3,[excited] جوراب!,جوراب!,jurâb!,socks!,clothes
+say_socks.mp3,[playful] با من بگو: جوراب!,با من بگو: جوراب!,bâ man begu: jurâb!,say it with me: socks!,clothes
+where_socks.mp3,[whispers] جوراب کجا قایم شده؟,جوراب کجا قایم شده؟,jurâb kojâ ghâyem shode?,where is the socks hiding?,clothes
+this_socks.mp3,[excited] هورا! این جورابه!,هورا! این جورابه!,hurâ! in jurâbe!,hooray! that's the socks!,clothes
+w_hat.mp3,[cheerfully] کلاه!,کلاه!,kolâh!,hat!,clothes
+say_hat.mp3,[playful] بگو کلاه!,بگو کلاه!,begu kolâh!,say hat!,clothes
+where_hat.mp3,[curious] پس کلاه کو؟,پس کلاه کو؟,pas kolâh ku?,so where is the hat?,clothes
+this_hat.mp3,[proudly] باریکلا! کلاهه!,باریکلا! کلاهه!,bârikallâ! kolâhe!,bravo! it's the hat!,clothes
+w_pants.mp3,[surprised] وای! شلوار!,وای! شلوار!,vây! shalvâr!,wow! pants!,clothes
+say_pants.mp3,[cheerfully] تو بگو شلوار!,تو بگو شلوار!,to begu shalvâr!,you say pants!,clothes
+where_pants.mp3,[playful] شلوار رو پیدا کن!,شلوار رو پیدا کن!,shalvâr ro peydâ kon!,find the pants!,clothes
+this_pants.mp3,[excited] آفرین! این شلواره!,آفرین! این شلواره!,âfarin! in shalvâre!,well done! that's the pants!,clothes
+w_shirt.mp3,[playful] پیرهن!,پیرهن!,pirhan!,shirt!,clothes
+say_shirt.mp3,[curious] می‌تونی بگی پیرهن؟,می‌تونی بگی پیرهن؟,mituni begi pirhan?,can you say shirt?,clothes
+where_shirt.mp3,[curious] می‌تونی پیرهن رو پیدا کنی؟,می‌تونی پیرهن رو پیدا کنی؟,mituni pirhan ro peydâ koni?,can you find the shirt?,clothes
+this_shirt.mp3,[proudly] آره! این پیرهنه!,آره! این پیرهنه!,âre! in pirhane!,yes! that's the shirt!,clothes
+w_boots.mp3,[gasps] اِ، چکمه!,اِ، چکمه!,"e, chakme!","oh, boots!",clothes
+say_boots.mp3,[excited] حالا تو بگو: چکمه!,حالا تو بگو: چکمه!,hâlâ to begu: chakme!,now you say: boots!,clothes
+where_boots.mp3,[whispers] هیس... چکمه کجاست؟,هیس... چکمه کجاست؟,hiss... chakme kojâst?,shh... where is the boots?,clothes
+this_boots.mp3,[cheerfully] ایول! این چکمه‌ست!,ایول! این چکمه‌ست!,eyval! in chakmast!,awesome! that's the boots!,clothes
+w_jacket.mp3,[excited] کاپشن!,کاپشن!,kâpshen!,jacket!,clothes
+say_jacket.mp3,[mischievously] بگو ببینم... کاپشن!,بگو ببینم... کاپشن!,begu bebinam... kâpshen!,"go on, say... jacket!",clothes
+where_jacket.mp3,[curious] کاپشن کجاست؟,کاپشن کجاست؟,kâpshen kojâst?,where is the jacket?,clothes
+this_jacket.mp3,[giggles] درسته! این کاپشنه!,درسته! این کاپشنه!,doroste! in kâpshene!,right! that's the jacket!,clothes
+w_glasses.mp3,[cheerfully] عینک!,عینک!,eynak!,glasses!,clothes
+say_glasses.mp3,[playful] با من بگو: عینک!,با من بگو: عینک!,bâ man begu: eynak!,say it with me: glasses!,clothes
+where_glasses.mp3,[whispers] عینک کجا قایم شده؟,عینک کجا قایم شده؟,eynak kojâ ghâyem shode?,where is the glasses hiding?,clothes
+this_glasses.mp3,[excited] هورا! این عینکه!,هورا! این عینکه!,hurâ! in eynake!,hooray! that's the glasses!,clothes
+w_gloves.mp3,[surprised] وای! دستکش!,وای! دستکش!,vây! dastkesh!,wow! gloves!,clothes
+say_gloves.mp3,[playful] بگو دستکش!,بگو دستکش!,begu dastkesh!,say gloves!,clothes
+where_gloves.mp3,[curious] پس دستکش کو؟,پس دستکش کو؟,pas dastkesh ku?,so where is the gloves?,clothes
+this_gloves.mp3,[proudly] باریکلا! دستکشه!,باریکلا! دستکشه!,bârikallâ! dastkeshe!,bravo! it's the gloves!,clothes
+w_scarf.mp3,[playful] شال‌گردن!,شال‌گردن!,shâlgardan!,scarf!,clothes
+say_scarf.mp3,[cheerfully] تو بگو شال‌گردن!,تو بگو شال‌گردن!,to begu shâlgardan!,you say scarf!,clothes
+where_scarf.mp3,[playful] شال‌گردن رو پیدا کن!,شال‌گردن رو پیدا کن!,shâlgardan ro peydâ kon!,find the scarf!,clothes
+this_scarf.mp3,[excited] آفرین! این شال‌گردنه!,آفرین! این شال‌گردنه!,âfarin! in shâlgardane!,well done! that's the scarf!,clothes
+w_bag.mp3,[gasps] اِ، کیف!,اِ، کیف!,"e, kif!","oh, bag!",clothes
+say_bag.mp3,[curious] می‌تونی بگی کیف؟,می‌تونی بگی کیف؟,mituni begi kif?,can you say bag?,clothes
+where_bag.mp3,[curious] می‌تونی کیف رو پیدا کنی؟,می‌تونی کیف رو پیدا کنی؟,mituni kif ro peydâ koni?,can you find the bag?,clothes
+this_bag.mp3,[proudly] آره! این کیفه!,آره! این کیفه!,âre! in kife!,yes! that's the bag!,clothes
+w_umbrella.mp3,[excited] چتر!,چتر!,chatr!,umbrella!,clothes
+say_umbrella.mp3,[excited] حالا تو بگو: چتر!,حالا تو بگو: چتر!,hâlâ to begu: chatr!,now you say: umbrella!,clothes
+where_umbrella.mp3,[whispers] هیس... چتر کجاست؟,هیس... چتر کجاست؟,hiss... chatr kojâst?,shh... where is the umbrella?,clothes
+this_umbrella.mp3,[cheerfully] ایول! این چتره!,ایول! این چتره!,eyval! in chatre!,awesome! that's the umbrella!,clothes
+w_slippers.mp3,[cheerfully] دمپایی!,دمپایی!,dampâyi!,slippers!,clothes
+say_slippers.mp3,[mischievously] بگو ببینم... دمپایی!,بگو ببینم... دمپایی!,begu bebinam... dampâyi!,"go on, say... slippers!",clothes
+where_slippers.mp3,[curious] دمپایی کجاست؟,دمپایی کجاست؟,dampâyi kojâst?,where is the slippers?,clothes
+this_slippers.mp3,[giggles] درسته! این دمپاییه!,درسته! این دمپاییه!,doroste! in dampâyiye!,right! that's the slippers!,clothes
+w_watch.mp3,[surprised] وای! ساعت!,وای! ساعت!,vây! sâat!,wow! watch!,clothes
+say_watch.mp3,[playful] با من بگو: ساعت!,با من بگو: ساعت!,bâ man begu: sâat!,say it with me: watch!,clothes
+where_watch.mp3,[whispers] ساعت کجا قایم شده؟,ساعت کجا قایم شده؟,sâat kojâ ghâyem shode?,where is the watch hiding?,clothes
+this_watch.mp3,[excited] هورا! این ساعته!,هورا! این ساعته!,hurâ! in sâate!,hooray! that's the watch!,clothes
+w_door.mp3,[playful] در!,در!,dar!,door!,home
+say_door.mp3,[playful] بگو در!,بگو در!,begu dar!,say door!,home
+where_door.mp3,[curious] پس در کو؟,پس در کو؟,pas dar ku?,so where is the door?,home
+this_door.mp3,[proudly] باریکلا! دره!,باریکلا! دره!,bârikallâ! dare!,bravo! it's the door!,home
+w_window.mp3,[gasps] اِ، پنجره!,اِ، پنجره!,"e, panjere!","oh, window!",home
+say_window.mp3,[cheerfully] تو بگو پنجره!,تو بگو پنجره!,to begu panjere!,you say window!,home
+where_window.mp3,[playful] پنجره رو پیدا کن!,پنجره رو پیدا کن!,panjere ro peydâ kon!,find the window!,home
+this_window.mp3,[excited] آفرین! این پنجره‌ست!,آفرین! این پنجره‌ست!,âfarin! in panjerast!,well done! that's the window!,home
+w_tv.mp3,[excited] تلویزیون!,تلویزیون!,televizyon!,TV!,home
+say_tv.mp3,[curious] می‌تونی بگی تلویزیون؟,می‌تونی بگی تلویزیون؟,mituni begi televizyon?,can you say TV?,home
+where_tv.mp3,[curious] می‌تونی تلویزیون رو پیدا کنی؟,می‌تونی تلویزیون رو پیدا کنی؟,mituni televizyon ro peydâ koni?,can you find the TV?,home
+this_tv.mp3,[proudly] آره! این تلویزیونه!,آره! این تلویزیونه!,âre! in televizyone!,yes! that's the TV!,home
+w_phone.mp3,[cheerfully] گوشی!,گوشی!,gushi!,phone!,home
+say_phone.mp3,[excited] حالا تو بگو: گوشی!,حالا تو بگو: گوشی!,hâlâ to begu: gushi!,now you say: phone!,home
+where_phone.mp3,[whispers] هیس... گوشی کجاست؟,هیس... گوشی کجاست؟,hiss... gushi kojâst?,shh... where is the phone?,home
+this_phone.mp3,[cheerfully] ایول! این گوشیه!,ایول! این گوشیه!,eyval! in gushiye!,awesome! that's the phone!,home
+w_key.mp3,[surprised] وای! کلید!,وای! کلید!,vây! kelid!,wow! key!,home
+say_key.mp3,[mischievously] بگو ببینم... کلید!,بگو ببینم... کلید!,begu bebinam... kelid!,"go on, say... key!",home
+where_key.mp3,[curious] کلید کجاست؟,کلید کجاست؟,kelid kojâst?,where is the key?,home
+this_key.mp3,[giggles] درسته! این کلیده!,درسته! این کلیده!,doroste! in kelide!,right! that's the key!,home
+w_bath.mp3,[playful] حموم!,حموم!,hamum!,bath!,home
+say_bath.mp3,[playful] با من بگو: حموم!,با من بگو: حموم!,bâ man begu: hamum!,say it with me: bath!,home
+where_bath.mp3,[whispers] حموم کجا قایم شده؟,حموم کجا قایم شده؟,hamum kojâ ghâyem shode?,where is the bath hiding?,home
+this_bath.mp3,[excited] هورا! این حمومه!,هورا! این حمومه!,hurâ! in hamume!,hooray! that's the bath!,home
+w_toilet.mp3,[gasps] اِ، دستشویی!,اِ، دستشویی!,"e, dastshuyi!","oh, potty!",home
+say_toilet.mp3,[playful] بگو دستشویی!,بگو دستشویی!,begu dastshuyi!,say potty!,home
+where_toilet.mp3,[curious] پس دستشویی کو؟,پس دستشویی کو؟,pas dastshuyi ku?,so where is the potty?,home
+this_toilet.mp3,[proudly] باریکلا! دستشوییه!,باریکلا! دستشوییه!,bârikallâ! dastshuyiye!,bravo! it's the potty!,home
+w_soap.mp3,[excited] صابون!,صابون!,sâbun!,soap!,home
+say_soap.mp3,[cheerfully] تو بگو صابون!,تو بگو صابون!,to begu sâbun!,you say soap!,home
+where_soap.mp3,[playful] صابون رو پیدا کن!,صابون رو پیدا کن!,sâbun ro peydâ kon!,find the soap!,home
+this_soap.mp3,[excited] آفرین! این صابونه!,آفرین! این صابونه!,âfarin! in sâbune!,well done! that's the soap!,home
+w_toothbrush.mp3,[cheerfully] مسواک!,مسواک!,mesvâk!,toothbrush!,home
+say_toothbrush.mp3,[curious] می‌تونی بگی مسواک؟,می‌تونی بگی مسواک؟,mituni begi mesvâk?,can you say toothbrush?,home
+where_toothbrush.mp3,[curious] می‌تونی مسواک رو پیدا کنی؟,می‌تونی مسواک رو پیدا کنی؟,mituni mesvâk ro peydâ koni?,can you find the toothbrush?,home
+this_toothbrush.mp3,[proudly] آره! این مسواکه!,آره! این مسواکه!,âre! in mesvâke!,yes! that's the toothbrush!,home
+w_bucket.mp3,[surprised] وای! سطل!,وای! سطل!,vây! satl!,wow! bucket!,home
+say_bucket.mp3,[excited] حالا تو بگو: سطل!,حالا تو بگو: سطل!,hâlâ to begu: satl!,now you say: bucket!,home
+where_bucket.mp3,[whispers] هیس... سطل کجاست؟,هیس... سطل کجاست؟,hiss... satl kojâst?,shh... where is the bucket?,home
+this_bucket.mp3,[cheerfully] ایول! این سطله!,ایول! این سطله!,eyval! in satle!,awesome! that's the bucket!,home
+w_spoon.mp3,[playful] قاشق!,قاشق!,ghâshogh!,spoon!,home
+say_spoon.mp3,[mischievously] بگو ببینم... قاشق!,بگو ببینم... قاشق!,begu bebinam... ghâshogh!,"go on, say... spoon!",home
+where_spoon.mp3,[curious] قاشق کجاست؟,قاشق کجاست؟,ghâshogh kojâst?,where is the spoon?,home
+this_spoon.mp3,[giggles] درسته! این قاشقه!,درسته! این قاشقه!,doroste! in ghâshoghe!,right! that's the spoon!,home
+w_fork.mp3,[gasps] اِ، چنگال!,اِ، چنگال!,"e, changâl!","oh, fork!",home
+say_fork.mp3,[playful] با من بگو: چنگال!,با من بگو: چنگال!,bâ man begu: changâl!,say it with me: fork!,home
+where_fork.mp3,[whispers] چنگال کجا قایم شده؟,چنگال کجا قایم شده؟,changâl kojâ ghâyem shode?,where is the fork hiding?,home
+this_fork.mp3,[excited] هورا! این چنگاله!,هورا! این چنگاله!,hurâ! in changâle!,hooray! that's the fork!,home
+w_plate.mp3,[excited] بشقاب!,بشقاب!,boshghâb!,plate!,home
+say_plate.mp3,[playful] بگو بشقاب!,بگو بشقاب!,begu boshghâb!,say plate!,home
+where_plate.mp3,[curious] پس بشقاب کو؟,پس بشقاب کو؟,pas boshghâb ku?,so where is the plate?,home
+this_plate.mp3,[proudly] باریکلا! بشقابه!,باریکلا! بشقابه!,bârikallâ! boshghâbe!,bravo! it's the plate!,home
+w_cup.mp3,[cheerfully] لیوان!,لیوان!,livân!,cup!,home
+say_cup.mp3,[cheerfully] تو بگو لیوان!,تو بگو لیوان!,to begu livân!,you say cup!,home
+where_cup.mp3,[playful] لیوان رو پیدا کن!,لیوان رو پیدا کن!,livân ro peydâ kon!,find the cup!,home
+this_cup.mp3,[excited] آفرین! این لیوانه!,آفرین! این لیوانه!,âfarin! in livâne!,well done! that's the cup!,home
+w_broom.mp3,[surprised] وای! جارو!,وای! جارو!,vây! jâru!,wow! broom!,home
+say_broom.mp3,[curious] می‌تونی بگی جارو؟,می‌تونی بگی جارو؟,mituni begi jâru?,can you say broom?,home
+where_broom.mp3,[curious] می‌تونی جارو رو پیدا کنی؟,می‌تونی جارو رو پیدا کنی؟,mituni jâru ro peydâ koni?,can you find the broom?,home
+this_broom.mp3,[proudly] آره! این جاروئه!,آره! این جاروئه!,âre! in jârue!,yes! that's the broom!,home
+w_candle.mp3,[playful] شمع!,شمع!,sham!,candle!,home
+say_candle.mp3,[excited] حالا تو بگو: شمع!,حالا تو بگو: شمع!,hâlâ to begu: sham!,now you say: candle!,home
+where_candle.mp3,[whispers] هیس... شمع کجاست؟,هیس... شمع کجاست؟,hiss... sham kojâst?,shh... where is the candle?,home
+this_candle.mp3,[cheerfully] ایول! این شمعه!,ایول! این شمعه!,eyval! in shame!,awesome! that's the candle!,home
+w_gift.mp3,[gasps] اِ، کادو!,اِ، کادو!,"e, kâdo!","oh, present!",home
+say_gift.mp3,[mischievously] بگو ببینم... کادو!,بگو ببینم... کادو!,begu bebinam... kâdo!,"go on, say... present!",home
+where_gift.mp3,[curious] کادو کجاست؟,کادو کجاست؟,kâdo kojâst?,where is the present?,home
+this_gift.mp3,[giggles] درسته! این کادوئه!,درسته! این کادوئه!,doroste! in kâdoe!,right! that's the present!,home
+w_balloon.mp3,[excited] بادکنک!,بادکنک!,bâdkonak!,balloon!,home
+say_balloon.mp3,[playful] با من بگو: بادکنک!,با من بگو: بادکنک!,bâ man begu: bâdkonak!,say it with me: balloon!,home
+where_balloon.mp3,[whispers] بادکنک کجا قایم شده؟,بادکنک کجا قایم شده؟,bâdkonak kojâ ghâyem shode?,where is the balloon hiding?,home
+this_balloon.mp3,[excited] هورا! این بادکنکه!,هورا! این بادکنکه!,hurâ! in bâdkonake!,hooray! that's the balloon!,home
+w_doll.mp3,[cheerfully] عروسک!,عروسک!,arusak!,doll!,home
+say_doll.mp3,[playful] بگو عروسک!,بگو عروسک!,begu arusak!,say doll!,home
+where_doll.mp3,[curious] پس عروسک کو؟,پس عروسک کو؟,pas arusak ku?,so where is the doll?,home
+this_doll.mp3,[proudly] باریکلا! عروسکه!,باریکلا! عروسکه!,bârikallâ! arusake!,bravo! it's the doll!,home
+w_scissors.mp3,[surprised] وای! قیچی!,وای! قیچی!,vây! gheychi!,wow! scissors!,home
+say_scissors.mp3,[cheerfully] تو بگو قیچی!,تو بگو قیچی!,to begu gheychi!,you say scissors!,home
+where_scissors.mp3,[playful] قیچی رو پیدا کن!,قیچی رو پیدا کن!,gheychi ro peydâ kon!,find the scissors!,home
+this_scissors.mp3,[excited] آفرین! این قیچیه!,آفرین! این قیچیه!,âfarin! in gheychiye!,well done! that's the scissors!,home
+w_pencil.mp3,[playful] مداد!,مداد!,medâd!,pencil!,home
+say_pencil.mp3,[curious] می‌تونی بگی مداد؟,می‌تونی بگی مداد؟,mituni begi medâd?,can you say pencil?,home
+where_pencil.mp3,[curious] می‌تونی مداد رو پیدا کنی؟,می‌تونی مداد رو پیدا کنی؟,mituni medâd ro peydâ koni?,can you find the pencil?,home
+this_pencil.mp3,[proudly] آره! این مداده!,آره! این مداده!,âre! in medâde!,yes! that's the pencil!,home
+w_slide.mp3,[gasps] اِ، سرسره!,اِ، سرسره!,"e, sorsore!","oh, slide!",home
+say_slide.mp3,[excited] حالا تو بگو: سرسره!,حالا تو بگو: سرسره!,hâlâ to begu: sorsore!,now you say: slide!,home
+where_slide.mp3,[whispers] هیس... سرسره کجاست؟,هیس... سرسره کجاست؟,hiss... sorsore kojâst?,shh... where is the slide?,home
+this_slide.mp3,[cheerfully] ایول! این سرسره‌ست!,ایول! این سرسره‌ست!,eyval! in sorsorast!,awesome! that's the slide!,home
+w_puzzle.mp3,[excited] پازل!,پازل!,pâzel!,puzzle!,home
+say_puzzle.mp3,[mischievously] بگو ببینم... پازل!,بگو ببینم... پازل!,begu bebinam... pâzel!,"go on, say... puzzle!",home
+where_puzzle.mp3,[curious] پازل کجاست؟,پازل کجاست؟,pâzel kojâst?,where is the puzzle?,home
+this_puzzle.mp3,[giggles] درسته! این پازله!,درسته! این پازله!,doroste! in pâzele!,right! that's the puzzle!,home
+w_drum.mp3,[cheerfully] طبل!,طبل!,tabl!,drum!,home
+say_drum.mp3,[playful] با من بگو: طبل!,با من بگو: طبل!,bâ man begu: tabl!,say it with me: drum!,home
+where_drum.mp3,[whispers] طبل کجا قایم شده؟,طبل کجا قایم شده؟,tabl kojâ ghâyem shode?,where is the drum hiding?,home
+this_drum.mp3,[excited] هورا! این طبله!,هورا! این طبله!,hurâ! in table!,hooray! that's the drum!,home
+w_guitar.mp3,[surprised] وای! گیتار!,وای! گیتار!,vây! gitâr!,wow! guitar!,home
+say_guitar.mp3,[playful] بگو گیتار!,بگو گیتار!,begu gitâr!,say guitar!,home
+where_guitar.mp3,[curious] پس گیتار کو؟,پس گیتار کو؟,pas gitâr ku?,so where is the guitar?,home
+this_guitar.mp3,[proudly] باریکلا! گیتاره!,باریکلا! گیتاره!,bârikallâ! gitâre!,bravo! it's the guitar!,home
+w_piano.mp3,[playful] پیانو!,پیانو!,piyâno!,piano!,home
+say_piano.mp3,[cheerfully] تو بگو پیانو!,تو بگو پیانو!,to begu piyâno!,you say piano!,home
+where_piano.mp3,[playful] پیانو رو پیدا کن!,پیانو رو پیدا کن!,piyâno ro peydâ kon!,find the piano!,home
+this_piano.mp3,[excited] آفرین! این پیانوئه!,آفرین! این پیانوئه!,âfarin! in piyânoe!,well done! that's the piano!,home
+w_kite.mp3,[gasps] اِ، بادبادک!,اِ، بادبادک!,"e, bâdbâdak!","oh, kite!",home
+say_kite.mp3,[curious] می‌تونی بگی بادبادک؟,می‌تونی بگی بادبادک؟,mituni begi bâdbâdak?,can you say kite?,home
+where_kite.mp3,[curious] می‌تونی بادبادک رو پیدا کنی؟,می‌تونی بادبادک رو پیدا کنی؟,mituni bâdbâdak ro peydâ koni?,can you find the kite?,home
+this_kite.mp3,[proudly] آره! این بادبادکه!,آره! این بادبادکه!,âre! in bâdbâdake!,yes! that's the kite!,home
+w_robot.mp3,[excited] ربات!,ربات!,robât!,robot!,home
+say_robot.mp3,[excited] حالا تو بگو: ربات!,حالا تو بگو: ربات!,hâlâ to begu: robât!,now you say: robot!,home
+where_robot.mp3,[whispers] هیس... ربات کجاست؟,هیس... ربات کجاست؟,hiss... robât kojâst?,shh... where is the robot?,home
+this_robot.mp3,[cheerfully] ایول! این رباته!,ایول! این رباته!,eyval! in robâte!,awesome! that's the robot!,home
+w_bus.mp3,[cheerfully] اتوبوس!,اتوبوس!,otobus!,bus!,vehicles
+say_bus.mp3,[mischievously] بگو ببینم... اتوبوس!,بگو ببینم... اتوبوس!,begu bebinam... otobus!,"go on, say... bus!",vehicles
+where_bus.mp3,[curious] اتوبوس کجاست؟,اتوبوس کجاست؟,otobus kojâst?,where is the bus?,vehicles
+this_bus.mp3,[giggles] درسته! این اتوبوسه!,درسته! این اتوبوسه!,doroste! in otobuse!,right! that's the bus!,vehicles
+w_train.mp3,[surprised] وای! قطار!,وای! قطار!,vây! ghatâr!,wow! train!,vehicles
+say_train.mp3,[playful] با من بگو: قطار!,با من بگو: قطار!,bâ man begu: ghatâr!,say it with me: train!,vehicles
+where_train.mp3,[whispers] قطار کجا قایم شده؟,قطار کجا قایم شده؟,ghatâr kojâ ghâyem shode?,where is the train hiding?,vehicles
+this_train.mp3,[excited] هورا! این قطاره!,هورا! این قطاره!,hurâ! in ghatâre!,hooray! that's the train!,vehicles
+w_plane.mp3,[playful] هواپیما!,هواپیما!,havâpeymâ!,airplane!,vehicles
+say_plane.mp3,[playful] بگو هواپیما!,بگو هواپیما!,begu havâpeymâ!,say airplane!,vehicles
+where_plane.mp3,[curious] پس هواپیما کو؟,پس هواپیما کو؟,pas havâpeymâ ku?,so where is the airplane?,vehicles
+this_plane.mp3,[proudly] باریکلا! هواپیماست!,باریکلا! هواپیماست!,bârikallâ! havâpeymâst!,bravo! it's the airplane!,vehicles
+w_ship.mp3,[gasps] اِ، کشتی!,اِ، کشتی!,"e, keshti!","oh, ship!",vehicles
+say_ship.mp3,[cheerfully] تو بگو کشتی!,تو بگو کشتی!,to begu keshti!,you say ship!,vehicles
+where_ship.mp3,[playful] کشتی رو پیدا کن!,کشتی رو پیدا کن!,keshti ro peydâ kon!,find the ship!,vehicles
+this_ship.mp3,[excited] آفرین! این کشتیه!,آفرین! این کشتیه!,âfarin! in keshtiye!,well done! that's the ship!,vehicles
+w_boat.mp3,[excited] قایق!,قایق!,ghâyegh!,boat!,vehicles
+say_boat.mp3,[curious] می‌تونی بگی قایق؟,می‌تونی بگی قایق؟,mituni begi ghâyegh?,can you say boat?,vehicles
+where_boat.mp3,[curious] می‌تونی قایق رو پیدا کنی؟,می‌تونی قایق رو پیدا کنی؟,mituni ghâyegh ro peydâ koni?,can you find the boat?,vehicles
+this_boat.mp3,[proudly] آره! این قایقه!,آره! این قایقه!,âre! in ghâyeghe!,yes! that's the boat!,vehicles
+w_bike.mp3,[cheerfully] دوچرخه!,دوچرخه!,docharkhe!,bike!,vehicles
+say_bike.mp3,[excited] حالا تو بگو: دوچرخه!,حالا تو بگو: دوچرخه!,hâlâ to begu: docharkhe!,now you say: bike!,vehicles
+where_bike.mp3,[whispers] هیس... دوچرخه کجاست؟,هیس... دوچرخه کجاست؟,hiss... docharkhe kojâst?,shh... where is the bike?,vehicles
+this_bike.mp3,[cheerfully] ایول! این دوچرخه‌ست!,ایول! این دوچرخه‌ست!,eyval! in docharkhast!,awesome! that's the bike!,vehicles
+w_motorbike.mp3,[surprised] وای! موتور!,وای! موتور!,vây! motor!,wow! motorbike!,vehicles
+say_motorbike.mp3,[mischievously] بگو ببینم... موتور!,بگو ببینم... موتور!,begu bebinam... motor!,"go on, say... motorbike!",vehicles
+where_motorbike.mp3,[curious] موتور کجاست؟,موتور کجاست؟,motor kojâst?,where is the motorbike?,vehicles
+this_motorbike.mp3,[giggles] درسته! این موتوره!,درسته! این موتوره!,doroste! in motore!,right! that's the motorbike!,vehicles
+w_truck.mp3,[playful] کامیون!,کامیون!,kâmiyon!,truck!,vehicles
+say_truck.mp3,[playful] با من بگو: کامیون!,با من بگو: کامیون!,bâ man begu: kâmiyon!,say it with me: truck!,vehicles
+where_truck.mp3,[whispers] کامیون کجا قایم شده؟,کامیون کجا قایم شده؟,kâmiyon kojâ ghâyem shode?,where is the truck hiding?,vehicles
+this_truck.mp3,[excited] هورا! این کامیونه!,هورا! این کامیونه!,hurâ! in kâmiyone!,hooray! that's the truck!,vehicles
+w_tractor.mp3,[gasps] اِ، تراکتور!,اِ، تراکتور!,"e, terâktor!","oh, tractor!",vehicles
+say_tractor.mp3,[playful] بگو تراکتور!,بگو تراکتور!,begu terâktor!,say tractor!,vehicles
+where_tractor.mp3,[curious] پس تراکتور کو؟,پس تراکتور کو؟,pas terâktor ku?,so where is the tractor?,vehicles
+this_tractor.mp3,[proudly] باریکلا! تراکتوره!,باریکلا! تراکتوره!,bârikallâ! terâktore!,bravo! it's the tractor!,vehicles
+w_ambulance.mp3,[excited] آمبولانس!,آمبولانس!,âmbulâns!,ambulance!,vehicles
+say_ambulance.mp3,[cheerfully] تو بگو آمبولانس!,تو بگو آمبولانس!,to begu âmbulâns!,you say ambulance!,vehicles
+where_ambulance.mp3,[playful] آمبولانس رو پیدا کن!,آمبولانس رو پیدا کن!,âmbulâns ro peydâ kon!,find the ambulance!,vehicles
+this_ambulance.mp3,[excited] آفرین! این آمبولانسه!,آفرین! این آمبولانسه!,âfarin! in âmbulânse!,well done! that's the ambulance!,vehicles
+w_fire_truck.mp3,[cheerfully] ماشین آتش‌نشانی!,ماشین آتش‌نشانی!,mâshin âtashneshâni!,fire truck!,vehicles
+say_fire_truck.mp3,[curious] می‌تونی بگی ماشین آتش‌نشانی؟,می‌تونی بگی ماشین آتش‌نشانی؟,mituni begi mâshin âtashneshâni?,can you say fire truck?,vehicles
+where_fire_truck.mp3,[curious] می‌تونی ماشین آتش‌نشانی رو پیدا کنی؟,می‌تونی ماشین آتش‌نشانی رو پیدا کنی؟,mituni mâshin âtashneshâni ro peydâ koni?,can you find the fire truck?,vehicles
+this_fire_truck.mp3,[proudly] آره! این ماشین آتش‌نشانیه!,آره! این ماشین آتش‌نشانیه!,âre! in mâshin âtashneshâniye!,yes! that's the fire truck!,vehicles
+w_police_car.mp3,[surprised] وای! ماشین پلیس!,وای! ماشین پلیس!,vây! mâshin polis!,wow! police car!,vehicles
+say_police_car.mp3,[excited] حالا تو بگو: ماشین پلیس!,حالا تو بگو: ماشین پلیس!,hâlâ to begu: mâshin polis!,now you say: police car!,vehicles
+where_police_car.mp3,[whispers] هیس... ماشین پلیس کجاست؟,هیس... ماشین پلیس کجاست؟,hiss... mâshin polis kojâst?,shh... where is the police car?,vehicles
+this_police_car.mp3,[cheerfully] ایول! این ماشین پلیسه!,ایول! این ماشین پلیسه!,eyval! in mâshin polise!,awesome! that's the police car!,vehicles
+w_helicopter.mp3,[playful] هلیکوپتر!,هلیکوپتر!,helikopter!,helicopter!,vehicles
+say_helicopter.mp3,[mischievously] بگو ببینم... هلیکوپتر!,بگو ببینم... هلیکوپتر!,begu bebinam... helikopter!,"go on, say... helicopter!",vehicles
+where_helicopter.mp3,[curious] هلیکوپتر کجاست؟,هلیکوپتر کجاست؟,helikopter kojâst?,where is the helicopter?,vehicles
+this_helicopter.mp3,[giggles] درسته! این هلیکوپتره!,درسته! این هلیکوپتره!,doroste! in helikoptere!,right! that's the helicopter!,vehicles
+w_rocket.mp3,[gasps] اِ، موشک!,اِ، موشک!,"e, mushak!","oh, rocket!",vehicles
+say_rocket.mp3,[playful] با من بگو: موشک!,با من بگو: موشک!,bâ man begu: mushak!,say it with me: rocket!,vehicles
+where_rocket.mp3,[whispers] موشک کجا قایم شده؟,موشک کجا قایم شده؟,mushak kojâ ghâyem shode?,where is the rocket hiding?,vehicles
+this_rocket.mp3,[excited] هورا! این موشکه!,هورا! این موشکه!,hurâ! in mushake!,hooray! that's the rocket!,vehicles
+w_taxi.mp3,[excited] تاکسی!,تاکسی!,tâksi!,taxi!,vehicles
+say_taxi.mp3,[playful] بگو تاکسی!,بگو تاکسی!,begu tâksi!,say taxi!,vehicles
+where_taxi.mp3,[curious] پس تاکسی کو؟,پس تاکسی کو؟,pas tâksi ku?,so where is the taxi?,vehicles
+this_taxi.mp3,[proudly] باریکلا! تاکسیه!,باریکلا! تاکسیه!,bârikallâ! tâksiye!,bravo! it's the taxi!,vehicles
+w_sun.mp3,[cheerfully] خورشید!,خورشید!,khorshid!,sun!,nature
+say_sun.mp3,[cheerfully] تو بگو خورشید!,تو بگو خورشید!,to begu khorshid!,you say sun!,nature
+where_sun.mp3,[playful] خورشید رو پیدا کن!,خورشید رو پیدا کن!,khorshid ro peydâ kon!,find the sun!,nature
+this_sun.mp3,[excited] آفرین! این خورشیده!,آفرین! این خورشیده!,âfarin! in khorshide!,well done! that's the sun!,nature
+w_moon.mp3,[surprised] وای! ماه!,وای! ماه!,vây! mâh!,wow! moon!,nature
+say_moon.mp3,[curious] می‌تونی بگی ماه؟,می‌تونی بگی ماه؟,mituni begi mâh?,can you say moon?,nature
+where_moon.mp3,[curious] می‌تونی ماه رو پیدا کنی؟,می‌تونی ماه رو پیدا کنی؟,mituni mâh ro peydâ koni?,can you find the moon?,nature
+this_moon.mp3,[proudly] آره! این ماهه!,آره! این ماهه!,âre! in mâhe!,yes! that's the moon!,nature
+w_star.mp3,[playful] ستاره!,ستاره!,setâre!,star!,nature
+say_star.mp3,[excited] حالا تو بگو: ستاره!,حالا تو بگو: ستاره!,hâlâ to begu: setâre!,now you say: star!,nature
+where_star.mp3,[whispers] هیس... ستاره کجاست؟,هیس... ستاره کجاست؟,hiss... setâre kojâst?,shh... where is the star?,nature
+this_star.mp3,[cheerfully] ایول! این ستاره‌ست!,ایول! این ستاره‌ست!,eyval! in setârast!,awesome! that's the star!,nature
+w_cloud.mp3,[gasps] اِ، ابر!,اِ، ابر!,"e, abr!","oh, cloud!",nature
+say_cloud.mp3,[mischievously] بگو ببینم... ابر!,بگو ببینم... ابر!,begu bebinam... abr!,"go on, say... cloud!",nature
+where_cloud.mp3,[curious] ابر کجاست؟,ابر کجاست؟,abr kojâst?,where is the cloud?,nature
+this_cloud.mp3,[giggles] درسته! این ابره!,درسته! این ابره!,doroste! in abre!,right! that's the cloud!,nature
+w_rain.mp3,[excited] بارون!,بارون!,bârun!,rain!,nature
+say_rain.mp3,[playful] با من بگو: بارون!,با من بگو: بارون!,bâ man begu: bârun!,say it with me: rain!,nature
+where_rain.mp3,[whispers] بارون کجا قایم شده؟,بارون کجا قایم شده؟,bârun kojâ ghâyem shode?,where is the rain hiding?,nature
+this_rain.mp3,[excited] هورا! این بارونه!,هورا! این بارونه!,hurâ! in bârune!,hooray! that's the rain!,nature
+w_snow.mp3,[cheerfully] برف!,برف!,barf!,snow!,nature
+say_snow.mp3,[playful] بگو برف!,بگو برف!,begu barf!,say snow!,nature
+where_snow.mp3,[curious] پس برف کو؟,پس برف کو؟,pas barf ku?,so where is the snow?,nature
+this_snow.mp3,[proudly] باریکلا! برفه!,باریکلا! برفه!,bârikallâ! barfe!,bravo! it's the snow!,nature
+w_rainbow.mp3,[surprised] وای! رنگین‌کمون!,وای! رنگین‌کمون!,vây! ranginkamun!,wow! rainbow!,nature
+say_rainbow.mp3,[cheerfully] تو بگو رنگین‌کمون!,تو بگو رنگین‌کمون!,to begu ranginkamun!,you say rainbow!,nature
+where_rainbow.mp3,[playful] رنگین‌کمون رو پیدا کن!,رنگین‌کمون رو پیدا کن!,ranginkamun ro peydâ kon!,find the rainbow!,nature
+this_rainbow.mp3,[excited] آفرین! این رنگین‌کمونه!,آفرین! این رنگین‌کمونه!,âfarin! in ranginkamune!,well done! that's the rainbow!,nature
+w_tree.mp3,[playful] درخت!,درخت!,derakht!,tree!,nature
+say_tree.mp3,[curious] می‌تونی بگی درخت؟,می‌تونی بگی درخت؟,mituni begi derakht?,can you say tree?,nature
+where_tree.mp3,[curious] می‌تونی درخت رو پیدا کنی؟,می‌تونی درخت رو پیدا کنی؟,mituni derakht ro peydâ koni?,can you find the tree?,nature
+this_tree.mp3,[proudly] آره! این درخته!,آره! این درخته!,âre! in derakhte!,yes! that's the tree!,nature
+w_flower.mp3,[gasps] اِ، گُل!,اِ، گُل!,"e, gol!","oh, flower!",nature
+say_flower.mp3,[excited] حالا تو بگو: گُل!,حالا تو بگو: گُل!,hâlâ to begu: gol!,now you say: flower!,nature
+where_flower.mp3,[whispers] هیس... گُل کجاست؟,هیس... گُل کجاست؟,hiss... gol kojâst?,shh... where is the flower?,nature
+this_flower.mp3,[cheerfully] ایول! این گُله!,ایول! این گُله!,eyval! in gole!,awesome! that's the flower!,nature
+w_leaf.mp3,[excited] برگ!,برگ!,barg!,leaf!,nature
+say_leaf.mp3,[mischievously] بگو ببینم... برگ!,بگو ببینم... برگ!,begu bebinam... barg!,"go on, say... leaf!",nature
+where_leaf.mp3,[curious] برگ کجاست؟,برگ کجاست؟,barg kojâst?,where is the leaf?,nature
+this_leaf.mp3,[giggles] درسته! این برگه!,درسته! این برگه!,doroste! in barge!,right! that's the leaf!,nature
+w_fire.mp3,[cheerfully] آتیش!,آتیش!,âtish!,fire!,nature
+say_fire.mp3,[playful] با من بگو: آتیش!,با من بگو: آتیش!,bâ man begu: âtish!,say it with me: fire!,nature
+where_fire.mp3,[whispers] آتیش کجا قایم شده؟,آتیش کجا قایم شده؟,âtish kojâ ghâyem shode?,where is the fire hiding?,nature
+this_fire.mp3,[excited] هورا! این آتیشه!,هورا! این آتیشه!,hurâ! in âtishe!,hooray! that's the fire!,nature
+w_sea.mp3,[surprised] وای! دریا!,وای! دریا!,vây! daryâ!,wow! sea!,nature
+say_sea.mp3,[playful] بگو دریا!,بگو دریا!,begu daryâ!,say sea!,nature
+where_sea.mp3,[curious] پس دریا کو؟,پس دریا کو؟,pas daryâ ku?,so where is the sea?,nature
+this_sea.mp3,[proudly] باریکلا! دریاست!,باریکلا! دریاست!,bârikallâ! daryâst!,bravo! it's the sea!,nature
+w_mountain.mp3,[playful] کوه!,کوه!,kuh!,mountain!,nature
+say_mountain.mp3,[cheerfully] تو بگو کوه!,تو بگو کوه!,to begu kuh!,you say mountain!,nature
+where_mountain.mp3,[playful] کوه رو پیدا کن!,کوه رو پیدا کن!,kuh ro peydâ kon!,find the mountain!,nature
+this_mountain.mp3,[excited] آفرین! این کوهه!,آفرین! این کوهه!,âfarin! in kuhe!,well done! that's the mountain!,nature
+w_stone.mp3,[gasps] اِ، سنگ!,اِ، سنگ!,"e, sang!","oh, rock!",nature
+say_stone.mp3,[curious] می‌تونی بگی سنگ؟,می‌تونی بگی سنگ؟,mituni begi sang?,can you say rock?,nature
+where_stone.mp3,[curious] می‌تونی سنگ رو پیدا کنی؟,می‌تونی سنگ رو پیدا کنی؟,mituni sang ro peydâ koni?,can you find the rock?,nature
+this_stone.mp3,[proudly] آره! این سنگه!,آره! این سنگه!,âre! in sange!,yes! that's the rock!,nature
+w_shell.mp3,[excited] صدف!,صدف!,sadaf!,shell!,nature
+say_shell.mp3,[excited] حالا تو بگو: صدف!,حالا تو بگو: صدف!,hâlâ to begu: sadaf!,now you say: shell!,nature
+where_shell.mp3,[whispers] هیس... صدف کجاست؟,هیس... صدف کجاست؟,hiss... sadaf kojâst?,shh... where is the shell?,nature
+this_shell.mp3,[cheerfully] ایول! این صدفه!,ایول! این صدفه!,eyval! in sadafe!,awesome! that's the shell!,nature
+w_red.mp3,[cheerfully] قرمز!,قرمز!,ghermez!,red!,colours
+say_red.mp3,[mischievously] بگو ببینم... قرمز!,بگو ببینم... قرمز!,begu bebinam... ghermez!,"go on, say... red!",colours
+where_red.mp3,[curious] قرمز کجاست؟,قرمز کجاست؟,ghermez kojâst?,where is red?,colours
+this_red.mp3,[giggles] درسته! این قرمزه!,درسته! این قرمزه!,doroste! in ghermeze!,right! that's red!,colours
+w_blue.mp3,[surprised] وای! آبی!,وای! آبی!,vây! âbi!,wow! blue!,colours
+say_blue.mp3,[playful] با من بگو: آبی!,با من بگو: آبی!,bâ man begu: âbi!,say it with me: blue!,colours
+where_blue.mp3,[whispers] آبی کجا قایم شده؟,آبی کجا قایم شده؟,âbi kojâ ghâyem shode?,where is blue hiding?,colours
+this_blue.mp3,[excited] هورا! این آبیه!,هورا! این آبیه!,hurâ! in âbiye!,hooray! that's blue!,colours
+w_green.mp3,[playful] سبز!,سبز!,sabz!,green!,colours
+say_green.mp3,[playful] بگو سبز!,بگو سبز!,begu sabz!,say green!,colours
+where_green.mp3,[curious] پس سبز کو؟,پس سبز کو؟,pas sabz ku?,so where is green?,colours
+this_green.mp3,[proudly] باریکلا! سبزه!,باریکلا! سبزه!,bârikallâ! sabze!,bravo! it's green!,colours
+w_yellow.mp3,[gasps] اِ، زرد!,اِ، زرد!,"e, zard!","oh, yellow!",colours
+say_yellow.mp3,[cheerfully] تو بگو زرد!,تو بگو زرد!,to begu zard!,you say yellow!,colours
+where_yellow.mp3,[playful] زرد رو پیدا کن!,زرد رو پیدا کن!,zard ro peydâ kon!,find yellow!,colours
+this_yellow.mp3,[excited] آفرین! این زرده!,آفرین! این زرده!,âfarin! in zarde!,well done! that's yellow!,colours
+w_orange_color.mp3,[excited] نارنجی!,نارنجی!,nârenji!,orange (colour)!,colours
+say_orange_color.mp3,[curious] می‌تونی بگی نارنجی؟,می‌تونی بگی نارنجی؟,mituni begi nârenji?,can you say orange (colour)?,colours
+where_orange_color.mp3,[curious] می‌تونی نارنجی رو پیدا کنی؟,می‌تونی نارنجی رو پیدا کنی؟,mituni nârenji ro peydâ koni?,can you find orange (colour)?,colours
+this_orange_color.mp3,[proudly] آره! این نارنجیه!,آره! این نارنجیه!,âre! in nârenjiye!,yes! that's orange (colour)!,colours
+w_purple.mp3,[cheerfully] بنفش!,بنفش!,banafsh!,purple!,colours
+say_purple.mp3,[excited] حالا تو بگو: بنفش!,حالا تو بگو: بنفش!,hâlâ to begu: banafsh!,now you say: purple!,colours
+where_purple.mp3,[whispers] هیس... بنفش کجاست؟,هیس... بنفش کجاست؟,hiss... banafsh kojâst?,shh... where is purple?,colours
+this_purple.mp3,[cheerfully] ایول! این بنفشه!,ایول! این بنفشه!,eyval! in banafshe!,awesome! that's purple!,colours
+w_black.mp3,[surprised] وای! سیاه!,وای! سیاه!,vây! siyâh!,wow! black!,colours
+say_black.mp3,[mischievously] بگو ببینم... سیاه!,بگو ببینم... سیاه!,begu bebinam... siyâh!,"go on, say... black!",colours
+where_black.mp3,[curious] سیاه کجاست؟,سیاه کجاست؟,siyâh kojâst?,where is black?,colours
+this_black.mp3,[giggles] درسته! این سیاهه!,درسته! این سیاهه!,doroste! in siyâhe!,right! that's black!,colours
+w_white.mp3,[playful] سفید!,سفید!,sefid!,white!,colours
+say_white.mp3,[playful] با من بگو: سفید!,با من بگو: سفید!,bâ man begu: sefid!,say it with me: white!,colours
+where_white.mp3,[whispers] سفید کجا قایم شده؟,سفید کجا قایم شده؟,sefid kojâ ghâyem shode?,where is white hiding?,colours
+this_white.mp3,[excited] هورا! این سفیده!,هورا! این سفیده!,hurâ! in sefide!,hooray! that's white!,colours
+w_pink.mp3,[gasps] اِ، صورتی!,اِ، صورتی!,"e, surati!","oh, pink!",colours
+say_pink.mp3,[playful] بگو صورتی!,بگو صورتی!,begu surati!,say pink!,colours
+where_pink.mp3,[curious] پس صورتی کو؟,پس صورتی کو؟,pas surati ku?,so where is pink?,colours
+this_pink.mp3,[proudly] باریکلا! صورتیه!,باریکلا! صورتیه!,bârikallâ! suratiye!,bravo! it's pink!,colours
+w_brown.mp3,[excited] قهوه‌ای!,قهوه‌ای!,ghahveyi!,brown!,colours
+say_brown.mp3,[cheerfully] تو بگو قهوه‌ای!,تو بگو قهوه‌ای!,to begu ghahveyi!,you say brown!,colours
+where_brown.mp3,[playful] قهوه‌ای رو پیدا کن!,قهوه‌ای رو پیدا کن!,ghahveyi ro peydâ kon!,find brown!,colours
+this_brown.mp3,[excited] آفرین! این قهوه‌ایه!,آفرین! این قهوه‌ایه!,âfarin! in ghahveyiye!,well done! that's brown!,colours
+w_one.mp3,[cheerfully] یک!,یک!,yek!,one!,numbers
+say_one.mp3,[curious] می‌تونی بگی یک؟,می‌تونی بگی یک؟,mituni begi yek?,can you say one?,numbers
+where_one.mp3,[curious] می‌تونی یک رو پیدا کنی؟,می‌تونی یک رو پیدا کنی؟,mituni yek ro peydâ koni?,can you find one?,numbers
+this_one.mp3,[proudly] آره! این یکه!,آره! این یکه!,âre! in yeke!,yes! that's one!,numbers
+w_two.mp3,[surprised] وای! دو!,وای! دو!,vây! do!,wow! two!,numbers
+say_two.mp3,[excited] حالا تو بگو: دو!,حالا تو بگو: دو!,hâlâ to begu: do!,now you say: two!,numbers
+where_two.mp3,[whispers] هیس... دو کجاست؟,هیس... دو کجاست؟,hiss... do kojâst?,shh... where is two?,numbers
+this_two.mp3,[cheerfully] ایول! این دوئه!,ایول! این دوئه!,eyval! in doe!,awesome! that's two!,numbers
+w_three.mp3,[playful] سه!,سه!,se!,three!,numbers
+say_three.mp3,[mischievously] بگو ببینم... سه!,بگو ببینم... سه!,begu bebinam... se!,"go on, say... three!",numbers
+where_three.mp3,[curious] سه کجاست؟,سه کجاست؟,se kojâst?,where is three?,numbers
+this_three.mp3,[giggles] درسته! این سه‌ست!,درسته! این سه‌ست!,doroste! in sest!,right! that's three!,numbers
+w_four.mp3,[gasps] اِ، چهار!,اِ، چهار!,"e, chahâr!","oh, four!",numbers
+say_four.mp3,[playful] با من بگو: چهار!,با من بگو: چهار!,bâ man begu: chahâr!,say it with me: four!,numbers
+where_four.mp3,[whispers] چهار کجا قایم شده؟,چهار کجا قایم شده؟,chahâr kojâ ghâyem shode?,where is four hiding?,numbers
+this_four.mp3,[excited] هورا! این چهاره!,هورا! این چهاره!,hurâ! in chahâre!,hooray! that's four!,numbers
+w_five.mp3,[excited] پنج!,پنج!,panj!,five!,numbers
+say_five.mp3,[playful] بگو پنج!,بگو پنج!,begu panj!,say five!,numbers
+where_five.mp3,[curious] پس پنج کو؟,پس پنج کو؟,pas panj ku?,so where is five?,numbers
+this_five.mp3,[proudly] باریکلا! پنجه!,باریکلا! پنجه!,bârikallâ! panje!,bravo! it's five!,numbers
+w_six.mp3,[cheerfully] شیش!,شیش!,shish!,six!,numbers
+say_six.mp3,[cheerfully] تو بگو شیش!,تو بگو شیش!,to begu shish!,you say six!,numbers
+where_six.mp3,[playful] شیش رو پیدا کن!,شیش رو پیدا کن!,shish ro peydâ kon!,find six!,numbers
+this_six.mp3,[excited] آفرین! این شیشه!,آفرین! این شیشه!,âfarin! in shishe!,well done! that's six!,numbers
+w_seven.mp3,[surprised] وای! هفت!,وای! هفت!,vây! haft!,wow! seven!,numbers
+say_seven.mp3,[curious] می‌تونی بگی هفت؟,می‌تونی بگی هفت؟,mituni begi haft?,can you say seven?,numbers
+where_seven.mp3,[curious] می‌تونی هفت رو پیدا کنی؟,می‌تونی هفت رو پیدا کنی؟,mituni haft ro peydâ koni?,can you find seven?,numbers
+this_seven.mp3,[proudly] آره! این هفته!,آره! این هفته!,âre! in hafte!,yes! that's seven!,numbers
+w_eight.mp3,[playful] هشت!,هشت!,hasht!,eight!,numbers
+say_eight.mp3,[excited] حالا تو بگو: هشت!,حالا تو بگو: هشت!,hâlâ to begu: hasht!,now you say: eight!,numbers
+where_eight.mp3,[whispers] هیس... هشت کجاست؟,هیس... هشت کجاست؟,hiss... hasht kojâst?,shh... where is eight?,numbers
+this_eight.mp3,[cheerfully] ایول! این هشته!,ایول! این هشته!,eyval! in hashte!,awesome! that's eight!,numbers
+w_nine.mp3,[gasps] اِ، نُه!,اِ، نُه!,"e, noh!","oh, nine!",numbers
+say_nine.mp3,[mischievously] بگو ببینم... نُه!,بگو ببینم... نُه!,begu bebinam... noh!,"go on, say... nine!",numbers
+where_nine.mp3,[curious] نُه کجاست؟,نُه کجاست؟,noh kojâst?,where is nine?,numbers
+this_nine.mp3,[giggles] درسته! این نُهه!,درسته! این نُهه!,doroste! in nohe!,right! that's nine!,numbers
+w_ten.mp3,[excited] دَه!,دَه!,dah!,ten!,numbers
+say_ten.mp3,[playful] با من بگو: دَه!,با من بگو: دَه!,bâ man begu: dah!,say it with me: ten!,numbers
+where_ten.mp3,[whispers] دَه کجا قایم شده؟,دَه کجا قایم شده؟,dah kojâ ghâyem shode?,where is ten hiding?,numbers
+this_ten.mp3,[excited] هورا! این دَهه!,هورا! این دَهه!,hurâ! in dahe!,hooray! that's ten!,numbers
+w_circle.mp3,[cheerfully] دایره!,دایره!,dâyere!,circle!,shapes
+say_circle.mp3,[playful] بگو دایره!,بگو دایره!,begu dâyere!,say circle!,shapes
+where_circle.mp3,[curious] پس دایره کو؟,پس دایره کو؟,pas dâyere ku?,so where is the circle?,shapes
+this_circle.mp3,[proudly] باریکلا! دایره‌ست!,باریکلا! دایره‌ست!,bârikallâ! dâyerast!,bravo! it's the circle!,shapes
+w_square.mp3,[surprised] وای! مربع!,وای! مربع!,vây! morabba!,wow! square!,shapes
+say_square.mp3,[cheerfully] تو بگو مربع!,تو بگو مربع!,to begu morabba!,you say square!,shapes
+where_square.mp3,[playful] مربع رو پیدا کن!,مربع رو پیدا کن!,morabba ro peydâ kon!,find the square!,shapes
+this_square.mp3,[excited] آفرین! این مربعه!,آفرین! این مربعه!,âfarin! in morabbae!,well done! that's the square!,shapes
+w_triangle.mp3,[playful] مثلث!,مثلث!,mosallas!,triangle!,shapes
+say_triangle.mp3,[curious] می‌تونی بگی مثلث؟,می‌تونی بگی مثلث؟,mituni begi mosallas?,can you say triangle?,shapes
+where_triangle.mp3,[curious] می‌تونی مثلث رو پیدا کنی؟,می‌تونی مثلث رو پیدا کنی؟,mituni mosallas ro peydâ koni?,can you find the triangle?,shapes
+this_triangle.mp3,[proudly] آره! این مثلثه!,آره! این مثلثه!,âre! in mosallase!,yes! that's the triangle!,shapes
+w_heart.mp3,[gasps] اِ، قلب!,اِ، قلب!,"e, ghalb!","oh, heart!",shapes
+say_heart.mp3,[excited] حالا تو بگو: قلب!,حالا تو بگو: قلب!,hâlâ to begu: ghalb!,now you say: heart!,shapes
+where_heart.mp3,[whispers] هیس... قلب کجاست؟,هیس... قلب کجاست؟,hiss... ghalb kojâst?,shh... where is the heart?,shapes
+this_heart.mp3,[cheerfully] ایول! این قلبه!,ایول! این قلبه!,eyval! in ghalbe!,awesome! that's the heart!,shapes
+w_mommy.mp3,[excited] مامان!,مامان!,mâmân!,mommy!,people
+say_mommy.mp3,[mischievously] بگو ببینم... مامان!,بگو ببینم... مامان!,begu bebinam... mâmân!,"go on, say... mommy!",people
+where_mommy.mp3,[curious] مامان کجاست؟,مامان کجاست؟,mâmân kojâst?,where is mommy?,people
+this_mommy.mp3,[giggles] درسته! این مامانه!,درسته! این مامانه!,doroste! in mâmâne!,right! that's mommy!,people
+w_daddy.mp3,[cheerfully] بابا!,بابا!,bâbâ!,daddy!,people
+say_daddy.mp3,[playful] با من بگو: بابا!,با من بگو: بابا!,bâ man begu: bâbâ!,say it with me: daddy!,people
+where_daddy.mp3,[whispers] بابا کجا قایم شده؟,بابا کجا قایم شده؟,bâbâ kojâ ghâyem shode?,where is daddy hiding?,people
+this_daddy.mp3,[excited] هورا! این باباست!,هورا! این باباست!,hurâ! in bâbâst!,hooray! that's daddy!,people
+w_grandma.mp3,[surprised] وای! مامان‌بزرگ!,وای! مامان‌بزرگ!,vây! mâmânbozorg!,wow! grandma!,people
+say_grandma.mp3,[playful] بگو مامان‌بزرگ!,بگو مامان‌بزرگ!,begu mâmânbozorg!,say grandma!,people
+where_grandma.mp3,[curious] پس مامان‌بزرگ کو؟,پس مامان‌بزرگ کو؟,pas mâmânbozorg ku?,so where is grandma?,people
+this_grandma.mp3,[proudly] باریکلا! مامان‌بزرگه!,باریکلا! مامان‌بزرگه!,bârikallâ! mâmânbozorge!,bravo! it's grandma!,people
+w_grandpa.mp3,[playful] بابابزرگ!,بابابزرگ!,bâbâbozorg!,grandpa!,people
+say_grandpa.mp3,[cheerfully] تو بگو بابابزرگ!,تو بگو بابابزرگ!,to begu bâbâbozorg!,you say grandpa!,people
+where_grandpa.mp3,[playful] بابابزرگ رو پیدا کن!,بابابزرگ رو پیدا کن!,bâbâbozorg ro peydâ kon!,find grandpa!,people
+this_grandpa.mp3,[excited] آفرین! این بابابزرگه!,آفرین! این بابابزرگه!,âfarin! in bâbâbozorge!,well done! that's grandpa!,people
+w_brother.mp3,[gasps] اِ، داداش!,اِ، داداش!,"e, dâdâsh!","oh, brother!",people
+say_brother.mp3,[curious] می‌تونی بگی داداش؟,می‌تونی بگی داداش؟,mituni begi dâdâsh?,can you say brother?,people
+where_brother.mp3,[curious] می‌تونی داداش رو پیدا کنی؟,می‌تونی داداش رو پیدا کنی؟,mituni dâdâsh ro peydâ koni?,can you find brother?,people
+this_brother.mp3,[proudly] آره! این داداشه!,آره! این داداشه!,âre! in dâdâshe!,yes! that's brother!,people
+w_sister.mp3,[excited] آبجی!,آبجی!,âbji!,sister!,people
+say_sister.mp3,[excited] حالا تو بگو: آبجی!,حالا تو بگو: آبجی!,hâlâ to begu: âbji!,now you say: sister!,people
+where_sister.mp3,[whispers] هیس... آبجی کجاست؟,هیس... آبجی کجاست؟,hiss... âbji kojâst?,shh... where is sister?,people
+this_sister.mp3,[cheerfully] ایول! این آبجیه!,ایول! این آبجیه!,eyval! in âbjiye!,awesome! that's sister!,people
+w_baby.mp3,[cheerfully] نی‌نی!,نی‌نی!,nini!,baby!,people
+say_baby.mp3,[mischievously] بگو ببینم... نی‌نی!,بگو ببینم... نی‌نی!,begu bebinam... nini!,"go on, say... baby!",people
+where_baby.mp3,[curious] نی‌نی کجاست؟,نی‌نی کجاست؟,nini kojâst?,where is the baby?,people
+this_baby.mp3,[giggles] درسته! این نی‌نیه!,درسته! این نی‌نیه!,doroste! in niniye!,right! that's the baby!,people
+w_doctor.mp3,[surprised] وای! دکتر!,وای! دکتر!,vây! doktor!,wow! doctor!,people
+say_doctor.mp3,[playful] با من بگو: دکتر!,با من بگو: دکتر!,bâ man begu: doktor!,say it with me: doctor!,people
+where_doctor.mp3,[whispers] دکتر کجا قایم شده؟,دکتر کجا قایم شده؟,doktor kojâ ghâyem shode?,where is the doctor hiding?,people
+this_doctor.mp3,[excited] هورا! این دکتره!,هورا! این دکتره!,hurâ! in doktore!,hooray! that's the doctor!,people
+w_police.mp3,[playful] پلیس!,پلیس!,polis!,police officer!,people
+say_police.mp3,[playful] بگو پلیس!,بگو پلیس!,begu polis!,say police officer!,people
+where_police.mp3,[curious] پس پلیس کو؟,پس پلیس کو؟,pas polis ku?,so where is the police officer?,people
+this_police.mp3,[proudly] باریکلا! پلیسه!,باریکلا! پلیسه!,bârikallâ! polise!,bravo! it's the police officer!,people
+w_firefighter.mp3,[gasps] اِ، آتش‌نشان!,اِ، آتش‌نشان!,"e, âtashneshân!","oh, firefighter!",people
+say_firefighter.mp3,[cheerfully] تو بگو آتش‌نشان!,تو بگو آتش‌نشان!,to begu âtashneshân!,you say firefighter!,people
+where_firefighter.mp3,[playful] آتش‌نشان رو پیدا کن!,آتش‌نشان رو پیدا کن!,âtashneshân ro peydâ kon!,find the firefighter!,people
+this_firefighter.mp3,[excited] آفرین! این آتش‌نشانه!,آفرین! این آتش‌نشانه!,âfarin! in âtashneshâne!,well done! that's the firefighter!,people
+w_happy.mp3,[excited] خوشحال!,خوشحال!,khoshhâl!,happy!,feelings
+say_happy.mp3,[curious] می‌تونی بگی خوشحال؟,می‌تونی بگی خوشحال؟,mituni begi khoshhâl?,can you say happy?,feelings
+where_happy.mp3,[curious] کی خوشحاله؟,کی خوشحاله؟,ki khoshhâle?,who is happy?,feelings
+this_happy.mp3,[excited] آفرین! این خوشحاله!,آفرین! این خوشحاله!,âfarin! in khoshhâle!,well done! this one is happy!,feelings
+w_sad.mp3,[sad] ناراحت!,ناراحت!,nârâhat!,sad!,feelings
+say_sad.mp3,[excited] حالا تو بگو: ناراحت!,حالا تو بگو: ناراحت!,hâlâ to begu: nârâhat!,now you say: sad!,feelings
+where_sad.mp3,[curious] کی ناراحته؟,کی ناراحته؟,ki nârâhate?,who is sad?,feelings
+this_sad.mp3,[softly] آره، این ناراحته.,آره، این ناراحته.,"âre, in nârâhate.","yes, this one is sad.",feelings
+w_angry.mp3,[mischievously] عصبانی!,عصبانی!,asabâni!,angry!,feelings
+say_angry.mp3,[mischievously] بگو ببینم... عصبانی!,بگو ببینم... عصبانی!,begu bebinam... asabâni!,"go on, say... angry!",feelings
+where_angry.mp3,[curious] کی عصبانیه؟,کی عصبانیه؟,ki asabâniye?,who is angry?,feelings
+this_angry.mp3,[playful] درسته! این عصبانیه!,درسته! این عصبانیه!,doroste! in asabâniye!,right! this one is angry!,feelings
+w_scared.mp3,[gasps] ترسیده!,ترسیده!,tarside!,scared!,feelings
+say_scared.mp3,[playful] با من بگو: ترسیده!,با من بگو: ترسیده!,bâ man begu: tarside!,say it with me: scared!,feelings
+where_scared.mp3,[whispers] کی ترسیده؟,کی ترسیده؟,ki tarside?,who got scared?,feelings
+this_scared.mp3,[gasps] آفرین! این ترسیده!,آفرین! این ترسیده!,âfarin! in tarside!,well done! this one is scared!,feelings
+w_sleepy.mp3,[whispers] خوابالو!,خوابالو!,khâbâlu!,sleepy!,feelings
+say_sleepy.mp3,[playful] بگو خوابالو!,بگو خوابالو!,begu khâbâlu!,say sleepy!,feelings
+where_sleepy.mp3,[whispers] کی خوابش میاد؟,کی خوابش میاد؟,ki khâbesh miyâd?,who is sleepy?,feelings
+this_sleepy.mp3,[whispers] آره! این خوابالوئه!,آره! این خوابالوئه!,âre! in khâbâlue!,yes! this one is sleepy!,feelings
+w_tired.mp3,[sighs] خسته!,خسته!,khaste!,tired!,feelings
+say_tired.mp3,[cheerfully] تو بگو خسته!,تو بگو خسته!,to begu khaste!,you say tired!,feelings
+where_tired.mp3,[curious] کی خسته‌ست؟,کی خسته‌ست؟,ki khastast?,who is tired?,feelings
+this_tired.mp3,[sighs] درسته! این خسته‌ست!,درسته! این خسته‌ست!,doroste! in khastast!,right! this one is tired!,feelings
+w_sick.mp3,[sad] مریض!,مریض!,mariz!,sick!,feelings
+say_sick.mp3,[curious] می‌تونی بگی مریض؟,می‌تونی بگی مریض؟,mituni begi mariz?,can you say sick?,feelings
+where_sick.mp3,[curious] کی مریضه؟,کی مریضه؟,ki marize?,who is sick?,feelings
+this_sick.mp3,[softly] اوخی! این مریضه!,اوخی! این مریضه!,okhey! in marize!,aww! this one is sick!,feelings
+w_hot.mp3,[sighs] گرم!,گرم!,garm!,hot!,feelings
+say_hot.mp3,[excited] حالا تو بگو: گرم!,حالا تو بگو: گرم!,hâlâ to begu: garm!,now you say: hot!,feelings
+where_hot.mp3,[curious] کی گرمشه؟,کی گرمشه؟,ki garmeshe?,who feels hot?,feelings
+this_hot.mp3,[excited] ایول! این گرمشه!,ایول! این گرمشه!,eyval! in garmeshe!,awesome! this one is hot!,feelings
+w_cold.mp3,[playful] سرد!,سرد!,sard!,cold!,feelings
+say_cold.mp3,[mischievously] بگو ببینم... سرد!,بگو ببینم... سرد!,begu bebinam... sard!,"go on, say... cold!",feelings
+where_cold.mp3,[playful] کی سردشه؟,کی سردشه؟,ki sardeshe?,who feels cold?,feelings
+this_cold.mp3,[giggles] آره! این سردشه!,آره! این سردشه!,âre! in sardeshe!,yes! this one is cold!,feelings
+w_run.mp3,[excited] بدو!,بدو!,bedo!,run!,actions
+say_run.mp3,[playful] با من بگو: بدو!,با من بگو: بدو!,bâ man begu: bedo!,say it with me: run!,actions
+where_run.mp3,[curious] کی داره می‌دوه؟,کی داره می‌دوه؟,ki dâre mi-dave?,who is running?,actions
+this_run.mp3,[excited] آفرین! این داره می‌دوه!,آفرین! این داره می‌دوه!,âfarin! in dâre mi-dave!,well done! this one is running!,actions
+w_swim.mp3,[cheerfully] شنا!,شنا!,shenâ!,swim!,actions
+say_swim.mp3,[playful] بگو شنا!,بگو شنا!,begu shenâ!,say swim!,actions
+where_swim.mp3,[curious] کی داره شنا می‌کنه؟,کی داره شنا می‌کنه؟,ki dâre shenâ mikone?,who is swimming?,actions
+this_swim.mp3,[cheerfully] آره! این داره شنا می‌کنه!,آره! این داره شنا می‌کنه!,âre! in dâre shenâ mikone!,yes! this one is swimming!,actions
+w_sing.mp3,[playful] بخون!,بخون!,bekhun!,sing!,actions
+say_sing.mp3,[cheerfully] تو بگو بخون!,تو بگو بخون!,to begu bekhun!,you say sing!,actions
+where_sing.mp3,[curious] کی داره آواز می‌خونه؟,کی داره آواز می‌خونه؟,ki dâre âvâz mikhune?,who is singing?,actions
+this_sing.mp3,[excited] ایول! این داره آواز می‌خونه!,ایول! این داره آواز می‌خونه!,eyval! in dâre âvâz mikhune!,awesome! this one is singing!,actions
+w_hug.mp3,[excited] بغل!,بغل!,baghal!,hug!,actions
+say_hug.mp3,[curious] می‌تونی بگی بغل؟,می‌تونی بگی بغل؟,mituni begi baghal?,can you say hug?,actions
+where_hug.mp3,[playful] کی بغل می‌خواد؟,کی بغل می‌خواد؟,ki baghal mikhâd?,who wants a hug?,actions
+this_hug.mp3,[cheerfully] آفرین! این بغل می‌کنه!,آفرین! این بغل می‌کنه!,âfarin! in baghal mikone!,well done! this one is hugging!,actions
+w_kiss.mp3,[cheerfully] بوس!,بوس!,bus!,kiss!,actions
+say_kiss.mp3,[excited] حالا تو بگو: بوس!,حالا تو بگو: بوس!,hâlâ to begu: bus!,now you say: kiss!,actions
+where_kiss.mp3,[curious] کی داره بوس می‌فرسته؟,کی داره بوس می‌فرسته؟,ki dâre bus mifereste?,who is blowing a kiss?,actions
+this_kiss.mp3,[giggles] آره! این داره بوس می‌فرسته!,آره! این داره بوس می‌فرسته!,âre! in dâre bus mifereste!,yes! this one is blowing a kiss!,actions
+w_wave.mp3,[playful] بای بای!,بای بای!,bâybây!,bye-bye!,actions
+say_wave.mp3,[mischievously] بگو ببینم... بای بای!,بگو ببینم... بای بای!,begu bebinam... bâybây!,"go on, say... bye-bye!",actions
+where_wave.mp3,[curious] کی داره بای بای می‌کنه؟,کی داره بای بای می‌کنه؟,ki dâre bâybây mikone?,who is waving bye-bye?,actions
+this_wave.mp3,[cheerfully] درسته! این داره بای بای می‌کنه!,درسته! این داره بای بای می‌کنه!,doroste! in dâre bâybây mikone!,right! this one is waving bye-bye!,actions
+w_laugh.mp3,[excited] بخند!,بخند!,bekhand!,laugh!,actions
+say_laugh.mp3,[playful] با من بگو: بخند!,با من بگو: بخند!,bâ man begu: bekhand!,say it with me: laugh!,actions
+where_laugh.mp3,[curious] کی داره می‌خنده؟,کی داره می‌خنده؟,ki dâre mikhande?,who is laughing?,actions
+this_laugh.mp3,[giggles] آفرین! این داره می‌خنده!,آفرین! این داره می‌خنده!,âfarin! in dâre mikhande!,well done! this one is laughing!,actions
+w_cry.mp3,[sad] گریه!,گریه!,gerye!,cry!,actions
+say_cry.mp3,[playful] بگو گریه!,بگو گریه!,begu gerye!,say cry!,actions
+where_cry.mp3,[curious] کی داره گریه می‌کنه؟,کی داره گریه می‌کنه؟,ki dâre gerye mikone?,who is crying?,actions
+this_cry.mp3,[softly] اوخی! این داره گریه می‌کنه!,اوخی! این داره گریه می‌کنه!,okhey! in dâre gerye mikone!,aww! this one is crying!,actions
+w_clap.mp3,[playful] دست بزن!,دست بزن!,dast bezan!,clap!,actions
+say_clap.mp3,[cheerfully] تو بگو دست بزن!,تو بگو دست بزن!,to begu dast bezan!,you say clap!,actions
+where_clap.mp3,[curious] کی داره دست می‌زنه؟,کی داره دست می‌زنه؟,ki dâre dast mizane?,who is clapping?,actions
+this_clap.mp3,[excited] هورا! این داره دست می‌زنه!,هورا! این داره دست می‌زنه!,hurâ! in dâre dast mizane!,hooray! this one is clapping!,actions
+w_dance.mp3,[excited] برقص!,برقص!,beraghs!,dance!,actions
+say_dance.mp3,[curious] می‌تونی بگی برقص؟,می‌تونی بگی برقص؟,mituni begi beraghs?,can you say dance?,actions
+where_dance.mp3,[playful] کی داره می‌رقصه؟,کی داره می‌رقصه؟,ki dâre miraghse?,who is dancing?,actions
+this_dance.mp3,[excited] ایول! این داره می‌رقصه!,ایول! این داره می‌رقصه!,eyval! in dâre miraghse!,awesome! this one is dancing!,actions
+w_sleep.mp3,[whispers] لالا!,لالا!,lâlâ!,night-night!,actions
+say_sleep.mp3,[excited] حالا تو بگو: لالا!,حالا تو بگو: لالا!,hâlâ to begu: lâlâ!,now you say: night-night!,actions
+where_sleep.mp3,[whispers] کی لالا کرده؟,کی لالا کرده؟,ki lâlâ karde?,who is sleeping?,actions
+this_sleep.mp3,[whispers] هیس! این لالا کرده!,هیس! این لالا کرده!,hiss! in lâlâ karde!,shh! this one is asleep!,actions

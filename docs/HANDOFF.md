@@ -35,18 +35,16 @@ Audio is currently embedded: `const VOICE_B64={key: base64mp3,...}` in the sourc
 ## Status
 Done and live: everything listed in decisions.md under Product, apart from the items marked "not built yet".
 
-### In progress / next (requested by the user on 2026-10-08)
-1. **Generate voices.** The user runs `vocab/PROMPT_for_Claude_Code.md` with their voice ID and model. Output goes to `C:\Users\ahmma\Downloads\Virtual Pet Sounds\v2\`. Then process every clip (trim leading silence, light compression, level-match, about 0.35 s tail pad, no effects) and replace `audio/`.
-2. **Audio restructure.** Stop embedding base64. Load `audio/<key>.mp3` on demand with a manifest (`audio/manifest.json`). Replace sync `VOICE[k]` existence checks with a `HAS(k)` set, and make `sayAsync` await loading. Preload core clips at start, and the next word on the Say it screen.
-3. **Icon-only UI.** Round buttons with big emoji, no text, in a left and a right column; phone friendly (about 56 px on phones, 68 px on iPad). Remove the bottom text bar.
-4. **Three rooms with bottom navigation:** 🏠 home, 🧸 play, 🛏️ bed, plus 🗣️ for the Say it screen.
-   - **Home:** table, chair, book, window, picture, maybe a TV. Buttons: Talk, Feed, Jump, Dance, Moves, Peekaboo.
-   - **Play room:** toy shelf, blocks, drum, kite, teddy, brighter wall. Buttons: Ball, Find, Bubbles, Dance, Moves, Talk.
-   - **Bedroom:** bed, lamp (day/night), night stand, star mobile, blue walls. Buttons: Sleep, Peekaboo, Talk.
-   - Fade transition between rooms. Raycasting must ignore hidden furniture: three r128's raycaster doesn't check visibility, so filter by the visible parent chain.
-5. **Say it screen:** a big emoji picture card. Pash says "بگو X!" (`say_X`), waits up to about 8 s listening, then praises any attempt (plays it back squeaky, cheer, a yay variant, then models the word with `w_X`). Next and repeat buttons are icons. Use all 220 words. Record `said` stats. Without a mic, wait about 3.5 s, then model the word.
-6. **Find with the new words** (optional): flat emoji cards as items.
-7. Re-test (playwright), then publish: commit and push `main`; GitHub Pages updates on its own.
+### Done on 2026-10-08 (Claude Code on the PC)
+- Audio split out: `audio/<key>.mp3` + `audio/manifest.json` (key → bubble text), loaded on demand (`HAS`, `loadVoice`, `loadCore`). Build with `python tools/build.py` (writes manifest + index.html).
+- v2 voices: Eleven v4, voice Setareh, emotion tags, +2 semitone pitch. `tools/gen_voices.py` (resumable, `--budget=N`), `tools/process_robo_clips.py`. Status in `vocab/voice_status.md`.
+- Icon-only round buttons (left/right columns, `SCREENS`), rooms home/play/bed with bottom nav (`setRoom`, `showScreen`, `WALL`, furniture `add(id,g,x,z,ry,room)`), Say it screen (`sayRound`, `SAY_WORDS`).
+- v2 phrases wired as `VARIANTS` and `ROOM_HI` (room greetings).
+
+### Next
+1. After the ElevenLabs top-up: run `python tools/gen_voices.py 8Ebkg5uUcbSbeqGucAoR eleven_v4`, then `python tools/process_robo_clips.py` and `python tools/build.py`. Say it only uses words with a clip, so new words appear automatically.
+2. Phone portrait: bed and toy shelf are mostly off-screen; iPad portrait bedroom: mic button overlaps the bed.
+3. Find with the new words (emoji cards), optional. Unused phrases: food (p_nam_nam..., p_ah_ino...), say-it prompts (p_hala_to_begu, p_chi_gofti_nashenidam), goodbye, countdown.
 
 ### Known gotchas
 - iPad and Safari need one tap before audio or the mic will start (the "Wake up" button does both).
