@@ -87,6 +87,7 @@ canvas{display:block}
   <button id="bTalk" class="rb" style="background:#ff4f6d" aria-label="Talk (microphone on/off)">🎤</button>
   <button id="bFind" class="rb" style="background:#2bb673" aria-label="Find">🔍</button>
   <button id="bMoves" class="rb" style="background:#00a6a6" aria-label="Moves">🤸</button>
+  <button id="bSing" class="rb" style="background:#ffb703" aria-label="Sing">🎵</button>
   <button id="bDance" class="rb" style="background:#a66cff" aria-label="Dance">💃</button>
   <button id="bJump" class="rb" style="background:#ff9f1c" aria-label="Jump">🦘</button>
   <button id="bPeek" class="rb" style="background:#e05aa0" aria-label="Peekaboo">🙈</button>
@@ -146,9 +147,9 @@ const SFX={
   munch:()=>{for(let i=0;i<3;i++)noise(.08,.4,900,i*.18)},
   snore:()=>{noise(1.2,.12,180)},
 };
-let musicTimer=null;
+let musicTimer=null,bedSrc=null;
 function music(on){
-  clearInterval(musicTimer); if(!on) return;
+  clearInterval(musicTimer);if(bedSrc){const b=bedSrc;bedSrc=null;try{b.g.gain.setTargetAtTime(0,AC.currentTime,.3);b.stop(AC.currentTime+1.5)}catch(e){}} if(!on) return;
   const notes=[523,659,784,659,587,698,880,698];let i=0;
   musicTimer=setInterval(()=>{tone(notes[i%8],notes[i%8],.18,'square',.07);if(i%2==0)tone(130,60,.12,'sine',.35);i++},220);
 }
@@ -174,7 +175,7 @@ function loadVoice(k){if(VOICE[k])return Promise.resolve(VOICE[k]);if(!HAS.has(k
     .then(b=>VOICE[k]=b).catch(()=>{delete VLOAD[k];return null}))}
 const loadVoices=keys=>Promise.all(keys.map(loadVoice));
 // core = every clip that isn't a per-word line; word clips load when needed
-const loadCore=()=>MANIFEST.then(()=>loadVoices([...HAS].filter(k=>!/^(w|where|this|say|want)_/.test(k))));
+const loadCore=()=>MANIFEST.then(()=>loadVoices([...HAS].filter(k=>!/^(w|where|this|say|want|song)_/.test(k))));
 let voiceSrc=null;
 function playVoice(k){const b=VOICE[k];if(!b||!AC)return 0;try{voiceSrc&&voiceSrc.stop()}catch(e){}
   const s=AC.createBufferSource(),g=AC.createGain();g.gain.value=k==='name'?.9:1;s.buffer=b;s.connect(g).connect(AC.destination);s.start(AC.currentTime+.05);voiceSrc=s;return b.duration}
@@ -945,6 +946,18 @@ addEventListener('pointerup',e=>{if(!down)return;
 function onBtn(id,fn,home=true){document.getElementById(id).onclick=()=>{endGame();if(st.mode==='sleep'&&id!=='bSleep')wake();if(home)goHome();st.lastPoke=performance.now();st.idleAct=null;fn()}}
 onBtn('bTalk',startTalk);
 onBtn('bDance',()=>{danceStyle=(danceStyle+1)%4;setMode('dance');music(true);say('dance');speak()});
+// Sing: Setareh chants a folk rhyme twice over an instrumental bed (song_bed, Eleven Music), Pash dances
+let lastSong='';
+async function playSong(){const all=[...HAS].filter(k=>/^song_(?!bed)/.test(k)&&k!==lastSong);if(!all.length)return;
+  const k=lastSong=all[Math.floor(Math.random()*all.length)],lull=/lala/.test(k);
+  await loadVoices([k,'song_bed']);const tok=++songTok;
+  if(lull){setMode('idle');setFace('sleep',2500)}else{danceStyle=(danceStyle+1)%4;setMode('dance');
+    if(VOICE.song_bed){const b=AC.createBufferSource(),g=AC.createGain();b.buffer=VOICE.song_bed;b.loop=true;g.gain.value=.35;b.connect(g).connect(AC.destination);b.g=g;b.start();bedSrc=b}}
+  hush(45000);await wait(lull?300:1500); // keep the mic from echoing the music
+  for(let i=0;i<2&&tok===songTok&&(lull||st.mode==='dance');i++){await sayAsync(k);await wait(600)}
+  if(tok===songTok){talkMuteUntil=performance.now()+800;if(st.mode==='dance')setMode('idle')}}
+let songTok=0;
+onBtn('bSing',playSong);
 onBtn('bJump',()=>{say('jump');speak();const big=Math.random()<.5;jump(big?10:7,big);setFace('laugh',1200)});
 onBtn('bPeek',()=>{setMode('peek');setFace('hidden',1300)});
 onBtn('bBubbles',blowBubbles);
@@ -959,7 +972,7 @@ document.getElementById('go').onclick=async()=>{await ac().resume();micOn(false)
 
 // ---------- Rooms (home, play, bed) + the Say it screen, switched from #nav ----------
 let curRoom='home',scr='home';
-const SCREENS={home:[['bTalk','bFeed','bJump'],['bDance','bMoves','bPeek']],play:[['bBall','bFind','bBubbles'],['bDance','bMoves','bTalk']],
+const SCREENS={home:[['bTalk','bFeed','bJump'],['bSing','bDance','bMoves','bPeek']],play:[['bBall','bFind','bBubbles'],['bDance','bMoves','bTalk']],
   bed:[['bSleep','bPeek'],['bTalk']],say:[['bTalk','bRepeat'],['bNext']]};
 const WALL={home:0xffffff,play:0xfff27a,bed:0x6f9cff};
 function showScreen(s){scr=s;
