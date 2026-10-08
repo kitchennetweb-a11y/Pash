@@ -10,7 +10,7 @@ Newest decisions are at the bottom of each section.
 - **Say it praises any attempt.** There's no pronunciation grading for a toddler: any detected speech counts.
 - **The child can't read.** Buttons must have no text: big round icon buttons on the left and right edges of the screen (requested 2026-10-08, not built yet).
 - **Three rooms plus a dedicated Say it screen**, switched with buttons at the bottom of the screen: home, play room and bedroom (requested 2026-10-08, not built yet).
-- **Sing (🎵, home) uses traditional folk rhymes only, never modern songs** (2026-10-08): Setareh chants them rhythmically (`song_*` in lines_existing_v2.csv) twice over an instrumental bed made with Eleven Music (`audio/song_bed.mp3`). Eleven Music's sung Persian wasn't good enough; revisit real sung versions later with a platform that handles Persian (Suno/Udio or a human singer).
+- **Sing (🎵, home) uses traditional folk rhymes only, never modern songs** (2026-10-08): Setareh chants them rhythmically (`song_*` in lines_existing_v2.csv) twice over an instrumental bed made with Eleven Music (`audio/song_bed.mp3`). Eleven Music's sung Persian wasn't good enough; Traditional/folk songs stay as rhythmic chants for good (Suno flags اتل متل as copyrighted). Sung songs will be new original lyrics made in Suno, in a separate session.
 - **Vocabulary grows by 200 words** with emoji picture cards. The list is in `vocab/words.py` and `vocab/words.json`.
 - **Parent corner** sits behind a press-and-hold (2 seconds) on the gear icon. Stats are stored on the device in localStorage.
 
