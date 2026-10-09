@@ -1,0 +1,238 @@
+﻿file_name,farsi_text,display_text,translit,english,group,use
+ww_cat.mp3,[whispers] پیس پیس... گربه کجاست؟,پیس پیس... گربه کجاست؟,pis pis... gorbe kojâst?,psst psst... where is the cat?,whisper,night hunt: whispered where-is
+ww_dog.mp3,[whispers] هیس... سگ کجا قایم شده؟,هیس... سگ کجا قایم شده؟,hiss... sag kojâ ghâyem shode?,shh... where is the dog hiding?,whisper,night hunt: whispered where-is
+ww_horse.mp3,[whispers] اسب کو؟ پیداش کن...,اسب کو؟ پیداش کن...,asb ku? peydâsh kon...,where is the horse? find it...,whisper,night hunt: whispered where-is
+ww_cow.mp3,[whispers] یواشکی... گاو رو پیدا کن!,یواشکی... گاو رو پیدا کن!,yavâshaki... gâv ro peydâ kon!,sneakily... find the cow!,whisper,night hunt: whispered where-is
+ww_sheep.mp3,[whispers] پیس پیس... گوسفند کجاست؟,پیس پیس... گوسفند کجاست؟,pis pis... gusfand kojâst?,psst psst... where is the sheep?,whisper,night hunt: whispered where-is
+ww_goat.mp3,[whispers] هیس... بُز کجا قایم شده؟,هیس... بُز کجا قایم شده؟,hiss... boz kojâ ghâyem shode?,shh... where is the goat hiding?,whisper,night hunt: whispered where-is
+ww_chicken.mp3,[whispers] مرغ کو؟ پیداش کن...,مرغ کو؟ پیداش کن...,morgh ku? peydâsh kon...,where is the chicken? find it...,whisper,night hunt: whispered where-is
+ww_rooster.mp3,[whispers] یواشکی... خروس رو پیدا کن!,یواشکی... خروس رو پیدا کن!,yavâshaki... khorus ro peydâ kon!,sneakily... find the rooster!,whisper,night hunt: whispered where-is
+ww_chick.mp3,[whispers] پیس پیس... جوجه کجاست؟,پیس پیس... جوجه کجاست؟,pis pis... juje kojâst?,psst psst... where is the chick?,whisper,night hunt: whispered where-is
+ww_duck.mp3,[whispers] هیس... اردک کجا قایم شده؟,هیس... اردک کجا قایم شده؟,hiss... ordak kojâ ghâyem shode?,shh... where is the duck hiding?,whisper,night hunt: whispered where-is
+ww_rabbit.mp3,[whispers] خرگوش کو؟ پیداش کن...,خرگوش کو؟ پیداش کن...,khargush ku? peydâsh kon...,where is the rabbit? find it...,whisper,night hunt: whispered where-is
+ww_mouse.mp3,[whispers] یواشکی... موش رو پیدا کن!,یواشکی... موش رو پیدا کن!,yavâshaki... mush ro peydâ kon!,sneakily... find the mouse!,whisper,night hunt: whispered where-is
+ww_fish.mp3,[whispers] پیس پیس... ماهی کجاست؟,پیس پیس... ماهی کجاست؟,pis pis... mâhi kojâst?,psst psst... where is the fish?,whisper,night hunt: whispered where-is
+ww_bird.mp3,[whispers] هیس... پرنده کجا قایم شده؟,هیس... پرنده کجا قایم شده؟,hiss... parande kojâ ghâyem shode?,shh... where is the bird hiding?,whisper,night hunt: whispered where-is
+ww_parrot.mp3,[whispers] طوطی کو؟ پیداش کن...,طوطی کو؟ پیداش کن...,tuti ku? peydâsh kon...,where is the parrot? find it...,whisper,night hunt: whispered where-is
+ww_tiger.mp3,[whispers] یواشکی... بَبر رو پیدا کن!,یواشکی... بَبر رو پیدا کن!,yavâshaki... babr ro peydâ kon!,sneakily... find the tiger!,whisper,night hunt: whispered where-is
+ww_elephant.mp3,[whispers] پیس پیس... فیل کجاست؟,پیس پیس... فیل کجاست؟,pis pis... fil kojâst?,psst psst... where is the elephant?,whisper,night hunt: whispered where-is
+ww_monkey.mp3,[whispers] هیس... میمون کجا قایم شده؟,هیس... میمون کجا قایم شده؟,hiss... meymun kojâ ghâyem shode?,shh... where is the monkey hiding?,whisper,night hunt: whispered where-is
+ww_giraffe.mp3,[whispers] زرافه کو؟ پیداش کن...,زرافه کو؟ پیداش کن...,zarâfe ku? peydâsh kon...,where is the giraffe? find it...,whisper,night hunt: whispered where-is
+ww_zebra.mp3,[whispers] یواشکی... گورخر رو پیدا کن!,یواشکی... گورخر رو پیدا کن!,yavâshaki... gurkhar ro peydâ kon!,sneakily... find the zebra!,whisper,night hunt: whispered where-is
+ww_penguin.mp3,[whispers] پیس پیس... پنگوئن کجاست؟,پیس پیس... پنگوئن کجاست؟,pis pis... panguan kojâst?,psst psst... where is the penguin?,whisper,night hunt: whispered where-is
+ww_turtle.mp3,[whispers] هیس... لاک‌پشت کجا قایم شده؟,هیس... لاک‌پشت کجا قایم شده؟,hiss... lâkposht kojâ ghâyem shode?,shh... where is the turtle hiding?,whisper,night hunt: whispered where-is
+ww_frog.mp3,[whispers] قورباغه کو؟ پیداش کن...,قورباغه کو؟ پیداش کن...,ghurbâghe ku? peydâsh kon...,where is the frog? find it...,whisper,night hunt: whispered where-is
+ww_snake.mp3,[whispers] یواشکی... مار رو پیدا کن!,یواشکی... مار رو پیدا کن!,yavâshaki... mâr ro peydâ kon!,sneakily... find the snake!,whisper,night hunt: whispered where-is
+ww_butterfly.mp3,[whispers] پیس پیس... پروانه کجاست؟,پیس پیس... پروانه کجاست؟,pis pis... parvâne kojâst?,psst psst... where is the butterfly?,whisper,night hunt: whispered where-is
+ww_bee.mp3,[whispers] هیس... زنبور کجا قایم شده؟,هیس... زنبور کجا قایم شده؟,hiss... zanbur kojâ ghâyem shode?,shh... where is the bee hiding?,whisper,night hunt: whispered where-is
+ww_ant.mp3,[whispers] مورچه کو؟ پیداش کن...,مورچه کو؟ پیداش کن...,murche ku? peydâsh kon...,where is the ant? find it...,whisper,night hunt: whispered where-is
+ww_ladybug.mp3,[whispers] یواشکی... کفشدوزک رو پیدا کن!,یواشکی... کفشدوزک رو پیدا کن!,yavâshaki... kafshduzak ro peydâ kon!,sneakily... find the ladybug!,whisper,night hunt: whispered where-is
+ww_octopus.mp3,[whispers] پیس پیس... هشت‌پا کجاست؟,پیس پیس... هشت‌پا کجاست؟,pis pis... hashtpâ kojâst?,psst psst... where is the octopus?,whisper,night hunt: whispered where-is
+ww_whale.mp3,[whispers] هیس... نهنگ کجا قایم شده؟,هیس... نهنگ کجا قایم شده؟,hiss... nahang kojâ ghâyem shode?,shh... where is the whale hiding?,whisper,night hunt: whispered where-is
+ww_dolphin.mp3,[whispers] دلفین کو؟ پیداش کن...,دلفین کو؟ پیداش کن...,dolfin ku? peydâsh kon...,where is the dolphin? find it...,whisper,night hunt: whispered where-is
+ww_camel.mp3,[whispers] یواشکی... شُتُر رو پیدا کن!,یواشکی... شُتُر رو پیدا کن!,yavâshaki... shotor ro peydâ kon!,sneakily... find the camel!,whisper,night hunt: whispered where-is
+ww_owl.mp3,[whispers] پیس پیس... جغد کجاست؟,پیس پیس... جغد کجاست؟,pis pis... joghd kojâst?,psst psst... where is the owl?,whisper,night hunt: whispered where-is
+ww_squirrel.mp3,[whispers] هیس... سنجاب کجا قایم شده؟,هیس... سنجاب کجا قایم شده؟,hiss... sanjâb kojâ ghâyem shode?,shh... where is the squirrel hiding?,whisper,night hunt: whispered where-is
+ww_dinosaur.mp3,[whispers] دایناسور کو؟ پیداش کن...,دایناسور کو؟ پیداش کن...,dâynâsor ku? peydâsh kon...,where is the dinosaur? find it...,whisper,night hunt: whispered where-is
+ww_orange.mp3,[whispers] یواشکی... پرتقال رو پیدا کن!,یواشکی... پرتقال رو پیدا کن!,yavâshaki... porteghâl ro peydâ kon!,sneakily... find the orange!,whisper,night hunt: whispered where-is
+ww_grapes.mp3,[whispers] پیس پیس... انگور کجاست؟,پیس پیس... انگور کجاست؟,pis pis... angur kojâst?,psst psst... where is the grapes?,whisper,night hunt: whispered where-is
+ww_watermelon.mp3,[whispers] هیس... هندونه کجا قایم شده؟,هیس... هندونه کجا قایم شده؟,hiss... hendune kojâ ghâyem shode?,shh... where is the watermelon hiding?,whisper,night hunt: whispered where-is
+ww_melon.mp3,[whispers] طالبی کو؟ پیداش کن...,طالبی کو؟ پیداش کن...,tâlebi ku? peydâsh kon...,where is the melon? find it...,whisper,night hunt: whispered where-is
+ww_strawberry.mp3,[whispers] یواشکی... توت‌فرنگی رو پیدا کن!,یواشکی... توت‌فرنگی رو پیدا کن!,yavâshaki... tutfarangi ro peydâ kon!,sneakily... find the strawberry!,whisper,night hunt: whispered where-is
+ww_cherry.mp3,[whispers] پیس پیس... گیلاس کجاست؟,پیس پیس... گیلاس کجاست؟,pis pis... gilâs kojâst?,psst psst... where is the cherries?,whisper,night hunt: whispered where-is
+ww_peach.mp3,[whispers] هیس... هلو کجا قایم شده؟,هیس... هلو کجا قایم شده؟,hiss... holu kojâ ghâyem shode?,shh... where is the peach hiding?,whisper,night hunt: whispered where-is
+ww_pear.mp3,[whispers] گلابی کو؟ پیداش کن...,گلابی کو؟ پیداش کن...,golâbi ku? peydâsh kon...,where is the pear? find it...,whisper,night hunt: whispered where-is
+ww_pineapple.mp3,[whispers] یواشکی... آناناس رو پیدا کن!,یواشکی... آناناس رو پیدا کن!,yavâshaki... ânânâs ro peydâ kon!,sneakily... find the pineapple!,whisper,night hunt: whispered where-is
+ww_lemon.mp3,[whispers] پیس پیس... لیمو کجاست؟,پیس پیس... لیمو کجاست؟,pis pis... limu kojâst?,psst psst... where is the lemon?,whisper,night hunt: whispered where-is
+ww_carrot.mp3,[whispers] هیس... هویج کجا قایم شده؟,هیس... هویج کجا قایم شده؟,hiss... havij kojâ ghâyem shode?,shh... where is the carrot hiding?,whisper,night hunt: whispered where-is
+ww_tomato.mp3,[whispers] گوجه کو؟ پیداش کن...,گوجه کو؟ پیداش کن...,goje ku? peydâsh kon...,where is the tomato? find it...,whisper,night hunt: whispered where-is
+ww_cucumber.mp3,[whispers] یواشکی... خیار رو پیدا کن!,یواشکی... خیار رو پیدا کن!,yavâshaki... khiyâr ro peydâ kon!,sneakily... find the cucumber!,whisper,night hunt: whispered where-is
+ww_potato.mp3,[whispers] پیس پیس... سیب‌زمینی کجاست؟,پیس پیس... سیب‌زمینی کجاست؟,pis pis... sibzamini kojâst?,psst psst... where is the potato?,whisper,night hunt: whispered where-is
+ww_corn.mp3,[whispers] هیس... ذرت کجا قایم شده؟,هیس... ذرت کجا قایم شده؟,hiss... zorrat kojâ ghâyem shode?,shh... where is the corn hiding?,whisper,night hunt: whispered where-is
+ww_egg.mp3,[whispers] تخم‌مرغ کو؟ پیداش کن...,تخم‌مرغ کو؟ پیداش کن...,tokhmemorgh ku? peydâsh kon...,where is the egg? find it...,whisper,night hunt: whispered where-is
+ww_cheese.mp3,[whispers] یواشکی... پنیر رو پیدا کن!,یواشکی... پنیر رو پیدا کن!,yavâshaki... panir ro peydâ kon!,sneakily... find the cheese!,whisper,night hunt: whispered where-is
+ww_rice.mp3,[whispers] پیس پیس... برنج کجاست؟,پیس پیس... برنج کجاست؟,pis pis... berenj kojâst?,psst psst... where is the rice?,whisper,night hunt: whispered where-is
+ww_pasta.mp3,[whispers] هیس... ماکارونی کجا قایم شده؟,هیس... ماکارونی کجا قایم شده؟,hiss... mâkâruni kojâ ghâyem shode?,shh... where is the pasta hiding?,whisper,night hunt: whispered where-is
+ww_pizza.mp3,[whispers] پیتزا کو؟ پیداش کن...,پیتزا کو؟ پیداش کن...,pitzâ ku? peydâsh kon...,where is the pizza? find it...,whisper,night hunt: whispered where-is
+ww_cake.mp3,[whispers] یواشکی... کیک رو پیدا کن!,یواشکی... کیک رو پیدا کن!,yavâshaki... keyk ro peydâ kon!,sneakily... find the cake!,whisper,night hunt: whispered where-is
+ww_icecream.mp3,[whispers] پیس پیس... بستنی کجاست؟,پیس پیس... بستنی کجاست؟,pis pis... bastani kojâst?,psst psst... where is the ice cream?,whisper,night hunt: whispered where-is
+ww_chocolate.mp3,[whispers] هیس... شکلات کجا قایم شده؟,هیس... شکلات کجا قایم شده؟,hiss... shokolât kojâ ghâyem shode?,shh... where is the chocolate hiding?,whisper,night hunt: whispered where-is
+ww_candy.mp3,[whispers] آبنبات کو؟ پیداش کن...,آبنبات کو؟ پیداش کن...,âbnabât ku? peydâsh kon...,where is the candy? find it...,whisper,night hunt: whispered where-is
+ww_cookie.mp3,[whispers] یواشکی... بیسکویت رو پیدا کن!,یواشکی... بیسکویت رو پیدا کن!,yavâshaki... biskuit ro peydâ kon!,sneakily... find the cookie!,whisper,night hunt: whispered where-is
+ww_honey.mp3,[whispers] پیس پیس... عسل کجاست؟,پیس پیس... عسل کجاست؟,pis pis... asal kojâst?,psst psst... where is the honey?,whisper,night hunt: whispered where-is
+ww_juice.mp3,[whispers] هیس... آبمیوه کجا قایم شده؟,هیس... آبمیوه کجا قایم شده؟,hiss... âbmive kojâ ghâyem shode?,shh... where is the juice hiding?,whisper,night hunt: whispered where-is
+ww_tea.mp3,[whispers] چایی کو؟ پیداش کن...,چایی کو؟ پیداش کن...,châyi ku? peydâsh kon...,where is the tea? find it...,whisper,night hunt: whispered where-is
+ww_soup.mp3,[whispers] یواشکی... سوپ رو پیدا کن!,یواشکی... سوپ رو پیدا کن!,yavâshaki... sup ro peydâ kon!,sneakily... find the soup!,whisper,night hunt: whispered where-is
+ww_sandwich.mp3,[whispers] پیس پیس... ساندویچ کجاست؟,پیس پیس... ساندویچ کجاست؟,pis pis... sândevich kojâst?,psst psst... where is the sandwich?,whisper,night hunt: whispered where-is
+ww_mushroom.mp3,[whispers] هیس... قارچ کجا قایم شده؟,هیس... قارچ کجا قایم شده؟,hiss... ghârch kojâ ghâyem shode?,shh... where is the mushroom hiding?,whisper,night hunt: whispered where-is
+ww_kiwi.mp3,[whispers] کیوی کو؟ پیداش کن...,کیوی کو؟ پیداش کن...,kivi ku? peydâsh kon...,where is the kiwi? find it...,whisper,night hunt: whispered where-is
+ww_popcorn.mp3,[whispers] یواشکی... پفیلا رو پیدا کن!,یواشکی... پفیلا رو پیدا کن!,yavâshaki... pofilâ ro peydâ kon!,sneakily... find the popcorn!,whisper,night hunt: whispered where-is
+ww_teeth.mp3,[whispers] پیس پیس... دندون کجاست؟,پیس پیس... دندون کجاست؟,pis pis... dandun kojâst?,psst psst... where is the teeth?,whisper,night hunt: whispered where-is
+ww_tongue.mp3,[whispers] هیس... زبون کجا قایم شده؟,هیس... زبون کجا قایم شده؟,hiss... zabun kojâ ghâyem shode?,shh... where is the tongue hiding?,whisper,night hunt: whispered where-is
+ww_finger.mp3,[whispers] انگشت کو؟ پیداش کن...,انگشت کو؟ پیداش کن...,angosht ku? peydâsh kon...,where is the finger? find it...,whisper,night hunt: whispered where-is
+ww_face.mp3,[whispers] یواشکی... صورت رو پیدا کن!,یواشکی... صورت رو پیدا کن!,yavâshaki... surat ro peydâ kon!,sneakily... find the face!,whisper,night hunt: whispered where-is
+ww_nose.mp3,[whispers] پیس پیس... دماغ کجاست؟,پیس پیس... دماغ کجاست؟,pis pis... damâgh kojâst?,psst psst... where is the nose?,whisper,night hunt: whispered where-is
+ww_arm.mp3,[whispers] هیس... بازو کجا قایم شده؟,هیس... بازو کجا قایم شده؟,hiss... bâzu kojâ ghâyem shode?,shh... where is the arm hiding?,whisper,night hunt: whispered where-is
+ww_shoes.mp3,[whispers] کفش کو؟ پیداش کن...,کفش کو؟ پیداش کن...,kafsh ku? peydâsh kon...,where is the shoes? find it...,whisper,night hunt: whispered where-is
+ww_socks.mp3,[whispers] یواشکی... جوراب رو پیدا کن!,یواشکی... جوراب رو پیدا کن!,yavâshaki... jurâb ro peydâ kon!,sneakily... find the socks!,whisper,night hunt: whispered where-is
+ww_hat.mp3,[whispers] پیس پیس... کلاه کجاست؟,پیس پیس... کلاه کجاست؟,pis pis... kolâh kojâst?,psst psst... where is the hat?,whisper,night hunt: whispered where-is
+ww_pants.mp3,[whispers] هیس... شلوار کجا قایم شده؟,هیس... شلوار کجا قایم شده؟,hiss... shalvâr kojâ ghâyem shode?,shh... where is the pants hiding?,whisper,night hunt: whispered where-is
+ww_shirt.mp3,[whispers] پیرهن کو؟ پیداش کن...,پیرهن کو؟ پیداش کن...,pirhan ku? peydâsh kon...,where is the shirt? find it...,whisper,night hunt: whispered where-is
+ww_boots.mp3,[whispers] یواشکی... چکمه رو پیدا کن!,یواشکی... چکمه رو پیدا کن!,yavâshaki... chakme ro peydâ kon!,sneakily... find the boots!,whisper,night hunt: whispered where-is
+ww_jacket.mp3,[whispers] پیس پیس... کاپشن کجاست؟,پیس پیس... کاپشن کجاست؟,pis pis... kâpshen kojâst?,psst psst... where is the jacket?,whisper,night hunt: whispered where-is
+ww_glasses.mp3,[whispers] هیس... عینک کجا قایم شده؟,هیس... عینک کجا قایم شده؟,hiss... eynak kojâ ghâyem shode?,shh... where is the glasses hiding?,whisper,night hunt: whispered where-is
+ww_gloves.mp3,[whispers] دستکش کو؟ پیداش کن...,دستکش کو؟ پیداش کن...,dastkesh ku? peydâsh kon...,where is the gloves? find it...,whisper,night hunt: whispered where-is
+ww_scarf.mp3,[whispers] یواشکی... شال‌گردن رو پیدا کن!,یواشکی... شال‌گردن رو پیدا کن!,yavâshaki... shâlgardan ro peydâ kon!,sneakily... find the scarf!,whisper,night hunt: whispered where-is
+ww_bag.mp3,[whispers] پیس پیس... کیف کجاست؟,پیس پیس... کیف کجاست؟,pis pis... kif kojâst?,psst psst... where is the bag?,whisper,night hunt: whispered where-is
+ww_umbrella.mp3,[whispers] هیس... چتر کجا قایم شده؟,هیس... چتر کجا قایم شده؟,hiss... chatr kojâ ghâyem shode?,shh... where is the umbrella hiding?,whisper,night hunt: whispered where-is
+ww_slippers.mp3,[whispers] دمپایی کو؟ پیداش کن...,دمپایی کو؟ پیداش کن...,dampâyi ku? peydâsh kon...,where is the slippers? find it...,whisper,night hunt: whispered where-is
+ww_watch.mp3,[whispers] یواشکی... ساعت رو پیدا کن!,یواشکی... ساعت رو پیدا کن!,yavâshaki... sâat ro peydâ kon!,sneakily... find the watch!,whisper,night hunt: whispered where-is
+ww_door.mp3,[whispers] پیس پیس... در کجاست؟,پیس پیس... در کجاست؟,pis pis... dar kojâst?,psst psst... where is the door?,whisper,night hunt: whispered where-is
+ww_window.mp3,[whispers] هیس... پنجره کجا قایم شده؟,هیس... پنجره کجا قایم شده؟,hiss... panjere kojâ ghâyem shode?,shh... where is the window hiding?,whisper,night hunt: whispered where-is
+ww_tv.mp3,[whispers] تلویزیون کو؟ پیداش کن...,تلویزیون کو؟ پیداش کن...,televizyon ku? peydâsh kon...,where is the TV? find it...,whisper,night hunt: whispered where-is
+ww_phone.mp3,[whispers] یواشکی... گوشی رو پیدا کن!,یواشکی... گوشی رو پیدا کن!,yavâshaki... gushi ro peydâ kon!,sneakily... find the phone!,whisper,night hunt: whispered where-is
+ww_key.mp3,[whispers] پیس پیس... کلید کجاست؟,پیس پیس... کلید کجاست؟,pis pis... kelid kojâst?,psst psst... where is the key?,whisper,night hunt: whispered where-is
+ww_bath.mp3,[whispers] هیس... حموم کجا قایم شده؟,هیس... حموم کجا قایم شده؟,hiss... hamum kojâ ghâyem shode?,shh... where is the bath hiding?,whisper,night hunt: whispered where-is
+ww_toilet.mp3,[whispers] دستشویی کو؟ پیداش کن...,دستشویی کو؟ پیداش کن...,dastshuyi ku? peydâsh kon...,where is the potty? find it...,whisper,night hunt: whispered where-is
+ww_soap.mp3,[whispers] یواشکی... صابون رو پیدا کن!,یواشکی... صابون رو پیدا کن!,yavâshaki... sâbun ro peydâ kon!,sneakily... find the soap!,whisper,night hunt: whispered where-is
+ww_toothbrush.mp3,[whispers] پیس پیس... مسواک کجاست؟,پیس پیس... مسواک کجاست؟,pis pis... mesvâk kojâst?,psst psst... where is the toothbrush?,whisper,night hunt: whispered where-is
+ww_bucket.mp3,[whispers] هیس... سطل کجا قایم شده؟,هیس... سطل کجا قایم شده؟,hiss... satl kojâ ghâyem shode?,shh... where is the bucket hiding?,whisper,night hunt: whispered where-is
+ww_spoon.mp3,[whispers] قاشق کو؟ پیداش کن...,قاشق کو؟ پیداش کن...,ghâshogh ku? peydâsh kon...,where is the spoon? find it...,whisper,night hunt: whispered where-is
+ww_fork.mp3,[whispers] یواشکی... چنگال رو پیدا کن!,یواشکی... چنگال رو پیدا کن!,yavâshaki... changâl ro peydâ kon!,sneakily... find the fork!,whisper,night hunt: whispered where-is
+ww_plate.mp3,[whispers] پیس پیس... بشقاب کجاست؟,پیس پیس... بشقاب کجاست؟,pis pis... boshghâb kojâst?,psst psst... where is the plate?,whisper,night hunt: whispered where-is
+ww_cup.mp3,[whispers] هیس... لیوان کجا قایم شده؟,هیس... لیوان کجا قایم شده؟,hiss... livân kojâ ghâyem shode?,shh... where is the cup hiding?,whisper,night hunt: whispered where-is
+ww_broom.mp3,[whispers] جارو کو؟ پیداش کن...,جارو کو؟ پیداش کن...,jâru ku? peydâsh kon...,where is the broom? find it...,whisper,night hunt: whispered where-is
+ww_candle.mp3,[whispers] یواشکی... شمع رو پیدا کن!,یواشکی... شمع رو پیدا کن!,yavâshaki... sham ro peydâ kon!,sneakily... find the candle!,whisper,night hunt: whispered where-is
+ww_gift.mp3,[whispers] پیس پیس... کادو کجاست؟,پیس پیس... کادو کجاست؟,pis pis... kâdo kojâst?,psst psst... where is the present?,whisper,night hunt: whispered where-is
+ww_balloon.mp3,[whispers] هیس... بادکنک کجا قایم شده؟,هیس... بادکنک کجا قایم شده؟,hiss... bâdkonak kojâ ghâyem shode?,shh... where is the balloon hiding?,whisper,night hunt: whispered where-is
+ww_doll.mp3,[whispers] عروسک کو؟ پیداش کن...,عروسک کو؟ پیداش کن...,arusak ku? peydâsh kon...,where is the doll? find it...,whisper,night hunt: whispered where-is
+ww_scissors.mp3,[whispers] یواشکی... قیچی رو پیدا کن!,یواشکی... قیچی رو پیدا کن!,yavâshaki... gheychi ro peydâ kon!,sneakily... find the scissors!,whisper,night hunt: whispered where-is
+ww_pencil.mp3,[whispers] پیس پیس... مداد کجاست؟,پیس پیس... مداد کجاست؟,pis pis... medâd kojâst?,psst psst... where is the pencil?,whisper,night hunt: whispered where-is
+ww_slide.mp3,[whispers] هیس... سرسره کجا قایم شده؟,هیس... سرسره کجا قایم شده؟,hiss... sorsore kojâ ghâyem shode?,shh... where is the slide hiding?,whisper,night hunt: whispered where-is
+ww_puzzle.mp3,[whispers] پازل کو؟ پیداش کن...,پازل کو؟ پیداش کن...,pâzel ku? peydâsh kon...,where is the puzzle? find it...,whisper,night hunt: whispered where-is
+ww_drum.mp3,[whispers] یواشکی... طبل رو پیدا کن!,یواشکی... طبل رو پیدا کن!,yavâshaki... tabl ro peydâ kon!,sneakily... find the drum!,whisper,night hunt: whispered where-is
+ww_guitar.mp3,[whispers] پیس پیس... گیتار کجاست؟,پیس پیس... گیتار کجاست؟,pis pis... gitâr kojâst?,psst psst... where is the guitar?,whisper,night hunt: whispered where-is
+ww_piano.mp3,[whispers] هیس... پیانو کجا قایم شده؟,هیس... پیانو کجا قایم شده؟,hiss... piyâno kojâ ghâyem shode?,shh... where is the piano hiding?,whisper,night hunt: whispered where-is
+ww_kite.mp3,[whispers] بادبادک کو؟ پیداش کن...,بادبادک کو؟ پیداش کن...,bâdbâdak ku? peydâsh kon...,where is the kite? find it...,whisper,night hunt: whispered where-is
+ww_robot.mp3,[whispers] یواشکی... ربات رو پیدا کن!,یواشکی... ربات رو پیدا کن!,yavâshaki... robât ro peydâ kon!,sneakily... find the robot!,whisper,night hunt: whispered where-is
+ww_bus.mp3,[whispers] پیس پیس... اتوبوس کجاست؟,پیس پیس... اتوبوس کجاست؟,pis pis... otobus kojâst?,psst psst... where is the bus?,whisper,night hunt: whispered where-is
+ww_train.mp3,[whispers] هیس... قطار کجا قایم شده؟,هیس... قطار کجا قایم شده؟,hiss... ghatâr kojâ ghâyem shode?,shh... where is the train hiding?,whisper,night hunt: whispered where-is
+ww_plane.mp3,[whispers] هواپیما کو؟ پیداش کن...,هواپیما کو؟ پیداش کن...,havâpeymâ ku? peydâsh kon...,where is the airplane? find it...,whisper,night hunt: whispered where-is
+ww_ship.mp3,[whispers] یواشکی... کشتی رو پیدا کن!,یواشکی... کشتی رو پیدا کن!,yavâshaki... keshti ro peydâ kon!,sneakily... find the ship!,whisper,night hunt: whispered where-is
+ww_boat.mp3,[whispers] پیس پیس... قایق کجاست؟,پیس پیس... قایق کجاست؟,pis pis... ghâyegh kojâst?,psst psst... where is the boat?,whisper,night hunt: whispered where-is
+ww_bike.mp3,[whispers] هیس... دوچرخه کجا قایم شده؟,هیس... دوچرخه کجا قایم شده؟,hiss... docharkhe kojâ ghâyem shode?,shh... where is the bike hiding?,whisper,night hunt: whispered where-is
+ww_motorbike.mp3,[whispers] موتور کو؟ پیداش کن...,موتور کو؟ پیداش کن...,motor ku? peydâsh kon...,where is the motorbike? find it...,whisper,night hunt: whispered where-is
+ww_truck.mp3,[whispers] یواشکی... کامیون رو پیدا کن!,یواشکی... کامیون رو پیدا کن!,yavâshaki... kâmiyon ro peydâ kon!,sneakily... find the truck!,whisper,night hunt: whispered where-is
+ww_tractor.mp3,[whispers] پیس پیس... تراکتور کجاست؟,پیس پیس... تراکتور کجاست؟,pis pis... terâktor kojâst?,psst psst... where is the tractor?,whisper,night hunt: whispered where-is
+ww_ambulance.mp3,[whispers] هیس... آمبولانس کجا قایم شده؟,هیس... آمبولانس کجا قایم شده؟,hiss... âmbulâns kojâ ghâyem shode?,shh... where is the ambulance hiding?,whisper,night hunt: whispered where-is
+ww_fire_truck.mp3,[whispers] ماشین آتش‌نشانی کو؟ پیداش کن...,ماشین آتش‌نشانی کو؟ پیداش کن...,mâshin âtashneshâni ku? peydâsh kon...,where is the fire truck? find it...,whisper,night hunt: whispered where-is
+ww_police_car.mp3,[whispers] یواشکی... ماشین پلیس رو پیدا کن!,یواشکی... ماشین پلیس رو پیدا کن!,yavâshaki... mâshin polis ro peydâ kon!,sneakily... find the police car!,whisper,night hunt: whispered where-is
+ww_helicopter.mp3,[whispers] پیس پیس... هلیکوپتر کجاست؟,پیس پیس... هلیکوپتر کجاست؟,pis pis... helikopter kojâst?,psst psst... where is the helicopter?,whisper,night hunt: whispered where-is
+ww_rocket.mp3,[whispers] هیس... موشک کجا قایم شده؟,هیس... موشک کجا قایم شده؟,hiss... mushak kojâ ghâyem shode?,shh... where is the rocket hiding?,whisper,night hunt: whispered where-is
+ww_taxi.mp3,[whispers] تاکسی کو؟ پیداش کن...,تاکسی کو؟ پیداش کن...,tâksi ku? peydâsh kon...,where is the taxi? find it...,whisper,night hunt: whispered where-is
+ww_sun.mp3,[whispers] یواشکی... خورشید رو پیدا کن!,یواشکی... خورشید رو پیدا کن!,yavâshaki... khorshid ro peydâ kon!,sneakily... find the sun!,whisper,night hunt: whispered where-is
+ww_moon.mp3,[whispers] پیس پیس... ماه کجاست؟,پیس پیس... ماه کجاست؟,pis pis... mâh kojâst?,psst psst... where is the moon?,whisper,night hunt: whispered where-is
+ww_star.mp3,[whispers] هیس... ستاره کجا قایم شده؟,هیس... ستاره کجا قایم شده؟,hiss... setâre kojâ ghâyem shode?,shh... where is the star hiding?,whisper,night hunt: whispered where-is
+ww_cloud.mp3,[whispers] ابر کو؟ پیداش کن...,ابر کو؟ پیداش کن...,abr ku? peydâsh kon...,where is the cloud? find it...,whisper,night hunt: whispered where-is
+ww_rain.mp3,[whispers] یواشکی... بارون رو پیدا کن!,یواشکی... بارون رو پیدا کن!,yavâshaki... bârun ro peydâ kon!,sneakily... find the rain!,whisper,night hunt: whispered where-is
+ww_snow.mp3,[whispers] پیس پیس... برف کجاست؟,پیس پیس... برف کجاست؟,pis pis... barf kojâst?,psst psst... where is the snow?,whisper,night hunt: whispered where-is
+ww_rainbow.mp3,[whispers] هیس... رنگین‌کمون کجا قایم شده؟,هیس... رنگین‌کمون کجا قایم شده؟,hiss... ranginkamun kojâ ghâyem shode?,shh... where is the rainbow hiding?,whisper,night hunt: whispered where-is
+ww_tree.mp3,[whispers] درخت کو؟ پیداش کن...,درخت کو؟ پیداش کن...,derakht ku? peydâsh kon...,where is the tree? find it...,whisper,night hunt: whispered where-is
+ww_flower.mp3,[whispers] یواشکی... گُل رو پیدا کن!,یواشکی... گُل رو پیدا کن!,yavâshaki... gol ro peydâ kon!,sneakily... find the flower!,whisper,night hunt: whispered where-is
+ww_leaf.mp3,[whispers] پیس پیس... برگ کجاست؟,پیس پیس... برگ کجاست؟,pis pis... barg kojâst?,psst psst... where is the leaf?,whisper,night hunt: whispered where-is
+ww_fire.mp3,[whispers] هیس... آتیش کجا قایم شده؟,هیس... آتیش کجا قایم شده؟,hiss... âtish kojâ ghâyem shode?,shh... where is the fire hiding?,whisper,night hunt: whispered where-is
+ww_sea.mp3,[whispers] دریا کو؟ پیداش کن...,دریا کو؟ پیداش کن...,daryâ ku? peydâsh kon...,where is the sea? find it...,whisper,night hunt: whispered where-is
+ww_mountain.mp3,[whispers] یواشکی... کوه رو پیدا کن!,یواشکی... کوه رو پیدا کن!,yavâshaki... kuh ro peydâ kon!,sneakily... find the mountain!,whisper,night hunt: whispered where-is
+ww_stone.mp3,[whispers] پیس پیس... سنگ کجاست؟,پیس پیس... سنگ کجاست؟,pis pis... sang kojâst?,psst psst... where is the rock?,whisper,night hunt: whispered where-is
+ww_shell.mp3,[whispers] هیس... صدف کجا قایم شده؟,هیس... صدف کجا قایم شده؟,hiss... sadaf kojâ ghâyem shode?,shh... where is the shell hiding?,whisper,night hunt: whispered where-is
+ww_red.mp3,[whispers] قرمز کو؟ پیداش کن...,قرمز کو؟ پیداش کن...,ghermez ku? peydâsh kon...,where is red? find it...,whisper,night hunt: whispered where-is
+ww_blue.mp3,[whispers] یواشکی... آبی رو پیدا کن!,یواشکی... آبی رو پیدا کن!,yavâshaki... âbi ro peydâ kon!,sneakily... find blue!,whisper,night hunt: whispered where-is
+ww_green.mp3,[whispers] پیس پیس... سبز کجاست؟,پیس پیس... سبز کجاست؟,pis pis... sabz kojâst?,psst psst... where is green?,whisper,night hunt: whispered where-is
+ww_yellow.mp3,[whispers] هیس... زرد کجا قایم شده؟,هیس... زرد کجا قایم شده؟,hiss... zard kojâ ghâyem shode?,shh... where is yellow hiding?,whisper,night hunt: whispered where-is
+ww_orange_color.mp3,[whispers] نارنجی کو؟ پیداش کن...,نارنجی کو؟ پیداش کن...,nârenji ku? peydâsh kon...,where is orange (colour)? find it...,whisper,night hunt: whispered where-is
+ww_purple.mp3,[whispers] یواشکی... بنفش رو پیدا کن!,یواشکی... بنفش رو پیدا کن!,yavâshaki... banafsh ro peydâ kon!,sneakily... find purple!,whisper,night hunt: whispered where-is
+ww_black.mp3,[whispers] پیس پیس... سیاه کجاست؟,پیس پیس... سیاه کجاست؟,pis pis... siyâh kojâst?,psst psst... where is black?,whisper,night hunt: whispered where-is
+ww_white.mp3,[whispers] هیس... سفید کجا قایم شده؟,هیس... سفید کجا قایم شده؟,hiss... sefid kojâ ghâyem shode?,shh... where is white hiding?,whisper,night hunt: whispered where-is
+ww_pink.mp3,[whispers] صورتی کو؟ پیداش کن...,صورتی کو؟ پیداش کن...,surati ku? peydâsh kon...,where is pink? find it...,whisper,night hunt: whispered where-is
+ww_brown.mp3,[whispers] یواشکی... قهوه‌ای رو پیدا کن!,یواشکی... قهوه‌ای رو پیدا کن!,yavâshaki... ghahveyi ro peydâ kon!,sneakily... find brown!,whisper,night hunt: whispered where-is
+ww_one.mp3,[whispers] پیس پیس... یک کجاست؟,پیس پیس... یک کجاست؟,pis pis... yek kojâst?,psst psst... where is one?,whisper,night hunt: whispered where-is
+ww_two.mp3,[whispers] هیس... دو کجا قایم شده؟,هیس... دو کجا قایم شده؟,hiss... do kojâ ghâyem shode?,shh... where is two hiding?,whisper,night hunt: whispered where-is
+ww_three.mp3,[whispers] سه کو؟ پیداش کن...,سه کو؟ پیداش کن...,se ku? peydâsh kon...,where is three? find it...,whisper,night hunt: whispered where-is
+ww_four.mp3,[whispers] یواشکی... چهار رو پیدا کن!,یواشکی... چهار رو پیدا کن!,yavâshaki... chahâr ro peydâ kon!,sneakily... find four!,whisper,night hunt: whispered where-is
+ww_five.mp3,[whispers] پیس پیس... پنج کجاست؟,پیس پیس... پنج کجاست؟,pis pis... panj kojâst?,psst psst... where is five?,whisper,night hunt: whispered where-is
+ww_six.mp3,[whispers] هیس... شیش کجا قایم شده؟,هیس... شیش کجا قایم شده؟,hiss... shish kojâ ghâyem shode?,shh... where is six hiding?,whisper,night hunt: whispered where-is
+ww_seven.mp3,[whispers] هفت کو؟ پیداش کن...,هفت کو؟ پیداش کن...,haft ku? peydâsh kon...,where is seven? find it...,whisper,night hunt: whispered where-is
+ww_eight.mp3,[whispers] یواشکی... هشت رو پیدا کن!,یواشکی... هشت رو پیدا کن!,yavâshaki... hasht ro peydâ kon!,sneakily... find eight!,whisper,night hunt: whispered where-is
+ww_nine.mp3,[whispers] پیس پیس... نُه کجاست؟,پیس پیس... نُه کجاست؟,pis pis... noh kojâst?,psst psst... where is nine?,whisper,night hunt: whispered where-is
+ww_ten.mp3,[whispers] هیس... دَه کجا قایم شده؟,هیس... دَه کجا قایم شده؟,hiss... dah kojâ ghâyem shode?,shh... where is ten hiding?,whisper,night hunt: whispered where-is
+ww_circle.mp3,[whispers] دایره کو؟ پیداش کن...,دایره کو؟ پیداش کن...,dâyere ku? peydâsh kon...,where is the circle? find it...,whisper,night hunt: whispered where-is
+ww_square.mp3,[whispers] یواشکی... مربع رو پیدا کن!,یواشکی... مربع رو پیدا کن!,yavâshaki... morabba ro peydâ kon!,sneakily... find the square!,whisper,night hunt: whispered where-is
+ww_triangle.mp3,[whispers] پیس پیس... مثلث کجاست؟,پیس پیس... مثلث کجاست؟,pis pis... mosallas kojâst?,psst psst... where is the triangle?,whisper,night hunt: whispered where-is
+ww_heart.mp3,[whispers] هیس... قلب کجا قایم شده؟,هیس... قلب کجا قایم شده؟,hiss... ghalb kojâ ghâyem shode?,shh... where is the heart hiding?,whisper,night hunt: whispered where-is
+ww_mommy.mp3,[whispers] مامان کو؟ پیداش کن...,مامان کو؟ پیداش کن...,mâmân ku? peydâsh kon...,where is mommy? find it...,whisper,night hunt: whispered where-is
+ww_daddy.mp3,[whispers] یواشکی... بابا رو پیدا کن!,یواشکی... بابا رو پیدا کن!,yavâshaki... bâbâ ro peydâ kon!,sneakily... find daddy!,whisper,night hunt: whispered where-is
+ww_grandma.mp3,[whispers] پیس پیس... مامان‌بزرگ کجاست؟,پیس پیس... مامان‌بزرگ کجاست؟,pis pis... mâmânbozorg kojâst?,psst psst... where is grandma?,whisper,night hunt: whispered where-is
+ww_grandpa.mp3,[whispers] هیس... بابابزرگ کجا قایم شده؟,هیس... بابابزرگ کجا قایم شده؟,hiss... bâbâbozorg kojâ ghâyem shode?,shh... where is grandpa hiding?,whisper,night hunt: whispered where-is
+ww_brother.mp3,[whispers] داداش کو؟ پیداش کن...,داداش کو؟ پیداش کن...,dâdâsh ku? peydâsh kon...,where is brother? find it...,whisper,night hunt: whispered where-is
+ww_sister.mp3,[whispers] یواشکی... آبجی رو پیدا کن!,یواشکی... آبجی رو پیدا کن!,yavâshaki... âbji ro peydâ kon!,sneakily... find sister!,whisper,night hunt: whispered where-is
+ww_baby.mp3,[whispers] پیس پیس... نی‌نی کجاست؟,پیس پیس... نی‌نی کجاست؟,pis pis... nini kojâst?,psst psst... where is baby?,whisper,night hunt: whispered where-is
+ww_doctor.mp3,[whispers] هیس... دکتر کجا قایم شده؟,هیس... دکتر کجا قایم شده؟,hiss... doktor kojâ ghâyem shode?,shh... where is doctor hiding?,whisper,night hunt: whispered where-is
+ww_police.mp3,[whispers] پلیس کو؟ پیداش کن...,پلیس کو؟ پیداش کن...,polis ku? peydâsh kon...,where is police officer? find it...,whisper,night hunt: whispered where-is
+ww_firefighter.mp3,[whispers] یواشکی... آتش‌نشان رو پیدا کن!,یواشکی... آتش‌نشان رو پیدا کن!,yavâshaki... âtashneshân ro peydâ kon!,sneakily... find firefighter!,whisper,night hunt: whispered where-is
+ww_happy.mp3,[whispers] پیس پیس... کی خوشحاله؟,پیس پیس... کی خوشحاله؟,pis pis... ki khoshhâle?,psst psst... who's happy?,whisper,night hunt: whispered where-is
+ww_sad.mp3,[whispers] هیس... کی ناراحته؟,هیس... کی ناراحته؟,hiss... ki nârâhate?,shh... who's sad?,whisper,night hunt: whispered where-is
+ww_angry.mp3,[whispers] یواشکی بگو... کی عصبانیه؟,یواشکی بگو... کی عصبانیه؟,yavâshaki begu... ki asabâniye?,tell me quietly... who's angry?,whisper,night hunt: whispered where-is
+ww_scared.mp3,[whispers] هیس... کی ترسیده؟,هیس... کی ترسیده؟,hiss... ki tarside?,shh... who's scared?,whisper,night hunt: whispered where-is
+ww_sleepy.mp3,[whispers] پیس پیس... کی خوابش میاد؟,پیس پیس... کی خوابش میاد؟,pis pis... ki khâbesh miyâd?,psst psst... who's sleepy?,whisper,night hunt: whispered where-is
+ww_tired.mp3,[whispers] هیس... کی خسته‌ست؟,هیس... کی خسته‌ست؟,hiss... ki khastast?,shh... who's tired?,whisper,night hunt: whispered where-is
+ww_sick.mp3,[whispers] پیس پیس... کی مریضه؟,پیس پیس... کی مریضه؟,pis pis... ki marize?,psst psst... who's sick?,whisper,night hunt: whispered where-is
+ww_hot.mp3,[whispers] یواشکی بگو... کی گرمشه؟,یواشکی بگو... کی گرمشه؟,yavâshaki begu... ki garmeshe?,tell me quietly... who's hot?,whisper,night hunt: whispered where-is
+ww_cold.mp3,[whispers] هیس... کی سردشه؟,هیس... کی سردشه؟,hiss... ki sardeshe?,shh... who's cold?,whisper,night hunt: whispered where-is
+ww_run.mp3,[whispers] پیس پیس... کی داره می‌دوه؟,پیس پیس... کی داره می‌دوه؟,pis pis... ki dâre midove?,psst psst... who's running?,whisper,night hunt: whispered where-is
+ww_swim.mp3,[whispers] هیس... کی داره شنا می‌کنه؟,هیس... کی داره شنا می‌کنه؟,hiss... ki dâre shenâ mikone?,shh... who's swimming?,whisper,night hunt: whispered where-is
+ww_sing.mp3,[whispers] پیداش کن... کی داره آواز می‌خونه؟,پیداش کن... کی داره آواز می‌خونه؟,peydâsh kon... ki dâre âvâz mikhune?,find them... who's singing?,whisper,night hunt: whispered where-is
+ww_hug.mp3,[whispers] پیس پیس... کی بغل می‌خواد؟,پیس پیس... کی بغل می‌خواد؟,pis pis... ki baghal mikhâd?,psst psst... who wants a hug?,whisper,night hunt: whispered where-is
+ww_kiss.mp3,[whispers] هیس... کی داره بوس می‌فرسته؟,هیس... کی داره بوس می‌فرسته؟,hiss... ki dâre bus mifereste?,shh... who's blowing a kiss?,whisper,night hunt: whispered where-is
+ww_wave.mp3,[whispers] پیس پیس... کی داره بای بای می‌کنه؟,پیس پیس... کی داره بای بای می‌کنه؟,pis pis... ki dâre bây bây mikone?,psst psst... who's waving bye-bye?,whisper,night hunt: whispered where-is
+ww_laugh.mp3,[whispers] هیس... کی داره می‌خنده؟,هیس... کی داره می‌خنده؟,hiss... ki dâre mikhande?,shh... who's laughing?,whisper,night hunt: whispered where-is
+ww_cry.mp3,[whispers] پیداش کن... کی داره گریه می‌کنه؟,پیداش کن... کی داره گریه می‌کنه؟,peydâsh kon... ki dâre gerye mikone?,find them... who's crying?,whisper,night hunt: whispered where-is
+ww_clap.mp3,[whispers] پیس پیس... کی داره دست می‌زنه؟,پیس پیس... کی داره دست می‌زنه؟,pis pis... ki dâre dast mizane?,psst psst... who's clapping?,whisper,night hunt: whispered where-is
+ww_dance.mp3,[whispers] هیس... کی داره می‌رقصه؟,هیس... کی داره می‌رقصه؟,hiss... ki dâre miraghse?,shh... who's dancing?,whisper,night hunt: whispered where-is
+ww_sleep.mp3,[whispers] هیس هیس... کی لالا کرده؟,هیس هیس... کی لالا کرده؟,hiss hiss... ki lâlâ karde?,shh shh... who's gone night-night?,whisper,night hunt: whispered where-is
+whisper_yay.mp3,[whispers] آفرین! پیداش کردی!,آفرین! پیداش کردی!,âfarin! peydâsh kardi!,well done! you found it!,whisper,whispered praise
+whisper_yay2.mp3,[whispers] هورا... یواشکی هورا! پیداش کردی!,هورا... یواشکی هورا! پیداش کردی!,hurâ... yavâshaki hurâ! peydâsh kardi!,hooray... a quiet hooray! you found it!,whisper,whispered praise
+whisper_yay3.mp3,[whispers] وای... چه چشمای تیزی داری!,وای... چه چشمای تیزی داری!,vây... che cheshmâye tizi dâri!,wow... what sharp eyes you have!,whisper,whispered praise
+wn_one.mp3,[whispers] یک...,یک...,yek...,one...,whisper,counting stars: whispered number
+wn_two.mp3,[whispers] دو...,دو...,do...,two...,whisper,counting stars: whispered number
+wn_three.mp3,[whispers] سه...,سه...,se...,three...,whisper,counting stars: whispered number
+wn_four.mp3,[whispers] چهار...,چهار...,chahâr...,four...,whisper,counting stars: whispered number
+wn_five.mp3,[whispers] پنج...,پنج...,panj...,five...,whisper,counting stars: whispered number
+wn_six.mp3,[whispers] شیش...,شیش...,shish...,six...,whisper,counting stars: whispered number
+wn_seven.mp3,[whispers] هفت...,هفت...,haft...,seven...,whisper,counting stars: whispered number
+wn_eight.mp3,[whispers] هشت...,هشت...,hasht...,eight...,whisper,counting stars: whispered number
+wn_nine.mp3,[whispers] نُه...,نُه...,noh...,nine...,whisper,counting stars: whispered number
+wn_ten.mp3,[whispers] دَه...,دَه...,dah...,ten...,whisper,counting stars: whispered number
+dark_start.mp3,[whispers] اوه! تاریک شد! بیا با چراغ‌قوه پیداش کنیم!,اوه! تاریک شد! بیا با چراغ‌قوه پیداش کنیم!,oh! târik shod! biyâ bâ cherâgh-ghove peydâsh konim!,oh! it got dark! let's find it with the torch!,dark,dark hunt: lights go off
+dark_torch.mp3,[whispers] چراغ‌قوه رو تکون بده... این‌ور... اون‌ور...,چراغ‌قوه رو تکون بده... این‌ور... اون‌ور...,cherâgh-ghove ro tekun bede... in-var... un-var...,wiggle the torch... this way... that way...,dark,dark hunt: move the torch hint
+dark_done.mp3,[excited] چراغ‌ها روشن! آفرین!,چراغ‌ها روشن! آفرین!,cherâghâ roshan! âfarin!,lights on! well done!,dark,dark hunt: lights back on
+disco_on.mp3,[excited] دیسکو! بیا برقصیم!,دیسکو! بیا برقصیم!,disko! biyâ beraghsim!,disco! let's dance!,lights,home: disco lights on
+disco_off.mp3,[playful] تموم شد! دیسکو رفت لالا!,تموم شد! دیسکو رفت لالا!,tamum shod! disko raft lâlâ!,all done! the disco went night-night!,lights,home: disco lights off
+lamp_home_on.mp3,[excited] چیلیک! روشن شد! چه نوری!,چیلیک! روشن شد! چه نوری!,chilik! roshan shod! che nuri!,click! it's on! what a light!,lights,home: lamp on
+lamp_home_off.mp3,[playful] چیلیک! خاموش! نور کجا رفت؟,چیلیک! خاموش! نور کجا رفت؟,chilik! khâmush! nur kojâ raft?,click! off! where did the light go?,lights,home: lamp off
+invite_bed.mp3,[yawns] وای چقدر بازی کردیم... بریم لالا؟,وای چقدر بازی کردیم... بریم لالا؟,vây cheghadr bâzi kardim... berim lâlâ?,"wow, we played so much... shall we go night-night?",invite,invite to bedroom
+invite_bed2.mp3,[yawns] چشمام داره بسته می‌شه... بریم تو تخت؟,چشمام داره بسته می‌شه... بریم تو تخت؟,cheshmâm dâre baste mishe... berim tu takht?,my eyes are closing... shall we go to bed?,invite,invite to bedroom variant
+bed_night_start.mp3,[whispers] شب شد... چراغ رو خاموش کنیم؟,شب شد... چراغ رو خاموش کنیم؟,shab shod... cherâgh ro khâmush konim?,it's night... shall we turn off the light?,invite,bedroom: night begins
+surprise_hint.mp3,[whispers] هیس... یه چیزی تو یه اتاق قایم شده... بریم ببینیم؟,هیس... یه چیزی تو یه اتاق قایم شده... بریم ببینیم؟,hiss... ye chizi tu ye otâgh ghâyem shode... berim bebinim?,shh... something is hiding in a room... shall we go see?,surprise,surprise hint
+surprise_hint2.mp3,[whispers] پیس پیس... یه سورپرایز دارم! بیا دنبالم...,پیس پیس... یه سورپرایز دارم! بیا دنبالم...,pis pis... ye surprâyz dâram! biyâ dombâlam...,psst psst... I have a surprise! follow me...,surprise,surprise hint variant
+surprise_balloon.mp3,[gasps] وای! یه بادکنک! برای تو!,وای! یه بادکنک! برای تو!,vây! ye bâdkonak! barâye to!,wow! a balloon! for you!,surprise,surprise reveal
+surprise_gift.mp3,[gasps] وای! یه کادو! مال توئه!,وای! یه کادو! مال توئه!,vây! ye kâdo! mâle toe!,wow! a present! it's yours!,surprise,surprise reveal
+surprise_dog.mp3,[gasps] وای! یه سگ کوچولو! هاپ هاپ!,وای! یه سگ کوچولو! هاپ هاپ!,vây! ye sage kuchulu! hâp hâp!,wow! a little dog! woof woof!,surprise,surprise reveal
+surprise_cat.mp3,[gasps] وای! یه گربه ناز! میو!,وای! یه گربه ناز! میو!,vây! ye gorbeye nâz! miu!,wow! a cute kitty! meow!,surprise,surprise reveal
+surprise_cake.mp3,[gasps] وای! یه کیک خوشمزه! برای تو!,وای! یه کیک خوشمزه! برای تو!,vây! ye keyke khoshmaze! barâye to!,wow! a yummy cake! for you!,surprise,surprise reveal
+surprise_butterfly.mp3,[gasps] وای! یه پروانه! ببین چه قشنگ پر می‌زنه!,وای! یه پروانه! ببین چه قشنگ پر می‌زنه!,vây! ye parvâne! bebin che ghashang par mizane!,wow! a butterfly! look how pretty it flutters!,surprise,surprise reveal
+surprise_rabbit.mp3,[gasps] وای! یه خرگوش! هاپ... پرید!,وای! یه خرگوش! هاپ... پرید!,vây! ye khargush! hop... parid!,wow! a bunny! hop... it jumped!,surprise,surprise reveal
+surprise_chick.mp3,[gasps] وای! یه جوجه کوچولو! جیک جیک!,وای! یه جوجه کوچولو! جیک جیک!,vây! ye jujeye kuchulu! jik jik!,wow! a little chick! cheep cheep!,surprise,surprise reveal
+night_stars.mp3,[whispers] ستاره‌ها رو ببین... بیا بشمریم!,ستاره‌ها رو ببین... بیا بشمریم!,setârehâ ro bebin... biyâ beshmorim!,look at the stars... let's count them!,night,bedroom: count stars start
+night_stars_done.mp3,[whispers] چه ستاره‌های قشنگی... شب بخیر ستاره‌ها.,چه ستاره‌های قشنگی... شب بخیر ستاره‌ها.,che setârehâye ghashangi... shab bekheir setârehâ.,"such pretty stars... good night, stars.",night,bedroom: count stars done
+night_story.mp3,[whispers] وقت قصه‌ست... گوش کن...,وقت قصه‌ست... گوش کن...,vaghte ghessast... gush kon...,it's story time... listen...,night,bedroom: story start
+night_moon.mp3,[whispers] سلام ماه خانم!,سلام ماه خانم!,salâm mâh khânom!,"hello, Miss Moon!",night,bedroom: moon

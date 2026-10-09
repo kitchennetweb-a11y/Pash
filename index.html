@@ -31,7 +31,7 @@ canvas{display:block}
 .rb:focus-visible{outline:4px solid var(--ink);outline-offset:3px}
 #nav .rb{background:#ffffffcc}#nav .rb.cur{background:#ffd34d;box-shadow:0 0 0 4px #fff,0 5px 0 #0003}
 @media (min-width:700px) and (min-height:700px){:root{--b:68px;--g:18px}}
-@media (max-height:440px){:root{--g:8px}}
+@media (max-height:440px){:root{--g:8px;--b:50px}}
 #fade{position:fixed;inset:0;background:#fff7ea;opacity:0;pointer-events:none;transition:opacity .3s;z-index:4}#fade.on{opacity:1}
 #card{position:fixed;left:30%;top:50%;transform:translate(-50%,-50%);z-index:2;background:#fffffff0;border-radius:32px;padding:10px 26px 6px;
   text-align:center;box-shadow:0 8px 0 #22314a22;pointer-events:none}
@@ -93,6 +93,22 @@ canvas{display:block}
 .wig{animation:wig .5s}@keyframes wig{25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
 .pc-card h3{font:800 17px var(--display);margin:14px 0 6px}.pc-chips{display:flex;flex-wrap:wrap;gap:6px}
 .pc-chip{background:#f3f7fb;border-radius:10px;padding:3px 10px;font-size:20px}.pc-chip b{font:700 18px var(--fa)}.pc-chip i{font-size:12px;color:#5b6b82;font-style:normal}
+/* dark-room Find: cards only show inside the torch beam (--x/--y follow the finger) */
+#deck.dark{-webkit-mask:radial-gradient(circle at var(--x,50%) var(--y,50%),#000 0 12vmin,#0000000d 22vmin);mask:radial-gradient(circle at var(--x,50%) var(--y,50%),#000 0 12vmin,#0000000d 22vmin);
+  background:radial-gradient(circle at var(--x,50%) var(--y,50%),#fff3b066 0 10vmin,#0000 20vmin)}
+/* night: bedroom with the lamp off; stars game */
+.night #bubble,.night .ec{background:#2b3358e6;color:#e6ecff;box-shadow:none}
+#deck.stars .ec{background:none;box-shadow:none;font-size:min(13vh,12vw)}#deck.stars span{position:relative;opacity:.35}#deck.stars span.on{opacity:1;filter:drop-shadow(0 0 14px #ffd34d)}
+/* nav hints: bed invite bounce, surprise sparkle; the surprise itself */
+#nav .rb{position:relative}#nav .rb.invite{animation:inv 1.4s ease-in-out infinite}
+@keyframes inv{50%{transform:translateY(-10px) scale(1.08);box-shadow:0 0 0 5px #fff8,0 0 22px 8px #9fb8ff}}
+#nav .rb.surp{box-shadow:0 0 0 4px #fff,0 0 20px 6px #ffd34d}#nav .rb.surp::after{content:'✨';position:absolute;right:-10px;top:-12px;font-size:.7em;animation:tw 1s ease-in-out infinite}
+@keyframes tw{50%{transform:scale(1.4) rotate(20deg);opacity:.6}}
+#surp{position:fixed;z-index:2;left:24%;top:60%;font-size:min(18vh,16vw);line-height:1;background:none;border:0;padding:0;cursor:pointer;touch-action:manipulation;
+  filter:drop-shadow(0 6px 10px #0005);animation:pop .6s cubic-bezier(.3,1.6,.5,1),bob 2s ease-in-out .6s infinite;transform:translate(-50%,-50%)}
+@keyframes pop{from{transform:translate(-50%,-50%) scale(0)}}@keyframes bob{50%{transform:translate(-50%,-62%)}}
+@media (orientation:portrait){#surp{left:18%;top:34%}}
+@media (prefers-reduced-motion:reduce){#nav .rb.invite,#nav .rb.surp::after,#surp{animation:none}}
 </style>
 
 <div id="stage"></div>
@@ -124,7 +140,13 @@ canvas{display:block}
   <button id="bAnimals" class="rb" style="background:#8bc34a" aria-label="Animal sounds">🐮</button>
   <button id="bBookHome" class="rb" style="background:#3bb4e5" aria-label="Book: all pictures">🔙</button>
   <button id="bStories" class="rb" style="background:#a66cff" aria-label="Stories" hidden>📚</button>
+  <button id="bLamp" class="rb" style="background:#ffd34d" aria-label="Light on/off">💡</button>
+  <button id="bDisco" class="rb" style="background:#ff4fd8" aria-label="Disco">🪩</button>
+  <button id="bDark" class="rb" style="background:#3d4a7a" aria-label="Find in the dark">🔦</button>
+  <button id="bStars" class="rb" style="background:#2b3a78" aria-label="Count stars">⭐</button>
+  <button id="bNStory" class="rb" style="background:#6a4fb3" aria-label="Bedtime story">📖</button>
 </div>
+<button id="surp" hidden aria-label="Surprise"></button>
 <button id="parentBtn" aria-label="Parent corner: press and hold">⚙︎</button>
 <div id="parent" hidden><div class="pc-card">
   <div class="pc-head"><h2>Parent corner</h2><button id="pcClose">Close</button></div>
@@ -147,7 +169,7 @@ let AC=null;
 function ac(){ if(!AC) AC=new (window.AudioContext||window.webkitAudioContext)(); return AC; }
 let talkMuteUntil=0;
 const audioSession=t=>{try{if(navigator.audioSession)navigator.audioSession.type=t}catch(e){}}; // Safari 16.4+
-const MIC_FLOOR=.03; // mic sensitivity: raise to make Pash need a louder voice (was .02)
+const MIC_FLOOR=.024; // mic sensitivity: raise to make Pash need a louder voice (was .02)
 function hush(ms){try{talkMuteUntil=Math.max(talkMuteUntil,performance.now()+ms)}catch(e){}}
 function tone(f1,f2,dur,type='sine',vol=.25,delay=0){hush((delay+dur)*1000+250);
   const a=ac(),t=a.currentTime+delay,o=a.createOscillator(),g=a.createGain();
@@ -205,7 +227,7 @@ function loadVoice(k){if(VOICE[k])return Promise.resolve(VOICE[k]);if(!HAS.has(k
     .then(b=>VOICE[k]=b).catch(()=>{delete VLOAD[k];return null}))}
 const loadVoices=keys=>Promise.all(keys.map(loadVoice));
 // core = every clip that isn't a per-word line; word clips load when needed
-const loadCore=()=>MANIFEST.then(()=>loadVoices([...HAS].filter(k=>!/^(w|where|this|say|want|song)_/.test(k))));
+const loadCore=()=>MANIFEST.then(()=>loadVoices([...HAS].filter(k=>!/^(w|ww|wn|where|this|say|want|song|surprise)_/.test(k))));
 let voiceSrc=null,voiceEnd=0;
 function playVoice(k){const b=VOICE[k];if(!b||!AC)return 0;try{voiceSrc&&voiceSrc.stop()}catch(e){}
   const s=AC.createBufferSource(),g=AC.createGain();g.gain.value=k==='name'?.9:1;s.buffer=b;s.connect(g).connect(AC.destination);s.start(AC.currentTime+.05);voiceSrc=s;voiceEnd=AC.currentTime+.05+b.duration;return b.duration}
@@ -316,6 +338,12 @@ const skyTex=canvasTex(256,256,(x,w,h)=>{const g=x.createLinearGradient(0,0,0,h)
   x.fillStyle='rgba(255,255,255,.9)';for(const [cx,cy,r] of[[70,70,22],[95,62,28],[125,72,20],[190,110,16],[210,104,20]]){x.beginPath();x.arc(cx,cy,r,0,7);x.fill()}
   x.fillStyle='#7fb069';x.beginPath();x.moveTo(0,h);x.quadraticCurveTo(w*.3,h*.72,w*.6,h*.85);x.quadraticCurveTo(w*.85,h*.75,w,h*.8);x.lineTo(w,h);x.fill()});
 const skyMat=new THREE.MeshBasicMaterial({map:skyTex,toneMapped:false});
+// night sky for the window: dark gradient, moon and stars (swapped in by setLights)
+const nightTex=canvasTex(256,256,(x,w,h)=>{const g=x.createLinearGradient(0,0,0,h);g.addColorStop(0,'#0b1236');g.addColorStop(1,'#2a3570');x.fillStyle=g;x.fillRect(0,0,w,h);
+  x.fillStyle='#fff';for(let i=0;i<40;i++){x.globalAlpha=.4+Math.random()*.6;x.beginPath();x.arc(Math.random()*w,Math.random()*h*.75,Math.random()*1.6+.4,0,7);x.fill()}
+  x.globalAlpha=1;x.fillStyle='#fff6c8';x.shadowColor='#fff6c8';x.shadowBlur=18;x.beginPath();x.arc(180,70,26,0,7);x.fill();
+  x.shadowBlur=0;x.fillStyle='#0b1236';x.beginPath();x.arc(194,62,24,0,7);x.fill(); // crescent
+  x.fillStyle='#1d3a2c';x.beginPath();x.moveTo(0,h);x.quadraticCurveTo(w*.3,h*.72,w*.6,h*.85);x.quadraticCurveTo(w*.85,h*.75,w,h*.8);x.lineTo(w,h);x.fill()});
 const WX=-1.2,WY=3.9,WW=3.2,WH=2.4;
 const sky=new THREE.Mesh(new THREE.PlaneGeometry(WW,WH),skyMat);sky.position.set(WX,WY,BACK+.01);room.add(sky);
 const frameMat=new THREE.MeshStandardMaterial({color:0xffffff,roughness:.45});
@@ -650,7 +678,7 @@ function animateItems(t,dt){
 // ----- game state -----
 const game={type:null,token:0,awaiting:null,busy:false,listening:false,onHeard:null,score:0};
 const deck=document.getElementById('deck');
-function endGame(){game.token++;game.type=null;game.awaiting=null;game.busy=false;game.listening=false;game.onHeard=null;clearItems();
+function endGame(){if(game.type==='dark')setLights(true);game.token++;game.type=null;game.awaiting=null;game.busy=false;game.listening=false;game.onHeard=null;clearItems();
   if(!deck.hidden){deck.hidden=true;resize()}
   if(st.mode==='game')setMode('idle')}
 // Cards: items [{pic (string, or array -> separate tappable spans), fa?, cls?, ...}]; onTap(item, button, spanIndex)
@@ -662,17 +690,20 @@ function showDeck(items,onTap,cls=''){deck.className=cls;deck.textContent='';
   deck.hidden=false;resize()}
 const wig=el=>{el.classList.remove('wig');void el.offsetWidth;el.classList.add('wig')};
 const sayIf=k=>HAS.has(k)||LINES[k]?sayAsync(k):Promise.resolve(); // lines still being recorded: skip quietly
+const anyOf=ks=>{const h=ks.filter(k=>HAS.has(k));return h[Math.random()*h.length|0]},sayAny=(...ks)=>sayIf(anyOf(ks)||'');
+// whisper mode: ww_<id> "shh... where is it?" + whisper_yay*, falling back to the normal lines
+const wkey=id=>HAS.has('ww_'+id)?'ww_'+id:'where_'+id,wyay=()=>sayAsync(anyOf(['whisper_yay','whisper_yay2','whisper_yay3'])||'yay');
 const pickN=(pool,n,not=[])=>{const out=[];for(const id of shuffle(pool))if(out.length<n&&!not.includes(id)&&!out.some(o=>SW[o].pic===SW[id].pic))out.push(id);return out};
 const card=id=>({id,pic:SW[id].pic});
 // Show cards and wait for a right tap; a wrong tap names that card and asks again (never "no")
-async function cardAsk(tok,items,ok,key,statId){let res;const done=new Promise(r=>res=r);
+async function cardAsk(tok,items,ok,key,statId,cls){let res;const done=new Promise(r=>res=r);
   showDeck(items,async(it,b)=>{if(game.busy||!alive(tok))return;game.busy=true;
     if(ok(it)){b.classList.add('win');res(it);return}
-    statAdd(statId,'miss');wig(b);setFace('shock',600);kick('lean',3);await sayAsync('w_'+it.id);if(alive(tok))await sayAsync(key);game.busy=false});
+    statAdd(statId,'miss');wig(b);setFace('shock',600);kick('lean',3);await sayAsync('w_'+it.id);if(alive(tok))await sayAsync(key);game.busy=false},cls);
   game.busy=true;await sayAsync(key);if(alive(tok))game.busy=false;
   const nud=setInterval(()=>{if(!alive(tok))clearInterval(nud);else if(!game.busy){game.busy=true;sayAsync(key).then(()=>{if(alive(tok))game.busy=false})}},12000);
   const it=await done;clearInterval(nud);return it}
-async function finale(tok){cheer(true);await sayAsync('yay');if(alive(tok)&&HAS.has('x_dobare'))await sayAsync('x_dobare');if(alive(tok))endGame()}
+async function finale(tok){cheer(true);await sayAsync('yay');if(alive(tok)&&HAS.has('x_dobare'))await sayAsync('x_dobare');if(alive(tok)){endGame();doneAct()}}
 function startGame(type){endGame();game.type=type;game.score=0;setMode('game');return game.token}
 const alive=tok=>tok===game.token;
 function cheer(big){SFX.giggle();setFace('laugh',1400);kick('squash',7);arms.forEach(a=>a.vel+=a.s*10);jump(big?9:6,big);
@@ -724,15 +755,21 @@ async function playFind(){
   if(alive(tok))finale(tok);
 }
 // 1b) Find with picture cards (the 3D toys Find above runs every 3rd time)
-let findN=0;
-async function playFindCards(){if(++findN%3===0)return playFind();
-  const tok=startGame('find'),pool=V2.filter(id=>HAS.has('where_'+id));
-  await sayAsync('play');
-  for(let r=0;r<5&&alive(tok);r++){const ids=pickN(pool.length>=3?pool:V2,3),t=ids[0];
-    await cardAsk(tok,shuffle(ids).map(card),it=>it.id===t,'where_'+t,t);
-    statAdd(t,'right');cheer(false);await sayAsync('this_'+t);if(alive(tok))await sayAsync('yay');await wait(300)}
-  if(alive(tok))finale(tok);
+// dark=true (🔦): room goes dark, cards only show in a torch beam that follows the finger, Pash always whispers; 4 rounds
+let findN=0,torchT=0;
+async function playFindCards(dark){if(!dark&&++findN%3===0)return playFind();
+  const tok=startGame(dark?'dark':'find'),pool=V2.filter(id=>HAS.has('where_'+id));
+  if(dark){setLights(false);renderer.toneMappingExposure=.4;deck.style.removeProperty('--x');deck.style.removeProperty('--y');torchT=performance.now();await sayIf('dark_start');
+    const h=setInterval(()=>{if(!alive(tok))clearInterval(h);else if(!game.busy&&performance.now()-torchT>5000){torchT=performance.now()+4000;sayIf('dark_torch')}},1000)}
+  else await sayAsync('play');
+  for(let r=0;r<(dark?4:5)&&alive(tok);r++){const ids=pickN(pool.length>=3?pool:V2,3),t=ids[0],ww=dark||Math.random()<.3;if(ww)setFace('listen',3500);
+    await cardAsk(tok,shuffle(ids).map(card),it=>it.id===t,ww?wkey(t):'where_'+t,t,dark?'dark':'');deck.classList.remove('dark');
+    statAdd(t,'right');cheer(false);await sayAsync('this_'+t);if(alive(tok))await(ww?wyay():sayAsync('yay'));await wait(300)}
+  if(!alive(tok))return;if(!dark)return finale(tok);
+  setLights(true);cheer(true);await sayAsync(HAS.has('dark_done')?'dark_done':'yay');if(alive(tok)){endGame();doneAct()}
 }
+['pointerdown','pointermove'].forEach(ev=>addEventListener(ev,e=>{if(!deck.classList.contains('dark'))return;const r=deck.getBoundingClientRect();
+  deck.style.setProperty('--x',e.clientX-r.left+'px');deck.style.setProperty('--y',e.clientY-r.top+'px');torchT=performance.now()}));
 // Colour hunt: "find something red!"; words carry an optional col field (vocab/words_v2.json). Without it: the colour dots themselves
 const COLS=['red','blue','green','yellow','orange_color','purple','black','white','pink','brown'];
 async function playColour(){const tok=startGame('colour');
@@ -758,6 +795,15 @@ async function playCount(){const tok=startGame('count');
     cheer(n>3);await sayAsync('w_'+NUM[n-1]);if(alive(tok))await sayIf('count_done');game.busy=false;await wait(800);countMax=Math.min(10,countMax+1)}
   if(alive(tok))finale(tok);
 }
+// Night stars (bedroom, lamp off): 3-7 stars light up one by one while Pash whispers the count; taps twinkle and count along
+async function playStars(){const tok=startGame('stars'),n=3+Math.floor(Math.random()*5),num=i=>HAS.has('wn_'+NUM[i])?'wn_'+NUM[i]:'w_'+NUM[i];let tapped=0;
+  showDeck([{pic:Array(n).fill('⭐'),cls:'many'}],(it,b,j)=>{if(j<0)return;const s=b.children[j];s.classList.add('on');wig(s);
+    tapped=tapped%n+1;tone(900+tapped*80,1200+tapped*80,.15,'sine',.08);if(!game.busy)say(num(tapped-1))},'stars');
+  const spans=[...deck.querySelectorAll('span')];spans.forEach(s=>s.style.top=rnd(-.4,.4).toFixed(2)+'em');
+  game.busy=true;setFace('listen',3000);await sayIf('night_stars');
+  for(let i=0;i<n&&alive(tok);i++){spans[i].classList.add('on');wig(spans[i]);tone(1200,1600,.2,'sine',.06);await sayAsync(num(i))}
+  if(!alive(tok))return;emit('star',new THREE.Vector3(0,3.4,.5),n,{size:.25,life:1.6,g:.2});await sayIf('night_stars_done');game.busy=false;
+  await wait(5000);if(alive(tok))endGame()}
 // 2) Feed: Pash asks for one food out of three
 async function playFeed(){
   const tok=startGame('feed');
@@ -765,7 +811,7 @@ async function playFeed(){
   spawnItems(foods);await wait(450);if(!alive(tok))return;
   game.busy=true;await sayAsync('want_'+target);game.busy=false;if(!alive(tok))return;
   await ask(tok,'item',target,'want_'+target);
-  await wait(300);if(alive(tok))endGame();
+  await wait(300);if(alive(tok)){endGame();doneAct()}
 }
 // 3) Say it screen: one big picture card; Pash says "say X!", listens up to 8 s, praises any try, then models the word
 let sayCur=null,sayNext=null;
@@ -811,14 +857,14 @@ const np=s=>s.replace(/️/g,''),PIC={};for(const id of [...V2,...Object.keys(SW
 const graphemes=s=>(window.Intl&&Intl.Segmenter?[...new Intl.Segmenter().segment(s)].map(x=>x.segment):Array.from(s)).filter(x=>x.trim());
 function bookStories(){showDeck(STORIES.map(s=>({s,pic:s.cover})),it=>storyPage(it.s,0),'grid')}
 async function storyPage(s,i){const tok=startGame('story'),p=s.pages[i];try{voiceSrc&&voiceSrc.stop()}catch(e){}
-  if(!p){cheer(true);await sayAsync('yay');if(alive(tok)){endGame();bookStories()}return}
+  if(!p){cheer(true);await sayAsync('yay');if(alive(tok)){endGame();scr==='book'?bookStories():doneAct()}return}
   const segs=graphemes(p.scene||''),goal=p.ask&&SW[p.ask]?np(SW[p.ask].pic):null;let want=null;
   showDeck([{pic:'🔁',cls:'nav',go:i},{pic:segs,cls:'scene'},{pic:'➡️',cls:'nav',go:i+1}],(it,b,j)=>{if(it.go!==undefined)return storyPage(s,it.go);if(j<0)return;
     if(want&&np(segs[j])===goal)return want();wig(b.children[j]);const id=PIC[np(segs[j])];if(id&&!game.busy)say('w_'+id)},'story');
   game.busy=true;if(i===0)await sayIf('st_'+s.id+'_title');if(alive(tok))await sayIf(p.key);if(!alive(tok))return;game.busy=false;
   const k=segs.findIndex(x=>np(x)===goal);
-  if(k>=0){await sayAsync('where_'+p.ask);if(!alive(tok))return;const got=await Promise.race([new Promise(r=>want=()=>r(1)),wait(15000)]);want=null;if(!alive(tok))return;
-    deck.querySelector('.scene').children[k].classList.add('on');if(got){statAdd(p.ask,'right');cheer(false)};await sayAsync('this_'+p.ask)}
+  if(k>=0){const ww=!lightsOn||Math.random()<.3;if(ww)setFace('listen',3000);await sayAsync(ww?wkey(p.ask):'where_'+p.ask);if(!alive(tok))return;const got=await Promise.race([new Promise(r=>want=()=>r(1)),wait(15000)]);want=null;if(!alive(tok))return;
+    deck.querySelector('.scene').children[k].classList.add('on');if(got){statAdd(p.ask,'right');cheer(false);if(ww)await wyay();if(!alive(tok))return};await sayAsync('this_'+p.ask)}
   await wait(1500);if(alive(tok))storyPage(s,i+1)}
 
 // ---------- Room furniture: tap to hear the word ----------
@@ -894,9 +940,16 @@ function furnById(id){return furnGroup.children.find(g=>g.userData.furn===id)}
 const lampLight=new THREE.PointLight(0xffc77a,0,7,2);
 function setLights(on){lightsOn=on;const L=on?ROOM_DAY:ROOM_NIGHT;sun.intensity=L.sun;if(hemiLight)hemiLight.intensity=L.hemi;
   windowGlow.intensity=L.win;scene.environment=on?dayEnv:null;fill.intensity=L.fill;renderer.toneMappingExposure=L.exp;scene.background.setHex(L.bg);
-  skyMat.color.setHex(on?0xffffff:0x1c2340);
+  skyMat.map=on?skyTex:nightTex;skyMat.color.setHex(0xffffff);skyMat.needsUpdate=true;
   const f=furnById('lamp');if(f){f.userData.shade.emissiveIntensity=on?.6:2.2;if(!lampLight.parent){f.add(lampLight);lampLight.position.set(0,1.6,0)}}
-  lampLight.intensity=on?0:1.6}
+  lampLight.intensity=on?0:1.6;if(scr==='bed')showScreen('bed')} // bedroom: night buttons while the lamp is off
+// Disco (🪩, play room): the existing lights cycle colours (no extra lights, cheap), Pash dances to the music until tapped again or the room changes
+let discoOn=false;const LCOL=[[sun,0xfff1dc],[hemiLight,0xdfeeff],[windowGlow,0xcfe8ff],[fill,0xffe2c4]];
+function disco(on,quiet){if(on===discoOn)return;discoOn=on;
+  if(on){setLights(false);danceStyle=(danceStyle+1)%4;setMode('dance');music(true)}else{LCOL.forEach(([l,c])=>l.color.setHex(c));setLights(true);if(st.mode==='dance')setMode('idle')}
+  if(!quiet)sayIf(on?'disco_on':'disco_off')}
+function discoTick(t){LCOL.forEach(([l],i)=>l.color.setHSL((t*.35+i*.33)%1,1,.5));sun.intensity=.5+.7*Math.abs(Math.sin(t*4.5));hemiLight.intensity=.15;windowGlow.intensity=3;fill.intensity=.6;
+  scene.background.setHSL(t*.35%1,.5,.12);if(st.mode==='idle'){setMode('dance');music(true)}}
 async function tapFurniture(id){
   if(game.type||st.mode==='sleep'&&id!=='lamp')return;
   const g=furnById(id);if(g)g.userData.wig=.7;st.lastPoke=performance.now();
@@ -997,9 +1050,8 @@ async function micOn(fromButton){
   const a=ac();await a.resume();
   try{
     if(!navigator.mediaDevices||!navigator.mediaDevices.getUserMedia)throw new Error('no mic api');
-    audioSession('play-and-record');
-    // no echo cancellation/AGC: on iOS they switch to "voice chat" mode, which ducks all app sound. The mic is ignored while Pash talks instead.
-    talk.stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:false,noiseSuppression:true,autoGainControl:false}});
+    audioSession('auto'); // back to the browser default while the mic is on (as it was before)
+    talk.stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true}});
   }catch(e){audioSession('playback');if(fromButton){setFace('shock',900);document.getElementById('micHelp').hidden=false}return false}
   talk.src=a.createMediaStreamSource(talk.stream);
   talk.proc=a.createScriptProcessor(2048,1,1);
@@ -1029,14 +1081,13 @@ function onMic(e){
     if(talk.rec&&st.mode==='listen'&&!talk.playing)setMode('idle');
     talk.rec=false;talk.chunks=[];talk.pre=[];return}
   let sum=0;for(let i=0;i<d.length;i++)sum+=d[i]*d[i];const rms=Math.sqrt(sum/d.length);
-  const loud=Math.max(MIC_FLOOR,talk.noise*4.5);
+  const loud=Math.max(MIC_FLOOR,talk.noise*3.8);
   if(st.mode==='sleep'){ // a voice wakes him up instead of being copied
     if(rms>loud*1.3)wake();else talk.noise=talk.noise*.97+rms*.03;return}
   const copy=new Float32Array(d);
   if(!talk.rec){
     talk.pre.push(copy);if(talk.pre.length>6)talk.pre.shift();
-    talk.hot=rms>loud?(talk.hot||0)+1:0;
-    if(talk.hot>=2){talk.hot=0;talk.rec=true;talk.chunks=talk.pre.slice();talk.pre=[];talk.quiet=0;st.lastPoke=now;st.idleAct=null;
+    if(rms>loud){talk.rec=true;talk.chunks=talk.pre.slice();talk.pre=[];talk.quiet=0;st.lastPoke=now;st.idleAct=null;
       if(!gameEar&&st.mode!=='listen'){goHome();setMode('listen')}}
     else talk.noise=talk.noise*.97+rms*.03;
   }else{
@@ -1049,7 +1100,7 @@ function finishClip(sr,secs){
   const chunks=talk.chunks;talk.rec=false;talk.chunks=[];
   const keep=Math.max(1,chunks.length-Math.floor(talk.quiet/secs)+2);
   const parts=chunks.slice(0,keep),len=parts.reduce((n,c)=>n+c.length,0);
-  if(len/sr<.45){if(st.mode==='listen')setMode('idle');return}
+  if(len/sr<.35){if(st.mode==='listen')setMode('idle');return}
   const a=ac(),buf=a.createBuffer(1,len,sr),out=buf.getChannelData(0);
   let o=0,peak=0;for(const c of parts){out.set(c,o);o+=c.length}
   for(let i=0;i<len;i++)peak=Math.max(peak,Math.abs(out[i]));
@@ -1083,7 +1134,7 @@ addEventListener('pointerup',e=>{if(!down)return;
     else if(st.mode!=='sleep'){goHome();if(st.mode==='chase'||st.mode==='idle')setFace('shock',400)}}
   else if(Math.abs(st.spinVel)>3){setTimeout(()=>{if(st.mode!=='sleep'){setFace('dizzy',1500);SFX.dizzy()}},400)}
   down=null});
-function onBtn(id,fn,home=true){document.getElementById(id).onclick=()=>{endGame();if(st.mode==='sleep'&&id!=='bSleep')wake();if(home)goHome();st.lastPoke=performance.now();st.idleAct=null;fn()}}
+function onBtn(id,fn,home=true){document.getElementById(id).onclick=()=>{endGame();if(id!=='bDisco')disco(false,1);if(st.mode==='sleep'&&id!=='bSleep'&&id!=='bLamp')wake();if(home)goHome();st.lastPoke=performance.now();st.idleAct=null;fn()}}
 onBtn('bTalk',startTalk);
 onBtn('bDance',()=>{danceStyle=(danceStyle+1)%4;setMode('dance');music(true);say('dance');speak()});
 // Sing: Setareh chants a folk rhyme twice over an instrumental bed (song_bed, Eleven Music), Pash dances
@@ -1095,7 +1146,7 @@ async function playSong(){const all=[...HAS].filter(k=>/^song_(?!bed)/.test(k)&&
     if(VOICE.song_bed){const b=AC.createBufferSource(),g=AC.createGain();b.buffer=VOICE.song_bed;b.loop=true;g.gain.value=.35;b.connect(g).connect(AC.destination);b.g=g;b.start();bedSrc=b}}
   hush(45000);await wait(lull?300:1500); // keep the mic from echoing the music
   for(let i=0;i<2&&tok===songTok&&(lull||st.mode==='dance');i++){await sayAsync(k);await wait(600)}
-  if(tok===songTok){talkMuteUntil=performance.now()+800;if(st.mode==='dance')setMode('idle')}}
+  if(tok===songTok){talkMuteUntil=performance.now()+800;if(st.mode==='dance')setMode('idle');doneAct()}}
 let songTok=0;
 onBtn('bSing',playSong);
 onBtn('bJump',()=>{say('jump');speak();const big=Math.random()<.5;jump(big?10:7,big);setFace('laugh',1200)});
@@ -1108,24 +1159,50 @@ onBtn('bBookHome',()=>bookHome());onBtn('bStories',bookStories);
 onBtn('bNext',()=>sayRound(sayNext||pickSay()));
 onBtn('bRepeat',()=>sayRound(sayCur||pickSay()));
 onBtn('bMoves',playMoves);
+onBtn('bLamp',()=>{if(curRoom==='bed')return tapFurniture('lamp');setLights(!lightsOn);SFX.beep();sayIf(lightsOn?'lamp_home_on':'lamp_home_off')});
+onBtn('bDisco',()=>disco(!discoOn));onBtn('bDark',()=>playFindCards(true));onBtn('bStars',playStars);
+onBtn('bNStory',async()=>{const s=STORIES.find(s=>s.id==='bedtime')||STORIES[0];if(!s)return;await sayIf('night_story');if(scr==='bed'&&!game.type)storyPage(s,0)});
 onBtn('bSleep',()=>{setMode('sleep');say(HAS.has('x_khabam_miad')&&Math.random()<.5?'x_khabam_miad':'sleep');setFace('sleep',1e9);music(false)});
-document.getElementById('go').onclick=async()=>{audioSession('playback');await ac().resume();micOn(false);await Promise.race([MANIFEST.then(()=>loadVoices(['name','hi'])),wait(2500)]);loadCore();document.getElementById('start').hidden=true;document.getElementById('hint').hidden=true;say(HAS.has('name')?'name':'hi');SFX.beep();kick('squash',8);speak()};
+document.getElementById('go').onclick=async()=>{await ac().resume();micOn(false);await Promise.race([MANIFEST.then(()=>loadVoices(['name','hi'])),wait(2500)]);loadCore();document.getElementById('start').hidden=true;document.getElementById('hint').hidden=true;say(HAS.has('name')?'name':'hi');SFX.beep();kick('squash',8);speak()};
+
+// ---------- Bedtime invite (after 3 finished games or ~6 min away from the bedroom) + hidden surprises ----------
+let doneN=0,awayT=0,bedInvite=false,surp=null,surpAt=Infinity;
+const navB=r=>document.querySelector(`#nav [data-r=${r}]`),surpEl=document.getElementById('surp');
+function doneAct(){if(curRoom!=='bed'&&++doneN>=3)inviteBed()}
+function inviteBed(){if(bedInvite||curRoom==='bed')return;bedInvite=true;navB('bed').classList.add('invite');
+  const go=()=>{if(!bedInvite||curRoom==='bed')return;if(game.type||st.mode!=='idle')return setTimeout(go,3000);
+    setFace('sleep',1500);tone(300,150,1,'sine',.08);sayAny('invite_bed','invite_bed2')};go()}
+const SURP=['balloon','gift','dog','cat','cake','butterfly','rabbit','chick'];
+function hideSurprise(){const room=['home','play','bed'].filter(r=>r!==curRoom)[Math.random()*2|0];
+  surp={room,id:SURP[Math.random()*SURP.length|0]};surpEl.textContent=SW[surp.id].pic;navB(room).classList.add('surp');setFace('listen',2500);sayAny('surprise_hint','surprise_hint2')}
+surpEl.onclick=async()=>{if(!surp)return;const id=surp.id;navB(surp.room).classList.remove('surp');surp=null;surpEl.hidden=true;surpAt=performance.now()+12e4+Math.random()*12e4;st.lastPoke=performance.now();
+  cheer(true);emit('heart',new THREE.Vector3(0,3,.6),12,{size:.3,life:1.6,g:.3,vel:()=>new THREE.Vector3((Math.random()-.5)*4,2+Math.random()*3,(Math.random()-.5)*2)});
+  await sayIf('surprise_'+id);await sayAsync('w_'+id)};
+document.getElementById('go').addEventListener('click',()=>surpAt=performance.now()+6e4);
+setInterval(()=>{if(!document.getElementById('start').hidden)return;if(curRoom!=='bed'&&(awayT+=5)>=360&&!bedInvite)inviteBed();
+  else if(!surp&&performance.now()>surpAt&&!game.type&&st.mode!=='sleep'&&ROOM_HI[scr])hideSurprise()},5000);
 
 // ---------- Rooms (home, play, bed) + the Say it screen, switched from #nav ----------
 let curRoom='home',scr='home';
-const SCREENS={home:[['bTalk','bFeed','bJump'],['bSing','bDance','bMoves','bPeek']],play:[['bBall','bFind','bColour','bCount'],['bAnimals','bBubbles','bDance','bTalk']],
-  bed:[['bSleep','bPeek'],['bTalk']],say:[['bTalk','bRepeat'],['bNext']],book:[['bBookHome'],['bStories']]};
+const SCREENS={home:[['bTalk','bFeed','bJump','bLamp'],['bSing','bDance','bMoves','bPeek']],play:[['bBall','bFind','bDark','bColour','bCount'],['bAnimals','bBubbles','bDisco','bTalk']],
+  bed:[['bSleep','bPeek','bLamp'],['bTalk']],night:[['bSleep','bPeek','bLamp'],['bTalk','bStars','bNStory']],say:[['bTalk','bRepeat'],['bNext']],book:[['bBookHome'],['bStories']]};
 const WALL={home:0xffffff,play:0xfff27a,bed:0x6f9cff};
-function showScreen(s){scr=s;
-  if(ROOM_HI[s]){curRoom=s;furnGroup.children.forEach(g=>g.visible=g.userData.room===s);wallMat.color.setHex(WALL[s]);if(s!=='bed'&&!lightsOn)setLights(true)}
+function showScreen(s){const old=scr;scr=s;
+  if(s!==old){disco(false,1);if(!lightsOn&&(old==='home'||old==='play'||ROOM_HI[s]&&s!=='bed'))setLights(true)} // leaving a room: normal lights (bedroom lamp stays as it was)
+  if(ROOM_HI[s]){curRoom=s;furnGroup.children.forEach(g=>g.visible=g.userData.room===s);wallMat.color.setHex(WALL[s])}
+  const night=s==='bed'&&!lightsOn;document.body.classList.toggle('night',night);surpEl.hidden=!(surp&&surp.room===s);
   document.querySelectorAll('.col .rb').forEach(b=>document.getElementById('btns').appendChild(b));
-  ['colL','colR'].forEach((c,i)=>{c=document.getElementById(c);SCREENS[s][i].forEach(id=>c.appendChild(document.getElementById(id)))});
+  ['colL','colR'].forEach((c,i)=>{c=document.getElementById(c);SCREENS[night?'night':s][i].forEach(id=>c.appendChild(document.getElementById(id)))});
   document.querySelectorAll('#nav .rb').forEach(b=>b.classList.toggle('cur',b.dataset.r===s));document.getElementById('card').hidden=s!=='say';document.body.classList.toggle('say',s==='say');resize()}
 async function setRoom(s){if(s===scr&&ROOM_HI[s])return;const f=document.getElementById('fade');
   endGame();try{voiceSrc&&voiceSrc.stop()}catch(e){}if(st.mode!=='idle')setMode('idle');setFace('happy',0);goHome();
   while(bubbleGroup.children.length)bubbleGroup.remove(bubbleGroup.children[0]);
   f.classList.add('on');await wait(320);showScreen(s);robot.position.x=robot.position.z=0;f.classList.remove('on');
-  if(s==='say')sayRound(pickSay(sayCur));else if(s==='book')bookHome(true);else say(ROOM_HI[s]);
+  if(s==='bed')awayT=0;
+  if(s==='say')sayRound(pickSay(sayCur));else if(s==='book')bookHome(true);
+  else if(s==='bed'&&bedInvite){bedInvite=false;doneN=0;navB('bed').classList.remove('invite');say(HAS.has('bed_night_start')?'bed_night_start':ROOM_HI[s]); // cosy ending: the lamp goes off by itself
+    setTimeout(()=>{if(scr==='bed'&&lightsOn&&!game.type){setLights(false);SFX.beep()}},4000)}
+  else say(ROOM_HI[s]);
 }
 document.querySelectorAll('#nav .rb').forEach(b=>b.onclick=()=>{st.lastPoke=performance.now();setRoom(b.dataset.r)});
 
@@ -1155,7 +1232,7 @@ function loop(){
       if(k!==lastBeat){lastBeat=k;tone(1200,1200,.05,'square',.06);kick('squash',2)}}
     else{yaw=Math.sin(b/2)*.7;armWave=[3,3];headYaw=Math.sin(b)*.3;if(beat!==lastBeat){lastBeat=beat;jump(4.5)}}
     if(face==='happy'&&Math.sin(b*.5)>.9)setFace('laugh',400);
-    if(st.modeT>9){setMode('idle');setFace('laugh',1200);say('hi')}}
+    if(st.modeT>9&&!discoOn){setMode('idle');setFace('laugh',1200);say('hi')}}
   else if(st.mode==='sleep'){bob=Math.sin(t*1.2)*.04-.05;headYaw=0;st.head=.25+Math.sin(t*1.2)*.03;st.sleepT+=dt;
     if(st.sleepT>1.6){st.sleepT=0;emit('z',new THREE.Vector3(.6,3.5,0),1,{size:.35,life:2,g:.3,grow:.5,vel:()=>new THREE.Vector3(.3,.5,0)});SFX.snore()}}
   else if(st.mode==='chase'&&ball.visible){const dx=ball.position.x-x,dz=ball.position.z-z,d=Math.hypot(dx,dz);
@@ -1215,7 +1292,7 @@ function loop(){
     ball.position.x=THREE.MathUtils.clamp(ball.position.x,-4.5,4.5);ball.position.z=THREE.MathUtils.clamp(ball.position.z,-3,3);
     if(Math.abs(ball.position.x)>=4.5)bv.x*=-.8;if(Math.abs(ball.position.z)>=3)bv.z*=-.8;
     ball.rotation.x+=bv.z*dt*3;ball.rotation.z-=bv.x*dt*3}
-  animateItems(t,dt);animateFurniture(t,dt);
+  animateItems(t,dt);animateFurniture(t,dt);if(discoOn)discoTick(t);
   for(const b of [...bubbleGroup.children]){const u=b.userData;b.position.y+=u.sp*dt;b.position.x+=Math.sin(t*1.5+u.ph)*dt*.3;
     b.scale.setScalar(1+Math.sin(t*4+u.ph)*.04);if(b.position.y>6)bubbleGroup.remove(b)}
   for(let i=parts.length-1;i>=0;i--){const p=parts[i];p.life+=dt;

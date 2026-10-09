@@ -6,7 +6,7 @@ import csv, json, os, sys, time, urllib.request, urllib.error
 from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CSVS = [os.path.join(HERE, '..', 'vocab', f) for f in ('lines_existing_v2.csv', 'lines_words_v2.csv', 'lines_games_v2.csv')]
+CSVS = [os.path.join(HERE, '..', 'vocab', f) for f in ('lines_existing_v2.csv', 'lines_words_v2.csv', 'lines_games_v2.csv', 'lines_night_v2.csv')]
 OUT = r'C:\Users\ahmma\Downloads\Virtual Pet Sounds\v2'
 SKIP = {'name.mp3'}  # personal greeting, keep the original
 
