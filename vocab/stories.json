@@ -1,0 +1,154 @@
+[
+ {
+  "id": "farm",
+  "title_fa": "پاش میره مزرعه!",
+  "title_en": "Pash goes to the farm!",
+  "cover": "🐮",
+  "pages": [
+   {
+    "key": "st_farm_1",
+    "scene": "🤖🚜🌳",
+    "ask": null
+   },
+   {
+    "key": "st_farm_2",
+    "scene": "🐮🌳🤖",
+    "ask": "cow"
+   },
+   {
+    "key": "st_farm_3",
+    "scene": "🐔🐥🐥",
+    "ask": "chick"
+   },
+   {
+    "key": "st_farm_4",
+    "scene": "🐑🤖",
+    "ask": null
+   },
+   {
+    "key": "st_farm_5",
+    "scene": "🦆🌊🦆",
+    "ask": "duck"
+   },
+   {
+    "key": "st_farm_6",
+    "scene": "☀️🌳🤖👋",
+    "ask": null
+   }
+  ]
+ },
+ {
+  "id": "rain",
+  "title_fa": "روز بارونیِ پاش",
+  "title_en": "Pash's rainy day",
+  "cover": "☂️",
+  "pages": [
+   {
+    "key": "st_rain_1",
+    "scene": "☁️🌧️🤖",
+    "ask": "cloud"
+   },
+   {
+    "key": "st_rain_2",
+    "scene": "🤖🥾🧥",
+    "ask": null
+   },
+   {
+    "key": "st_rain_3",
+    "scene": "☂️🤖🌧️",
+    "ask": "umbrella"
+   },
+   {
+    "key": "st_rain_4",
+    "scene": "🤖💦🐸",
+    "ask": "frog"
+   },
+   {
+    "key": "st_rain_5",
+    "scene": "🌈☀️🤖",
+    "ask": null
+   },
+   {
+    "key": "st_rain_6",
+    "scene": "🏠🍵🤖",
+    "ask": null
+   }
+  ]
+ },
+ {
+  "id": "bedtime",
+  "title_fa": "پاش می‌خواد بخوابه",
+  "title_en": "Pash's bedtime",
+  "cover": "🌙",
+  "pages": [
+   {
+    "key": "st_bedtime_1",
+    "scene": "🌙⭐⭐",
+    "ask": "moon"
+   },
+   {
+    "key": "st_bedtime_2",
+    "scene": "🤖🛁🧼",
+    "ask": null
+   },
+   {
+    "key": "st_bedtime_3",
+    "scene": "🤖🪥🦷",
+    "ask": "toothbrush"
+   },
+   {
+    "key": "st_bedtime_4",
+    "scene": "👩📖🤖",
+    "ask": null
+   },
+   {
+    "key": "st_bedtime_5",
+    "scene": "🤖😴🛌",
+    "ask": null
+   },
+   {
+    "key": "st_bedtime_6",
+    "scene": "🦉🌙🤖",
+    "ask": "owl"
+   }
+  ]
+ },
+ {
+  "id": "park",
+  "title_fa": "پیک‌نیکِ پاش تو پارک!",
+  "title_en": "Pash's picnic in the park!",
+  "cover": "🛝",
+  "pages": [
+   {
+    "key": "st_park_1",
+    "scene": "🤖🎒☀️",
+    "ask": null
+   },
+   {
+    "key": "st_park_2",
+    "scene": "🌳🌸🌸",
+    "ask": "tree"
+   },
+   {
+    "key": "st_park_3",
+    "scene": "🥪🍉🤖",
+    "ask": "watermelon"
+   },
+   {
+    "key": "st_park_4",
+    "scene": "🤖🛝",
+    "ask": null
+   },
+   {
+    "key": "st_park_5",
+    "scene": "🦋🤖",
+    "ask": "butterfly"
+   },
+   {
+    "key": "st_park_6",
+    "scene": "🪁☁️🤖",
+    "ask": null
+   }
+  ]
+ }
+]

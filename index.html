@@ -73,6 +73,26 @@ canvas{display:block}
 #hint{position:fixed;right:16px;top:calc(env(safe-area-inset-top,0px) + 14px);font-size:13px;background:var(--card);
   border-radius:12px;padding:6px 10px;max-width:220px;line-height:1.35}
 @media (max-width:520px){#hint{display:none}.say #bubble .tr{display:none}}
+/* #deck: big tappable emoji cards for the card games, picture book and stories (robot steps aside, like Say it) */
+#deck{position:fixed;z-index:2;left:calc(env(safe-area-inset-left,0px) + var(--b) + 28px);right:42%;top:calc(env(safe-area-inset-top,0px) + 100px);
+  bottom:calc(env(safe-area-inset-bottom,0px) + var(--b) + 26px);display:flex;flex-wrap:wrap;align-items:center;align-content:center;justify-content:center;gap:14px;pointer-events:none}
+@media (orientation:portrait){#deck{left:12px;right:12px;top:calc(env(safe-area-inset-top,0px) + 120px);bottom:47%}}
+#bubble{width:max-content}body:has(#deck.story:not([hidden])) #bubble .fa{font-size:clamp(20px,3.6vw,30px)}
+@media (orientation:portrait){body:has(#deck.story:not([hidden])) #bubble .tr{display:none}}
+@media (orientation:portrait){#deck.story{flex-wrap:wrap}#deck.story .ec.scene{flex-basis:100%;order:-1;font-size:min(12vh,20vw)}} /* upright: story picture gets its own big row */
+@media (max-height:500px){#deck{top:calc(env(safe-area-inset-top,0px) + 76px);gap:10px}}
+.ec{pointer-events:auto;border:0;border-radius:28px;background:#fffffff0;box-shadow:0 8px 0 #22314a22;color:var(--ink);font:inherit;font-size:min(17vh,12vw);
+  line-height:1.15;padding:8px 16px;cursor:pointer;touch-action:manipulation;max-width:100%}
+.ec b{display:block;font:800 .36em/1.4 var(--fa);direction:rtl}
+.ec span{display:inline-block;padding:0 .04em;transition:transform .2s}.ec span.on{transform:scale(1.25);filter:drop-shadow(0 0 8px #ffd34d)}
+.ec.nav{font-size:calc(var(--b)*.5);width:var(--b);height:var(--b);padding:0;border-radius:50%;background:#ffffffcc;box-shadow:0 5px 0 #0003}
+.ec.many,.ec.scene{font-size:min(11vh,8vw)}.ec.scene{flex:1;min-width:0}
+.grid .ec{font-size:min(9vh,7vw);padding:6px 10px;border-radius:20px}
+@media (orientation:portrait){.ec:not(.nav,.many,.scene){font-size:min(13vh,18vw)}.grid .ec{font-size:min(7vh,11vw)}}
+.ec:active,.ec.win{transform:scale(1.08)}.ec.win{box-shadow:0 0 0 6px #ffd34d,0 8px 0 #22314a22}
+.wig{animation:wig .5s}@keyframes wig{25%{transform:rotate(-8deg)}75%{transform:rotate(8deg)}}
+.pc-card h3{font:800 17px var(--display);margin:14px 0 6px}.pc-chips{display:flex;flex-wrap:wrap;gap:6px}
+.pc-chip{background:#f3f7fb;border-radius:10px;padding:3px 10px;font-size:20px}.pc-chip b{font:700 18px var(--fa)}.pc-chip i{font-size:12px;color:#5b6b82;font-style:normal}
 </style>
 
 <div id="stage"></div>
@@ -80,7 +100,9 @@ canvas{display:block}
 <div id="hint">Find, Feed and Say it are Farsi games. Just talk to Pash: when he's standing still he listens and repeats it in a funny voice. The Talk button turns his ears on and off. Poke his head, tummy (try 3 times fast!), ears, feet, antenna or face. Drag to spin him. Tap the empty floor to call him home. Grown-ups: Farsi lines show here and will play your recorded voice later.</div>
 <div id="colL" class="col"></div><div id="colR" class="col"></div>
 <div id="nav"><button class="rb" data-r="home" aria-label="Home">🏠</button><button class="rb" data-r="play" aria-label="Play room">🧸</button>
-  <button class="rb" data-r="bed" aria-label="Bedroom">🛏️</button><button class="rb" data-r="say" aria-label="Say it">🗣️</button></div>
+  <button class="rb" data-r="bed" aria-label="Bedroom">🛏️</button><button class="rb" data-r="say" aria-label="Say it">🗣️</button>
+  <button class="rb" data-r="book" aria-label="Picture book">📖</button></div>
+<div id="deck" hidden></div>
 <div id="card" hidden><div class="em" id="cardEm"></div><div class="fa" id="cardFa"></div></div>
 <div id="fade"></div>
 <div id="btns" hidden><!-- side buttons; showScreen() moves the current screen's ones into #colL/#colR -->
@@ -97,13 +119,19 @@ canvas{display:block}
   <button id="bSleep" class="rb" style="background:#5b7bd5" aria-label="Sleep">🌙</button>
   <button id="bNext" class="rb" style="background:#2bb673" aria-label="Next word">➡️</button>
   <button id="bRepeat" class="rb" style="background:#f15bb5" aria-label="Say it again">🔁</button>
+  <button id="bColour" class="rb" style="background:#ff6b8b" aria-label="Colour hunt">🎨</button>
+  <button id="bCount" class="rb" style="background:#ffc93c" aria-label="Counting">🔢</button>
+  <button id="bAnimals" class="rb" style="background:#8bc34a" aria-label="Animal sounds">🐮</button>
+  <button id="bBookHome" class="rb" style="background:#3bb4e5" aria-label="Book: all pictures">🔙</button>
+  <button id="bStories" class="rb" style="background:#a66cff" aria-label="Stories" hidden>📚</button>
 </div>
 <button id="parentBtn" aria-label="Parent corner: press and hold">⚙︎</button>
 <div id="parent" hidden><div class="pc-card">
   <div class="pc-head"><h2>Parent corner</h2><button id="pcClose">Close</button></div>
   <div class="pc-sum" id="pcSum"></div>
+  <div id="pcLists"></div><h3>All words</h3>
   <div class="pc-tablewrap"><table><thead><tr><th>Word</th><th></th><th>Heard</th><th>Found</th><th>Mixed up</th><th>Said</th></tr></thead><tbody id="pcRows"></tbody></table></div>
-  <p class="pc-note">Stored on this device only. "Found" counts right taps in Find and Feed; "Said" counts tries in Say it. Words he has heard fewer than 3 times are marked for more practice.</p>
+  <p class="pc-note">Stored on this device only. "Found" counts right taps in Find, Colours and Feed; "Said" counts tries in Say it and Animals. Words he has heard fewer than 3 times are marked for more practice.</p>
   <button id="pcReset">Reset stats</button>
 </div></div>
 <div id="micHelp" hidden><h2>Pash can't hear here</h2>
@@ -545,6 +573,9 @@ const FIND_POOL=['ball','apple','banana','teddy','car'],FOOD_POOL=['apple','bana
 // (regenerate this one line from words.json when the list changes; don't hand-edit)
 const SAY_WORDS=[["ball","توپ","toop","ball","⚽"],["apple","سیب","sib","apple","🍎"],["banana","موز","moz","banana","🍌"],["teddy","خرس","khers","teddy bear","🧸"],["car","ماشین","mâshin","car","🚗"],["bread","نون","nun","bread","🍞"],["milk","شیر","shir","milk","🥛"],["water","آب","âb","water","💧"],["head","سر","sar","head","👦"],["hand","دست","dast","hand","✋"],["belly","شکم","shekam","tummy","😋"],["feet","پا","pâ","foot","🦶"],["eye","چشم","cheshm","eyes","👁️"],["ear","گوش","gush","ear","👂"],["mouth","دهن","dahan","mouth","👄"],["lamp","چراغ","cherâgh","lamp","💡"],["book","کتاب","ketâb","book","📖"],["bed","تخت","takht","bed","🛏️"],["table","میز","miz","table","🍽️"],["chair","صندلی","sandali","chair","🪑"],["cat","گربه","gorbe","cat","🐱"],["dog","سگ","sag","dog","🐶"],["horse","اسب","asb","horse","🐴"],["cow","گاو","gâv","cow","🐮"],["sheep","گوسفند","gusfand","sheep","🐑"],["goat","بُز","boz","goat","🐐"],["chicken","مرغ","morgh","chicken","🐔"],["rooster","خروس","khorus","rooster","🐓"],["chick","جوجه","juje","chick","🐥"],["duck","اردک","ordak","duck","🦆"],["rabbit","خرگوش","khargush","rabbit","🐰"],["mouse","موش","mush","mouse","🐭"],["fish","ماهی","mâhi","fish","🐟"],["bird","پرنده","parande","bird","🐦"],["parrot","طوطی","tuti","parrot","🦜"],["tiger","بَبر","babr","tiger","🐯"],["elephant","فیل","fil","elephant","🐘"],["monkey","میمون","meymun","monkey","🐒"],["giraffe","زرافه","zarâfe","giraffe","🦒"],["zebra","گورخر","gurkhar","zebra","🦓"],["penguin","پنگوئن","panguan","penguin","🐧"],["turtle","لاک‌پشت","lâkposht","turtle","🐢"],["frog","قورباغه","ghurbâghe","frog","🐸"],["snake","مار","mâr","snake","🐍"],["butterfly","پروانه","parvâne","butterfly","🦋"],["bee","زنبور","zanbur","bee","🐝"],["ant","مورچه","murche","ant","🐜"],["ladybug","کفشدوزک","kafshduzak","ladybug","🐞"],["octopus","هشت‌پا","hashtpâ","octopus","🐙"],["whale","نهنگ","nahang","whale","🐋"],["dolphin","دلفین","dolfin","dolphin","🐬"],["camel","شُتُر","shotor","camel","🐫"],["owl","جغد","joghd","owl","🦉"],["squirrel","سنجاب","sanjâb","squirrel","🐿️"],["dinosaur","دایناسور","dâynâsor","dinosaur","🦖"],["orange","پرتقال","porteghâl","orange","🍊"],["grapes","انگور","angur","grapes","🍇"],["watermelon","هندونه","hendune","watermelon","🍉"],["melon","طالبی","tâlebi","melon","🍈"],["strawberry","توت‌فرنگی","tutfarangi","strawberry","🍓"],["cherry","گیلاس","gilâs","cherries","🍒"],["peach","هلو","holu","peach","🍑"],["pear","گلابی","golâbi","pear","🍐"],["pineapple","آناناس","ânânâs","pineapple","🍍"],["lemon","لیمو","limu","lemon","🍋"],["carrot","هویج","havij","carrot","🥕"],["tomato","گوجه","goje","tomato","🍅"],["cucumber","خیار","khiyâr","cucumber","🥒"],["potato","سیب‌زمینی","sibzamini","potato","🥔"],["corn","ذرت","zorrat","corn","🌽"],["egg","تخم‌مرغ","tokhmemorgh","egg","🥚"],["cheese","پنیر","panir","cheese","🧀"],["rice","برنج","berenj","rice","🍚"],["pasta","ماکارونی","mâkâruni","pasta","🍝"],["pizza","پیتزا","pitzâ","pizza","🍕"],["cake","کیک","keyk","cake","🍰"],["icecream","بستنی","bastani","ice cream","🍦"],["chocolate","شکلات","shokolât","chocolate","🍫"],["candy","آبنبات","âbnabât","candy","🍬"],["cookie","بیسکویت","biskuit","cookie","🍪"],["honey","عسل","asal","honey","🍯"],["juice","آبمیوه","âbmive","juice","🧃"],["tea","چایی","châyi","tea","🍵"],["soup","سوپ","sup","soup","🍲"],["sandwich","ساندویچ","sândevich","sandwich","🥪"],["mushroom","قارچ","ghârch","mushroom","🍄"],["kiwi","کیوی","kivi","kiwi","🥝"],["popcorn","پفیلا","pofilâ","popcorn","🍿"],["teeth","دندون","dandun","teeth","🦷"],["tongue","زبون","zabun","tongue","👅"],["finger","انگشت","angosht","finger","☝️"],["face","صورت","surat","face","🙂"],["nose","دماغ","damâgh","nose","👃"],["arm","بازو","bâzu","arm","💪"],["shoes","کفش","kafsh","shoes","👟"],["socks","جوراب","jurâb","socks","🧦"],["hat","کلاه","kolâh","hat","🧢"],["pants","شلوار","shalvâr","pants","👖"],["shirt","پیرهن","pirhan","shirt","👕"],["boots","چکمه","chakme","boots","🥾"],["jacket","کاپشن","kâpshen","jacket","🧥"],["glasses","عینک","eynak","glasses","👓"],["gloves","دستکش","dastkesh","gloves","🧤"],["scarf","شال‌گردن","shâlgardan","scarf","🧣"],["bag","کیف","kif","bag","🎒"],["umbrella","چتر","chatr","umbrella","☂️"],["slippers","دمپایی","dampâyi","slippers","🩴"],["watch","ساعت","sâat","watch","⌚"],["door","در","dar","door","🚪"],["window","پنجره","panjere","window","🪟"],["tv","تلویزیون","televizyon","TV","📺"],["phone","گوشی","gushi","phone","📱"],["key","کلید","kelid","key","🔑"],["bath","حموم","hamum","bath","🛁"],["toilet","دستشویی","dastshuyi","potty","🚽"],["soap","صابون","sâbun","soap","🧼"],["toothbrush","مسواک","mesvâk","toothbrush","🪥"],["bucket","سطل","satl","bucket","🪣"],["spoon","قاشق","ghâshogh","spoon","🥄"],["fork","چنگال","changâl","fork","🍴"],["plate","بشقاب","boshghâb","plate","🍽️"],["cup","لیوان","livân","cup","🥤"],["broom","جارو","jâru","broom","🧹"],["candle","شمع","sham","candle","🕯️"],["gift","کادو","kâdo","present","🎁"],["balloon","بادکنک","bâdkonak","balloon","🎈"],["doll","عروسک","arusak","doll","🪆"],["scissors","قیچی","gheychi","scissors","✂️"],["pencil","مداد","medâd","pencil","✏️"],["slide","سرسره","sorsore","slide","🛝"],["puzzle","پازل","pâzel","puzzle","🧩"],["drum","طبل","tabl","drum","🥁"],["guitar","گیتار","gitâr","guitar","🎸"],["piano","پیانو","piyâno","piano","🎹"],["kite","بادبادک","bâdbâdak","kite","🪁"],["robot","ربات","robât","robot","🤖"],["bus","اتوبوس","otobus","bus","🚌"],["train","قطار","ghatâr","train","🚂"],["plane","هواپیما","havâpeymâ","airplane","✈️"],["ship","کشتی","keshti","ship","🚢"],["boat","قایق","ghâyegh","boat","⛵"],["bike","دوچرخه","docharkhe","bike","🚲"],["motorbike","موتور","motor","motorbike","🏍️"],["truck","کامیون","kâmiyon","truck","🚚"],["tractor","تراکتور","terâktor","tractor","🚜"],["ambulance","آمبولانس","âmbulâns","ambulance","🚑"],["fire_truck","ماشین آتش‌نشانی","mâshin âtashneshâni","fire truck","🚒"],["police_car","ماشین پلیس","mâshin polis","police car","🚓"],["helicopter","هلیکوپتر","helikopter","helicopter","🚁"],["rocket","موشک","mushak","rocket","🚀"],["taxi","تاکسی","tâksi","taxi","🚕"],["sun","خورشید","khorshid","sun","☀️"],["moon","ماه","mâh","moon","🌙"],["star","ستاره","setâre","star","⭐"],["cloud","ابر","abr","cloud","☁️"],["rain","بارون","bârun","rain","🌧️"],["snow","برف","barf","snow","❄️"],["rainbow","رنگین‌کمون","ranginkamun","rainbow","🌈"],["tree","درخت","derakht","tree","🌳"],["flower","گُل","gol","flower","🌸"],["leaf","برگ","barg","leaf","🍃"],["fire","آتیش","âtish","fire","🔥"],["sea","دریا","daryâ","sea","🌊"],["mountain","کوه","kuh","mountain","⛰️"],["stone","سنگ","sang","rock","🪨"],["shell","صدف","sadaf","shell","🐚"],["red","قرمز","ghermez","red","🔴"],["blue","آبی","âbi","blue","🔵"],["green","سبز","sabz","green","🟢"],["yellow","زرد","zard","yellow","🟡"],["orange_color","نارنجی","nârenji","orange (colour)","🟠"],["purple","بنفش","banafsh","purple","🟣"],["black","سیاه","siyâh","black","⚫"],["white","سفید","sefid","white","⚪"],["pink","صورتی","surati","pink","🩷"],["brown","قهوه‌ای","ghahveyi","brown","🟤"],["one","یک","yek","one","1️⃣"],["two","دو","do","two","2️⃣"],["three","سه","se","three","3️⃣"],["four","چهار","chahâr","four","4️⃣"],["five","پنج","panj","five","5️⃣"],["six","شیش","shish","six","6️⃣"],["seven","هفت","haft","seven","7️⃣"],["eight","هشت","hasht","eight","8️⃣"],["nine","نُه","noh","nine","9️⃣"],["ten","دَه","dah","ten","🔟"],["circle","دایره","dâyere","circle","⭕"],["square","مربع","morabba","square","🔲"],["triangle","مثلث","mosallas","triangle","🔺"],["heart","قلب","ghalb","heart","❤️"],["mommy","مامان","mâmân","mommy","👩"],["daddy","بابا","bâbâ","daddy","👨"],["grandma","مامان‌بزرگ","mâmânbozorg","grandma","👵"],["grandpa","بابابزرگ","bâbâbozorg","grandpa","👴"],["brother","داداش","dâdâsh","brother","👦"],["sister","آبجی","âbji","sister","👧"],["baby","نی‌نی","nini","baby","👶"],["doctor","دکتر","doktor","doctor","🧑‍⚕️"],["police","پلیس","polis","police officer","👮"],["firefighter","آتش‌نشان","âtashneshân","firefighter","🧑‍🚒"],["happy","خوشحال","khoshhâl","happy","😀"],["sad","ناراحت","nârâhat","sad","😢"],["angry","عصبانی","asabâni","angry","😠"],["scared","ترسیده","tarside","scared","😨"],["sleepy","خوابالو","khâbâlu","sleepy","😴"],["tired","خسته","khaste","tired","😩"],["sick","مریض","mariz","sick","🤒"],["hot","گرم","garm","hot","🥵"],["cold","سرد","sard","cold","🥶"],["run","بدو","bedo","run","🏃"],["swim","شنا","shenâ","swim","🏊"],["sing","بخون","bekhun","sing","🎤"],["hug","بغل","baghal","hug","🤗"],["kiss","بوس","bus","kiss","😘"],["wave","بای بای","bâybây","bye-bye","👋"],["laugh","بخند","bekhand","laugh","😂"],["cry","گریه","gerye","cry","😭"],["clap","دست بزن","dast bezan","clap","👏"],["dance","برقص","beraghs","dance","💃"],["sleep","لالا","lâlâ","night-night","🛌"]];
 const SW={};for(const [id,fa,tr,en,pic] of SAY_WORDS){SW[id]={fa,tr,en,pic};LINES['w_'+id]||=[fa+'!',tr+'! ('+en+'!)'];LINES['say_'+id]||=['بگو '+fa+'!','begu '+tr+'! (say '+en+'!)']}
+const V2=SAY_WORDS.slice(20).map(w=>w[0]); // the 200 new words
+// category + optional colour per word, from the deployed vocab file (games fall back gracefully without it)
+fetch('vocab/words_v2.json').then(r=>r.json()).then(a=>{for(const w of a)if(SW[w.id])Object.assign(SW[w.id],{cat:w.cat,col:w.col})}).catch(()=>{});
 const BODY_OF_PART={head:'head',face:'face',antenna:'head',ear:'ear',arm:'hand',belly:'belly',feet:'feet'};
 
 const wait=ms=>new Promise(r=>setTimeout(r,ms));
@@ -616,8 +647,30 @@ function animateItems(t,dt){
 
 // ----- game state -----
 const game={type:null,token:0,awaiting:null,busy:false,listening:false,onHeard:null,score:0};
+const deck=document.getElementById('deck');
 function endGame(){game.token++;game.type=null;game.awaiting=null;game.busy=false;game.listening=false;game.onHeard=null;clearItems();
+  if(!deck.hidden){deck.hidden=true;resize()}
   if(st.mode==='game')setMode('idle')}
+// Cards: items [{pic (string, or array -> separate tappable spans), fa?, cls?, ...}]; onTap(item, button, spanIndex)
+function showDeck(items,onTap,cls=''){deck.className=cls;deck.textContent='';
+  items.forEach(it=>{const b=document.createElement('button');b.className='ec '+(it.cls||'');
+    if(Array.isArray(it.pic))it.pic.forEach((p,j)=>{const s=document.createElement('span');s.textContent=p;s.dataset.j=j;b.appendChild(s)});else b.textContent=it.pic;
+    if(it.fa){const f=document.createElement('b');f.textContent=it.fa;b.appendChild(f)}
+    b.onclick=e=>{if(performance.now()-(deck.swiped||0)<400)return;const s=e.target.closest('[data-j]');onTap(it,b,s?+s.dataset.j:-1)};deck.appendChild(b)});
+  deck.hidden=false;resize()}
+const wig=el=>{el.classList.remove('wig');void el.offsetWidth;el.classList.add('wig')};
+const sayIf=k=>HAS.has(k)||LINES[k]?sayAsync(k):Promise.resolve(); // lines still being recorded: skip quietly
+const pickN=(pool,n,not=[])=>{const out=[];for(const id of shuffle(pool))if(out.length<n&&!not.includes(id)&&!out.some(o=>SW[o].pic===SW[id].pic))out.push(id);return out};
+const card=id=>({id,pic:SW[id].pic});
+// Show cards and wait for a right tap; a wrong tap names that card and asks again (never "no")
+async function cardAsk(tok,items,ok,key,statId){let res;const done=new Promise(r=>res=r);
+  showDeck(items,async(it,b)=>{if(game.busy||!alive(tok))return;game.busy=true;
+    if(ok(it)){b.classList.add('win');res(it);return}
+    statAdd(statId,'miss');wig(b);setFace('shock',600);kick('lean',3);await sayAsync('w_'+it.id);if(alive(tok))await sayAsync(key);game.busy=false});
+  game.busy=true;await sayAsync(key);if(alive(tok))game.busy=false;
+  const nud=setInterval(()=>{if(!alive(tok))clearInterval(nud);else if(!game.busy){game.busy=true;sayAsync(key).then(()=>{if(alive(tok))game.busy=false})}},12000);
+  const it=await done;clearInterval(nud);return it}
+async function finale(tok){cheer(true);await sayAsync('yay');if(alive(tok)&&HAS.has('x_dobare'))await sayAsync('x_dobare');if(alive(tok))endGame()}
 function startGame(type){endGame();game.type=type;game.score=0;setMode('game');return game.token}
 const alive=tok=>tok===game.token;
 function cheer(big){SFX.giggle();setFace('laugh',1400);kick('squash',7);arms.forEach(a=>a.vel+=a.s*10);jump(big?9:6,big);
@@ -666,7 +719,42 @@ async function playFind(){
     }
     await wait(400);
   }
-  if(alive(tok)){cheer(true);await sayAsync('yay');if(alive(tok)&&HAS.has('x_dobare'))await sayAsync('x_dobare');if(alive(tok))endGame()}
+  if(alive(tok))finale(tok);
+}
+// 1b) Find with picture cards (the 3D toys Find above runs every 3rd time)
+let findN=0;
+async function playFindCards(){if(++findN%3===0)return playFind();
+  const tok=startGame('find'),pool=V2.filter(id=>HAS.has('where_'+id));
+  await sayAsync('play');
+  for(let r=0;r<5&&alive(tok);r++){const ids=pickN(pool.length>=3?pool:V2,3),t=ids[0];
+    await cardAsk(tok,shuffle(ids).map(card),it=>it.id===t,'where_'+t,t);
+    statAdd(t,'right');cheer(false);await sayAsync('this_'+t);if(alive(tok))await sayAsync('yay');await wait(300)}
+  if(alive(tok))finale(tok);
+}
+// Colour hunt: "find something red!"; words carry an optional col field (vocab/words_v2.json). Without it: the colour dots themselves
+const COLS=['red','blue','green','yellow','orange_color','purple','black','white','pink','brown'];
+async function playColour(){const tok=startGame('colour');
+  for(let r=0;r<5&&alive(tok);r++){const has=COLS.filter(c=>V2.filter(id=>SW[id].col===c).length>=2);let c,ids;
+    if(has.length>=3){c=pickN(has,1)[0];const right=pickN(V2.filter(id=>SW[id].col===c),Math.random()<.3?2:1);
+      ids=[...right,...pickN(V2.filter(id=>SW[id].col&&SW[id].col!==c),3-right.length+(Math.random()<.5),right)]}
+    else{c=pickN(COLS,1)[0];ids=[c,...pickN(COLS,2,[c])]}
+    const it=await cardAsk(tok,shuffle(ids).map(card),it=>it.id===c||SW[it.id].col===c,HAS.has('hunt_'+c)?'hunt_'+c:'w_'+c,c);
+    statAdd(c,'right');cheer(false);await sayAsync('w_'+c);if(alive(tok)&&it.id!==c)await sayAsync('w_'+it.id);if(alive(tok))await sayAsync('yay');await wait(300)}
+  if(alive(tok))finale(tok);
+}
+// Counting: N copies of one picture; Pash counts while each pops, taps count along. N grows after each round (up to 10)
+const NUM=['one','two','three','four','five','six','seven','eight','nine','ten'];let countMax=5;
+async function playCount(){const tok=startGame('count');
+  for(let r=0;r<3&&alive(tok);r++){const n=1+Math.floor(Math.random()*countMax),pool=V2.filter(id=>/animals|food/.test(SW[id].cat)),id=pickN(pool.length?pool:V2,1)[0];
+    let tapped=0;showDeck([{pic:Array(n).fill(SW[id].pic),cls:'many'}],(it,b,j)=>{if(j<0)return;wig(b.children[j]);
+      tapped=tapped%n+1;tone(500+tapped*60,700+tapped*60,.12,'triangle',.12);if(!game.busy)say('w_'+NUM[tapped-1])});
+    const spans=[...deck.querySelectorAll('span')];
+    game.busy=true;await sayIf('count_start');
+    for(let i=0;i<n&&alive(tok);i++){spans[i].classList.add('on');kick('squash',3);await sayAsync('w_'+NUM[i])}
+    if(!alive(tok))return;await sayIf('count_ask');game.busy=false;await wait(2200);if(!alive(tok))return;
+    game.busy=true;const num=document.createElement('span');num.textContent=SW[NUM[n-1]].pic;num.className='on';deck.firstChild.appendChild(num);
+    cheer(n>3);await sayAsync('w_'+NUM[n-1]);if(alive(tok))await sayIf('count_done');game.busy=false;await wait(800);countMax=Math.min(10,countMax+1)}
+  if(alive(tok))finale(tok);
 }
 // 2) Feed: Pash asks for one food out of three
 async function playFeed(){
@@ -685,15 +773,51 @@ async function sayRound(id){
   const tok=startGame('say');sayCur=id;sayNext=pickSay(id);loadVoices(['say_'+sayNext,'w_'+sayNext]);
   document.getElementById('cardEm').textContent=SW[id].pic;document.getElementById('cardFa').textContent=SW[id].fa;
   game.busy=true;await sayAsync('say_'+id);game.busy=false;if(!alive(tok))return;
-  let heard=false;
-  if(talk.on){heard=await new Promise(res=>{game.listening=true;game.onHeard=()=>res(true);
-      const to=()=>talk.rec||talk.playing?setTimeout(to,400):res(false);setTimeout(to,8000)}); // don't cut off a try in progress
-    game.listening=false;game.onHeard=null}
-  else await wait(3500); // no mic: give him time to say it out loud
+  const heard=await hear(8000,3500);
   if(!alive(tok))return;
   if(heard){statAdd(id,'said');cheer(false);await sayAsync('p_vay_goftish');if(!alive(tok))return}
   await sayAsync('w_'+id);await wait(1800);if(alive(tok))sayRound(sayNext); // model the word, then gently move on
 }
+// Listen for a try (mic: up to ms, squeaky playback; no mic: just give him quiet ms to say it out loud). true = heard something
+async function hear(ms,quiet){if(!talk.on){await wait(quiet);return false}
+  const heard=await new Promise(res=>{game.listening=true;game.onHeard=()=>res(true);
+    const to=()=>talk.rec||talk.playing?setTimeout(to,400):res(false);setTimeout(to,ms)}); // don't cut off a try in progress
+  game.listening=false;game.onHeard=null;return heard}
+// Animal sounds: "what does the cat say?", listen, then the sound with Pash wiggling, then the word
+let animalCur=null;
+async function playAnimal(){const tok=startGame('animal'),a=V2.filter(id=>SW[id].cat==='animals'),all=a.length?a:V2.slice(0,35),snd=all.filter(id=>HAS.has('snd_'+id));
+  const pool=(snd.length?snd:all).filter(x=>x!==animalCur),id=animalCur=pool[Math.floor(Math.random()*pool.length)];loadVoices(['ask_snd_'+id,'snd_'+id,'w_'+id]);
+  showDeck([{id,pic:SW[id].pic,fa:SW[id].fa},{pic:'➡️',cls:'nav'}],(it,b)=>{if(!it.id)playAnimal();else if(!game.busy){wig(b);say('w_'+id)}});
+  game.busy=true;await sayAsync(HAS.has('ask_snd_'+id)?'ask_snd_'+id:'w_'+id);game.busy=false;if(!alive(tok))return;
+  if(await hear(6000,3000)&&alive(tok)){statAdd(id,'said');cheer(false);await sayAsync('p_vay_goftish')}
+  if(!alive(tok))return;game.busy=true;
+  if(HAS.has('snd_'+id)){wig(deck.firstChild);pose={name:'dance',until:performance.now()+1800};setFace('laugh',1800);await sayAsync('snd_'+id);if(!alive(tok))return}
+  await sayAsync('w_'+id);game.busy=false;await wait(1800);if(alive(tok))playAnimal()}
+// Picture book (📖 screen): category grid -> swipeable flashcards; 📚 stories
+const CATS=['animals','food','body','clothes','home','vehicles','nature','colours','numbers','shapes','people','feelings','actions'];
+let bookList=[],bookI=0,STORIES=[];
+fetch('vocab/stories.json').then(r=>r.json()).then(a=>{STORIES=a;document.getElementById('bStories').hidden=!a.length}).catch(()=>{});
+function bookHome(hi){const cats=CATS.filter(c=>V2.some(id=>SW[id].cat===c));
+  showDeck(cats.map(c=>({c,pic:SW[V2.find(id=>SW[id].cat===c)].pic})),it=>bookCat(it.c),'grid');if(hi)sayIf('book_open')}
+async function bookCat(c){bookList=V2.filter(id=>SW[id].cat===c);bookI=0;bookCard(0,true);await sayIf('book_'+c);if(deck.className==='book')say('w_'+bookList[bookI])}
+function bookCard(d,quiet){bookI=(bookI+d+bookList.length)%bookList.length;const id=bookList[bookI];
+  showDeck([{pic:'⬅️',cls:'nav',d:-1},{id,pic:SW[id].pic,fa:SW[id].fa},{pic:'➡️',cls:'nav',d:1}],(it,b)=>{if(it.id){wig(b);say('w_'+id)}else bookCard(it.d)},'book');if(!quiet)say('w_'+id)}
+deck.addEventListener('pointerdown',e=>deck.x0=e.clientX);
+deck.addEventListener('pointerup',e=>{const dx=e.clientX-deck.x0;if(deck.className==='book'&&Math.abs(dx)>50){deck.swiped=performance.now();bookCard(dx<0?1:-1)}});
+// Stories: pages of scene emojis (each tappable) + narration; an "ask" page waits for a tap on that picture
+const np=s=>s.replace(/️/g,''),PIC={};for(const id of [...V2,...Object.keys(SW)])PIC[np(SW[id].pic)]||=id;
+const graphemes=s=>(window.Intl&&Intl.Segmenter?[...new Intl.Segmenter().segment(s)].map(x=>x.segment):Array.from(s)).filter(x=>x.trim());
+function bookStories(){showDeck(STORIES.map(s=>({s,pic:s.cover})),it=>storyPage(it.s,0),'grid')}
+async function storyPage(s,i){const tok=startGame('story'),p=s.pages[i];try{voiceSrc&&voiceSrc.stop()}catch(e){}
+  if(!p){cheer(true);await sayAsync('yay');if(alive(tok)){endGame();bookStories()}return}
+  const segs=graphemes(p.scene||''),goal=p.ask&&SW[p.ask]?np(SW[p.ask].pic):null;let want=null;
+  showDeck([{pic:'🔁',cls:'nav',go:i},{pic:segs,cls:'scene'},{pic:'➡️',cls:'nav',go:i+1}],(it,b,j)=>{if(it.go!==undefined)return storyPage(s,it.go);if(j<0)return;
+    if(want&&np(segs[j])===goal)return want();wig(b.children[j]);const id=PIC[np(segs[j])];if(id&&!game.busy)say('w_'+id)},'story');
+  game.busy=true;if(i===0)await sayIf('st_'+s.id+'_title');if(alive(tok))await sayIf(p.key);if(!alive(tok))return;game.busy=false;
+  const k=segs.findIndex(x=>np(x)===goal);
+  if(k>=0){await sayAsync('where_'+p.ask);if(!alive(tok))return;const got=await Promise.race([new Promise(r=>want=()=>r(1)),wait(15000)]);want=null;if(!alive(tok))return;
+    deck.querySelector('.scene').children[k].classList.add('on');if(got){statAdd(p.ask,'right');cheer(false)};await sayAsync('this_'+p.ask)}
+  await wait(1500);if(alive(tok))storyPage(s,i+1)}
 
 // ---------- Room furniture: tap to hear the word ----------
 const furnGroup=new THREE.Group();scene.add(furnGroup);
@@ -811,7 +935,7 @@ async function playMoves(){
     await wait(m.pose?1500:1300);if(m.end)m.end();
     pose={name:null,until:0};await wait(500);
   }
-  if(alive(tok)){cheer(true);await sayAsync('yay');if(alive(tok)&&HAS.has('x_dobare'))await sayAsync('x_dobare');if(alive(tok))endGame()}
+  if(alive(tok))finale(tok);
 }
 
 // ---------- Parent corner: what he hears and gets right (stored on this device) ----------
@@ -821,7 +945,7 @@ let statsDirty=false;
 function saveStats(){if(!statsDirty)return;statsDirty=false;try{localStorage.setItem(STATS_KEY,JSON.stringify(stats))}catch(e){}}
 function wordOf(k){const m=k.match(/^(?:w|where|this|say|want)_(.+)$/);if(!m)return null;const id=m[1];
   return (WORDS[id]||BODY[id]||FURN[id]||SW[id])?id:null}
-function statAdd(id,field){if(!id)return;const w=stats.words[id]||(stats.words[id]={heard:0,right:0,miss:0,said:0});w[field]=(w[field]||0)+1;statsDirty=true}
+function statAdd(id,field){if(!id)return;const w=stats.words[id]||(stats.words[id]={heard:0,right:0,miss:0,said:0});w[field]=(w[field]||0)+1;if(field==='said')w.ts=Date.now();statsDirty=true}
 function statHeard(k){statAdd(wordOf(k),'heard')}
 const today=()=>new Date().toISOString().slice(0,10);
 setInterval(()=>{if(document.getElementById('start').hidden&&document.visibilityState==='visible'){stats.secs+=5;stats.days[today()]=(stats.days[today()]||0)+5;statsDirty=true}saveStats()},5000);
@@ -831,7 +955,17 @@ function renderParent(){
   const all={...SW,...WORDS,...BODY,...FURN};
   document.getElementById('pcSum').innerHTML=
     `<div><b>${mins(stats.days[today()]||0)}</b>minutes today</div><div><b>${mins(stats.secs)}</b>minutes total</div><div><b>${stats.sessions}</b>times opened</div>`+
-    `<div><b>${Object.values(stats.words).filter(w=>w.heard>=3).length}/${Object.keys(all).length}</b>words heard 3+ times</div>`;
+    `<div><b>${Object.values(stats.words).filter(w=>w.heard>=3).length}/${Object.keys(all).length}</b>words heard 3+ times</div>`+
+    ['heard','said','right'].map(f=>`<div><b>${Object.values(stats.words).reduce((n,w)=>n+(w[f]||0),0)}</b>${{heard:'times heard a word',said:'times he said a word',right:'right taps'}[f]}</div>`).join('');
+  const W=stats.words,ids=Object.keys(W).filter(id=>SW[id]),
+    chips=(list,f)=>list.length?list.map(id=>`<span class="pc-chip">${SW[id].pic} <b>${SW[id].fa}</b> <i>${f(W[id]||{})}</i></span>`).join(''):'<i>none yet</i>',
+    said=ids.filter(id=>W[id].said).sort((a,b)=>(W[b].ts||0)-(W[a].ts||0)||W[b].said-W[a].said),
+    tricky=ids.filter(id=>(W[id].miss||0)>(W[id].right||0)).sort((a,b)=>(W[b].miss-W[b].right)-(W[a].miss-W[a].right)),
+    fresh=V2.filter(id=>!(W[id]&&W[id].heard));
+  document.getElementById('pcLists').innerHTML=
+    `<h3>Words he's said (newest first)</h3><div class="pc-chips">${chips(said,w=>'×'+w.said)}</div>`+
+    `<h3>Tricky words (mixed up more than found)</h3><div class="pc-chips">${chips(tricky,w=>w.miss+' mixed up, '+(w.right||0)+' found')}</div>`+
+    `<h3>New words to try (${fresh.length} not heard yet)</h3><div class="pc-chips">${chips(fresh.slice(0,30),()=>'')}</div>`;
   const rows=Object.entries(all).map(([id,w])=>[id,w,stats.words[id]||{heard:0,right:0,miss:0,said:0}])
     .sort((a,b)=>b[2].heard-a[2].heard||a[1].en.localeCompare(b[1].en));
   const tb=document.getElementById('pcRows');tb.textContent='';
@@ -963,7 +1097,8 @@ onBtn('bPeek',()=>{setMode('peek');setFace('hidden',1300)});
 onBtn('bBubbles',blowBubbles);
 onBtn('bBall',throwBall,false);
 onBtn('bFeed',playFeed);
-onBtn('bFind',playFind);
+onBtn('bFind',playFindCards);onBtn('bColour',playColour);onBtn('bCount',playCount);onBtn('bAnimals',playAnimal);
+onBtn('bBookHome',()=>bookHome());onBtn('bStories',bookStories);
 onBtn('bNext',()=>sayRound(sayNext||pickSay()));
 onBtn('bRepeat',()=>sayRound(sayCur||pickSay()));
 onBtn('bMoves',playMoves);
@@ -972,19 +1107,19 @@ document.getElementById('go').onclick=async()=>{await ac().resume();micOn(false)
 
 // ---------- Rooms (home, play, bed) + the Say it screen, switched from #nav ----------
 let curRoom='home',scr='home';
-const SCREENS={home:[['bTalk','bFeed','bJump'],['bSing','bDance','bMoves','bPeek']],play:[['bBall','bFind','bBubbles'],['bDance','bMoves','bTalk']],
-  bed:[['bSleep','bPeek'],['bTalk']],say:[['bTalk','bRepeat'],['bNext']]};
+const SCREENS={home:[['bTalk','bFeed','bJump'],['bSing','bDance','bMoves','bPeek']],play:[['bBall','bFind','bColour','bCount'],['bAnimals','bBubbles','bDance','bTalk']],
+  bed:[['bSleep','bPeek'],['bTalk']],say:[['bTalk','bRepeat'],['bNext']],book:[['bBookHome'],['bStories']]};
 const WALL={home:0xffffff,play:0xfff27a,bed:0x6f9cff};
 function showScreen(s){scr=s;
-  if(s!=='say'){curRoom=s;furnGroup.children.forEach(g=>g.visible=g.userData.room===s);wallMat.color.setHex(WALL[s]);if(s!=='bed'&&!lightsOn)setLights(true)}
+  if(ROOM_HI[s]){curRoom=s;furnGroup.children.forEach(g=>g.visible=g.userData.room===s);wallMat.color.setHex(WALL[s]);if(s!=='bed'&&!lightsOn)setLights(true)}
   document.querySelectorAll('.col .rb').forEach(b=>document.getElementById('btns').appendChild(b));
   ['colL','colR'].forEach((c,i)=>{c=document.getElementById(c);SCREENS[s][i].forEach(id=>c.appendChild(document.getElementById(id)))});
   document.querySelectorAll('#nav .rb').forEach(b=>b.classList.toggle('cur',b.dataset.r===s));document.getElementById('card').hidden=s!=='say';document.body.classList.toggle('say',s==='say');resize()}
-async function setRoom(s){if(s===scr&&s!=='say')return;const f=document.getElementById('fade');
+async function setRoom(s){if(s===scr&&ROOM_HI[s])return;const f=document.getElementById('fade');
   endGame();try{voiceSrc&&voiceSrc.stop()}catch(e){}if(st.mode!=='idle')setMode('idle');setFace('happy',0);goHome();
   while(bubbleGroup.children.length)bubbleGroup.remove(bubbleGroup.children[0]);
   f.classList.add('on');await wait(320);showScreen(s);robot.position.x=robot.position.z=0;f.classList.remove('on');
-  if(s==='say')sayRound(pickSay(sayCur));else say(ROOM_HI[s]);
+  if(s==='say')sayRound(pickSay(sayCur));else if(s==='book')bookHome(true);else say(ROOM_HI[s]);
 }
 document.querySelectorAll('#nav .rb').forEach(b=>b.onclick=()=>{st.lastPoke=performance.now();setRoom(b.dataset.r)});
 
@@ -992,7 +1127,7 @@ document.querySelectorAll('#nav .rb').forEach(b=>b.onclick=()=>{st.lastPoke=perf
 function resize(){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;
   const far=w<h?12:9;camera.position.set(0,3.4,far);camera.lookAt(0,1.2,0);
   const sq=Math.min(1,.35+w/h*.75);furnGroup.children.forEach(g=>g.position.x=g.userData.x0*sq); // portrait: pull furniture toward the middle so it stays on screen
-  if(scr==='say')camera.setViewOffset(w,h,w<h?0:-w*.2,w<h?-h*.2:0,w,h);else camera.clearViewOffset(); // Say it: robot moves aside for the card
+  if(scr==='say'||!deck.hidden)camera.setViewOffset(w,h,w<h?0:-w*.2,w<h?-h*.2:0,w,h);else camera.clearViewOffset(); // Say it: robot moves aside for the card
   camera.updateProjectionMatrix()}
 addEventListener('resize',resize);showScreen('home');
 

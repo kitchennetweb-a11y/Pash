@@ -24,7 +24,8 @@
 "en": "horse",
 "pic": "🐴",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "brown"
 },
 {
 "id": "cow",
@@ -42,7 +43,8 @@
 "en": "sheep",
 "pic": "🐑",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "white"
 },
 {
 "id": "goat",
@@ -78,7 +80,8 @@
 "en": "chick",
 "pic": "🐥",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "yellow"
 },
 {
 "id": "duck",
@@ -141,7 +144,8 @@
 "en": "tiger",
 "pic": "🐯",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "orange_color"
 },
 {
 "id": "elephant",
@@ -159,7 +163,8 @@
 "en": "monkey",
 "pic": "🐒",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "brown"
 },
 {
 "id": "giraffe",
@@ -195,7 +200,8 @@
 "en": "turtle",
 "pic": "🐢",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "green"
 },
 {
 "id": "frog",
@@ -204,7 +210,8 @@
 "en": "frog",
 "pic": "🐸",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "green"
 },
 {
 "id": "snake",
@@ -213,7 +220,8 @@
 "en": "snake",
 "pic": "🐍",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "green"
 },
 {
 "id": "butterfly",
@@ -249,7 +257,8 @@
 "en": "ladybug",
 "pic": "🐞",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "red"
 },
 {
 "id": "octopus",
@@ -267,7 +276,8 @@
 "en": "whale",
 "pic": "🐋",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "blue"
 },
 {
 "id": "dolphin",
@@ -276,7 +286,8 @@
 "en": "dolphin",
 "pic": "🐬",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "blue"
 },
 {
 "id": "camel",
@@ -285,7 +296,8 @@
 "en": "camel",
 "pic": "🐫",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "brown"
 },
 {
 "id": "owl",
@@ -294,7 +306,8 @@
 "en": "owl",
 "pic": "🦉",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "brown"
 },
 {
 "id": "squirrel",
@@ -303,7 +316,8 @@
 "en": "squirrel",
 "pic": "🐿️",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "brown"
 },
 {
 "id": "dinosaur",
@@ -312,7 +326,8 @@
 "en": "dinosaur",
 "pic": "🦖",
 "cat": "animals",
-"kind": "n"
+"kind": "n",
+"col": "green"
 },
 {
 "id": "orange",
@@ -321,7 +336,8 @@
 "en": "orange",
 "pic": "🍊",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "orange_color"
 },
 {
 "id": "grapes",
@@ -330,7 +346,8 @@
 "en": "grapes",
 "pic": "🍇",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "purple"
 },
 {
 "id": "watermelon",
@@ -357,7 +374,8 @@
 "en": "strawberry",
 "pic": "🍓",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "red"
 },
 {
 "id": "cherry",
@@ -366,7 +384,8 @@
 "en": "cherries",
 "pic": "🍒",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "red"
 },
 {
 "id": "peach",
@@ -384,7 +403,8 @@
 "en": "pear",
 "pic": "🍐",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "green"
 },
 {
 "id": "pineapple",
@@ -402,7 +422,8 @@
 "en": "lemon",
 "pic": "🍋",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "yellow"
 },
 {
 "id": "carrot",
@@ -411,7 +432,8 @@
 "en": "carrot",
 "pic": "🥕",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "orange_color"
 },
 {
 "id": "tomato",
@@ -420,7 +442,8 @@
 "en": "tomato",
 "pic": "🍅",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "red"
 },
 {
 "id": "cucumber",
@@ -429,7 +452,8 @@
 "en": "cucumber",
 "pic": "🥒",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "green"
 },
 {
 "id": "potato",
@@ -438,7 +462,8 @@
 "en": "potato",
 "pic": "🥔",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "brown"
 },
 {
 "id": "corn",
@@ -447,7 +472,8 @@
 "en": "corn",
 "pic": "🌽",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "yellow"
 },
 {
 "id": "egg",
@@ -456,7 +482,8 @@
 "en": "egg",
 "pic": "🥚",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "white"
 },
 {
 "id": "cheese",
@@ -465,7 +492,8 @@
 "en": "cheese",
 "pic": "🧀",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "yellow"
 },
 {
 "id": "rice",
@@ -474,7 +502,8 @@
 "en": "rice",
 "pic": "🍚",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "white"
 },
 {
 "id": "pasta",
@@ -510,7 +539,8 @@
 "en": "ice cream",
 "pic": "🍦",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "white"
 },
 {
 "id": "chocolate",
@@ -519,7 +549,8 @@
 "en": "chocolate",
 "pic": "🍫",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "brown"
 },
 {
 "id": "candy",
@@ -537,7 +568,8 @@
 "en": "cookie",
 "pic": "🍪",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "brown"
 },
 {
 "id": "honey",
@@ -591,7 +623,8 @@
 "en": "mushroom",
 "pic": "🍄",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "red"
 },
 {
 "id": "kiwi",
@@ -600,7 +633,8 @@
 "en": "kiwi",
 "pic": "🥝",
 "cat": "food",
-"kind": "n"
+"kind": "n",
+"col": "green"
 },
 {
 "id": "popcorn",
@@ -618,7 +652,8 @@
 "en": "teeth",
 "pic": "🦷",
 "cat": "body",
-"kind": "n"
+"kind": "n",
+"col": "white"
 },
 {
 "id": "tongue",
@@ -627,7 +662,8 @@
 "en": "tongue",
 "pic": "👅",
 "cat": "body",
-"kind": "n"
+"kind": "n",
+"col": "pink"
 },
 {
 "id": "finger",
@@ -699,7 +735,8 @@
 "en": "pants",
 "pic": "👖",
 "cat": "clothes",
-"kind": "n"
+"kind": "n",
+"col": "blue"
 },
 {
 "id": "shirt",
@@ -717,7 +754,8 @@
 "en": "boots",
 "pic": "🥾",
 "cat": "clothes",
-"kind": "n"
+"kind": "n",
+"col": "brown"
 },
 {
 "id": "jacket",
@@ -735,7 +773,8 @@
 "en": "glasses",
 "pic": "👓",
 "cat": "clothes",
-"kind": "n"
+"kind": "n",
+"col": "black"
 },
 {
 "id": "gloves",
@@ -852,7 +891,8 @@
 "en": "potty",
 "pic": "🚽",
 "cat": "home",
-"kind": "n"
+"kind": "n",
+"col": "white"
 },
 {
 "id": "soap",
@@ -951,7 +991,8 @@
 "en": "balloon",
 "pic": "🎈",
 "cat": "home",
-"kind": "n"
+"kind": "n",
+"col": "red"
 },
 {
 "id": "doll",
@@ -978,7 +1019,8 @@
 "en": "pencil",
 "pic": "✏️",
 "cat": "home",
-"kind": "n"
+"kind": "n",
+"col": "yellow"
 },
 {
 "id": "slide",
@@ -1131,7 +1173,8 @@
 "en": "ambulance",
 "pic": "🚑",
 "cat": "vehicles",
-"kind": "n"
+"kind": "n",
+"col": "white"
 },
 {
 "id": "fire_truck",
@@ -1140,7 +1183,8 @@
 "en": "fire truck",
 "pic": "🚒",
 "cat": "vehicles",
-"kind": "n"
+"kind": "n",
+"col": "red"
 },
 {
 "id": "police_car",
@@ -1176,7 +1220,8 @@
 "en": "taxi",
 "pic": "🚕",
 "cat": "vehicles",
-"kind": "n"
+"kind": "n",
+"col": "yellow"
 },
 {
 "id": "sun",
@@ -1185,7 +1230,8 @@
 "en": "sun",
 "pic": "☀️",
 "cat": "nature",
-"kind": "n"
+"kind": "n",
+"col": "yellow"
 },
 {
 "id": "moon",
@@ -1203,7 +1249,8 @@
 "en": "star",
 "pic": "⭐",
 "cat": "nature",
-"kind": "n"
+"kind": "n",
+"col": "yellow"
 },
 {
 "id": "cloud",
@@ -1212,7 +1259,8 @@
 "en": "cloud",
 "pic": "☁️",
 "cat": "nature",
-"kind": "n"
+"kind": "n",
+"col": "white"
 },
 {
 "id": "rain",
@@ -1248,7 +1296,8 @@
 "en": "tree",
 "pic": "🌳",
 "cat": "nature",
-"kind": "n"
+"kind": "n",
+"col": "green"
 },
 {
 "id": "flower",
@@ -1257,7 +1306,8 @@
 "en": "flower",
 "pic": "🌸",
 "cat": "nature",
-"kind": "n"
+"kind": "n",
+"col": "pink"
 },
 {
 "id": "leaf",
@@ -1266,7 +1316,8 @@
 "en": "leaf",
 "pic": "🍃",
 "cat": "nature",
-"kind": "n"
+"kind": "n",
+"col": "green"
 },
 {
 "id": "fire",
@@ -1275,7 +1326,8 @@
 "en": "fire",
 "pic": "🔥",
 "cat": "nature",
-"kind": "n"
+"kind": "n",
+"col": "orange_color"
 },
 {
 "id": "sea",
@@ -1284,7 +1336,8 @@
 "en": "sea",
 "pic": "🌊",
 "cat": "nature",
-"kind": "n"
+"kind": "n",
+"col": "blue"
 },
 {
 "id": "mountain",
@@ -1518,7 +1571,8 @@
 "en": "triangle",
 "pic": "🔺",
 "cat": "shapes",
-"kind": "n"
+"kind": "n",
+"col": "red"
 },
 {
 "id": "heart",
@@ -1527,7 +1581,8 @@
 "en": "heart",
 "pic": "❤️",
 "cat": "shapes",
-"kind": "n"
+"kind": "n",
+"col": "red"
 },
 {
 "id": "mommy",
@@ -1698,7 +1753,8 @@
 "en": "cold",
 "pic": "🥶",
 "cat": "feelings",
-"kind": "a"
+"kind": "a",
+"col": "blue"
 },
 {
 "id": "run",

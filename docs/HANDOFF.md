@@ -41,10 +41,12 @@ Done and live: everything listed in decisions.md under Product, apart from the i
 - Icon-only round buttons (left/right columns, `SCREENS`), rooms home/play/bed with bottom nav (`setRoom`, `showScreen`, `WALL`, furniture `add(id,g,x,z,ry,room)`), Say it screen (`sayRound`, `SAY_WORDS`).
 - v2 phrases wired as `VARIANTS` and `ROOM_HI` (room greetings).
 
+- Vocabulary games (2026-10-08): card Find (🔍, every 3rd press the old 3D Find), colour hunt (🎨), counting (🔢), animal sounds (🐮), picture book + 4 stories (📖 screen), parent progress summary. Shared helpers: `showDeck`, `cardAsk`, `hear`, `sayIf`. Content: `vocab/lines_games_v2.csv`, `vocab/stories.json`, `col` field in `words_v2.json`.
+
 ### Next
 1. (done: all 200 words generated)
 2. Phone portrait: bed and toy shelf are mostly off-screen; iPad portrait bedroom: mic button overlaps the bed.
-3. Find with the new words (emoji cards), optional. Unused phrases: food (p_nam_nam..., p_ah_ino...), say-it prompts (p_hala_to_begu, p_chi_gofti_nashenidam), goodbye, countdown.
+3. Colour hunt skips pink/purple/black (fewer than 2 tagged words); tag more words to enable them. Unused phrases: food (p_nam_nam..., p_ah_ino...), say-it prompts (p_hala_to_begu, p_chi_gofti_nashenidam), goodbye, countdown.
 
 ### Known gotchas
 - iPad and Safari need one tap before audio or the mic will start (the "Wake up" button does both).

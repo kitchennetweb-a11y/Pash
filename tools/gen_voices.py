@@ -6,7 +6,7 @@ import csv, json, os, sys, time, urllib.request, urllib.error
 from concurrent.futures import ThreadPoolExecutor
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CSVS = [os.path.join(HERE, '..', 'vocab', f) for f in ('lines_existing_v2.csv', 'lines_words_v2.csv')]
+CSVS = [os.path.join(HERE, '..', 'vocab', f) for f in ('lines_existing_v2.csv', 'lines_words_v2.csv', 'lines_games_v2.csv')]
 OUT = r'C:\Users\ahmma\Downloads\Virtual Pet Sounds\v2'
 SKIP = {'name.mp3'}  # personal greeting, keep the original
 
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     budget = int(next((a[9:] for a in sys.argv[3:] if a.startswith('--budget=')), 10**9))
     voice, model, only = sys.argv[1], sys.argv[2], set(args)
     os.makedirs(OUT, exist_ok=True)
-    rows = [r for f in CSVS for r in csv.DictReader(open(f, encoding='utf-8-sig'))
+    rows = [r for f in CSVS if os.path.exists(f) for r in csv.DictReader(open(f, encoding='utf-8-sig'))
             if r['file_name'] not in SKIP and (not only or r['file_name'] in only)]
     todo = [r for r in rows if not os.path.exists(os.path.join(OUT, r['file_name']))]
     # cut at the budget, keeping each word's lines together (w_/say_/where_/this_ share the id)

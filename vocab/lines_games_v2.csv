@@ -1,0 +1,126 @@
+﻿file_name,farsi_text,display_text,translit,english,group,use
+ask_snd_cat.mp3,[curious] گربه چی میگه؟,گربه چی میگه؟,gorbe chi mige?,what does the cat say?,animal_sounds,animal sounds: ask
+snd_cat.mp3,[playful] میو! میو!,میو! میو!,miu! miu!,meow! meow!,animal_sounds,animal sounds: the sound
+ask_snd_dog.mp3,[curious] سگه چی میگه؟,سگه چی میگه؟,sage chi mige?,what does the dog say?,animal_sounds,animal sounds: ask
+snd_dog.mp3,[playful] هاپ هاپ! هاپ هاپ!,هاپ هاپ! هاپ هاپ!,hâp hâp! hâp hâp!,woof woof! woof woof!,animal_sounds,animal sounds: the sound
+ask_snd_horse.mp3,[curious] اسب چه صدایی می‌کنه؟,اسب چه صدایی می‌کنه؟,asb che sedâyi mikone?,what sound does the horse make?,animal_sounds,animal sounds: ask
+snd_horse.mp3,[playful] اییییهه! تق تق تق!,اییییهه! تق تق تق!,iiiihe! tagh tagh tagh!,neigh! clip clop clip!,animal_sounds,animal sounds: the sound
+ask_snd_cow.mp3,[playful] گاوه چی میگه؟,گاوه چی میگه؟,gâve chi mige?,what does the cow say?,animal_sounds,animal sounds: ask
+snd_cow.mp3,[playful] ماااا! ماااا!,ماااا! ماااا!,mââââ! mââââ!,moo! moo!,animal_sounds,animal sounds: the sound
+ask_snd_sheep.mp3,[curious] گوسفند چی میگه؟,گوسفند چی میگه؟,gusfand chi mige?,what does the sheep say?,animal_sounds,animal sounds: ask
+snd_sheep.mp3,[playful] بع بع! بع بع!,بع بع! بع بع!,ba'ba'! ba'ba'!,baa baa! baa baa!,animal_sounds,animal sounds: the sound
+ask_snd_goat.mp3,[curious] بُزه چی میگه؟,بُزه چی میگه؟,boze chi mige?,what does the goat say?,animal_sounds,animal sounds: ask
+snd_goat.mp3,[playful] مِع مِع! مِععع!,مِع مِع! مِععع!,me' me'! me'''!,meh meh! meeeh!,animal_sounds,animal sounds: the sound
+ask_snd_chicken.mp3,[curious] مرغه چی میگه؟,مرغه چی میگه؟,morghe chi mige?,what does the chicken say?,animal_sounds,animal sounds: ask
+snd_chicken.mp3,[playful] قُد قُد قُدا! قُد قُد قُدا!,قُد قُد قُدا! قُد قُد قُدا!,ghod ghod ghodâ! ghod ghod ghodâ!,cluck cluck cluck!,animal_sounds,animal sounds: the sound
+ask_snd_rooster.mp3,[curious] خروسه صبح چی میگه؟,خروسه صبح چی میگه؟,khoruse sobh chi mige?,what does the rooster say in the morning?,animal_sounds,animal sounds: ask
+snd_rooster.mp3,[excited] قوقولی قوقو! قوقولی قوقو!,قوقولی قوقو! قوقولی قوقو!,ghughuli ghughu! ghughuli ghughu!,cock-a-doodle-doo!,animal_sounds,animal sounds: the sound
+ask_snd_chick.mp3,[softly] جوجه کوچولو چی میگه؟,جوجه کوچولو چی میگه؟,juje kuchulu chi mige?,what does the little chick say?,animal_sounds,animal sounds: ask
+snd_chick.mp3,[playful] جیک جیک! جیک جیک!,جیک جیک! جیک جیک!,jik jik! jik jik!,cheep cheep! cheep cheep!,animal_sounds,animal sounds: the sound
+ask_snd_duck.mp3,[curious] اردکه چی میگه؟,اردکه چی میگه؟,ordake chi mige?,what does the duck say?,animal_sounds,animal sounds: ask
+snd_duck.mp3,[playful] کوآک کوآک! کوآک!,کوآک کوآک! کوآک!,ku-âk ku-âk! ku-âk!,quack quack! quack!,animal_sounds,animal sounds: the sound
+ask_snd_rabbit.mp3,[curious] خرگوشه چی میگه؟,خرگوشه چی میگه؟,khargushe chi mige?,what does the bunny say?,animal_sounds,animal sounds: ask
+snd_rabbit.mp3,[whispers] خرگوشه هیچی نمیگه... فقط هویج می‌خوره! خرت خرت!,خرگوشه هیچی نمیگه... فقط هویج می‌خوره! خرت خرت!,khargushe hichi nemige... faghat havij mikhore! khert khert!,the bunny says nothing... it just eats carrots! munch munch!,animal_sounds,animal sounds: the sound
+ask_snd_mouse.mp3,[curious] موشه چی میگه؟,موشه چی میگه؟,mushe chi mige?,what does the mouse say?,animal_sounds,animal sounds: ask
+snd_mouse.mp3,[playful] جیر جیر! جیر جیر!,جیر جیر! جیر جیر!,jir jir! jir jir!,squeak squeak!,animal_sounds,animal sounds: the sound
+ask_snd_fish.mp3,[curious] ماهی چی میگه؟,ماهی چی میگه؟,mâhi chi mige?,what does the fish say?,animal_sounds,animal sounds: ask
+snd_fish.mp3,[whispers] ماهی هیچی نمیگه... فقط بلوپ بلوپ!,ماهی هیچی نمیگه... فقط بلوپ بلوپ!,mâhi hichi nemige... faghat blup blup!,the fish says nothing... just bloop bloop!,animal_sounds,animal sounds: the sound
+ask_snd_bird.mp3,[curious] پرنده چی میگه؟,پرنده چی میگه؟,parande chi mige?,what does the bird say?,animal_sounds,animal sounds: ask
+snd_bird.mp3,[playful] جیک جیک جیک! فیو فیو!,جیک جیک جیک! فیو فیو!,jik jik jik! fiyu fiyu!,tweet tweet tweet! fee-oo!,animal_sounds,animal sounds: the sound
+ask_snd_parrot.mp3,[curious] طوطی چی میگه؟,طوطی چی میگه؟,tuti chi mige?,what does the parrot say?,animal_sounds,animal sounds: ask
+snd_parrot.mp3,[mischievously] سلام! سلام! طوطی حرف می‌زنه!,سلام! سلام! طوطی حرف می‌زنه!,salâm! salâm! tuti harf mizane!,hello! hello! the parrot talks!,animal_sounds,animal sounds: the sound
+ask_snd_tiger.mp3,[curious] بَبر چی میگه؟,بَبر چی میگه؟,babr chi mige?,what does the tiger say?,animal_sounds,animal sounds: ask
+snd_tiger.mp3,[playful] غررررر! غررررر!,غررررر! غررررر!,ghorrrrr! ghorrrrr!,grrrr! grrrr!,animal_sounds,animal sounds: the sound
+ask_snd_elephant.mp3,[curious] فیله چه صدایی می‌کنه؟,فیله چه صدایی می‌کنه؟,file che sedâyi mikone?,what sound does the elephant make?,animal_sounds,animal sounds: ask
+snd_elephant.mp3,[excited] پِرووووو! پِرووووو!,پِرووووو! پِرووووو!,peruuuu! peruuuu!,pawooo! pawooo!,animal_sounds,animal sounds: the sound
+ask_snd_monkey.mp3,[curious] میمونه چی میگه؟,میمونه چی میگه؟,mimune chi mige?,what does the monkey say?,animal_sounds,animal sounds: ask
+snd_monkey.mp3,[giggles] اوو اوو! آ آ آ!,اوو اوو! آ آ آ!,uu uu! â â â!,ooh ooh! ah ah ah!,animal_sounds,animal sounds: the sound
+ask_snd_giraffe.mp3,[curious] زرافه چی میگه؟,زرافه چی میگه؟,zarâfe chi mige?,what does the giraffe say?,animal_sounds,animal sounds: ask
+snd_giraffe.mp3,[whispers] زرافه خیلی ساکته... فقط برگ می‌خوره! ملچ ملوچ!,زرافه خیلی ساکته... فقط برگ می‌خوره! ملچ ملوچ!,zarâfe kheyli sâkete... faghat barg mikhore! malch maluch!,the giraffe is very quiet... it just eats leaves! munch munch!,animal_sounds,animal sounds: the sound
+ask_snd_zebra.mp3,[curious] گورخره چی میگه؟,گورخره چی میگه؟,gurkhare chi mige?,what does the zebra say?,animal_sounds,animal sounds: ask
+snd_zebra.mp3,[playful] ییههه! من اسب راه‌راهم!,ییههه! من اسب راه‌راهم!,yihhhe! man asb-e râh-râham!,neigh! I'm a stripy horse!,animal_sounds,animal sounds: the sound
+ask_snd_penguin.mp3,[curious] پنگوئن چی میگه؟,پنگوئن چی میگه؟,penguan chi mige?,what does the penguin say?,animal_sounds,animal sounds: ask
+snd_penguin.mp3,[giggles] قاق قاق! تاپ تاپ راه میرم!,قاق قاق! تاپ تاپ راه میرم!,ghâgh ghâgh! tâp tâp râh miram!,squawk squawk! I waddle tap tap!,animal_sounds,animal sounds: the sound
+ask_snd_turtle.mp3,[curious] لاک‌پشت چی میگه؟,لاک‌پشت چی میگه؟,lâkposht chi mige?,what does the turtle say?,animal_sounds,animal sounds: ask
+snd_turtle.mp3,[whispers] لاک‌پشت هیچی نمیگه... فقط یواش یواش راه میره!,لاک‌پشت هیچی نمیگه... فقط یواش یواش راه میره!,lâkposht hichi nemige... faghat yavâsh yavâsh râh mire!,"the turtle says nothing... it just walks slowly, slowly!",animal_sounds,animal sounds: the sound
+ask_snd_frog.mp3,[curious] قورباغه چی میگه؟,قورباغه چی میگه؟,ghurbâghe chi mige?,what does the frog say?,animal_sounds,animal sounds: ask
+snd_frog.mp3,[playful] قور قور! قور قور!,قور قور! قور قور!,ghur ghur! ghur ghur!,ribbit ribbit!,animal_sounds,animal sounds: the sound
+ask_snd_snake.mp3,[curious] ماره چی میگه؟,ماره چی میگه؟,mâre chi mige?,what does the snake say?,animal_sounds,animal sounds: ask
+snd_snake.mp3,[whispers] فیسسسس... فیسسسس!,فیسسسس... فیسسسس!,fisssss... fisssss!,hissss... hissss!,animal_sounds,animal sounds: the sound
+ask_snd_butterfly.mp3,[curious] پروانه چی میگه؟,پروانه چی میگه؟,parvâne chi mige?,what does the butterfly say?,animal_sounds,animal sounds: ask
+snd_butterfly.mp3,[softly] پروانه هیچی نمیگه... فقط بال بال می‌زنه!,پروانه هیچی نمیگه... فقط بال بال می‌زنه!,parvâne hichi nemige... faghat bâl bâl mizane!,the butterfly says nothing... it just flutters!,animal_sounds,animal sounds: the sound
+ask_snd_bee.mp3,[curious] زنبوره چی میگه؟,زنبوره چی میگه؟,zanbure chi mige?,what does the bee say?,animal_sounds,animal sounds: ask
+snd_bee.mp3,[playful] وززززز! وززززز!,وززززز! وززززز!,vozzzzz! vozzzzz!,bzzzzz! bzzzzz!,animal_sounds,animal sounds: the sound
+ask_snd_ant.mp3,[curious] مورچه چی میگه؟,مورچه چی میگه؟,murche chi mige?,what does the ant say?,animal_sounds,animal sounds: ask
+snd_ant.mp3,[whispers] مورچه خیلی کوچولوئه... صداش رو نمی‌شنویم! هیس!,مورچه خیلی کوچولوئه... صداش رو نمی‌شنویم! هیس!,murche kheyli kuchulue... sedâsh ro nemishnavim! hiss!,the ant is so tiny... we can't hear it! shh!,animal_sounds,animal sounds: the sound
+ask_snd_ladybug.mp3,[curious] کفشدوزک چی میگه؟,کفشدوزک چی میگه؟,kafshduzak chi mige?,what does the ladybug say?,animal_sounds,animal sounds: ask
+snd_ladybug.mp3,[giggles] کفشدوزک هیچی نمیگه... فقط رو دستم راه میره! قلقلکم میاد!,کفشدوزک هیچی نمیگه... فقط رو دستم راه میره! قلقلکم میاد!,kafshduzak hichi nemige... faghat ru dastam râh mire! ghelghelakam miâd!,the ladybug says nothing... it just walks on my hand! it tickles!,animal_sounds,animal sounds: the sound
+ask_snd_octopus.mp3,[curious] هشت‌پا چی میگه؟,هشت‌پا چی میگه؟,hashtpâ chi mige?,what does the octopus say?,animal_sounds,animal sounds: ask
+snd_octopus.mp3,[giggles] هشت‌پا هیچی نمیگه... فقط با هشتا پاش شلپ شلوپ می‌کنه!,هشت‌پا هیچی نمیگه... فقط با هشتا پاش شلپ شلوپ می‌کنه!,hashtpâ hichi nemige... faghat bâ hashtâ pâsh shalap shulup mikone!,the octopus says nothing... it just splish-splashes with eight legs!,animal_sounds,animal sounds: the sound
+ask_snd_whale.mp3,[curious] نهنگه چی میگه؟,نهنگه چی میگه؟,nahange chi mige?,what does the whale say?,animal_sounds,animal sounds: ask
+snd_whale.mp3,[playful] ووووو! فوووش! آب پاشید!,ووووو! فوووش! آب پاشید!,vuuuuu! fuuush! âb pâshid!,wooooo! whoosh! it sprayed water!,animal_sounds,animal sounds: the sound
+ask_snd_dolphin.mp3,[curious] دلفین چی میگه؟,دلفین چی میگه؟,dolfin chi mige?,what does the dolphin say?,animal_sounds,animal sounds: ask
+snd_dolphin.mp3,[playful] ایک ایک ایک! اییییی!,ایک ایک ایک! اییییی!,ik ik ik! iiiii!,eek eek eek! eeeee!,animal_sounds,animal sounds: the sound
+ask_snd_camel.mp3,[curious] شتره چی میگه؟,شتره چی میگه؟,shotore chi mige?,what does the camel say?,animal_sounds,animal sounds: ask
+snd_camel.mp3,[playful] غُر غُر! بُرررر!,غُر غُر! بُرررر!,ghor ghor! borrrr!,grumble grumble! brrrr!,animal_sounds,animal sounds: the sound
+ask_snd_owl.mp3,[curious] جغده شب چی میگه؟,جغده شب چی میگه؟,joghde shab chi mige?,what does the owl say at night?,animal_sounds,animal sounds: ask
+snd_owl.mp3,[softly] هوو هوو! هوو هوو!,هوو هوو! هوو هوو!,huu huu! huu huu!,hoo hoo! hoo hoo!,animal_sounds,animal sounds: the sound
+ask_snd_squirrel.mp3,[curious] سنجابه چی میگه؟,سنجابه چی میگه؟,sanjâbe chi mige?,what does the squirrel say?,animal_sounds,animal sounds: ask
+snd_squirrel.mp3,[playful] چیک چیک! قرچ قرچ! فندق می‌خورم!,چیک چیک! قرچ قرچ! فندق می‌خورم!,chik chik! gherch gherch! fandogh mikhoram!,chik chik! crunch crunch! I'm eating hazelnuts!,animal_sounds,animal sounds: the sound
+ask_snd_dinosaur.mp3,[curious] دایناسوره چی میگه؟,دایناسوره چی میگه؟,dâynâsure chi mige?,what does the dinosaur say?,animal_sounds,animal sounds: ask
+snd_dinosaur.mp3,[playful] آاااارررر! من خیلی گنده‌م!,آاااارررر! من خیلی گنده‌م!,âââârrrr! man kheyli gondam!,raaawr! I'm so big!,animal_sounds,animal sounds: the sound
+hunt_red.mp3,[excited] یه چیز قرمز پیدا کن!,یه چیز قرمز پیدا کن!,ye chiz-e ghermez peydâ kon!,find something red!,colour_hunt,colour hunt ask
+hunt_blue.mp3,[excited] یه چیز آبی پیدا کن!,یه چیز آبی پیدا کن!,ye chiz-e âbi peydâ kon!,find something blue!,colour_hunt,colour hunt ask
+hunt_green.mp3,[curious] یه چیز سبز کجاست؟ پیداش کن!,یه چیز سبز کجاست؟ پیداش کن!,ye chiz-e sabz kojâst? peydâsh kon!,where's something green? find it!,colour_hunt,colour hunt ask
+hunt_yellow.mp3,[excited] یه چیز زرد پیدا کن!,یه چیز زرد پیدا کن!,ye chiz-e zard peydâ kon!,find something yellow!,colour_hunt,colour hunt ask
+hunt_orange_color.mp3,[playful] یه چیز نارنجی پیدا کن!,یه چیز نارنجی پیدا کن!,ye chiz-e nârenji peydâ kon!,find something orange!,colour_hunt,colour hunt ask
+hunt_purple.mp3,[curious] یه چیز بنفش پیدا کن!,یه چیز بنفش پیدا کن!,ye chiz-e banafsh peydâ kon!,find something purple!,colour_hunt,colour hunt ask
+hunt_black.mp3,[playful] یه چیز سیاه پیدا کن!,یه چیز سیاه پیدا کن!,ye chiz-e siyâh peydâ kon!,find something black!,colour_hunt,colour hunt ask
+hunt_white.mp3,[excited] یه چیز سفید پیدا کن!,یه چیز سفید پیدا کن!,ye chiz-e sefid peydâ kon!,find something white!,colour_hunt,colour hunt ask
+hunt_pink.mp3,[playful] یه چیز صورتی پیدا کن!,یه چیز صورتی پیدا کن!,ye chiz-e surati peydâ kon!,find something pink!,colour_hunt,colour hunt ask
+hunt_brown.mp3,[curious] یه چیز قهوه‌ای پیدا کن!,یه چیز قهوه‌ای پیدا کن!,ye chiz-e ghahvei peydâ kon!,find something brown!,colour_hunt,colour hunt ask
+count_start.mp3,[excited] بیا بشمریم!,بیا بشمریم!,biâ beshmorim!,let's count!,counting,counting game start
+count_ask.mp3,[curious] چندتا هست؟,چندتا هست؟,chandtâ hast?,how many are there?,counting,counting game ask
+count_done.mp3,[proudly] آفرین! شمردیم!,آفرین! شمردیم!,âfarin! shemordim!,well done! we counted!,counting,counting game done
+book_animals.mp3,[excited] حیوون‌ها!,حیوون‌ها!,heyvunhâ!,animals!,book,picture book category title
+book_food.mp3,[happy] خوراکی‌ها! به به!,خوراکی‌ها! به به!,khorâkihâ! bah bah!,food! yum!,book,picture book category title
+book_body.mp3,[playful] بدن! دست و پا و دماغ!,بدن! دست و پا و دماغ!,badan! dast o pâ o damâgh!,"the body! hands, feet and nose!",book,picture book category title
+book_clothes.mp3,[cheerfully] لباس‌ها!,لباس‌ها!,lebâshâ!,clothes!,book,picture book category title
+book_home.mp3,[cheerfully] تو خونه!,تو خونه!,tu khune!,at home!,book,picture book category title
+book_vehicles.mp3,[excited] ماشین و قطار و هواپیما!,ماشین و قطار و هواپیما!,mâshin o ghatâr o havâpeymâ!,"cars, trains and planes!",book,picture book category title
+book_nature.mp3,[softly] طبیعت! درخت و گل و آسمون!,طبیعت! درخت و گل و آسمون!,tabi'at! derakht o gol o âsemun!,"nature! trees, flowers and sky!",book,picture book category title
+book_colours.mp3,[excited] رنگ‌ها!,رنگ‌ها!,ranghâ!,colours!,book,picture book category title
+book_numbers.mp3,[cheerfully] عددها! یک، دو، سه!,عددها! یک، دو، سه!,"adadhâ! yek, do, se!","numbers! one, two, three!",book,picture book category title
+book_shapes.mp3,[curious] شکل‌ها!,شکل‌ها!,shekl-hâ!,shapes!,book,picture book category title
+book_people.mp3,[happy] آدم‌ها! مامان، بابا، نی‌نی!,آدم‌ها! مامان، بابا، نی‌نی!,"âdamhâ! mâmân, bâbâ, ni-ni!","people! mommy, daddy, baby!",book,picture book category title
+book_feelings.mp3,[playful] حس‌ها! خوشحال... ناراحت!,حس‌ها! خوشحال... ناراحت!,heshâ! khoshhâl... nârâhat!,feelings! happy... sad!,book,picture book category title
+book_actions.mp3,[excited] بدو، بپر، برقص!,بدو، بپر، برقص!,"bedo, bepar, beraghs!","run, jump, dance!",book,picture book category title
+book_open.mp3,[cheerfully] بیا کتاب بخونیم!,بیا کتاب بخونیم!,biâ ketâb bekhunim!,let's read a book!,book,picture book open
+st_farm_title.mp3,[excited] پاش میره مزرعه!,پاش میره مزرعه!,pâsh mire mazra'e!,Pash goes to the farm!,stories,story farm: title
+st_farm_1.mp3,[cheerfully] امروز پاش سوار تراکتور شد و رفت مزرعه! برووم برووم!,امروز پاش سوار تراکتور شد و رفت مزرعه! برووم برووم!,emruz pâsh savâr-e trâktor shod o raft mazra'e! beruum beruum!,today Pash rode a tractor to the farm! vroom vroom!,stories,story farm: page 1
+st_farm_2.mp3,[excited] وای! یه گاو گنده! گاوه گفت: ماااا!,وای! یه گاو گنده! گاوه گفت: ماااا!,vây! ye gâv-e gonde! gâve goft: mââââ!,wow! a big cow! the cow said: moo!,stories,story farm: page 2
+st_farm_3.mp3,[giggles] جوجه‌ها دنبال مامان‌مرغ می‌دوَن. جیک جیک!,جوجه‌ها دنبال مامان‌مرغ می‌دوَن. جیک جیک!,jujehâ donbâl-e mâmân-morgh midavan. jik jik!,the chicks run after mommy hen. cheep cheep!,stories,story farm: page 3
+st_farm_4.mp3,[playful] گوسفنده گفت: بع بع! پاش هم گفت: بع بع!,گوسفنده گفت: بع بع! پاش هم گفت: بع بع!,gusfande goft: ba'ba'! pâsh ham goft: ba'ba'!,the sheep said: baa baa! Pash said: baa baa too!,stories,story farm: page 4
+st_farm_5.mp3,[curious] اردک‌ها تو آب شنا می‌کنن. کوآک کوآک!,اردک‌ها تو آب شنا می‌کنن. کوآک کوآک!,ordakhâ tu âb shenâ mikonan. ku-âk ku-âk!,the ducks swim in the water. quack quack!,stories,story farm: page 5
+st_farm_6.mp3,[softly] خورشید رفت پایین. پاش گفت: بای بای مزرعه!,خورشید رفت پایین. پاش گفت: بای بای مزرعه!,khorshid raft pâyin. pâsh goft: bây bây mazra'e!,"the sun went down. Pash said: bye bye, farm!",stories,story farm: page 6
+st_rain_title.mp3,[cheerfully] روز بارونیِ پاش,روز بارونیِ پاش,ruz-e bâruni-ye pâsh,Pash's rainy day,stories,story rain: title
+st_rain_1.mp3,[curious] اِ! آسمون پر از ابره. بارون اومد! شُرشُر!,اِ! آسمون پر از ابره. بارون اومد! شُرشُر!,e! âsemun por az abre. bârun umad! shor shor!,oh! the sky is full of clouds. it's raining! pitter patter!,stories,story rain: page 1
+st_rain_2.mp3,[cheerfully] پاش چکمه‌هاشو پوشید، کاپشنشم پوشید!,پاش چکمه‌هاشو پوشید، کاپشنشم پوشید!,"pâsh chakmehâsho pushid, kâpshanesham pushid!","Pash put on his boots, and his jacket too!",stories,story rain: page 2
+st_rain_3.mp3,[excited] بعد چترشو باز کرد. یه چتر بزرگ!,بعد چترشو باز کرد. یه چتر بزرگ!,ba'd chatresho bâz kard. ye chatr-e bozorg!,then he opened his umbrella. a big umbrella!,stories,story rain: page 3
+st_rain_4.mp3,[giggles] شَلَپ! پرید تو آب! یه قورباغه گفت: قور قور!,شَلَپ! پرید تو آب! یه قورباغه گفت: قور قور!,shalap! parid tu âb! ye ghurbâghe goft: ghur ghur!,splash! he jumped in the water! a frog said: ribbit ribbit!,stories,story rain: page 4
+st_rain_5.mp3,[gasps] بارون بند اومد... وای! رنگین‌کمون!,بارون بند اومد... وای! رنگین‌کمون!,bârun band umad... vây! rangin-kamun!,the rain stopped... wow! a rainbow!,stories,story rain: page 5
+st_rain_6.mp3,[softly] پاش رفت خونه و یه چایی گرم خورد. آخیش!,پاش رفت خونه و یه چایی گرم خورد. آخیش!,pâsh raft khune o ye châyi-ye garm khord. âkhish!,Pash went home and drank a warm tea. ahh!,stories,story rain: page 6
+st_bedtime_title.mp3,[softly] پاش می‌خواد بخوابه,پاش می‌خواد بخوابه,pâsh mikhâd bekhâbe,Pash's bedtime,stories,story bedtime: title
+st_bedtime_1.mp3,[softly] شب شد. ماه اومد بالا و ستاره‌ها چشمک زدن.,شب شد. ماه اومد بالا و ستاره‌ها چشمک زدن.,shab shod. mâh umad bâlâ o setârehâ cheshmak zadan.,night came. the moon came up and the stars twinkled.,stories,story bedtime: page 1
+st_bedtime_2.mp3,[cheerfully] پاش رفت حموم. با صابون، کف کف کف!,پاش رفت حموم. با صابون، کف کف کف!,"pâsh raft hammum. bâ sâbun, kaf kaf kaf!","Pash took a bath. with soap, bubbles bubbles bubbles!",stories,story bedtime: page 2
+st_bedtime_3.mp3,[playful] بعدش مسواک زد. دندونا برق می‌زنن! برق برق!,بعدش مسواک زد. دندونا برق می‌زنن! برق برق!,ba'desh mesvâk zad. dandunâ bargh mizanan! bargh bargh!,then he brushed his teeth. they sparkle! shiny shiny!,stories,story bedtime: page 3
+st_bedtime_4.mp3,[softly] مامان اومد و یه قصه‌ی قشنگ گفت.,مامان اومد و یه قصه‌ی قشنگ گفت.,mâmân umad o ye ghesse-ye ghashang goft.,mommy came and told a lovely story.,stories,story bedtime: page 4
+st_bedtime_5.mp3,[yawns] پاش خمیازه کشید... خیلی خوابالوئه.,پاش خمیازه کشید... خیلی خوابالوئه.,pâsh khamyâze keshid... kheyli khâbâlue.,Pash yawned... he's so sleepy.,stories,story bedtime: page 5
+st_bedtime_6.mp3,[whispers] شب بخیر پاش... شب بخیر جغد کوچولو. لالا.,شب بخیر پاش... شب بخیر جغد کوچولو. لالا.,shab bekheyr pâsh... shab bekheyr joghd-e kuchulu. lâlâ.,good night Pash... good night little owl. sleep tight.,stories,story bedtime: page 6
+st_park_title.mp3,[excited] پیک‌نیکِ پاش تو پارک!,پیک‌نیکِ پاش تو پارک!,piknik-e pâsh tu pârk!,Pash's picnic in the park!,stories,story park: title
+st_park_1.mp3,[excited] امروز روز پیک‌نیکه! پاش کیفشو برداشت.,امروز روز پیک‌نیکه! پاش کیفشو برداشت.,emruz ruz-e piknike! pâsh kifesho bardâsht.,today is picnic day! Pash grabbed his bag.,stories,story park: page 1
+st_park_2.mp3,[cheerfully] تو پارک یه درخت بزرگ بود، پر از گل.,تو پارک یه درخت بزرگ بود، پر از گل.,"tu pârk ye derakht-e bozorg bud, por az gol.","in the park there was a big tree, full of flowers.",stories,story park: page 2
+st_park_3.mp3,[happy] پاش ساندویچ و هندونه خورد. به به!,پاش ساندویچ و هندونه خورد. به به!,pâsh sândevich o hendune khord. bah bah!,Pash ate a sandwich and watermelon. yum!,stories,story park: page 3
+st_park_4.mp3,[playful] بعد رفت سرسره بازی. وییییی!,بعد رفت سرسره بازی. وییییی!,ba'd raft sorsore bâzi. viiiii!,then he went down the slide. wheeee!,stories,story park: page 4
+st_park_5.mp3,[gasps] یه پروانه اومد نشست رو دماغش! قلقلکش اومد!,یه پروانه اومد نشست رو دماغش! قلقلکش اومد!,ye parvâne umad neshast ru damâghesh! ghelghelakesh umad!,a butterfly landed on his nose! it tickled!,stories,story park: page 5
+st_park_6.mp3,[proudly] پاش بادبادکشو هوا کرد. بالا، بالا، بالاتر!,پاش بادبادکشو هوا کرد. بالا، بالا، بالاتر!,"pâsh bâdbâdakesho havâ kard. bâlâ, bâlâ, bâlâtar!","Pash flew his kite. up, up, higher!",stories,story park: page 6
