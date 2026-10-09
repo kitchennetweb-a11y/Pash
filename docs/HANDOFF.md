@@ -49,6 +49,7 @@ Done and live: everything listed in decisions.md under Product, apart from the i
 3. Colour hunt skips pink/purple/black (fewer than 2 tagged words); tag more words to enable them. Unused phrases: food (p_nam_nam..., p_ah_ino...), say-it prompts (p_hala_to_begu, p_chi_gofti_nashenidam), goodbye, countdown.
 
 ### Known gotchas
+- Mic and volume on iOS: echo cancellation/AGC are off, because they put iOS in "voice chat" mode, which ducks all app sound. `audioSession('play-and-record')` is used only while the mic is on, `'playback'` otherwise. The mic is ignored while Pash's voice or the song bed plays (`voiceEnd`, `bedSrc`). Sensitivity knob: `MIC_FLOOR`.
 - iPad and Safari need one tap before audio or the mic will start (the "Wake up" button does both).
 - The mic only works over https on GitHub Pages; it's blocked inside the Claude artifact viewer.
 - Clip timings: `sayAsync` waits for the decoded duration plus 250 ms. Padded clips make games slightly slower; that's acceptable.
