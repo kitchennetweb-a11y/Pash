@@ -61,7 +61,7 @@ body.words.face #faceWord.on{display:block}body.face #bubble{display:none} /* th
 #micHelp p{margin:0 0 10px}
 #micHelp button{font:800 18px var(--display);background:var(--ink);color:#fff;border:0;border-radius:16px;padding:8px 20px;cursor:pointer}
 #parentBtn{position:fixed;right:10px;top:calc(env(safe-area-inset-top,0px) + 10px);width:34px;height:34px;border-radius:50%;border:0;
-  background:#ffffff66;color:#22314a88;font-size:18px;z-index:4;cursor:pointer;-webkit-touch-callout:none}
+  background:#ffffff66;color:#22314a88;font-size:18px;z-index:4;cursor:pointer;-webkit-touch-callout:none;touch-action:none;user-select:none;-webkit-user-select:none}
 #parentBtn.holding{background:#fff;color:var(--ink);box-shadow:0 0 0 6px #ffffff88}
 #parent{position:fixed;inset:0;background:#22314a99;z-index:7;display:grid;place-items:center;padding:16px}
 #parent .pc-card{background:#fff;color:var(--ink);border-radius:22px;width:min(640px,100%);max-height:calc(100% - 32px);overflow:auto;padding:18px 20px;
@@ -1948,9 +1948,9 @@ const wordsEl=document.getElementById('pcWords');try{wordsEl.checked=localStorag
 document.body.classList.toggle('words',wordsEl.checked);
 wordsEl.onchange=()=>{document.body.classList.toggle('words',wordsEl.checked);if(!wordsEl.checked)bubble.classList.remove('show');try{localStorage.setItem('pash-words',wordsEl.checked?'1':'0')}catch(e){}};
 (function(){const btn=document.getElementById('parentBtn');let tmr=null;
-  const start=e=>{e.preventDefault();btn.classList.add('holding');tmr=setTimeout(()=>{btn.classList.remove('holding');saveStats();renderParent();document.getElementById('parent').hidden=false},1800)};
+  const start=e=>{e.preventDefault();try{btn.setPointerCapture(e.pointerId)}catch(_){}btn.classList.add('holding');tmr=setTimeout(()=>{btn.classList.remove('holding');saveStats();renderParent();document.getElementById('parent').hidden=false},1800)};
   const stop=()=>{clearTimeout(tmr);btn.classList.remove('holding')};
-  btn.addEventListener('pointerdown',start);btn.addEventListener('pointerup',stop);btn.addEventListener('pointerleave',stop);btn.addEventListener('pointercancel',stop);
+  btn.addEventListener('pointerdown',start);btn.addEventListener('pointerup',stop);btn.addEventListener('pointercancel',stop);btn.addEventListener('contextmenu',e=>e.preventDefault()); // the finger is captured: a small wobble during the hold doesn't cancel it
   document.getElementById('pcClose').onclick=()=>{document.getElementById('parent').hidden=true;const r=document.getElementById('pcReset');r.classList.remove('armed');r.textContent='Reset stats'};
   const reset=document.getElementById('pcReset');
   reset.onclick=()=>{if(!reset.classList.contains('armed')){reset.classList.add('armed');reset.textContent='Tap again to erase all stats';return}
