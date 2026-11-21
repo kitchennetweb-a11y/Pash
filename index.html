@@ -1655,7 +1655,7 @@ const WP={
            portrait:[['gingerbread',.65,.372,.04,'w_gingerbread'],['wreath',.25,.26,.07,'w_wreath'],['tree',.24,.84,.1,'w_xtree','tree'],['santa',.72,.83,.07,'w_santa'],['present',.36,.87,.04,'w_gift','gift']]}};
 // per season: pictures, props, hat [model, size, height, tilt z], what's in the corners, greetings (room or * = once per visit), tint [painting, sky light, warm fill] (per room allowed)
 const SEAS={halloween:{dir:'assets/hw/',P:HWP,hat:['witch_hat',2.2,1.02,.16],deco:'webs',greet:{'*':'x_halloween'},tint:{'*':['#b8a2e8','#d9c6ff','#ffa060']},vig:'rgba(48,12,80,.55)'},
-  winter:{dir:'assets/winter/',P:WP,hat:['santa_hat',1.9,1,.2],deco:'lights snow',greet:{home:'x_yalda',play:'x_christmas',library:'x_christmas'},
+  winter:{dir:'assets/winter/',P:WP,hat:['santa_hat_tripo',1.75,.66,.14,1.57],deco:'lights snow',greet:{home:'x_yalda',play:'x_christmas',library:'x_christmas'},
     tint:{home:['#f6dccb','#ffe6d0','#ffb070'],'*':['#cdd9f2','#e3ecff','#ffc890']},vig:'rgba(30,50,110,.35)'},
   snow:{dir:'assets/winter/',P:{bed:WBED},deco:'snow',greet:{},tint:{'*':['#cdd9f2','#e3ecff','#ffc890']},vig:'rgba(30,50,110,.3)'}};
 const hwTint=()=>{const S=SEAS[HW.season];return S&&(S.tint[curRoom]||S.tint['*'])};
@@ -1700,7 +1700,7 @@ function hwSet(s){HW.season=s;try{localStorage.setItem('pash-season',s)}catch(e)
 function hwHat(){if(!B.Head)return;const H=(SEAS[HW.season]||{}).hat;
   for(const k in HW.hats){const h=HW.hats[k];if(h&&h!==1)h.visible=!!H&&H[0]===k}
   if(H&&!HW.hats[H[0]]){HW.hats[H[0]]=1;new THREE.GLTFLoader().load('models/'+H[0]+'.glb',g=>{const h=HW.hats[H[0]]=g.scene,s=new THREE.Vector3();h.traverse(o=>{if(o.isMesh)o.castShadow=true});
-    B.Head.getWorldScale(s);const k=robot.scale.x/s.x;h.scale.setScalar(H[1]*k);h.position.set(0,H[2]*k,.04*k);h.rotation.set(-.12,0,H[3]);B.Head.add(h);h.userData.pp=h.getObjectByName('pompom');
+    B.Head.getWorldScale(s);const k=robot.scale.x/s.x;h.scale.setScalar(H[1]*k);h.position.set(0,H[2]*k,.04*k);h.rotation.set(-.12,H[4]||0,H[3]);B.Head.add(h);h.userData.pp=h.getObjectByName('pompom');
     if(h.userData.pp)h.userData.pp0=h.userData.pp.position.clone();hwHat()},undefined,()=>{delete HW.hats[H[0]]})}}
 // every frame: the props follow the picture's pan/zoom; now and then something flies across (Halloween: a bat or the little witch; winter: Santa's sleigh, not at Yalda)
 function hwTick(dt){for(const k in HW.hats){const h=HW.hats[k],p=h&&h.userData&&h.userData.pp;if(p&&h.visible)p.position.y=h.userData.pp0.y+Math.sin(performance.now()/260)*.012}
