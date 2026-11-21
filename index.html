@@ -114,12 +114,14 @@ body.space #acts,body.space #nav,body.space #score,body.space #bTalk{display:non
 @keyframes hwFlick{0%{opacity:.6;transform:translate(-50%,-50%) scale(.92)}45%{opacity:.95}55%{opacity:.75}100%{opacity:1;transform:translate(-50%,-50%) scale(1.05)}}
 .hwbub{position:absolute;bottom:70%;aspect-ratio:1;border-radius:50%;opacity:.9;animation:hwBub 1.6s ease-out both;box-shadow:inset -2px -2px 0 rgba(0,0,0,.15),inset 2px 2px 0 rgba(255,255,255,.5)}
 @keyframes hwBub{0%{transform:translateY(0) scale(.3)}100%{transform:translateY(-120px) scale(1.2);opacity:0}}
-.hwweb{position:absolute;top:0;width:min(30vw,30vh);pointer-events:auto}.hwweb.l{left:0}.hwweb.r{right:0;transform:scaleX(-1)}
-#hwSpider{position:absolute;right:calc(min(30vw,30vh)*.42);top:0;width:min(9vw,9vh);pointer-events:auto;animation:hwDangle 4s ease-in-out infinite;transform-origin:50% 0}
+.hwweb{position:absolute;top:0;width:min(30vw,30vh);pointer-events:none}.hwweb.l{left:0}.hwweb.r{right:0;transform:scaleX(-1)}
+#hwSpider{position:absolute;right:calc(min(30vw,30vh)*.42);top:0;width:min(9vw,9vh);pointer-events:none;animation:hwDangle 4s ease-in-out infinite;transform-origin:50% 0}
 #hwSpider i{display:block;width:1.5px;margin:0 auto;height:min(15vw,15vh);background:#f4efffbb}#hwSpider img{width:100%;display:block;margin-top:-6%}
 @keyframes hwDangle{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(8%) rotate(3deg)}}
 #hwSpider.drop{animation:hwDrop 1.2s cubic-bezier(.3,1.5,.5,1)}@keyframes hwDrop{40%{transform:translateY(55%)}}
 #hwFly{position:absolute;left:0;top:0;display:none;pointer-events:auto;filter:drop-shadow(0 4px 6px rgba(20,0,40,.4))}
+#rkHint{position:fixed;z-index:1;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%);display:none;mix-blend-mode:screen;background:radial-gradient(circle,rgba(255,200,120,.75),rgba(255,140,60,.25) 45%,transparent 70%);animation:rkHint 7s ease-in-out infinite}
+@keyframes rkHint{0%,78%,100%{opacity:0;transform:translate(-50%,-50%) scale(.7)}86%{opacity:1;transform:translate(-50%,-50%) scale(1.05)}93%{opacity:.4}}
 #spHome{width:64px;height:64px;font-size:32px;background:#fff}
 #spSkip{width:76px;height:76px;padding:6px;background:radial-gradient(circle at 35% 30%,#3a4a8a,#141a3a 75%);box-shadow:0 5px 0 #0a0e24,0 0 22px rgba(255,190,80,.55)}#spSkip img{width:100%;height:100%;object-fit:contain}
 #spNext{width:104px;height:104px;background:radial-gradient(circle at 35% 30%,#ff9a5c,#d2501a 70%);box-shadow:0 6px 0 #8a3210,0 0 30px rgba(255,140,60,.6);animation:spBob 1.6s ease-in-out infinite}
@@ -194,7 +196,7 @@ body.jelly .rb.jtap,body.jelly .ec.nav.jtap{animation:jtap .35s cubic-bezier(.3,
   <button class="rb" data-r="library" aria-label="Library">📖</button></div>
 <!-- picture-book pages on his face screen: arrows beside his ears (placed every frame by placeEars), the Farsi word under his face only with "Show words" -->
 <button id="earL" class="rb ear" hidden aria-label="Previous page">⬅️</button><button id="earR" class="rb ear" hidden aria-label="Next page">➡️</button><div id="faceWord"></div>
-<div id="pFg" class="off"></div>
+<div id="pFg" class="off"></div><div id="rkHint"></div>
 <button id="pgPrev" class="rb pg" hidden aria-label="Previous books"><svg viewBox="0 0 24 24"><path d="M15 4 L7 12 L15 20" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
 <button id="pgNext" class="rb pg" hidden aria-label="Next books"><svg viewBox="0 0 24 24"><path d="M9 4 L17 12 L9 20" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div id="pgDots" hidden></div>
 <div id="deck" hidden></div><div id="cdNum" dir="rtl"></div><div id="spBtns"><button id="spHome" class="rb" aria-label="Fly home">🏠</button><button id="spSkip" class="rb" aria-label="The whole solar system"><img src="assets/space/sun.webp" alt=""></button><button id="spNext" class="rb" aria-label="Next planet"><img src="assets/pics/rocket.webp" alt=""></button></div><div id="spCol" dir="rtl"><i></i><b></b></div><div id="flash"></div>
@@ -219,6 +221,7 @@ body.jelly .rb.jtap,body.jelly .ec.nav.jtap{animation:jtap .35s cubic-bezier(.3,
   <button id="bBookHome" class="rb" style="background:#3bb4e5" aria-label="Book: all pictures">🔙</button>
   <button id="bStories" class="rb" style="background:#a66cff" aria-label="Stories" hidden>📚</button>
   <button id="bLamp" class="rb" style="background:#ffd34d" aria-label="Light on/off">💡</button>
+  <button id="bRocket" class="rb" style="background:#3a4fb0" aria-label="Rocket to space">🚀</button>
   <button id="bDisco" class="rb" style="background:#ff4fd8" aria-label="Disco">🪩</button>
   <button id="bDark" class="rb" style="background:#3d4a7a" aria-label="Find in the dark">🔦</button>
   <button id="bStars" class="rb" style="background:#2b3a78" aria-label="Count stars">⭐</button>
@@ -1437,7 +1440,7 @@ function applyLayout(L){for(const s in L.rooms){const R=L.rooms[s];WALLS[s]=R.wa
     for(const id in PROPS)if(PROPS[id].room===s)delete PROPS[id];
     GOO[s]=R.googoo||{};CAMS[s]=R.camera||{};if(s==='library')LIBORDER=R.books||null;if('backdrop' in R)PAINT[s]=R.backdrop; // painted room (null = 3D)
     for(const p of R.props||[])if(p.builtin)BUILT[p.id]=p;else PROPS[p.id]={f:p.file,k:p.k,x:p.x,y:p.y,z:p.z,ry:p.ry,room:s,on:p.on!==undefined?p.on:SITS[p.id],back:p.wall==='back',side:p.wall==='left',sy:p.flatten,nosq:p.noSqueeze,off:p.hidden,cast:p.castShadow,pt:p.portrait}}
-  const U=L.ui||{},S=U.size||1;document.body.classList.toggle('jelly',(U.style||'jelly')==='jelly');FREE=U.free||{};NAVORDER=(U.nav||{}).order||NAVORDER;TOPORDER=(U.top||{}).order||TOPORDER;for(const k in U.screens||{})SCREENS[k]=[U.screens[k].left,U.screens[k].right];
+  const U=L.ui||{},S=U.size||1;document.body.classList.toggle('jelly',(U.style||'jelly')==='jelly');FREE=U.free||{};NAVORDER=(U.nav||{}).order||NAVORDER;TOPORDER=(U.top||{}).order||TOPORDER;for(const k in U.screens||{})SCREENS[k]=[U.screens[k].left,U.screens[k].right];{const b=SCREENS.bed[0];if(!b.includes('bRocket')){const i=b.indexOf('bPeek');i>=0?b.splice(i,1,'bRocket'):b.push('bRocket')}} /* the bedroom's rocket button, also when the saved layout predates it */
   for(const id in U.buttons||{}){const b=document.getElementById(id);if(b&&U.buttons[id].color)b.style.background=U.buttons[id].color}
   for(const id in BUILT){const p=BUILT[id],g=furnById(id);if(!g)continue;g.userData.x0=p.x??g.userData.x0;if(p.z!=null)g.position.z=p.z;if(p.y!=null)g.position.y=p.y;if(p.ry!=null&&!g.userData.spin)g.rotation.y=p.ry;g.userData.off=p.hidden?1:0;g.userData.on=p.on!==undefined?p.on:SITS[id]} // book, star mobile
   const T=U.top||{},N=U.nav||{},NS=N.size??S,top=document.getElementById('top'),nav=document.getElementById('nav'),sz=(q,k)=>k!==1?`${q}{width:calc(var(--b)*${k});height:calc(var(--b)*${k});font-size:calc(var(--b)*${k/2})}`:'';
@@ -1607,10 +1610,10 @@ const PAINT={
       taps:[{r:[.39,.1,.61,.44],w:'w_window'},{r:[.11,.36,.28,.58],w:'w_chair'}]}},
   bed:{keep:[],portrait:{img:'assets/rooms/bed_portrait.webp',night:'assets/rooms/bed_portrait_night.webp',size:[810,1440],focus:[.5,.55],fov:50,horizon:.26,wall:.425,goo:[.5,.76,.26],rug:[.5,.72,.46,.12],
       light:{sun:['#fff0dc',1.15],dir:[5,8,-2],hemi:['#e2e9ff','#8a5a3a',.75],fill:['#ffe6c8',.45],shadow:.32,exp:.95},beam:[.25,.2,60,.05,.8,.07],dust:[.15,.1,.85,.55],lamps:[[.842,.316,.05]],
-      taps:[{r:[.26,.23,.79,.45],f:'bed'},{r:[.79,.29,.9,.43],f:'lamp'},{r:[.1,.1,.42,.29],w:'w_window'},{r:[.87,.1,.94,.18],f:'rocket'},{r:[.12,.04,.21,.09],w:'w_moon'}]},
+      taps:[{r:[.26,.23,.79,.45],f:'bed'},{r:[.79,.29,.9,.43],f:'lamp'},{r:[.1,.1,.42,.29],w:'w_window'},{r:[.84,.06,.97,.21],f:'rocket'},{r:[.12,.04,.21,.09],w:'w_moon'}]},
     landscape:{img:'assets/rooms/bed_landscape.webp',night:'assets/rooms/bed_landscape_night.webp',size:[1440,810],focus:[.5,.6],fov:50,horizon:.4,wall:.5,goo:[.5,.85,.34],rug:[.5,.833,.32,.14],
       light:{sun:['#fff0dc',1.15],dir:[5,8,-2],hemi:['#e2e9ff','#8a5a3a',.75],fill:['#ffe6c8',.45],shadow:.32,exp:.95},beam:[.3,.2,60,.05,.7,.07],dust:[.15,.1,.85,.55],lamps:[[.699,.36,.04]],
-      taps:[{r:[.34,.22,.65,.57],f:'bed'},{r:[.66,.31,.75,.55],f:'lamp'},{r:[.19,.03,.41,.36],w:'w_window'},{r:[.76,.04,.83,.18],f:'rocket'}]}}};
+      taps:[{r:[.34,.22,.65,.57],f:'bed'},{r:[.66,.31,.75,.55],f:'lamp'},{r:[.19,.03,.41,.36],w:'w_window'},{r:[.74,.01,.85,.21],f:'rocket'}]}}};
 // ----- Halloween (parent corner switch, on by default until switched off): painted props in every room (assets/hw/*.webp, cut from two ChatGPT sheets),
 // cobwebs with a dangling spider, bats and a little witch flying past, a purple dusk tint with flickering orange glows, Googoo's witch hat (models/witch_hat.glb).
 // Tap anything: Googoo names it in Farsi (w_pumpkin ... x_boo, vocab/lines_words_v2.csv). Cute only: nothing jumps out. -----
@@ -1632,7 +1635,7 @@ function hwWeb(left){const n=7,R=100,sp=[];let d='';for(let i=0;i<n;i++){const a
 function hwBuild(){if(HW.el)return;const e=HW.el=document.createElement('div');e.id='hw';
   e.innerHTML=`<div id="hwVig"></div><div id="hwRoom"></div>${hwWeb(1)}${hwWeb(0)}<div id="hwSpider"><i></i><img src="assets/hw/spider.webp" alt=""></div><img id="hwFly" alt="">`;
   document.getElementById('pFg').after(e);
-  e.querySelectorAll('.hwweb').forEach(w=>w.onpointerdown=ev=>{ev.stopPropagation();hwSay(w,'w_cobweb')});
+  /* corner webs let taps through: they sit over the bedroom rocket on phones */
   const sp=e.querySelector('#hwSpider');sp.onpointerdown=ev=>{ev.stopPropagation();sp.classList.remove('drop');void sp.offsetWidth;sp.classList.add('drop');hwSay(null,'w_spider')};
   const f=e.querySelector('#hwFly');f.onpointerdown=ev=>{ev.stopPropagation();if(HW.fly){HW.fly.loop=1;hwSay(null,HW.fly.w)}}}
 // Googoo says it (one at a time), the prop hops; ghost: boo first; cauldron: bubbles in a colour, then that colour
@@ -1646,7 +1649,8 @@ function hwBubbles(el,col){for(let i=0;i<9;i++){const b=document.createElement('
 // the props for this room and orientation, placed on the painting (paintFrame calls this after every layout)
 function hwLayout(){if(!HW.on||!PNT||!PW){if(HW.el)HW.el.hidden=true;return}hwBuild();HW.el.hidden=false;const list=(HWP[curRoom]||{})[portrait?'portrait':'landscape']||[],M=pU.uM.value,box=HW.el.querySelector('#hwRoom');
   const key=curRoom+portrait+M.x+M.y+M.z+M.w;if(key===HW.key)return;HW.key=key;box.innerHTML='';
-  for(const [pic,u,v,h,w,fx] of list){const [x,y]=PW.S(u,v),d=document.createElement('div');d.className='hwp'+(fx?' '+fx:'');d.style.cssText=`left:${x}px;top:${y}px;height:${h*M.w}px`;
+  const keep=PW.taps.filter(t=>t.f==='rocket'||t.f==='lamp'),[IW,IH]=PNT.size||[1,1];
+  for(const [pic,u,v,h,w,fx] of list){const hw=h*IH/IW/2;if(keep.some(t=>u+hw>t.r[0]&&u-hw<t.r[2]&&v>t.r[1]&&v-h<t.r[3]))continue;const [x,y]=PW.S(u,v),d=document.createElement('div');d.className='hwp'+(fx?' '+fx:'');d.style.cssText=`left:${x}px;top:${y}px;height:${h*M.w}px`;
     d.innerHTML=(fx==='glow'||fx==='green'?`<i class="hwg"></i>`:'')+`<img src="assets/hw/${pic}.webp" alt="" draggable="false" onerror="this.parentNode.remove()">`;
     d.onpointerdown=ev=>{ev.stopPropagation();hwSay(d,w,fx)};box.appendChild(d)}}
 function hwSet(on){HW.on=on;try{localStorage.setItem('pash-hw',on?'1':'0')}catch(e){}HW.key='';hwLayout();if(PNT)paintLights();hwHat()}
@@ -1752,7 +1756,8 @@ function paintFrame(){const P=pOf(curRoom),key=P?curRoom+'|'+(portrait?'p':'l')+
     if(!portrait)tx=w*.74;else{const db=deck.getBoundingClientRect().bottom+8,nt=document.getElementById('nav').getBoundingClientRect().top-8,need=db-hd[1];if(need>0)ty=Math.min(ay+need,ay+Math.max(0,nt-fy))}
     const z=Math.min(1.8,Math.max(1,tx/Math.max(1,ax-ox),(w-tx)/Math.max(1,ox+pw-ax),ty/Math.max(1,ay-oy),(h-ty)/Math.max(1,oy+ph-ay))),dx=tx-w/2-(ax-w/2)*z,dy=ty-h/2-(ay-h/2)*z;
     if(z>1||Math.abs(dx)>1||Math.abs(dy)>1){camera.zoom=z;camera.setViewOffset(w,h,-dx,-dy,w,h);camera.updateProjectionMatrix()}}
-  paintFg(P,w,h);paintUI();paintLights();hwLayout()}
+  paintFg(P,w,h);paintUI();paintLights();hwLayout();
+  const rk=PW.taps.find(t=>t.f==='rocket'),hn=document.getElementById('rkHint');hn.dataset.ok=rk?1:'';if(rk){const [a,b]=S(rk.r[0],rk.r[1]),[c,d]=S(rk.r[2],rk.r[3]),sz=Math.max(c-a,d-b)*1.3;if((a+c)/2<0||(a+c)/2>w||(b+d)/2<0||(b+d)/2>h)hn.dataset.ok='';Object.assign(hn.style,{left:(a+c)/2+'px',top:(b+d)/2+'px',width:sz+'px',height:sz+'px'})}}
 function paintFg(P,w,h){const f=P.fg;if(!f){pFg.classList.add('off');delete pFg.dataset.on;return}const [IW,IH]=P.size||[1056,1440],[u0,v0,u1,v1]=f.crop,bh=f.h*h,k=bh/((v1-v0)*IH),bw=(u1-u0)*IW*k,r=f.at[1]==='r',b=f.at[0]==='b';
   Object.assign(pFg.style,{width:bw+'px',height:bh+'px',left:r?'auto':-bw*.22+'px',right:r?-bw*.22+'px':'auto',top:b?'auto':-bh*.1+'px',bottom:b?-bh*.12+'px':'auto',
     backgroundSize:`${IW*k}px ${IH*k}px`,backgroundPosition:`${-u0*IW*k}px ${-v0*IH*k}px`});pFg.dataset.on=1}
@@ -1783,11 +1788,12 @@ function paintUI(){const on=paintLib()&&scr==='library'&&deck.hidden&&libPages.l
 pgPrev.onclick=()=>{st.lastPoke=performance.now();paintPage(libPage-1)};pgNext.onclick=()=>{st.lastPoke=performance.now();paintPage(libPage+1)};
 // a tap on the painting: a painted toy says its word (w, if there is a clip for it), or a painted bed / lamp does what the 3D one did (f = tapFurniture id)
 function paintTap(x,y){if(!PNT||!PW||!PW.taps.length)return false;const z=pU.uZ.value,T=pU.uT.value,M=pU.uM.value,u=(T.x+(x-T.z)/z-M.x)/M.z,v=(T.y+(y-T.w)/z-M.y)/M.w;
-  const t=PW.taps.find(t=>u>=t.r[0]&&u<=t.r[2]&&v>=t.r[1]&&v<=t.r[3]);if(!t||game.type||!t.f&&!HAS.has(t.w))return false;if(t.f){tapFurniture(t.f);return true}st.lastPoke=performance.now();setFace('shock',400);kick('squash',3);sayAsync(t.w).then(()=>setFace('laugh',700));return true}
+  const hit=t=>u>=t.r[0]&&u<=t.r[2]&&v>=t.r[1]&&v<=t.r[3],t=PW.taps.find(t=>t.f==='rocket'&&hit(t))||PW.taps.find(hit);if(!t||game.type||!t.f&&!HAS.has(t.w))return false;if(t.f){tapFurniture(t.f);return true}st.lastPoke=performance.now();setFace('shock',400);kick('squash',3);sayAsync(t.w).then(()=>setFace('laugh',700));return true}
 // every frame in a painted room: the picture follows the camera (card pan, face close-up), the blob follows his feet, the selected book glows, pages slide
 function paintTick(dt,t){if(!PNT||!PW)return;pU.uTime.value=t;if(pU.uMapN.value)pU.uMix.value+=(pMixT-pU.uMix.value)*Math.min(1,dt*4);
   _pv.copy(PW.anc).project(camera);const px=(_pv.x+1)/2*innerWidth,py=(1-_pv.y)/2*innerHeight,Z=camera.zoom*PW.dist/Math.max(.01,PW.anc.distanceTo(camera.position));
   pU.uT.value.set(PW.wb[0],PW.wb[1],px,py);pU.uZ.value=Z;
+  {const hn=document.getElementById('rkHint'),on=!!hn.dataset.ok&&scr==='bed'&&!game.type&&!LAUNCH&&Z<1.01&&Math.abs(px-PW.wb[0])<1&&Math.abs(py-PW.wb[1])<1;if((hn.style.display==='block')!==on)hn.style.display=on?'block':'none'}
   if(discoOn)pU.uMul.value.setHSL(t*.35%1,.55,.42);
   const k=RB.w*HOME.s*1.15/(1+robot.position.y*.25);pBlob.position.set(robot.position.x,.004,robot.position.z+.05*k);pBlob.scale.set(k,k*.55,1);
   const fgOn=pFg.dataset.on&&Z<1.01&&Math.abs(px-PW.wb[0])<1&&Math.abs(py-PW.wb[1])<1;if(pFg.classList.contains('off')===fgOn)pFg.classList.toggle('off',!fgOn);
@@ -2085,7 +2091,7 @@ onBtn('bNext',()=>sayRound(sayNext||pickSay()));
 onBtn('bRepeat',()=>sayRound(sayCur||pickSay()));
 onBtn('bMoves',playMoves);
 onBtn('bLamp',()=>{if(curRoom==='bed')return tapFurniture('lamp');setLights(!lightsOn);SFX.beep();sayIf(lightsOn?'lamp_home_on':'lamp_home_off')});
-onBtn('bDisco',()=>disco(!discoOn));onBtn('bDark',()=>playFindCards(true));onBtn('bStars',playStars);
+onBtn('bDisco',()=>disco(!discoOn));onBtn('bRocket',()=>tapFurniture('rocket'));onBtn('bDark',()=>playFindCards(true));onBtn('bStars',playStars);
 onBtn('bNStory',async()=>{if(curRoom==='library')return libStory();const s=STORIES.find(s=>s.id==='bedtime')||STORIES[0];if(!s)return;await sayIf('night_story');if(scr==='bed'&&!game.type)storyPage(s,0)});
 onBtn('bSleep',()=>{setMode('sleep');say(HAS.has('x_khabam_miad')&&Math.random()<.5?'x_khabam_miad':'sleep');setFace('sleep',1e9);music(false);ggClip(...YAWN)});
 document.getElementById('go').onclick=async()=>{await ac().resume();micOn(false);await Promise.race([MANIFEST.then(()=>loadVoices(['name','hi'])),wait(2500)]);loadCore();propsOn=true;loadProps(curRoom);document.getElementById('start').hidden=true;document.getElementById('hint').hidden=true;say(HAS.has('name')?'name':'hi');SFX.beep();kick('squash',8);speak();wave('wave_hello');ggAnims()};
@@ -2257,7 +2263,7 @@ setInterval(()=>{if(!document.getElementById('start').hidden)return;if(curRoom!=
 let curRoom='home',scr='home';
 const LEARN=['bFind','bColour','bCount','bAnimals']; // right rail, same in every room; left = this room's actions. Off screen for now: bJump, bMoves, bDark (bTalk lives in #top)
 const SCREENS={home:[['bFeed','bDance','bSing','bLamp'],LEARN],play:[['bBall','bBubbles','bDisco','bPeek'],LEARN],
-  bed:[['bSleep','bLamp','bPeek','bNStory'],LEARN],night:[['bSleep','bLamp','bStars','bNStory'],LEARN],say:[['bRepeat'],['bNext']],book:[['bBookHome'],[]],
+  bed:[['bSleep','bLamp','bRocket','bNStory'],LEARN],night:[['bSleep','bLamp','bStars','bNStory'],LEARN],say:[['bRepeat'],['bNext']],book:[['bBookHome'],[]],
   library:[['bNStory','bRead','bLamp','bSing'],LEARN]}; // book = a book or story open in the library: Back to the shelf
 const WALL={home:0xffffff,play:0xfff27a,bed:0x6f9cff,library:0xc4aef0}; // library: soft lavender
 function showScreen(s){const old=scr;scr=s;
