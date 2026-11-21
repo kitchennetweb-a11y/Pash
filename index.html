@@ -122,6 +122,16 @@ body.space #acts,body.space #nav,body.space #score,body.space #bTalk{display:non
 #hwFly{position:absolute;left:0;top:0;display:none;pointer-events:auto;filter:drop-shadow(0 4px 6px rgba(20,0,40,.4))}
 #rkHint{position:fixed;z-index:1;pointer-events:none;border-radius:50%;transform:translate(-50%,-50%);display:none;mix-blend-mode:screen;background:radial-gradient(circle,rgba(255,200,120,.75),rgba(255,140,60,.25) 45%,transparent 70%);animation:rkHint 7s ease-in-out infinite}
 @keyframes rkHint{0%,78%,100%{opacity:0;transform:translate(-50%,-50%) scale(.7)}86%{opacity:1;transform:translate(-50%,-50%) scale(1.05)}93%{opacity:.4}}
+#hwVig{background:radial-gradient(ellipse 80% 75% at 50% 55%,transparent 50%,var(--vig,rgba(48,12,80,.55)) 100%)!important}
+.hwp.tree .hwg{width:150%;top:45%;background:radial-gradient(circle,var(--gc,#ffcf5a),transparent 62%);opacity:.7}
+.hwtoy{position:absolute;left:50%;bottom:70%;width:110%;height:auto!important;transform:translateX(-50%);animation:hwToy .6s cubic-bezier(.3,1.6,.5,1) both;pointer-events:none}
+@keyframes hwToy{0%{transform:translate(-50%,60%) scale(.2);opacity:0}100%{transform:translate(-50%,0) scale(1);opacity:1}}
+#hwSnow{position:absolute;inset:0;overflow:hidden}#hwSnow i{position:absolute;top:0;border-radius:50%;background:radial-gradient(circle,#fff 30%,#ffffffaa 55%,transparent 72%);
+  animation-name:hwFall,hwSway;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite;animation-direction:normal,alternate}
+@keyframes hwFall{from{transform:translateY(-14px)}to{transform:translateY(102vh)}}@keyframes hwSway{from{margin-left:-12px}to{margin-left:12px}}
+#hwLights{--lh:min(8vw,8vh);position:absolute;left:0;top:0;width:100%;height:var(--lh)}#hwLights svg{position:absolute;inset:0;width:100%;height:100%}
+#hwLights b{position:absolute;width:calc(var(--lh)*.2);height:calc(var(--lh)*.28);border-radius:45% 45% 50% 50%;transform:translate(-50%,0);box-shadow:0 0 8px 2px currentColor;animation:hwTw 1.6s ease-in-out infinite alternate}
+@keyframes hwTw{from{opacity:.45}to{opacity:1}}
 #spHome{width:64px;height:64px;font-size:32px;background:#fff}
 #spSkip{width:76px;height:76px;padding:6px;background:radial-gradient(circle at 35% 30%,#3a4a8a,#141a3a 75%);box-shadow:0 5px 0 #0a0e24,0 0 22px rgba(255,190,80,.55)}#spSkip img{width:100%;height:100%;object-fit:contain}
 #spNext{width:104px;height:104px;background:radial-gradient(circle at 35% 30%,#ff9a5c,#d2501a 70%);box-shadow:0 6px 0 #8a3210,0 0 30px rgba(255,140,60,.6);animation:spBob 1.6s ease-in-out infinite}
@@ -236,7 +246,7 @@ body.jelly .rb.jtap,body.jelly .ec.nav.jtap{animation:jtap .35s cubic-bezier(.3,
   <div id="pcLists"></div><h3>All words</h3>
   <div class="pc-tablewrap"><table><thead><tr><th>Word</th><th></th><th>Heard</th><th>Found</th><th>Mixed up</th><th>Said</th></tr></thead><tbody id="pcRows"></tbody></table></div>
   <p class="pc-note">Stored on this device only. "Found" counts right taps in Find, Colours and Feed; "Said" counts tries in Say it and Animals. Words he has heard fewer than 3 times are marked for more practice.</p>
-  <label class="pc-note"><input type="checkbox" id="pcWords"> Show words: a small Farsi caption for every line (off: pictures only)</label><br><label class="pc-note"><input type="checkbox" id="pcHw"> Halloween: pumpkins, ghosts, bats and Googoo's witch hat</label><br><button id="pcReset">Reset stats</button>
+  <label class="pc-note"><input type="checkbox" id="pcWords"> Show words: a small Farsi caption for every line (off: pictures only)</label><br><label class="pc-note">Season: <select id="pcSeason"><option value="off">Off</option><option value="halloween">Halloween</option><option value="winter">Winter: Yalda, Christmas and snow</option><option value="snow">Winter, no holidays (snow only)</option></select></label><br><button id="pcReset">Reset stats</button>
 </div></div>
 <div id="micHelp" hidden><h2>Googoo can't hear here</h2>
 <p>This page blocks the microphone, so Googoo can't listen when it's opened inside Claude.</p>
@@ -1614,11 +1624,14 @@ const PAINT={
     landscape:{img:'assets/rooms/bed_landscape.webp',night:'assets/rooms/bed_landscape_night.webp',size:[1440,810],focus:[.5,.6],fov:50,horizon:.4,wall:.5,goo:[.5,.85,.34],rug:[.5,.833,.32,.14],
       light:{sun:['#fff0dc',1.15],dir:[5,8,-2],hemi:['#e2e9ff','#8a5a3a',.75],fill:['#ffe6c8',.45],shadow:.32,exp:.95},beam:[.3,.2,60,.05,.7,.07],dust:[.15,.1,.85,.55],lamps:[[.699,.36,.04]],
       taps:[{r:[.34,.22,.65,.57],f:'bed'},{r:[.66,.31,.75,.55],f:'lamp'},{r:[.19,.03,.41,.36],w:'w_window'},{r:[.74,.01,.85,.21],f:'rocket'}]}}};
-// ----- Halloween (parent corner switch, on by default until switched off): painted props in every room (assets/hw/*.webp, cut from two ChatGPT sheets),
-// cobwebs with a dangling spider, bats and a little witch flying past, a purple dusk tint with flickering orange glows, Googoo's witch hat (models/witch_hat.glb).
-// Tap anything: Googoo names it in Farsi (w_pumpkin ... x_boo, vocab/lines_words_v2.csv). Cute only: nothing jumps out. -----
-const HW={on:true,el:null,room:null,key:'',fly:null,flyT:8,busy:false,hat:null,tf:''};try{HW.on=localStorage.getItem('pash-hw')!=='0'}catch(e){}
-// [picture, u, v (its feet on the painting), height (part of the painting's height), word, effect]  glow = orange flicker, green = cauldron, bob = floats
+// ----- Seasons (parent corner: Off / Halloween / Winter / Winter without the holidays). Painted props per room and orientation, cut from the owner's ChatGPT sheets
+// (assets/hw: Halloween; assets/winter: Yalda, Christmas, snow), a tint, things in the top corners, something flying past now and then, Googoo's hat
+// (models/witch_hat.glb, santa_hat.glb: tools/*_hat_blender.py). Tap anything: Googoo names it in Farsi (vocab/lines_words_v2.csv). Cute only. docs/winter-plan.md
+const HW={season:'winter',el:null,built:'',room:'',key:'',fly:null,flyT:8,busy:false,hats:{},tf:'',said:new Set()};
+try{const v=localStorage.getItem('pash-season');if(v)HW.season=v}catch(e){}
+const hwOn=()=>HW.season!=='off';
+// [picture, u, v (its feet on the painting), height (part of the painting's height), word, effect]  glow = flicker, green = cauldron, bob = floats (a ghost says boo),
+// gift = opens and a toy pops out, tree = its lights change colour, bell = jingles
 const HWP={
   home:{landscape:[['jack',.86,.405,.09,'w_pumpkin','glow'],['candles',.95,.402,.07,'w_candle','glow'],['pumpkins2',.17,.72,.13,'w_pumpkin'],['blackcat',.8,.67,.13,'w_blackcat'],['ghost',.62,.22,.12,'w_ghost','bob'],['broom',.33,.6,.2,'w_broom']],
         portrait:[['jack',.75,.6,.06,'w_pumpkin','glow'],['candles',.42,.405,.045,'w_candle','glow'],['pumpkins2',.24,.66,.07,'w_pumpkin'],['blackcat',.7,.69,.07,'w_blackcat'],['ghost',.68,.2,.08,'w_ghost','bob'],['broom',.33,.47,.11,'w_broom']]},
@@ -1628,47 +1641,81 @@ const HWP={
        portrait:[['jack',.7,.44,.045,'w_pumpkin','glow'],['pumpkins2',.25,.61,.06,'w_pumpkin'],['cauldron',.85,.86,.09,'w_cauldron','green'],['ghost',.62,.17,.07,'w_ghost','bob'],['blackcat',.75,.66,.06,'w_blackcat'],['witchhat',.4,.37,.045,'w_witchhat']]},
   library:{landscape:[['jack',.5,.307,.06,'w_pumpkin','glow'],['candles',.9,.62,.06,'w_candle','glow'],['ghost',.25,.32,.1,'w_ghost','bob'],['blackcat',.73,.77,.1,'w_blackcat'],['broom',.3,.75,.18,'w_broom'],['monster',.17,.84,.09,'w_monster']],
            portrait:[['jack',.65,.372,.04,'w_pumpkin','glow'],['ghost',.25,.24,.07,'w_ghost','bob'],['broom',.27,.83,.1,'w_broom'],['blackcat',.72,.83,.06,'w_blackcat'],['cauldron',.3,.85,.07,'w_cauldron','green']]}};
-const HWCOL=[['zard','#f5c518'],['abi','#2f74d0'],['ghermez','#e0402a'],['naranji','#f08a1c'],['abiroshan','#79cfe2']];
-function hwWeb(left){const n=7,R=100,sp=[];let d='';for(let i=0;i<n;i++){const a=i/(n-1)*Math.PI/2;d+=`M0 0L${(R*Math.cos(a)).toFixed(1)} ${(R*Math.sin(a)).toFixed(1)}`}
+// winter: the living room is Yalda night, the bedroom snowy winter, the play room and library Christmas
+const WBED={landscape:[['snowglobe',.735,.478,.07,'w_snowglobe'],['cocoa',.17,.465,.07,'w_cocoa'],['snowman',.85,.82,.16,'w_snowman'],['polarbear',.15,.74,.12,'w_polarbear'],['mittens',.36,.47,.06,'w_gloves'],['penguin',.9,.3,.08,'w_penguin']],
+  portrait:[['snowglobe',.7,.44,.045,'w_snowglobe'],['polarbear',.25,.61,.06,'w_polarbear'],['snowman',.85,.86,.1,'w_snowman'],['penguin',.75,.66,.055,'w_penguin'],['mittens',.4,.37,.04,'w_gloves']]};
+const WP={
+  home:{landscape:[['korsi',.2,.75,.15,'w_korsi'],['pomegranate_open',.2,.62,.05,'w_pomegranate'],['tea',.32,.74,.07,'w_tea'],['watermelon',.85,.405,.07,'w_watermelon'],['candles_red',.95,.402,.06,'w_candle','glow'],
+          ['pomegranates',.78,.68,.09,'w_pomegranate'],['persimmons',.89,.71,.07,'w_persimmon'],['hafez',.2,.5,.06,'w_hafez'],['ajil',.66,.3,.05,'w_ajil']],
+        portrait:[['korsi',.27,.68,.08,'w_korsi'],['pomegranate_open',.27,.605,.03,'w_pomegranate'],['candles_red',.42,.405,.04,'w_candle','glow'],['tea',.55,.405,.04,'w_tea'],['watermelon',.78,.6,.045,'w_watermelon'],['pomegranates',.72,.69,.05,'w_pomegranate']]},
+  play:{landscape:[['tree',.86,.74,.24,'w_xtree','tree'],['presents',.76,.66,.09,'w_gift'],['present',.4,.66,.07,'w_gift','gift'],['reindeer',.68,.56,.1,'w_reindeer'],['bell',.55,.18,.07,'w_bell','bell'],['candycane',.1,.55,.08,'w_candycane']],
+        portrait:[['tree',.25,.82,.13,'w_xtree','tree'],['reindeer',.72,.63,.06,'w_reindeer'],['present',.66,.71,.05,'w_gift','gift'],['presents',.4,.6,.045,'w_gift'],['candycane',.28,.452,.05,'w_candycane'],['bell',.42,.2,.05,'w_bell','bell']]},
+  bed:WBED,
+  library:{landscape:[['gingerbread',.5,.307,.06,'w_gingerbread'],['stocking',.9,.62,.07,'w_socks'],['wreath',.25,.32,.1,'w_wreath'],['santa',.73,.77,.12,'w_santa'],['present',.3,.75,.07,'w_gift','gift'],['tree',.17,.84,.14,'w_xtree','tree']],
+           portrait:[['gingerbread',.65,.372,.04,'w_gingerbread'],['wreath',.25,.26,.07,'w_wreath'],['tree',.24,.84,.1,'w_xtree','tree'],['santa',.72,.83,.07,'w_santa'],['present',.36,.87,.04,'w_gift','gift']]}};
+// per season: pictures, props, hat [model, size, height, tilt z], what's in the corners, greetings (room or * = once per visit), tint [painting, sky light, warm fill] (per room allowed)
+const SEAS={halloween:{dir:'assets/hw/',P:HWP,hat:['witch_hat',2.2,1.02,.16],deco:'webs',greet:{'*':'x_halloween'},tint:{'*':['#b8a2e8','#d9c6ff','#ffa060']},vig:'rgba(48,12,80,.55)'},
+  winter:{dir:'assets/winter/',P:WP,hat:['santa_hat',1.9,1,.2],deco:'lights snow',greet:{home:'x_yalda',play:'x_christmas',library:'x_christmas'},
+    tint:{home:['#f6dccb','#ffe6d0','#ffb070'],'*':['#cdd9f2','#e3ecff','#ffc890']},vig:'rgba(30,50,110,.35)'},
+  snow:{dir:'assets/winter/',P:{bed:WBED},deco:'snow',greet:{},tint:{'*':['#cdd9f2','#e3ecff','#ffc890']},vig:'rgba(30,50,110,.3)'}};
+const hwTint=()=>{const S=SEAS[HW.season];return S&&(S.tint[curRoom]||S.tint['*'])};
+const HWCOL=[['zard','#f5c518'],['abi','#2f74d0'],['ghermez','#e0402a'],['naranji','#f08a1c'],['abiroshan','#79cfe2']],
+  GIFTS=['ball','car','teddy','drum','doll','kite','robot','puzzle','balloon','train','guitar','piano','bike','plane'];
+function hwWeb(left){const n=7,R=100;let d='';for(let i=0;i<n;i++){const a=i/(n-1)*Math.PI/2;d+=`M0 0L${(R*Math.cos(a)).toFixed(1)} ${(R*Math.sin(a)).toFixed(1)}`}
   for(let r=18;r<R;r+=16){let s='';for(let i=0;i<n;i++){const a=i/(n-1)*Math.PI/2,k=r*(i%(n-1)?.93:1);s+=(i?'Q':'M')+(i?`${(r*1.02*Math.cos(a-.13)).toFixed(1)} ${(r*1.02*Math.sin(a-.13)).toFixed(1)} `:'')+`${(k*Math.cos(a)).toFixed(1)} ${(k*Math.sin(a)).toFixed(1)}`}d+=s}
   return `<svg class="hwweb ${left?'l':'r'}" viewBox="0 0 100 100"><path d="${d}" fill="none" stroke="#f4efff" stroke-opacity=".75" stroke-width=".7" stroke-linecap="round"/></svg>`}
-function hwBuild(){if(HW.el)return;const e=HW.el=document.createElement('div');e.id='hw';
-  e.innerHTML=`<div id="hwVig"></div><div id="hwRoom"></div>${hwWeb(1)}${hwWeb(0)}<div id="hwSpider"><i></i><img src="assets/hw/spider.webp" alt=""></div><img id="hwFly" alt="">`;
-  document.getElementById('pFg').after(e);
-  /* corner webs let taps through: they sit over the bedroom rocket on phones */
-  const sp=e.querySelector('#hwSpider');sp.onpointerdown=ev=>{ev.stopPropagation();sp.classList.remove('drop');void sp.offsetWidth;sp.classList.add('drop');hwSay(null,'w_spider')};
+// fairy lights: a drooping wire across the top with bulbs that twinkle out of step
+function hwLights(){const n=16,c=['#ff4d4d','#ffd34d','#4dd2ff','#6dff7a','#ff8af0'];let w='M0 6',b='';for(let i=0;i<n;i++){const x0=i*100/n,x1=(i+1)*100/n;w+=` Q${(x0+x1)/2} 13 ${x1} 6`}
+  for(let i=0;i<n*2;i++){const x=(i+.5)*50/n,y=6+3.5*Math.sin(Math.PI*((x%(100/n))/(100/n)));b+=`<b style="left:${x.toFixed(2)}%;top:calc(var(--lh)*${(y/14).toFixed(3)});background:${c[i%c.length]};color:${c[i%c.length]};animation-delay:${(i*.37%2).toFixed(2)}s"></b>`}
+  return `<div id="hwLights"><svg viewBox="0 0 100 14" preserveAspectRatio="none"><path d="${w}" fill="none" stroke="#2e4a2e" stroke-width=".6" vector-effect="non-scaling-stroke"/></svg>${b}</div>`}
+function hwSnow(){let s='';for(let i=0;i<46;i++){const z=4+Math.random()*7;s+=`<i style="left:${(Math.random()*100).toFixed(1)}%;width:${z.toFixed(1)}px;height:${z.toFixed(1)}px;animation-duration:${(9+Math.random()*9).toFixed(1)}s,${(2.5+Math.random()*2).toFixed(1)}s;animation-delay:-${(Math.random()*18).toFixed(1)}s,-${(Math.random()*3).toFixed(1)}s"></i>`}return `<div id="hwSnow">${s}</div>`}
+function hwBuild(){const S=SEAS[HW.season];if(!HW.el){const e=HW.el=document.createElement('div');e.id='hw';document.getElementById('pFg').after(e)}
+  if(HW.built===HW.season)return;HW.built=HW.season;HW.key='';HW.fly=null;const d=S.deco||'',e=HW.el;e.style.setProperty('--vig',S.vig);
+  e.innerHTML=`<div id="hwVig"></div>${d.includes('snow')?hwSnow():''}<div id="hwRoom"></div>${d.includes('webs')?hwWeb(1)+hwWeb(0)+'<div id="hwSpider"><i></i><img src="assets/hw/spider.webp" alt=""></div>':''}${d.includes('lights')?hwLights():''}<img id="hwFly" alt="">`;
+  /* corner decorations let taps through: they sit over the bedroom rocket on phones */
   const f=e.querySelector('#hwFly');f.onpointerdown=ev=>{ev.stopPropagation();if(HW.fly){HW.fly.loop=1;hwSay(null,HW.fly.w)}}}
-// Googoo says it (one at a time), the prop hops; ghost: boo first; cauldron: bubbles in a colour, then that colour
+// Googoo says it (one at a time), the prop hops; then its effect
 async function hwSay(el,w,fx){if(HW.busy||game.type||st.mode==='sleep')return;HW.busy=true;st.lastPoke=performance.now();setFace('shock',400);kick('squash',3);
   if(el){el.classList.remove('hop');void el.offsetWidth;el.classList.add('hop')}
-  try{if(fx==='bob'){SFX.giggle();await sayAsync('x_boo')}
+  try{if(fx==='bob'&&HW.season==='halloween'){SFX.giggle();await sayAsync('x_boo')}
+    if(fx==='bell')[1568,2093,1760,2349,1976].forEach((f,i)=>tone(f,f*.97,.3,'triangle',.07,i*.08));
     await sayAsync(w);if(w==='w_blackcat')playAsnd('cat',AC.currentTime);
-    if(fx==='green'){const [ck,col]=HWCOL[Math.random()*HWCOL.length|0];hwBubbles(el,col);await wait(300);await sayAsync('col_'+ck)}
+    if(fx==='green'||fx==='tree'){const [ck,col]=HWCOL[Math.random()*HWCOL.length|0];if(fx==='green')hwBubbles(el,col);else el.querySelector('.hwg').style.setProperty('--gc',col);await wait(300);await sayAsync('col_'+ck)}
+    if(fx==='gift'){const img=el.querySelector('img'),toy=GIFTS[Math.random()*GIFTS.length|0],t=document.createElement('img');img.src=SEAS[HW.season].dir+'present_open.webp';
+      t.className='hwtoy';t.src='assets/pics/'+toy+'.webp';el.appendChild(t);SFX.boing();await wait(450);await sayAsync('w_'+toy);setTimeout(()=>{t.remove();img.src=SEAS[HW.season].dir+'present.webp'},1600)}
     setFace('laugh',800)}finally{HW.busy=false}}
 function hwBubbles(el,col){for(let i=0;i<9;i++){const b=document.createElement('b');b.className='hwbub';b.style.cssText=`left:${20+Math.random()*60}%;background:${col};animation-delay:${i*.08}s;width:${10+Math.random()*12}px`;el.appendChild(b);setTimeout(()=>b.remove(),2200)}}
+// once per visit: "یلدا مبارک!" in the living room, "کریسمس مبارک!" in the play room and library (Halloween: once, anywhere)
+function hwGreet(){const g=(SEAS[HW.season]||{}).greet||{},k=g[curRoom]||g['*'];if(!k||HW.said.has(k)||!document.getElementById('start').hidden)return;HW.said.add(k);setTimeout(()=>{if(!game.type&&hwOn())say(k)},1200)}
 // the props for this room and orientation, placed on the painting (paintFrame calls this after every layout)
-function hwLayout(){if(!HW.on||!PNT||!PW){if(HW.el)HW.el.hidden=true;return}hwBuild();HW.el.hidden=false;const list=(HWP[curRoom]||{})[portrait?'portrait':'landscape']||[],M=pU.uM.value,box=HW.el.querySelector('#hwRoom');
-  const key=curRoom+portrait+M.x+M.y+M.z+M.w;if(key===HW.key)return;HW.key=key;box.innerHTML='';
+function hwLayout(){if(!hwOn()||!PNT||!PW){if(HW.el)HW.el.hidden=true;return}hwBuild();HW.el.hidden=false;const S=SEAS[HW.season],list=(S.P[curRoom]||{})[portrait?'portrait':'landscape']||[],M=pU.uM.value,box=HW.el.querySelector('#hwRoom');
+  if(curRoom!==HW.room){HW.room=curRoom;hwGreet()}
+  const key=HW.season+curRoom+portrait+M.x+M.y+M.z+M.w;if(key===HW.key)return;HW.key=key;box.innerHTML='';
   const keep=PW.taps.filter(t=>t.f==='rocket'||t.f==='lamp'),[IW,IH]=PNT.size||[1,1];
   for(const [pic,u,v,h,w,fx] of list){const hw=h*IH/IW/2;if(keep.some(t=>u+hw>t.r[0]&&u-hw<t.r[2]&&v>t.r[1]&&v-h<t.r[3]))continue;const [x,y]=PW.S(u,v),d=document.createElement('div');d.className='hwp'+(fx?' '+fx:'');d.style.cssText=`left:${x}px;top:${y}px;height:${h*M.w}px`;
-    d.innerHTML=(fx==='glow'||fx==='green'?`<i class="hwg"></i>`:'')+`<img src="assets/hw/${pic}.webp" alt="" draggable="false" onerror="this.parentNode.remove()">`;
+    d.innerHTML=(fx==='glow'||fx==='green'||fx==='tree'?`<i class="hwg"></i>`:'')+`<img src="${S.dir}${pic}.webp" alt="" draggable="false" onerror="this.parentNode.remove()">`;
     d.onpointerdown=ev=>{ev.stopPropagation();hwSay(d,w,fx)};box.appendChild(d)}}
-function hwSet(on){HW.on=on;try{localStorage.setItem('pash-hw',on?'1':'0')}catch(e){}HW.key='';hwLayout();if(PNT)paintLights();hwHat()}
-// Googoo's hat, on his head bone (tilted a little, a bit cheeky)
-function hwHat(){if(!B.Head)return;if(!HW.hat){HW.hat=1;new THREE.GLTFLoader().load('models/witch_hat.glb',g=>{const h=HW.hat=g.scene,s=new THREE.Vector3();h.traverse(o=>{if(o.isMesh)o.castShadow=true});
-    B.Head.getWorldScale(s);const k=robot.scale.x/s.x;h.scale.setScalar(2.2*k);h.position.set(0,1.02*k,.04*k);h.rotation.set(-.12,0,.16);B.Head.add(h);h.visible=HW.on},undefined,()=>{HW.hat=null})}
-  else if(HW.hat!==1)HW.hat.visible=HW.on}
-// every frame: the props follow the picture's pan/zoom; now and then a bat (or the little witch) flies across
-function hwTick(dt){if(!HW.el||HW.el.hidden)return;const T=pU.uT.value,Z=pU.uZ.value,tf=`translate(${T.z-T.x*Z}px,${T.w-T.y*Z}px) scale(${Z})`;
+function hwSet(s){HW.season=s;try{localStorage.setItem('pash-season',s)}catch(e){}HW.key='';HW.said.clear();hwLayout();if(PNT)paintLights();hwHat()}
+// Googoo's hat for this season, on his head bone (tilted a little, a bit cheeky); the Santa hat's pom-pom wobbles (hwTick)
+function hwHat(){if(!B.Head)return;const H=(SEAS[HW.season]||{}).hat;
+  for(const k in HW.hats){const h=HW.hats[k];if(h&&h!==1)h.visible=!!H&&H[0]===k}
+  if(H&&!HW.hats[H[0]]){HW.hats[H[0]]=1;new THREE.GLTFLoader().load('models/'+H[0]+'.glb',g=>{const h=HW.hats[H[0]]=g.scene,s=new THREE.Vector3();h.traverse(o=>{if(o.isMesh)o.castShadow=true});
+    B.Head.getWorldScale(s);const k=robot.scale.x/s.x;h.scale.setScalar(H[1]*k);h.position.set(0,H[2]*k,.04*k);h.rotation.set(-.12,0,H[3]);B.Head.add(h);h.userData.pp=h.getObjectByName('pompom');
+    if(h.userData.pp)h.userData.pp0=h.userData.pp.position.clone();hwHat()},undefined,()=>{delete HW.hats[H[0]]})}}
+// every frame: the props follow the picture's pan/zoom; now and then something flies across (Halloween: a bat or the little witch; winter: Santa's sleigh, not at Yalda)
+function hwTick(dt){for(const k in HW.hats){const h=HW.hats[k],p=h&&h.userData&&h.userData.pp;if(p&&h.visible)p.position.y=h.userData.pp0.y+Math.sin(performance.now()/260)*.012}
+  if(!HW.el||HW.el.hidden)return;const T=pU.uT.value,Z=pU.uZ.value,tf=`translate(${T.z-T.x*Z}px,${T.w-T.y*Z}px) scale(${Z})`;
   if(tf!==HW.tf){HW.tf=tf;HW.el.querySelector('#hwRoom').style.transform=tf}
   const f=HW.el.querySelector('#hwFly');
-  if(!HW.fly){HW.flyT-=dt;if(HW.flyT<0&&!game.type){const bat=Math.random()<.7,dir=Math.random()<.5?1:-1;HW.fly={bat,dir,t:0,dur:bat?6:8,y:.12+Math.random()*.3,w:bat?'w_bat':'w_witch',loop:0,fr:0};
-      f.src='assets/hw/'+(bat?'bat1':'witch')+'.webp';const m=Math.min(innerWidth,innerHeight)/100;f.style.width=bat?17*m+'px':'auto';f.style.height=bat?'auto':19*m+'px';f.style.display='block'}return}
-  const F=HW.fly;F.t+=dt;const p=F.t/F.dur,W=innerWidth+300,x=F.dir>0?-150+p*W:innerWidth+150-p*W,y=innerHeight*(F.y+Math.sin(p*9)*.03);
+  if(!HW.fly){HW.flyT-=dt;if(HW.flyT>0||game.type)return;HW.flyT=14+Math.random()*12;const dir=Math.random()<.5?1:-1,m=Math.min(innerWidth,innerHeight)/100;
+    if(HW.season==='halloween'){const bat=Math.random()<.7;HW.fly={bat,dir,t:0,dur:bat?6:8,y:.12+Math.random()*.3,w:bat?'w_bat':'w_witch',loop:0,fr:0};f.src='assets/hw/'+(bat?'bat1':'witch')+'.webp';f.style.width=bat?17*m+'px':'auto';f.style.height=bat?'auto':19*m+'px'}
+    else if(HW.season==='winter'&&curRoom!=='home'){HW.fly={dir,t:0,dur:9,y:.1+Math.random()*.2,w:'w_sleigh',loop:0};f.src='assets/winter/sleigh.webp';f.style.width=34*m+'px';f.style.height='auto'}
+    else return;f.style.display='block';return}
+  const F=HW.fly;F.t+=dt;const p=F.t/F.dur,W=innerWidth+500,x=F.dir>0?-250+p*W:innerWidth+250-p*W,y=innerHeight*(F.y+Math.sin(p*9)*.03);
   if(F.loop){F.loop+=dt*2.2;if(F.loop>=Math.PI*2+1)F.loop=0}const l=F.loop?F.loop-1:0,lr=l>0?60:0;
   if(F.bat&&(F.fr+=dt)>.14){F.fr=0;f.dataset.f=f.dataset.f==='2'?'1':'2';f.src='assets/hw/bat'+f.dataset.f+'.webp'}
   f.style.transform=`translate(${x+Math.sin(l)*lr}px,${y-(1-Math.cos(l))*lr}px) translate(-50%,-50%) scaleX(${F.dir}) rotate(${l>0?l*57.3*F.dir:0}deg)`;
-  if(p>=1){HW.fly=null;f.style.display='none';HW.flyT=14+Math.random()*12}}
+  if(p>=1){HW.fly=null;f.style.display='none'}}
 const PAINT0=JSON.parse(JSON.stringify(PAINT)); // the built-in pictures (Design mode: "painted room" on again)
 let PNT=null,PK='',PW=null,libPage=0,libPages=[[]],libStoryP=0,libSlide=null,libSel=-1,libIdx={};const POSE=[],_pv=V3(),_pq=new THREE.Quaternion();
 const pOf=r=>{const B=PAINT[r];return B?B[portrait?'portrait':'landscape']||B.portrait||B.landscape||null:null}; // no picture for this orientation: the other one (cover fit, still no bars)
@@ -1718,7 +1765,7 @@ function paintLights(){const P=PNT;if(!P)return;const Lt=P.light||{},n=!lightsOn
   windowGlow.intensity=0;renderer.toneMappingExposure=Lt.exp||.95;pFloor.material.opacity=(Lt.shadow??.35)*(n?.4:1);pBlob.material.opacity=n?.55:1;
   const nP=!!P.night;pMixT=n&&nP?1:0;pU.uNight.value=n?1:0;pU.uMul.value.set(n?(nP?'#e4e4f2':'#5a66a8'):'#ffffff');pU.uDustA.value=n?.25:1;pFg.classList.toggle('dark',n);(P.lamps||[]).forEach((l,i)=>i<4&&pU.uLamp.value[i].set(l[0],l[1],l[2],nP?.45:1)); // night picture: already dark, so a light tint and softer lamp glows
   for(let i=(P.lamps||[]).length;i<4;i++)pU.uLamp.value[i].w=0;
-  if(HW.on&&!n){pU.uMul.value.set('#b8a2e8');hemiL.color.set('#d9c6ff');fill.color.set('#ffa060')}} // Halloween: a purple dusk, orange from the pumpkins
+  const T=hwOn()&&hwTint();if(T&&!n){pU.uMul.value.set(T[0]);hemiL.color.set(T[1]);fill.color.set(T[2])}} // the season's light: Halloween dusk, cool winter, a warm Yalda living room
 function paintVis(){const on=!!PNT;room.visible=!on;pBg.visible=pDust.visible=pFloor.visible=pBlob.visible=on;
   if(on)paintLights();else{paintRestore();pFg.classList.add('off');pgPrev.hidden=pgNext.hidden=pgDots.hidden=true;pGlow.visible=false;libSlide=null;clipL.constant=clipR.constant=1e6}}
 // called at the end of resize(): the cover fit, then the camera from the painting (horizon + his feet + his height), then everything that sits on the painting
@@ -1950,8 +1997,8 @@ function renderParent(){
       if(i===1&&c.heard<3){const tag=document.createElement('span');tag.className='tag';tag.textContent='more practice';td.appendChild(tag)}tr.appendChild(td)});
     tb.appendChild(tr)}
 }
-{const e=document.getElementById('pcHw');e.checked=HW.on;e.onchange=()=>hwSet(e.checked)}
-document.getElementById('go').addEventListener('click',()=>setTimeout(()=>{hwHat();if(HW.on&&!game.type)say('x_halloween')},3500));
+{const e=document.getElementById('pcSeason');e.value=HW.season;e.onchange=()=>hwSet(e.value)}
+document.getElementById('go').addEventListener('click',()=>setTimeout(()=>{hwHat();hwGreet()},3500));
 const wordsEl=document.getElementById('pcWords');try{wordsEl.checked=localStorage.getItem('pash-words')==='1'}catch(e){}
 document.body.classList.toggle('words',wordsEl.checked);
 wordsEl.onchange=()=>{document.body.classList.toggle('words',wordsEl.checked);if(!wordsEl.checked)bubble.classList.remove('show');try{localStorage.setItem('pash-words',wordsEl.checked?'1':'0')}catch(e){}};
