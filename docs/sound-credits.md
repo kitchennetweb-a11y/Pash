@@ -31,3 +31,11 @@ Note: the owner's earlier free-plan ElevenLabs meow is NOT used (a free-plan sou
 ## 3D planet surface maps
 
 `assets/space/3d/*.webp` (solar system finale): Solar System Scope textures, https://www.solarsystemscope.com/textures/ , CC BY 4.0. Resized to 1024/512 wide webp.
+
+## Train set
+
+`assets/sounds/train_chug.mp3`, `train_whistle.mp3`, `train_stop.mp3`: generated with ElevenLabs sound effects (2026-11-21).
+
+## Train model
+
+`models/train_loco.glb`, `models/train_tender.glb`: "Locomotive" by yanix, https://sketchfab.com/3d-models/locomotive-d89f7d5a37ef43119e7b6c37b41c69cb , CC BY 4.0. Split into engine and tender with turning wheels by tools/train_loco_blender.py.

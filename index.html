@@ -232,6 +232,7 @@ body.jelly .rb.jtap,body.jelly .ec.nav.jtap{animation:jtap .35s cubic-bezier(.3,
   <button id="bStories" class="rb" style="background:#a66cff" aria-label="Stories" hidden>📚</button>
   <button id="bLamp" class="rb" style="background:#ffd34d" aria-label="Light on/off">💡</button>
   <button id="bRocket" class="rb" style="background:#3a4fb0" aria-label="Rocket to space">🚀</button>
+  <button id="bTrain" class="rb" style="background:#c0392b" aria-label="Train set">🚂</button>
   <button id="bDisco" class="rb" style="background:#ff4fd8" aria-label="Disco">🪩</button>
   <button id="bDark" class="rb" style="background:#3d4a7a" aria-label="Find in the dark">🔦</button>
   <button id="bStars" class="rb" style="background:#2b3a78" aria-label="Count stars">⭐</button>
@@ -246,6 +247,7 @@ body.jelly .rb.jtap,body.jelly .ec.nav.jtap{animation:jtap .35s cubic-bezier(.3,
   <div id="pcLists"></div><h3>All words</h3>
   <div class="pc-tablewrap"><table><thead><tr><th>Word</th><th></th><th>Heard</th><th>Found</th><th>Mixed up</th><th>Said</th></tr></thead><tbody id="pcRows"></tbody></table></div>
   <p class="pc-note">Stored on this device only. "Found" counts right taps in Find, Colours and Feed; "Said" counts tries in Say it and Animals. Words he has heard fewer than 3 times are marked for more practice.</p>
+  <p class="pc-note">Thanks: train "Locomotive" by yanix (Sketchfab, CC BY 4.0); planet maps by Solar System Scope (CC BY 4.0); sounds listed in docs/sound-credits.md.</p>
   <label class="pc-note"><input type="checkbox" id="pcWords"> Show words: a small Farsi caption for every line (off: pictures only)</label><br><label class="pc-note">Season: <select id="pcSeason"><option value="off">Off</option><option value="halloween">Halloween</option><option value="winter">Winter: Yalda, Christmas and snow</option><option value="snow">Winter, no holidays (snow only)</option></select></label><br><button id="pcReset">Reset stats</button>
 </div></div>
 <div id="micHelp" hidden><h2>Googoo can't hear here</h2>
@@ -1118,7 +1120,7 @@ function animateItems(t,dt){
 // ----- game state -----
 const game={type:null,token:0,awaiting:null,busy:false,listening:false,onHeard:null,score:0};
 const deck=document.getElementById('deck');
-function endGame(){if(game.type==='launch')launchEnd();if(game.type==='dark')setLights(true);faceOff();game.token++;game.type=null;game.awaiting=null;game.busy=false;game.listening=false;game.onHeard=null;clearItems();
+function endGame(){if(game.type==='launch')launchEnd();if(game.type==='train')trainEnd();if(game.type==='dark')setLights(true);faceOff();game.token++;game.type=null;game.awaiting=null;game.busy=false;game.listening=false;game.onHeard=null;clearItems();
   if(!deck.hidden){deck.hidden=true;resize()}
   if(st.mode==='game')setMode('idle')}
 // Cards: items [{pic (string, or array -> separate tappable spans), fa?, cls?, ...}]; onTap(item, button, spanIndex)
@@ -1450,7 +1452,7 @@ function applyLayout(L){for(const s in L.rooms){const R=L.rooms[s];WALLS[s]=R.wa
     for(const id in PROPS)if(PROPS[id].room===s)delete PROPS[id];
     GOO[s]=R.googoo||{};CAMS[s]=R.camera||{};if(s==='library')LIBORDER=R.books||null;if('backdrop' in R)PAINT[s]=R.backdrop; // painted room (null = 3D)
     for(const p of R.props||[])if(p.builtin)BUILT[p.id]=p;else PROPS[p.id]={f:p.file,k:p.k,x:p.x,y:p.y,z:p.z,ry:p.ry,room:s,on:p.on!==undefined?p.on:SITS[p.id],back:p.wall==='back',side:p.wall==='left',sy:p.flatten,nosq:p.noSqueeze,off:p.hidden,cast:p.castShadow,pt:p.portrait}}
-  const U=L.ui||{},S=U.size||1;document.body.classList.toggle('jelly',(U.style||'jelly')==='jelly');FREE=U.free||{};NAVORDER=(U.nav||{}).order||NAVORDER;TOPORDER=(U.top||{}).order||TOPORDER;for(const k in U.screens||{})SCREENS[k]=[U.screens[k].left,U.screens[k].right];{const b=SCREENS.bed[0];if(!b.includes('bRocket')){const i=b.indexOf('bPeek');i>=0?b.splice(i,1,'bRocket'):b.push('bRocket')}} /* the bedroom's rocket button, also when the saved layout predates it */
+  const U=L.ui||{},S=U.size||1;document.body.classList.toggle('jelly',(U.style||'jelly')==='jelly');FREE=U.free||{};NAVORDER=(U.nav||{}).order||NAVORDER;TOPORDER=(U.top||{}).order||TOPORDER;for(const k in U.screens||{})SCREENS[k]=[U.screens[k].left,U.screens[k].right];{const p=SCREENS.play[0];if(!p.includes('bTrain'))p.splice(2,0,'bTrain')}{const b=SCREENS.bed[0];if(!b.includes('bRocket')){const i=b.indexOf('bPeek');i>=0?b.splice(i,1,'bRocket'):b.push('bRocket')}} /* the bedroom's rocket button, also when the saved layout predates it */
   for(const id in U.buttons||{}){const b=document.getElementById(id);if(b&&U.buttons[id].color)b.style.background=U.buttons[id].color}
   for(const id in BUILT){const p=BUILT[id],g=furnById(id);if(!g)continue;g.userData.x0=p.x??g.userData.x0;if(p.z!=null)g.position.z=p.z;if(p.y!=null)g.position.y=p.y;if(p.ry!=null&&!g.userData.spin)g.rotation.y=p.ry;g.userData.off=p.hidden?1:0;g.userData.on=p.on!==undefined?p.on:SITS[id]} // book, star mobile
   const T=U.top||{},N=U.nav||{},NS=N.size??S,top=document.getElementById('top'),nav=document.getElementById('nav'),sz=(q,k)=>k!==1?`${q}{width:calc(var(--b)*${k});height:calc(var(--b)*${k});font-size:calc(var(--b)*${k/2})}`:'';
@@ -1876,6 +1878,61 @@ async function tapFurniture(id){
     teddy:()=>{SFX.giggle();emit('heart',furnById('teddy').position.clone().setY(1.8),5,{size:.3,life:1.2,g:.5})},cow:()=>{SFX.giggle();emit('heart',furnById('cow').position.clone().setY(2.5),5,{size:.3,life:1.2,g:.5})},star:()=>{[1047,1319,1568].forEach((f,i)=>tone(f,f,.2,'triangle',.08,i*.15))}}[id]||SFX.boing)();
   setFace('shock',500);kick('squash',4);if(HAS.has('w_'+id)||FURN[id])await sayAsync('w_'+id);setFace('laugh',800);
 }
+// ----- Train set (play room, 🚂 button): a round track appears on the rug around Googoo, the steam train runs round him while he turns to watch,
+// steam puffs from the chimney, chugs (assets/sounds/train_*.mp3, ElevenLabs), tap it for the whistle and "قطار!". It slows down, stops, Googoo counts the cars, it packs away.
+// Cars: models/train_loco.glb + train_tender.glb from "Locomotive" by yanix (Sketchfab, CC BY 4.0; tools/train_loco_blender.py): front = +x, base at y 0,
+// spoked wheels are their own nodes (wheel_*, origin on the axle) and turn with the speed. The track is made here, to the cars' size.
+const TRAIN={on:false,g:null,cars:[],a:0,v:0,vmax:0,r:0,puff:0,look:null,src:null,gain:null,models:null,tapT:0};
+const TRAIN_CARS=[['train_loco',2.9],['train_tender',1.72]]; // file, length (x HOME.s)
+const trainLoad=()=>TRAIN.models||(TRAIN.models=Promise.all(TRAIN_CARS.map(([f])=>new Promise(ok=>new THREE.GLTFLoader().load('models/'+f+'.glb',g=>{g.scene.traverse(o=>{if(o.isMesh){o.castShadow=true;
+  if(o.material){o.material.envMapIntensity=1.2}}});ok(g.scene)},undefined,()=>ok(null))))));
+// gravel bed, wooden sleepers, two steel rails (lathed rings, so they are perfectly round)
+function trainTrack(r,g){const T=new THREE.Group(),c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d');x.fillStyle='#6f675c';x.fillRect(0,0,128,128);
+  for(let i=0;i<900;i++){const v=80+Math.random()*80|0;x.fillStyle=`rgb(${v},${v-6},${v-14})`;x.fillRect(Math.random()*128,Math.random()*128,1+Math.random()*3,1+Math.random()*3)}
+  const gt=new THREE.CanvasTexture(c);gt.wrapS=gt.wrapT=THREE.RepeatWrapping;gt.repeat.set(24,2);
+  const bed=new THREE.Mesh(new THREE.RingGeometry(r-g*.95,r+g*.95,160,1),new THREE.MeshStandardMaterial({map:gt,color:0x6e665d,roughness:1}));bed.rotation.x=-Math.PI/2;bed.position.y=.006;bed.receiveShadow=true;T.add(bed);
+  const n=Math.round(Math.PI*2*r/(g*.55)),sl=new THREE.InstancedMesh(new THREE.BoxGeometry(g*1.45,g*.1,g*.22),new THREE.MeshStandardMaterial({color:0x2e1d10,roughness:.85}),n),m=new THREE.Matrix4(),q=new THREE.Quaternion();
+  for(let i=0;i<n;i++){const a=i/n*Math.PI*2;q.setFromAxisAngle(_trY,-a);m.compose(V3().set(Math.cos(a)*r,g*.05+.01,Math.sin(a)*r),q,V3().set(1,1,1));sl.setMatrixAt(i,m)}sl.castShadow=sl.receiveShadow=true;T.add(sl);
+  const steel=new THREE.MeshStandardMaterial({color:0xa4a9b0,metalness:.85,roughness:.32});
+  for(const rr of [r-g/2,r+g/2]){const w=g*.05,h=g*.13,b=g*.11,P=[[rr-w,0],[rr+w,0],[rr+w*.35,h*.2],[rr+w*.35,h*.68],[rr+w,h*.74],[rr+w,h],[rr-w,h],[rr-w,h*.74],[rr-w*.35,h*.68],[rr-w*.35,h*.2],[rr-w,0]].map(([u,v])=>new THREE.Vector2(u,v+b));
+    const rail=new THREE.Mesh(new THREE.LatheGeometry(P,200),steel);rail.castShadow=true;T.add(rail)}
+  return T}
+const _trY=new THREE.Vector3(0,1,0);
+async function trainRun(){const tok=startGame('train'),M=await trainLoad();if(!alive(tok))return;if(M.some(m=>!m)){endGame();return}
+  goHome();const s=HOME.s,L=TRAIN_CARS.map(([,l])=>l*s),g=L[0]*.185; /* gauge: the loco's wheels */TRAIN.r=3*s;
+  const G=TRAIN.g=new THREE.Group();G.position.set(HOME.x,0,HOME.z);G.add(trainTrack(TRAIN.r,g));
+  TRAIN.cars=M.map((m,i)=>{const c=m.clone(),bb=new THREE.Box3().setFromObject(m),k=L[i]/Math.max(.01,bb.max.x-bb.min.x),p=new THREE.Group();c.scale.setScalar(k);c.position.y=g*.24;p.add(c);G.add(p);
+    const wh=[];c.traverse(o=>{if(/^wheel/.test(o.name)){const b=new THREE.Box3().setFromObject(o);wh.push({o,r:Math.max(.01,(b.max.y-b.min.y)/2*k)})}});return {p,c,L:L[i],H:(bb.max.y-bb.min.y)*k,y0:c.position.y,wh}});
+  scene.add(G);TRAIN.on=true;TRAIN.a=-Math.PI*.5;TRAIN.v=0;TRAIN.vmax=1.7*s/TRAIN.r;TRAIN.look=0;trainPlace(0);
+  await anim2(600,p=>G.scale.setScalar(.001+smooth(p)));if(!alive(tok))return;
+  loadAsnd('train_stop');trainWhistle();await wait(700);if(!alive(tok))return;trainChug(true);
+  // run: speed up, about three laps round him, slow down
+  const t0=performance.now(),RUN=26000;
+  while(alive(tok)&&performance.now()-t0<RUN){const p=(performance.now()-t0)/RUN;TRAIN.v=TRAIN.vmax*Math.min(1,p*6,(1-p)*5+.15);await wait(100)}
+  if(!alive(tok))return;playAsnd('train_stop',AC.currentTime);await anim2(1600,p=>{TRAIN.v=TRAIN.vmax*.15*(1-p)});trainChug(false);TRAIN.v=0;if(!alive(tok))return;
+  // count the cars, each one hops as he says its number
+  setFace('laugh',800);for(let i=0;i<TRAIN.cars.length;i++){if(!alive(tok))return;const c=TRAIN.cars[i];c.hop=0;await Promise.all([sayAsync('cd_'+(i+1)),wait(700)])}
+  if(!alive(tok))return;await sayAsync('w_train');trainWhistle();await wait(900);if(!alive(tok))return;
+  await anim2(600,p=>G.scale.setScalar(1-smooth(p)+.001));if(alive(tok))endGame()}
+const anim2=(ms,f)=>new Promise(ok=>{const t0=performance.now(),step=()=>{const p=Math.min(1,(performance.now()-t0)/ms);if(TRAIN.on)f(p);p<1&&TRAIN.on?requestAnimationFrame(step):ok()};step()});
+function trainWhistle(){loadAsnd('train_whistle').then(b=>{if(!b||!AC)return;const s=AC.createBufferSource();s.buffer=b;s.connect(AC.destination);s.start()})}
+function trainChug(on){if(TRAIN.src){try{TRAIN.src.stop()}catch(e){}TRAIN.src=null}if(!on)return;
+  loadAsnd('train_chug').then(b=>{if(!b||!AC||!TRAIN.on)return;const s=AC.createBufferSource(),gn=AC.createGain();s.buffer=b;s.loop=true;gn.gain.value=.55;s.connect(gn).connect(AC.destination);s.start();TRAIN.src=s;TRAIN.gain=gn})}
+// cars on the circle: the engine leads, each car a little further back round the bend, turned along the track, rocking a little
+function trainPlace(dt){let a=TRAIN.a;const t=performance.now()/1000;
+  TRAIN.cars.forEach((c,i)=>{if(i)a-=(TRAIN.cars[i-1].L/2+c.L/2+.08*HOME.s)/TRAIN.r;c.p.position.set(Math.cos(a)*TRAIN.r,0,Math.sin(a)*TRAIN.r);c.p.rotation.set(0,-a-Math.PI/2,0);
+    c.c.rotation.x=Math.sin(t*9+i)*.012*Math.min(1,TRAIN.v/(TRAIN.vmax||1));if(c.hop!==undefined){c.hop+=dt;c.c.position.y=c.y0+(c.hop<.5?Math.sin(c.hop/.5*Math.PI)*.25*HOME.s:0);if(c.hop>.5)delete c.hop}})}
+function trainTick(dt){if(!TRAIN.on)return;TRAIN.a+=TRAIN.v*dt;trainPlace(dt);
+  for(const c of TRAIN.cars)for(const w of c.wh)w.o.rotation.z-=TRAIN.v*TRAIN.r/w.r*dt; // the wheels roll along the rails
+  if(TRAIN.src)TRAIN.src.playbackRate.value=.6+.5*TRAIN.v/(TRAIN.vmax||1);
+  // he turns his body and head toward the engine while it is in front of him; when it goes behind he looks back to the front
+  const e=TRAIN.cars[0];if(e){const w=V3();e.p.getWorldPosition(w);const ang=Math.atan2(w.x-HOME.x,w.z-HOME.z)-HOME.ry,d=Math.atan2(Math.sin(ang),Math.cos(ang));TRAIN.look=Math.max(-1,Math.min(1,d))*.6;
+    TRAIN.puff-=dt;if(TRAIN.v>TRAIN.vmax*.2&&TRAIN.puff<0){TRAIN.puff=.22;const ch=new THREE.Vector3(e.L*.3,e.H+e.y0,0); /* the chimney */e.p.localToWorld(ch);emit('smoke',ch,1,{size:.45*HOME.s,life:1.3,g:.5,grow:1.3,vel:()=>new THREE.Vector3((Math.random()-.5)*.3,.9,(Math.random()-.5)*.3)})}}}
+function trainEnd(){if(!TRAIN.on)return;TRAIN.on=false;trainChug(false);if(TRAIN.g){scene.remove(TRAIN.g);TRAIN.g.traverse(o=>{if(o.isMesh&&o.parent&&!TRAIN.cars.some(c=>c.c===o)){o.geometry.dispose()}})}TRAIN.g=null;TRAIN.cars=[];TRAIN.look=null}
+// tap the train while it runs: whistle and "قطار!"
+renderer.domElement.addEventListener('pointerdown',e=>{if(!TRAIN.on||!TRAIN.g||performance.now()-TRAIN.tapT<1500)return;const r=renderer.domElement.getBoundingClientRect(),rc=new THREE.Raycaster();
+  rc.setFromCamera({x:(e.clientX-r.left)/r.width*2-1,y:-((e.clientY-r.top)/r.height*2-1)},camera);if(!rc.intersectObjects(TRAIN.cars.map(c=>c.p),true).length)return;
+  TRAIN.tapT=performance.now();trainWhistle();setFace('laugh',900);kick('squash',3);say('w_train')});
 // ----- Rocket launch (bedroom toy rocket): the rocket appears, Googoo jets into its window, counts down 5..1 in Farsi, blast-off.
 // Then the space trip (spaceTrip, below). Rocket: models/space_rocket.glb (tools/rocket_blender.py). -----
 let LAUNCH=null,ROCKET=null,rocketFlame=null;const FLY_UP=.45;
@@ -2139,7 +2196,7 @@ onBtn('bNext',()=>sayRound(sayNext||pickSay()));
 onBtn('bRepeat',()=>sayRound(sayCur||pickSay()));
 onBtn('bMoves',playMoves);
 onBtn('bLamp',()=>{if(curRoom==='bed')return tapFurniture('lamp');setLights(!lightsOn);SFX.beep();sayIf(lightsOn?'lamp_home_on':'lamp_home_off')});
-onBtn('bDisco',()=>disco(!discoOn));onBtn('bRocket',()=>tapFurniture('rocket'));onBtn('bDark',()=>playFindCards(true));onBtn('bStars',playStars);
+onBtn('bDisco',()=>disco(!discoOn));onBtn('bRocket',()=>tapFurniture('rocket'));onBtn('bTrain',trainRun);onBtn('bDark',()=>playFindCards(true));onBtn('bStars',playStars);
 onBtn('bNStory',async()=>{if(curRoom==='library')return libStory();const s=STORIES.find(s=>s.id==='bedtime')||STORIES[0];if(!s)return;await sayIf('night_story');if(scr==='bed'&&!game.type)storyPage(s,0)});
 onBtn('bSleep',()=>{setMode('sleep');say(HAS.has('x_khabam_miad')&&Math.random()<.5?'x_khabam_miad':'sleep');setFace('sleep',1e9);music(false);ggClip(...YAWN)});
 document.getElementById('go').onclick=async()=>{await ac().resume();micOn(false);await Promise.race([MANIFEST.then(()=>loadVoices(['name','hi'])),wait(2500)]);loadCore();propsOn=true;loadProps(curRoom);document.getElementById('start').hidden=true;document.getElementById('hint').hidden=true;say(HAS.has('name')?'name':'hi');SFX.beep();kick('squash',8);speak();wave('wave_hello');ggAnims()};
@@ -2310,7 +2367,7 @@ setInterval(()=>{if(!document.getElementById('start').hidden)return;if(curRoom!=
 // ---------- Rooms (home, play, bed) + the Say it screen, switched from #nav ----------
 let curRoom='home',scr='home';
 const LEARN=['bFind','bColour','bCount','bAnimals']; // right rail, same in every room; left = this room's actions. Off screen for now: bJump, bMoves, bDark (bTalk lives in #top)
-const SCREENS={home:[['bFeed','bDance','bSing','bLamp'],LEARN],play:[['bBall','bBubbles','bDisco','bPeek'],LEARN],
+const SCREENS={home:[['bFeed','bDance','bSing','bLamp'],LEARN],play:[['bBall','bBubbles','bTrain','bDisco','bPeek'],LEARN],
   bed:[['bSleep','bLamp','bRocket','bNStory'],LEARN],night:[['bSleep','bLamp','bStars','bNStory'],LEARN],say:[['bRepeat'],['bNext']],book:[['bBookHome'],[]],
   library:[['bNStory','bRead','bLamp','bSing'],LEARN]}; // book = a book or story open in the library: Back to the shelf
 const WALL={home:0xffffff,play:0xfff27a,bed:0x6f9cff,library:0xc4aef0}; // library: soft lavender
@@ -2462,6 +2519,7 @@ function loop(){
   sitNow+=((sitDip||0)-sitNow)*Math.min(1,dt*8);sitDip=0;
   const sc=pose.name==='big'&&now<pose.until?1.45:pose.name==='small'&&now<pose.until?.6:1;robotScale+=(sc-robotScale)*Math.min(1,dt*6);robot.scale.setScalar(robotScale*HOME.s);
   const fp=GG?1.8:1.2;flipZ=fp*Math.sin(flip);robot.position.set(x,jumpY+fp-fp*Math.cos(flip)-(GG?0:sitNow*.35),z-flipZ);robot.rotation.x=flip; // flipZ: the flip's arc, not part of where he stands
+  if(TRAIN.look!==null){yaw=HOME.ry+TRAIN.look;headYaw=TRAIN.look*.8} // watching the train go round
   robot.rotation.y+=((yaw+st.spin)-robot.rotation.y)*Math.min(1,dt*8);
   const sq=st.squash*.04;hips.scale.set(1+sq,1-sq,1+sq);hips.position.y=bob;hips.rotation.z=st.lean*.05;
   head.rotation.z=st.head*.08;head.rotation.y=headYaw;neck.position.y=1.85+st.squash*.02;
@@ -2496,7 +2554,7 @@ function loop(){
   if(talk.an){const b=talk.buf||(talk.buf=new Float32Array(talk.an.fftSize));talk.an.getFloatTimeDomainData(b);let q=0;for(const v of b)q+=v*v;talk.level=Math.sqrt(q/b.length)}
   mouthOpen=talk.playing?Math.min(1,talk.level*7):now<mouthT?Math.abs(Math.sin(now/70)):0;
   const fk=face+(face==='pic'?facePic:'')+(blink>0)+(mouthOpen>.05?Math.round(mouthOpen*8):0);if(fk!==faceKey||face==='dizzy'){faceKey=fk;drawFace(t)}} // redraw the face only when it changes
-  if(libFly&&libFly.t<1)stepFly(dt);faceStep(dt);paintTick(dt,t);if(LAUNCH)launchTick(dt);hwTick(dt);
+  if(libFly&&libFly.t<1)stepFly(dt);faceStep(dt);paintTick(dt,t);if(LAUNCH)launchTick(dt);hwTick(dt);trainTick(dt);
   renderer.render(scene,camera);
 }
 loop();
