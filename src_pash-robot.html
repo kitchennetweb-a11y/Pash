@@ -9,7 +9,7 @@
   color-scheme:light;
 }
 [hidden]{display:none!important}
-html,body{height:100%}
+html,body{height:100%;touch-action:manipulation}#stage canvas{touch-action:none} /* quick repeated taps never zoom the page (iPad double-tap zoom) */
 body{margin:0;background:var(--sky);color:var(--ink);font-family:var(--display);overflow:hidden;
   -webkit-user-select:none;user-select:none;touch-action:none;-webkit-tap-highlight-color:transparent}
 #stage{position:fixed;inset:0}
@@ -1922,6 +1922,7 @@ function showStars(){document.getElementById('scoreN').textContent=Object.values
 function statHeard(k){statAdd(wordOf(k),'heard')}
 const today=()=>new Date().toISOString().slice(0,10);
 setInterval(()=>{if(document.getElementById('start').hidden&&document.visibilityState==='visible'){stats.secs+=5;stats.days[today()]=(stats.days[today()]||0)+5;statsDirty=true}saveStats()},5000);
+['gesturestart','gesturechange','dblclick'].forEach(t=>document.addEventListener(t,e=>e.preventDefault(),{passive:false})); // Safari: no pinch or double-tap page zoom
 document.getElementById('go').addEventListener('click',()=>{stats.sessions++;statsDirty=true;saveStats()});
 const mins=s=>s<60?'<1':Math.round(s/60);
 function renderParent(){

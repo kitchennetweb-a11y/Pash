@@ -4,7 +4,7 @@ import csv, glob, hashlib, json, os, re
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 HEAD = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
-        '<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">'
+        '<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">'
         '<meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">'
         '<meta name="apple-mobile-web-app-title" content="Googoo Robo"><meta name="theme-color" content="#bfe3f2">'
         '<link rel="manifest" href="manifest.webmanifest"><link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">'
