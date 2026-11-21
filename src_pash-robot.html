@@ -131,6 +131,7 @@ body.space #acts,body.space #nav,body.space #score,body.space #bTalk{display:non
 #hwLights{--lh:min(8vw,8vh);position:absolute;left:0;top:0;width:100%;height:var(--lh)}#hwLights svg{position:absolute;inset:0;width:100%;height:100%}
 #hwLights b{position:absolute;width:calc(var(--lh)*.2);height:calc(var(--lh)*.28);border-radius:45% 45% 50% 50%;transform:translate(-50%,0);box-shadow:0 0 8px 2px currentColor;animation:hwTw 1.6s ease-in-out infinite alternate}
 @keyframes hwTw{from{opacity:.45}to{opacity:1}}
+body.launching :is(#acts,#nav,#top,#free,#hw,#deck,#card,#parentBtn),body.launching :is(#acts,#nav,#top,#free,#hw) *{pointer-events:none!important}body.space #surp,body.launching #surp{display:none!important}
 #spHome{width:64px;height:64px;font-size:32px;background:#fff}
 #spSkip{width:76px;height:76px;padding:6px;background:radial-gradient(circle at 35% 30%,#3a4a8a,#141a3a 75%);box-shadow:0 5px 0 #0a0e24,0 0 22px rgba(255,190,80,.55)}#spSkip img{width:100%;height:100%;object-fit:contain}
 #spNext{width:104px;height:104px;background:radial-gradient(circle at 35% 30%,#ff9a5c,#d2501a 70%);box-shadow:0 6px 0 #8a3210,0 0 30px rgba(255,140,60,.6);animation:spBob 1.6s ease-in-out infinite}
@@ -1897,13 +1898,13 @@ function trainTrack(r,g){const T=new THREE.Group(),c=document.createElement('can
     const rail=new THREE.Mesh(new THREE.LatheGeometry(P,200),steel);rail.castShadow=true;T.add(rail)}
   return T}
 const _trY=new THREE.Vector3(0,1,0);
-async function trainRun(){const tok=startGame('train'),M=await trainLoad();if(!alive(tok))return;if(M.some(m=>!m)){endGame();return}
+async function trainRun(){const tok=startGame('train'),Mp=trainLoad();
   goHome();const s=HOME.s,L=TRAIN_CARS.map(([,l])=>l*s),g=L[0]*.185; /* gauge: the loco's wheels */TRAIN.r=3*s;
-  const G=TRAIN.g=new THREE.Group();G.position.set(HOME.x,0,HOME.z);G.add(trainTrack(TRAIN.r,g));
+  const G=TRAIN.g=new THREE.Group();G.position.set(HOME.x,0,HOME.z);G.add(trainTrack(TRAIN.r,g));scene.add(G);TRAIN.on=true;TRAIN.cars=[];TRAIN.v=0;TRAIN.look=null;
+  trainWhistle();await anim2(600,p=>G.scale.setScalar(.001+smooth(p)));const M=await Mp;if(!alive(tok))return;if(M.some(m=>!m)){TRAIN.models=null;endGame();return} // the track shows at once; the cars come when downloaded
   TRAIN.cars=M.map((m,i)=>{const c=m.clone(),bb=new THREE.Box3().setFromObject(m),k=L[i]/Math.max(.01,bb.max.x-bb.min.x),p=new THREE.Group();c.scale.setScalar(k);c.position.y=g*.24;p.add(c);G.add(p);
     const wh=[];c.traverse(o=>{if(/^wheel/.test(o.name)){const b=new THREE.Box3().setFromObject(o);wh.push({o,r:Math.max(.01,(b.max.y-b.min.y)/2*k)})}});return {p,c,L:L[i],H:(bb.max.y-bb.min.y)*k,y0:c.position.y,wh}});
-  scene.add(G);TRAIN.on=true;TRAIN.a=-Math.PI*.5;TRAIN.v=0;TRAIN.vmax=1.7*s/TRAIN.r;TRAIN.look=0;trainPlace(0);
-  await anim2(600,p=>G.scale.setScalar(.001+smooth(p)));if(!alive(tok))return;
+  TRAIN.a=-Math.PI*.5;TRAIN.vmax=1.7*s/TRAIN.r;TRAIN.look=0;trainPlace(0);SFX.boing();
   loadAsnd('train_stop');trainWhistle();await wait(700);if(!alive(tok))return;trainChug(true);
   // run: speed up, about three laps round him, slow down
   const t0=performance.now(),RUN=26000;
@@ -1940,7 +1941,7 @@ const _fe=new THREE.Euler(),_fq0=new THREE.Quaternion(),_fq1=new THREE.Quaternio
 const smooth=x=>x*x*(3-2*x),anim=(ms,f)=>new Promise(ok=>{const t0=performance.now(),step=()=>{const p=Math.min(1,(performance.now()-t0)/ms);if(LAUNCH)f(p);p<1&&LAUNCH?requestAnimationFrame(step):ok()};step()});
 const loadRocket=()=>ROCKET?Promise.resolve(ROCKET):new Promise(ok=>new THREE.GLTFLoader().load('models/space_rocket.glb',g=>{ROCKET=g.scene;ROCKET.traverse(o=>{if(o.isMesh)o.castShadow=true});ok(ROCKET)},undefined,()=>ok(null)));
 function cdShow(txt){const e=document.getElementById('cdNum');e.textContent=txt;e.classList.remove('pop');void e.offsetWidth;e.classList.add('pop')}
-async function launchRocket(){
+async function launchRocket(){document.body.classList.add('launching');
   const tok=startGame('launch'),R=await loadRocket();if(!R||!alive(tok)){if(alive(tok))endGame();return}
   goHome();const home=robot.position.clone().setY(0),rp=new THREE.Vector3(home.x+(portrait?1.35:2.1)*HOME.s,0,home.z-(portrait?.9:.3)); // upright phones: closer and a bit behind him, clear of the side buttons
   LAUNCH={jets:false,rs:0,ry:0,shake:0,flame:0,gs:1,gp:null,gvis:true,home};
@@ -1979,7 +1980,7 @@ function launchTick(dt){const L=LAUNCH;
     robot.quaternion.premultiply(_fqs.setFromEuler(_fe.set(Math.sin(tt*1.6)*.14*f,Math.sin(tt*1.1)*.07*f,(FLY_UP+Math.sin(tt*1.3)*.05)*f))); // FLY_UP: head end raised (a diagonal, like the Iron Man picture)
     const a=(Math.PI/2-FLY_UP)*f;robot.position.x-=hh*Math.sin(a);robot.position.y+=hh*(1-Math.cos(a))}else robot.rotation.z=0
   jetTick(0,L.jets&&L.gvis)}
-function launchEnd(){const L=LAUNCH;if(!L)return;LAUNCH=null;spaceOff();robot.rotation.z=0;spEl('spNext').hidden=false;try{L.boom&&L.boom.stop()}catch(e){}
+function launchEnd(){document.body.classList.remove('launching');const L=LAUNCH;if(!L)return;LAUNCH=null;spaceOff();robot.rotation.z=0;spEl('spNext').hidden=false;try{L.boom&&L.boom.stop()}catch(e){}
   if(ROCKET)scene.remove(ROCKET);if(rocketFlame)rocketFlame.g.visible=false;robot.visible=true;robot.scale.setScalar(HOME.s);jetTick(0,false);
   document.getElementById('flash').style.opacity=0;document.getElementById('cdNum').classList.remove('pop')}
 function animateFurniture(t,dt){for(const g of furnGroup.children){const u=g.userData;
@@ -2195,7 +2196,7 @@ onBtn('bNext',()=>sayRound(sayNext||pickSay()));
 onBtn('bRepeat',()=>sayRound(sayCur||pickSay()));
 onBtn('bMoves',playMoves);
 onBtn('bLamp',()=>{if(curRoom==='bed')return tapFurniture('lamp');setLights(!lightsOn);SFX.beep();sayIf(lightsOn?'lamp_home_on':'lamp_home_off')});
-onBtn('bDisco',()=>disco(!discoOn));onBtn('bRocket',()=>tapFurniture('rocket'));onBtn('bTrain',trainRun);onBtn('bDark',()=>playFindCards(true));onBtn('bStars',playStars);
+onBtn('bDisco',()=>disco(!discoOn));onBtn('bRocket',()=>tapFurniture('rocket'));document.getElementById('bTrain').onclick=()=>{if(game.type==='train')return trainWhistle();endGame();disco(false,1);if(st.mode==='sleep')wake();goHome();st.lastPoke=performance.now();st.idleAct=null;trainRun()};onBtn('bDark',()=>playFindCards(true));onBtn('bStars',playStars);
 onBtn('bNStory',async()=>{if(curRoom==='library')return libStory();const s=STORIES.find(s=>s.id==='bedtime')||STORIES[0];if(!s)return;await sayIf('night_story');if(scr==='bed'&&!game.type)storyPage(s,0)});
 onBtn('bSleep',()=>{setMode('sleep');say(HAS.has('x_khabam_miad')&&Math.random()<.5?'x_khabam_miad':'sleep');setFace('sleep',1e9);music(false);ggClip(...YAWN)});
 document.getElementById('go').onclick=async()=>{await ac().resume();micOn(false);await Promise.race([MANIFEST.then(()=>loadVoices(['name','hi'])),wait(2500)]);loadCore();propsOn=true;loadProps(curRoom);document.getElementById('start').hidden=true;document.getElementById('hint').hidden=true;say(HAS.has('name')?'name':'hi');SFX.beep();kick('squash',8);speak();wave('wave_hello');ggAnims()};
@@ -2212,7 +2213,7 @@ const PLANETS=[['sun','#f5b81a','zard','زرد',1.2],['mercury','#9b9690','tusi'
 let SPACE=null;
 const spEl=id=>document.getElementById(id);
 function ndcAt(nx,ny,d){const v=new THREE.Vector3(nx,ny,.5).unproject(camera).sub(camera.position).normalize();return camera.position.clone().addScaledVector(v,d)}
-function spaceOn(){const S=SPACE={i:-1,tex:{},sp:null,gl:null,stars:[],caught:0,speed:0,next:null,say:0,D:camera.position.distanceTo(robot.position)+4};
+function spaceOn(){document.body.classList.remove('launching');const S=SPACE={i:-1,tex:{},sp:null,gl:null,stars:[],caught:0,speed:0,next:null,say:0,D:camera.position.distanceTo(robot.position)+4};
   document.body.classList.add('space');pFg.classList.add('off');pFloor.visible=pBlob.visible=pDust.visible=false;
   pMixT=0;pU.uMix.value=0;pU.uNight.value=0;pU.uMul.value.set('#ffffff');pU.uBeam.value.w=0;pU.uLamp.value.forEach(l=>l.w=0);
   const k=PK;new THREE.TextureLoader().load('assets/rooms/space_'+(portrait?'portrait':'landscape')+'.webp',t=>{if(SPACE&&PK===k){S.bg0=pU.uMap.value;pU.uMap.value=t;pU.uHas.value=1}else t.dispose()});
@@ -2372,7 +2373,7 @@ const SCREENS={home:[['bFeed','bDance','bSing','bLamp'],LEARN],play:[['bBall','b
 const WALL={home:0xffffff,play:0xfff27a,bed:0x6f9cff,library:0xc4aef0}; // library: soft lavender
 function showScreen(s){const old=scr;scr=s;
   if(s!==old){disco(false,1);if(!lightsOn&&(old==='home'||old==='play'||old==='library'&&s!=='book'||ROOM_HI[s]&&s!=='bed'&&!(old==='book'&&s==='library')))setLights(true)} // (a book open in the library keeps its lamp) // leaving a room: normal lights (bedroom lamp stays as it was)
-  if(ROOM_HI[s]){curRoom=s;if(propsOn)loadProps(s);furnGroup.children.forEach(g=>g.visible=g.userData.room===s&&!g.userData.off&&!paintHid(g));roomProps(s);furnGroup.children.forEach(g=>{if(!g.visible)g.traverse(o=>{if(o.isMesh&&o.material)for(const k of TEXK)o.material[k]?.dispose()})}); // other rooms' props give their GPU textures back (re-uploaded when shown again): keeps a visit to every room under the memory budget
+  if(ROOM_HI[s]){curRoom=s;try{if(s==='play')trainLoad()}catch(e){}if(propsOn)loadProps(s);furnGroup.children.forEach(g=>g.visible=g.userData.room===s&&!g.userData.off&&!paintHid(g));roomProps(s);furnGroup.children.forEach(g=>{if(!g.visible)g.traverse(o=>{if(o.isMesh&&o.material)for(const k of TEXK)o.material[k]?.dispose()})}); // other rooms' props give their GPU textures back (re-uploaded when shown again): keeps a visit to every room under the memory budget
   libGroup.visible=s==='library';wallMat.color.setHex(WALL[s]);applyWalls(s)}
   const night=s==='bed'&&!lightsOn;document.body.classList.toggle('night',night);surpEl.hidden=!(surp&&surp.room===s);
   document.querySelectorAll('.col .rb').forEach(b=>document.getElementById('btns').appendChild(b));
